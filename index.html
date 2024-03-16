@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME | HOTEL小町</title>
+    <meta content="HOTEL小町は創立から80年を迎え、蓼科高原の四季に彩られ戦国時代から続く名湯を使った温泉を備えています。
+  日頃の喧騒を忘れた癒しのひと時をゆっくりとご堪能ください。" name="description">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="icon" href="/images/ico_favicon.svg">
+
+    <!-- ##### ⬇︎ OGP関連タグ ⬇︎ ##### -->
+    <meta property="og:title" content="HOME | HOTEL小町" />
+    <meta property="og:description" content="HOTEL小町は創立から80年を迎え、蓼科高原の四季に彩られ戦国時代から続く名湯を使った温泉を備えています。
+  日頃の喧騒を忘れた癒しのひと時をゆっくりとご堪能ください。" />
+    <meta property="og:type" content="ページの種類" />
+    <meta property="og:url" content="index.html" />
+    <meta property="og:image" content="サムネイル画像の URL" />
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:locale" content="ja_JP" />
+    <!-- ##### ⬆︎ OGP関連タグ ⬆︎ ##### -->
+
+    <!-- ##### ⬇︎ css / js 読み込み ⬇︎ ##### -->
+    <link rel="stylesheet" href="/style/css/style.css">
+    <link rel="stylesheet" href="/style/css/reset.css">
+
+    <!-- 下記トップページでのみ使用 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <!-- ======== ⬆︎ css / js 読み込み ⬆︎ ======== -->
+
+  </head>
+
+  <body>
+    <div class="container">
+
+      <!-- ======== ⬇︎ グローバルヘッダー ⬇︎ ======== -->
+      <header class="g-header js-fixed-header">
+
+        <div class="g-header__inner">
+          <h1 class="g-header__title">
+            <a class="g-header__title-link" href="/">
+              <img class="g-header__logo-img" src="/images/ico_site-logo.svg" alt="HOTEL小町">
+            </a>
+          </h1>
+
+          <nav class="g-nav">
+            <ul class="g-nav__list" id="js-header-list">
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/hot-spring.html">温泉</a>
+              </li>
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/rooms.html">客室</a>
+              </li>
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/cuisine.html">お料理</a>
+              </li>
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/facilities.html">館内ご案内</a>
+              </li>
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/sightseeing.html">周辺の観光地</a>
+              </li>
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/access.html">アクセス</a>
+              </li>
+
+              <li class="g-nav__item g-nav__item--col is-pc">
+                <ul class="g-nav__launguage-list">
+                  <li class="g-nav__launguage-item">
+                    <a class="g-nav__launguage-link" href="">日本語</a>
+                  </li>
+                  <li class="g-nav__launguage-item">
+                    <a class="g-nav__launguage-link" href="">English</a>
+                  </li>
+                  <li class="g-nav__launguage-item">
+                    <a class="g-nav__launguage-link" href="">繁体中文</a>
+                  </li>
+                  <li class="g-nav__launguage-item">
+                    <a class="g-nav__launguage-link" href="">한국어</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="g-header__info is-tab">
+            <p class="g-header__info-text">ご予約受付 9:00 ~ 18:00</p>
+            <p class="g-header__info-text g-header__info-text--large">TEL 01234-56-7890</p>
+          </div>
+        </div>
+
+        <div id="js-hamburger" class="hamburger is-pc">
+          <span class="hamburger__border hamburger__border--top"></span>
+          <span class="hamburger__border hamburger__border--center"></span>
+          <span class="hamburger__border hamburger__border--bottom"></span>
+        </div>
+        <div id="js-header-bg" class="g-header__bg"></div>
+
+
+        <!-- ======== ⬇︎ ※ SP / タブレット限定 固定ボトムメニュー ⬇︎ ======== -->
+        <nav class="drop-down is-pc">
+          <ul class="drop-down__menu">
+            <li class="drop-down__item">
+              <a class="drop-down__label" href="">
+                <span class="drop-down__icon">
+                  <img class="drop-down__icon-img" src="/images/icon/ico_phone.svg" alt="">
+                </span>
+                お電話予約
+              </a>
+            </li>
+            <li class="drop-down__item drop-down__item--accent">
+              <span class="drop-down__label" href="">
+                <span class="drop-down__icon">
+                  <img class="drop-down__icon-img" src="/images/icon/ico_form-calendar_white.svg" alt="">
+                </span>
+                宿泊ご予約
+              </span>
+              <ul class="drop-down__sub-menu">
+                <li class="drop-down__sub-item">
+                  <a class="drop-down__sub-link" href="/reservation/index.html#rooms-searh">空室検索</a>
+                </li>
+                <li class="drop-down__sub-item">
+                  <a class="drop-down__sub-link" href="/reservation/index.html?active-tab=tab-1#is-tab">宿泊プランから探す</a>
+                </li>
+                <li class="drop-down__sub-item">
+                  <a class="drop-down__sub-link" href="/reservation/index.html?active-tab=tab-2#is-tab">客室タイプから探す</a>
+                </li>
+              </ul>
+            </li>
+            <li class="drop-down__item drop-down__item--language is-sp">
+              <span class="drop-down__label" href="">
+                Language
+              </span>
+              <ul class="drop-down__sub-menu drop-down__sub-menu--language">
+                <li class="drop-down__sub-item drop-down__sub-item--language">
+                  <a class="drop-down__sub-link drop-down__sub-link--language" href="">English</a>
+                </li>
+                <li class="drop-down__sub-item drop-down__sub-item--language">
+                  <a class="drop-down__sub-link drop-down__sub-link--language" href="">简体中文</a>
+                </li>
+                <li class="drop-down__sub-item drop-down__sub-item--language">
+                  <a class="drop-down__sub-link drop-down__sub-link--language" href="">繁体中文</a>
+                </li>
+                <li class="drop-down__sub-item drop-down__sub-item--language">
+                  <a class="drop-down__sub-link drop-down__sub-link--language" href="">한국어</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- ======== ⬆︎ ※ SP / タブレット限定 固定ボトムメニュー ⬆︎ ======== -->
+      </header>
+      <!-- ======== ⬆︎ グローバルヘッダー ⬆︎ ======== -->
+
+      <!-- ======== ⬇︎ メインビジュアル ⬇︎ ======== -->
+      <div class="mv">
+        <div class="swiper-mv js-mv">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide sw-1">
+              <div><span class="img-opacity"></span></div>
+            </div>
+            <div class="swiper-slide sw-2">
+              <div><span class="img-opacity"></span></div>
+            </div>
+            <div class="swiper-slide sw-3">
+              <div><span class="img-opacity"></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="mv__inner">
+          <p class="mv__text mv__text--top">創業八十年</p>
+          <div class="mv__col">
+            <div class="mv__logo">
+              <img class="mv_top__logo-img" src="/images/icon/ico_mv-logo.svg" alt="HOTEL小町のロゴ">
+            </div>
+            <p class="mv__text--large">
+              小町
+            </p>
+          </div>
+          <p class="mv__text mv__text--small">KOMACHI</p>
+        </div>
+        <div class="scroll-down">
+          <span class="scroll-down__text">Scroll</span>
+        </div>
+      </div>
+      <!-- ======== ⬆︎ メインビジュアル ⬆︎ ======== -->
+
+      <!-- ==================================================================== -->
+
+      <main class="contents">
+
+        <!-- ======== ⬇︎ コンテンツ_温泉 ⬇︎ ======== -->
+        <section class="page-section">
+          <h2 class="h2-heading">
+            <div class="h2-heading__inner">
+              <span class="h2-heading__text">温泉</span>
+            </div>
+          </h2>
+
+          <div class="top-contents top-contents--right">
+            <div class="top-contents__kv top-contents__kv--right">
+              <div class="top-contents__kv-inner">
+                <img class="top-contents__kv-img" src="/images/top/img_kv-hotspring.jpg" alt="四季折々の自然と共に旅の疲れを癒す温泉">
+                <span class="top-contents__kv-catch top-contents__kv-catch--right">四季折々の自然と共に旅の疲れを癒す温泉</span>
+              </div>
+            </div>
+
+            <div class="top-contents__col">
+              <div class="top-contents__slide">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img class="swiper-img" src="/images/top/img_hot-spring_slide01.jpg"
+                        alt="室内温泉">
+                    </div>
+                    <div class="swiper-slide"><img class="swiper-img" src="/images/top/img_hot-spring_slide02.jpg"
+                        alt="サウナ">
+                    </div>
+                    <div class="swiper-slide"><img class="swiper-img" src="/images/top/img_hot-spring_slide03.jpg"
+                        alt="露天風呂">
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev"><span class="right-arrow"></span></div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+
+              <div class="top-contents__info top-contents__info--right desc-contents">
+                <div class="desc-contents__inner">
+                  <p class="desc-contents__text">
+                    蓼科の温泉の歴史は戦国時代にまで遡ります。<br><br>
+                    古くから八ヶ岳山麓の道は信濃国に向かう街道で多くの兵が行き交い、
+                    山中に湧き出している温泉に傷ついた兵を入浴させたところ傷が治ったと伝わっております。<br> <br>
+                    その源泉を利用し、自身の隠れ湯としたと言われている戦国時代の名将が甲斐の虎こと「武田信玄」です。<br><br>
+                    当館では、そんな泉質を利用した2種類の温泉をご用意しておりますので、アウトドアや旅の疲れをゆっくりと癒やすことができます。
+                  </p>
+                </div>
+                <div class="button-box">
+                  <a href="hot-spring.html" class="primary-btn">温泉をみる</a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+        <!-- ======== ⬆︎ コンテンツ_温泉 ⬆︎ ======== -->
+
+        <!-- ==================================================================== -->
+
+        <!-- ======== ⬇︎ コンテンツ_客室 ⬇︎ ======== -->
+        <section class="page-section page-section--gray-bg">
+          <h2 class="h2-heading">
+            <div class="h2-heading__inner">
+              <span class="h2-heading__text">客室</span>
+            </div>
+          </h2>
+
+          <div class="top-contents top-contents--left">
+            <div class="top-contents__kv top-contents__kv--left">
+              <div class="top-contents__kv-inner">
+                <img class="top-contents__kv-img" src="/images/top/img_kv-room.jpg" alt="小町亭の和室のテーブルとベランダ">
+                <span class="top-contents__kv-catch top-contents__kv-catch--left">大自然の音色がもたらす安らぎに満ちた時間</span>
+              </div>
+            </div>
+
+            <div class="top-contents__col top-contents__col--row-reverse">
+              <div class="top-contents__slide">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img class="swiper-img" src="/images/top/img_room_slide01.jpg"
+                        alt="ファミリールームの和室">
+                    </div>
+                    <div class="swiper-slide"><img class="swiper-img" src="/images/top/img_room_slide02.jpg"
+                        alt="小町亭の和室">
+                    </div>
+                    <div class="swiper-slide"><img class="swiper-img" src="/images/top/img_room_slide03.jpg"
+                        alt="洋室ツインルーム">
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev"><span class="right-arrow"></span></div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+
+              <div class="top-contents__info top-contents__info--left desc-contents">
+                <div class="desc-contents__inner">
+                  <p class="desc-contents__text">
+                    雄大な自然に囲まれた当館では、全客室に蓼科高原の大自然を展望できるテラス席がございます。<br>
+                    春の桜、夏の夜空に輝く星々、秋の紅葉、冬の雪景色、四季折々の景色を楽しむことができます。<br><br>
+                    当館では、ペットと泊まれるお部屋、和室、洋室、貸切風呂付きのお部屋など様々なお部屋タイプをご用意しております。<br><br>
+                    蓼科高原の大自然を温泉とともにゆっくりご堪能くださいませ。
+                  </p>
+                </div>
+
+                <div class="button-box">
+                  <a href="rooms.html" class="primary-btn">客室をみる</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ======== ⬆︎ コンテンツ_客室 ⬆︎ ======== -->
+
+        <!-- ==================================================================== -->
+
+        <!-- ======== ⬇︎ コンテンツ_お料理 ⬇︎ ======== -->
+        <section class="page-section">
+          <h2 class="h2-heading">
+            <div class="h2-heading__inner">
+              <span class="h2-heading__text">お料理</span>
+            </div>
+          </h2>
+
+          <div class="top-contents top-contents--center">
+            <div class="top-contents__kv">
+              <div class="top-contents__kv-inner">
+                <img class="top-contents__kv-img" src="/images/top/img_kv-cook.jpg" alt="すき焼き、バイキング、和食料理の写真">
+                <span class="top-contents__kv-catch top-contents__kv-catch--center">信州の新鮮な食材を使用したお料理をご提供</span>
+              </div>
+            </div>
+
+            <div class="top-contents__info top-contents__info--center desc-contents__inner">
+              <p class="desc-contents__text">
+                HOTEL小町では、
+              </p>
+              <ul class="desc-contents__text-list">
+                <li class="desc-contents__text-item">和・洋・中の豊富な料理を揃えたバイキング</li>
+                <li class="desc-contents__text-item">お部屋でゆっくりとご堪能できるお部屋食</li>
+                <li class="desc-contents__text-item">蓼科湖や八ヶ岳を眺めながら和食料理を楽しめるレストラン</li>
+              </ul>
+              <p>
+                などの食事スタイルをご用意しております。
+                どのコースでも地元の採れたて新鮮な食材を使っておりますので、季節に合わせた四季折々の料理をお楽しみいただけます。
+              </p>
+            </div>
+
+            <section class="img-list">
+              <h3 class="h3-heading">
+                <span class="h3-heading__inner">お食事スタイル</span>
+              </h3>
+              <div class="img-list__box">
+                <figure class="img-list__item">
+                  <img class="img-list__img" src="/images/cuisine/img_room-cuisine02.jpg" alt="御鍋料理のすき焼き">
+                  <figcaption class="img-list__caption">
+                    お部屋食
+                  </figcaption>
+                </figure>
+
+                <figure class="img-list__item">
+                  <img class="img-list__img" src="/images/cuisine/img_biking-cuisine03.jpg" alt="お皿に盛られたミックスサラダ">
+                  <figcaption class="img-list__caption">
+                    バイキング
+                  </figcaption>
+                </figure>
+
+                <figure class="img-list__item">
+                  <img class="img-list__img" src="/images/cuisine/img_yatugatake.jpg" alt="レストラン YATUGATAKE">
+                  <figcaption class="img-list__caption">
+                    展望レストラン YATUGATAKE
+                  </figcaption>
+                </figure>
+
+                <figure class="img-list__item">
+                  <img class="img-list__img" src="/images/cuisine/img_horoyoi.jpg" alt="お酒">
+                  <figcaption class="img-list__caption">
+                    日本酒バー ほろ酔
+                  </figcaption>
+                </figure>
+
+              </div>
+            </section>
+
+            <div class="button-box">
+              <a href="cuisine.html" class="primary-btn">お料理をみる</a>
+            </div>
+          </div>
+
+          <section class="page-section__inner">
+            <h3 class="h3-heading"><span class="h3-heading__inner">お食事処</span></h3>
+            <!-- ###### 画像リンク ⬇︎ ###### -->
+            <div class="link-img">
+              <a href="#" class="link-img__item">
+                <div class="link-img__thumb">
+                  <img class="link-img__img" src="/images/top/img_yatugatake-link.jpg" alt="レストラン「YATUGATAKE」">
+
+                  <div class="link-img__info">
+                    <p class="link-img__label">
+                      蓼科の景色と和食で舌鼓<br>
+                      【YATUGATAKE】
+                    </p>
+                    <p class="link-img__time">
+                      営業時間：11:00 ~ 14:00
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="#" class="link-img__item">
+                <div class="link-img__thumb">
+                  <img class="link-img__img" src="/images/top/img_horoyoi-link.jpg" alt="日本酒バー「ほろ酔い」">
+                  <div class="link-img__info">
+                    <p class="link-img__label">
+                      信州・日本各地の地酒を味わえる<br>
+                      【ほろ酔】
+                    </p>
+                    <p class="link-img__time">
+                      営業時間：PM19:00 ~ PM23:00
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- ###### 画像リンク ⬆︎ ###### -->
+          </section>
+        </section>
+        <!-- ======== ⬆︎ コンテンツ_お料理 ⬆︎ ======== -->
+
+        <!-- ==================================================================== -->
+
+        <!-- ======== ⬇︎ コンテンツ_周辺の観光地 ⬇︎ ======== -->
+        <section class="page-section page-section--gray-bg">
+          <h2 class="h2-heading">
+            <div class="h2-heading__inner">
+              <span class="h2-heading__text">周辺の観光地</span>
+            </div>
+          </h2>
+
+          <div class="top-sightseeing top-contents--center">
+            <div class="top-contents__kv">
+              <div class="top-contents__kv-inner">
+                <img class="top-contents__kv-img" src="/images/top/img_kv-sightseeing.jpg" alt="蓼科大滝">
+                <span class="top-contents__kv-catch top-contents__kv-catch--center">一生に一度の景色を体験</span>
+              </div>
+            </div>
+
+            <div class="top-contents__info top-contents__info--center desc-contents">
+              <div class="desc-contents__inner">
+                <p class="desc-contents__text">
+                  温泉だけではなく、蓼科周辺には大自然が生み出した観光名所が数多く存在しております。<br>
+                  八ヶ岳や蓼科山などの火山活動によって生み出された景色や農業用のために作られた人工的な湖など個性豊かな景観が数多く存在しています。<br><br>
+                  また、登山やロープウェイ、スキーなどのアクティビティを体験できる観光地も多くシーズンごとに異なる賑わいを見せるのも特徴です。<br><br>
+                  当館では、周辺の観光地を送迎バスで巡る宿泊プランもご用意しております。
+                </p>
+              </div>
+            </div>
+
+
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img class="swiper-img" src="/images/top/img_sightseeing_slide01.jpg"
+                    alt="八ヶ岳の岩山">
+                </div>
+                <div class="swiper-slide"><img class="swiper-img" src="/images/top/img_sightseeing_slide02.jpg"
+                    alt="小町亭の和室">
+                </div>
+                <div class="swiper-slide"><img class="swiper-img" src="/images/top/img_sightseeing_slide03.jpg"
+                    alt="洋室ツインルーム">
+                </div>
+              </div>
+              <div class="swiper-button-prev"><span class="right-arrow"></span></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="button-box">
+              <a href="sightseeing.html" class="primary-btn">周辺の観光地を見る</a>
+            </div>
+
+          </div>
+
+
+          <section class="top-contents__inner">
+            <h3 class="h3-heading">
+              <span class="h3-heading__inner">宿泊プランのご案内</span>
+            </h3>
+            <!-- ###### おすすめ宿泊プランリンク ⬇︎ ###### -->
+            <div class="plan-recome">
+              <section class="plan-recome__item">
+                <h4 class="plan-recome__title">蓼科高原 周遊観光プラン</h4>
+                <a class="plan-recome__link" href="/reservation/index.html?active-tab=tab-1#plan-01">
+                  <div class="plan-recome__thumb">
+                    <img class="plan-recome__img" src="/images/plan/img_plan-recome01.jpg" alt="蓼科高原 周遊観光プラン">
+                  </div>
+                </a>
+                <p class="plan-recome__desc">
+                  観光バスで蓼科周辺の観光名所を巡るプランとなっております。<br>
+                  電車でお越しになられた方や、現地の観光プランはお任せしたい方におすすめです。
+                </p>
+                <p class="plan-recome__price">料金：お一人様
+                  <span class="plan-recome__price plan-recome__price--green">¥16,000 〜</span>
+                </p>
+                <div class="plan-recome__text-link">
+                  <a class="link-text" href="/reservation/index.html?active-tab=tab-1#plan-01">プラン詳細はこちら</a>
+                </div>
+              </section>
+
+              <section class="plan-recome__item">
+                <h4 class="plan-recome__title">【12月 ~ 2月限定】スキーレンタルプラン</h4>
+                <a class="plan-recome__link" href="/reservation/index.html?active-tab=tab-1#plan-02">
+                  <div class="plan-recome__thumb">
+                    <img class="plan-recome__img" src="/images/plan/img_plan-recome02.jpg"
+                      alt="【※冬季限定（12月 ~ 2月）】スキーレンタルプラン">
+                  </div>
+                </a>
+                <p class="plan-recome__desc">
+                  スキー道具一式のレンタルが含まれた冬場のレジャーにおすすめのプランです。旅行に必要な最低限の荷物でご来館いただけます。<br>
+                  貸出物：スキー板、ブーツ、ストック、スキーウェア
+                </p>
+                <p class="plan-recome__price">料金：お一人様
+                  <span class="plan-recome__price plan-recome__price--green">¥15,000 〜</span>
+                </p>
+                <div class="plan-recome__text-link">
+                  <a class="link-text" href="/reservation/index.html?active-tab=tab-1#plan-01">プラン詳細はこちら</a>
+                </div>
+              </section>
+            </div>
+            <!-- ###### おすすめ宿泊プランリンク ⬆︎ ###### -->
+          </section>
+
+        </section>
+        <!-- ======== ⬆︎ コンテンツ_周辺の観光地 ⬆︎ ======== -->
+
+        <!-- ==================================================================== -->
+
+        <!-- ======== ⬇︎ コンテンツ_館内ご案内 ⬇︎ ======== -->
+        <section class="page-section">
+          <h2 class="h2-heading">
+            <div class="h2-heading__inner">
+              <span class="h2-heading__text">館内ご案内</span>
+            </div>
+          </h2>
+
+          <div class="top-contents">
+            <div class="top-contents__kv top-contents__center">
+              <div class="top-contents__kv-inner">
+                <img class="top-contents__kv-img" src="/images/top/img_kv-in-house-facilities.jpg" alt="館内ロビーの和風待合所">
+                <span class="top-contents__kv-catch top-contents__kv-catch--center">家族や仲間と過ごす癒しのひととき</span>
+              </div>
+            </div>
+
+            <div class="top-contents__col">
+              <div class="top-contents__thumb">
+                <img class="top-contents__img" src="/images/top/img_in-house-facilities.png"
+                  alt="ホテルのロビーと屋上庭園とお土産屋「博麗」の写真">
+              </div>
+
+              <div class="top-contents__info top-contents__info--right desc-contents">
+                <div class="desc-contents__inner">
+                  <p class="desc-contents__catch">
+                    退屈することのない充実した施設をご用意
+                  </p>
+                  <p class="desc-contents__text">
+                    お子様と楽しめるゲームセンターから、夏の屋上プール、愛犬と楽しめるドッグランまで、旅の思い出作りに充実した施設をご用意しております。<br><br>
+                    屋上からは夜空の星の観覧や庭園を散策でき、<br>
+                    信州の特産を取り扱っている売店兼お土産センターもございます。<br><br>
+                    家族や仲間と水入らずのお時間をお過ごしいただけます。
+                  </p>
+                </div>
+
+                <div class="button-box">
+                  <a href="facilities.html" class="primary-btn">館内をみる</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ======== ⬆︎ コンテンツ_館内ご案内 ⬆︎ ======== -->
+
+        <!-- ==================================================================== -->
+
+        <!-- ======== ⬇︎ コンテンツ_アクセス ⬇︎ ======== -->
+        <section class="page-section page-section--gray-bg">
+          <div class="page-section__bg-image">
+            <h2 class="h2-heading">
+              <div class="h2-heading__inner">
+                <span class="h2-heading__text">アクセス</span>
+              </div>
+            </h2>
+
+            <div class="top-contents">
+              <div class="top-contents__col">
+                <div class="top-contents__info top-contents__info--left desc-contents">
+                  <div class="desc-contents__inner">
+                    <p class="desc-contents__text">
+                      <span class="desc-contents__text-bold">所在地</span>：<br>
+                      〒 123-4456　長野県茅野市北山56789-10
+                    </p>
+                    <p class="desc-contents__text">
+                      <span class="desc-contents__text-bold">車でお越しの場合</span><br>
+                      諏訪IC から 国道20号線 ~ ビーナスライン 約30分<br>
+                      佐久IC から 県道142号線 ~ 県道40号線 約70分
+                    </p>
+                    <p class="desc-contents__text">
+                      <span class="desc-contents__text-bold">電車でお越しの場合</span><br>
+                      JR茅野駅 から 無料送迎バス 約30分<br>
+                      ご予約時に乗車時間をご選択してください。
+                    </p>
+                  </div>
+
+                  <div class="button-box">
+                    <a href="access.html" class="primary-btn">アクセスはこちら</a>
+                  </div>
+                </div>
+
+                <div class="googlemap">
+                  <iframe class="googlemap__contents"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3225.6612284843372!2d138.25644357116394!3d36.0529729!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601c4e511bbc2e49%3A0xeb4c9b5928751149!2z6JO856eR6auY5Y6f!5e0!3m2!1sja!2sjp!4v1706511728855!5m2!1sja!2sjp"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                  </iframe>
+                </div>
+
+              </div>
+            </div>
+        </section>
+        <!-- ======== ⬆︎ コンテンツ_アクセス ⬆︎ ======== -->
+
+        <!-- ==================================================================== -->
+
+        <!-- ======== ⬇︎ コンテンツ_空室検索 ⬇︎ ======== -->
+        <section class="page-section top-contents page-section--green">
+          <h2 class="search-heading">客室検索</h2>
+
+          <div class="top-contents__inner vacancy-search">
+            <ul class="vacancy-search__menu">
+              <li class="link-text link-text--white">
+                <a class="vacancy-search__link" href="/reservation/index.html?active-tab=tab-1#is-tab">プラン一覧</a>
+              </li>
+              <li class="link-text link-text--white">
+                <a class="vacancy-search__link" href="/reservation/index.html?active-tab=tab-2#is-tab">客室一覧</a>
+              </li>
+            </ul>
+
+            <div class="vacancy-search__form">
+              <form class="form-room" action="サイトURL" method="get">
+
+                <!-- #### ご宿泊日 #### -->
+                <label class="form-room__item" for="date">
+                  <input class="form-room__date" id="date" type="date" name="date">
+                  <span class="form-room__text">ご宿泊日</span>
+                  </input>
+                </label>
+
+
+                <!-- #### ご宿泊数 #### -->
+
+                <label for="number-of-nights" class="form-room__item">
+                  <span class="form-room__text">ご宿泊数</span>
+                  <select class="form-room__select" id="number-of-nights" class="form-room__number-of-nights"
+                    type="number-of-nights" size="1">
+                    <option value="1泊">1　泊</option>
+                    <option value="2泊">2　泊</option>
+                    <option value="3泊">3　泊</option>
+                    <option value="4泊">4　泊</option>
+                    <option value="5泊">5　泊</option>
+                  </select>
+                  <span class="form-room__arrow"></span>
+                </label>
+
+                <!-- #### ご利用人数 #### -->
+
+                <label class="form-room__item">
+                  <span class="form-room__text">ご利用人数</span>
+                  <select class="form-room__select" type="number-of-people" size="1">
+                    <option value="1名">1名 / 室</option>
+                    <option value="2名">2名 / 室</option>
+                    <option value="3名">3名 / 室</option>
+                    <option value="4名">4名 / 室</option>
+                    <option value="5名">5名 / 室</option>
+                  </select>
+                  <span class="form-room__arrow"></span>
+                </label>
+
+
+                <!-- #### お部屋数 #### -->
+
+                <label class="form-room__item">
+                  <span class="form-room__text">お部屋数</span>
+                  <select class="form-room__select" type="number-of-room" size="1">
+                    <option value="1室">1　室</option>
+                    <option value="2室">2　室</option>
+                    <option value="3室">3　室</option>
+                  </select>
+                  <span class="form-room__arrow"></span>
+                </label>
+
+
+                <!-- #### 検索ボタン #### -->
+                <button class="form-room__item form-room__item--search" type="button"
+                  onclick="location.href='/reservation/index.html'">
+                  検索
+                  <span class="form-room__search-icon"></span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+        <!-- ======== ⬆︎ コンテンツ_空室検索 ⬆︎ ======== -->
+
+        <!-- ==================================================================== -->
+
+        <!-- ======== ⬇︎ コンテンツ_インフォメーション ⬇︎ ======== -->
+        <section class="page-section">
+          <h2 class="h2-heading">
+            <div class="h2-heading__inner">
+              <span class="h2-heading__text">インフォメーション</span>
+            </div>
+          </h2>
+
+          <div class="top-contents">
+            <div class="top-contents__inner">
+
+              <ul class="information-list">
+                <!-- ##### 1件目 ##### -->
+                <li class="information-list__item">
+                  <time class="information-list__year">2024<br><span class="information-list__date">01.04</span></time>
+                  <p class="information-list__category">観光情報</p>
+                  <div class="information-list__link-box">
+                    <a class="information-list__link" href="information/article_20230202.html">
+                      【宿泊プラン】「送迎付きレンタルスキープラン」を今年も開催します！
+                    </a>
+                  </div>
+                </li>
+
+                <!-- ##### 2件目 ##### -->
+                <li class="information-list__item">
+                  <time class="information-list__year">2024<br><span class="information-list__date">01.01</span></time>
+                  <p class="information-list__category">小町LOG</p>
+                  <div class="information-list__link-box">
+                    <a class="information-list__link" href="information/article_20230202.html">
+                      謹賀新年のご挨拶
+                    </a>
+                  </div>
+                </li>
+
+                <!-- ##### 3件目 ##### -->
+                <li class="information-list__item">
+                  <time class="information-list__year">2022<br><span class="information-list__date">12.28</span></time>
+                  <p class="information-list__category">お知らせ</p>
+                  <div class="information-list__link-box">
+                    <a class="information-list__link" href="information/article_20230202.html">
+                      【宿泊プラン】「送迎付きレンタルスキープラン」を今年も開催します！
+                    </a>
+                  </div>
+                </li>
+
+                <!-- ##### 4件目 ##### -->
+                <li class="information-list__item">
+                  <time class="information-list__year">2022<br><span class="information-list__date">12.24</span></time>
+                  <p class="information-list__category">お知らせ</p>
+                  <div class="information-list__link-box">
+                    <a class="information-list__link" href="information/article_20230202.html">
+                      テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります
+                    </a>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="button-box">
+                <a href="/information/index.html" class="primary-btn">インフォメーション一覧</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ======== ⬆︎ コンテンツ_インフォメーション ⬆︎ ======== -->
+      </main>
+
+      <!-- ======== ⬇︎ フッター ⬇︎ ======== -->
+      <footer class="footer">
+        <div class="footer__inner">
+
+          <!-- ##### フッター情報 ##### -->
+          <div class="footer__info">
+            <a href="/" class="footer__logo">
+              <img class="footer__logo-img" src="/images/ico_footer-logo.svg" alt="HOTEL小町のロゴ">
+            </a>
+            <div class="footer__address">
+              <p class="footer__address-text">
+                〒123-4456　長野県茅野市北山56789-10
+              </p>
+              <p class="footer__address-text">
+                TEL：<span class="footer__address-text footer__address-text--large">01234-56-7890</span><br>
+                受付時間 9:00 ~ 18:00
+              </p>
+              <p class="footer__address-text">
+                Mail：<a class="footer__address-link" href="メールアプリ起動">test-test@sample.com</a>
+              </p>
+            </div>
+            <div class="footer__sns">
+              <p class="footer__sns-label">SNS</p>
+              <ul class="footer__sns-list">
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-instagram.svg" alt="instagram">
+                  </a>
+                </li>
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-facebook.svg" alt="facebook">
+                  </a>
+                </li>
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-line.svg" alt="LINE">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <nav class="footer__nav">
+            <!-- ##### メインメニュー ##### -->
+            <ul class="footer__menu is-sp">
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/hot-spring.html">
+                  温泉
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/rooms.html">
+                  客室
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/cuisine.html">
+                  お料理
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/facilities.html">
+                  館内ご案内
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/sightseeing.html">
+                  周辺の観光地
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/access.html">
+                  アクセス
+                </a>
+              </li>
+            </ul>
+
+            <!-- ##### サブメニュー ##### -->
+            <ul class="footer__submenu footer__menu--sub">
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/information/index.html">
+                  インフォメーション
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/faq.html">
+                  よくあるご質問
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/contact/contact.html">
+                  お問い合わせ
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/privacy-policy.html">
+                  宿泊約款
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/privacy-policy.html#privacy-policy">
+                  個人情報保護方針
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <small class="footer__copyright">© 2024 Yuuki PortFolio</small>
+        </div>
+      </footer>
+      <!-- ======== ⬆︎ フッター ⬆︎ ======== -->
+
+      <!-- ==================================================================== -->
+
+      <!-- ======== ⬇︎ 固定サイドメニュー ⬇︎ ======== -->
+      <aside class="sidebar is-tab">
+
+        <nav id="js-side-slide_top" class="sidebar__nav">
+          <span class="sidebar__label">宿泊ご予約</span>
+          <ul class="sidebar__list">
+            <li class="sidebar__item"><a class="sidebar__link" href="/reservation/index.html#rooms-searh">空室検索</a></li>
+            <li class="sidebar__item"><a class="sidebar__link" href="/reservation/index.html?active-tab=tab-1#is-tab">宿泊プランから探す</a>
+            </li>
+            <li class="sidebar__item"><a class="sidebar__link" href="/reservation/index.html?active-tab=tab-2#is-tab">客室タイプから探す</a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav id="js-side-slide_bottom" class="sidebar__nav sidebar__nav--bottom">
+          <span class="sidebar__label">Language</span>
+          <ul class="sidebar__list">
+            <li class="sidebar__item"><a class="sidebar__link sidebar__link--black" href="#">English</a></li>
+            <li class="sidebar__item"><a class="sidebar__link sidebar__link--black" href="#">简体中文</a></li>
+            <li class="sidebar__item"><a class="sidebar__link sidebar__link--black" href="#">繁体中文</a></li>
+            <li class="sidebar__item"><a class="sidebar__link sidebar__link--black" href="#">한국어</a></li>
+          </ul>
+        </nav>
+
+      </aside>
+      <!-- ======== ⬆︎ 固定サイドメニュー ⬆︎ ======== -->
+
+    </div>
+
+    <!-- ======== ⬇︎ JQuery / プラグイン読み込み ⬇︎ ======== -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/javascript/common.js"></script>
+    <!-- ======== ⬆︎ JQuery/プラグイン読み込み ⬆︎ ======== -->
+  </body>
+
+</html>
