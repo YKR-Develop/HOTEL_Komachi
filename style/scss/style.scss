@@ -1,0 +1,92 @@
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+@charset "UTF-8";
+
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+@use "config/function";
+@use "config/mq";
+@use "config/variables";
+@use "config/font";
+
+/* --------------------------------------------------
+ moduleファイル 
+-------------------------------------------------- */
+@use "module/mv";
+@use "module/header";
+@use "module/nav";
+@use "module/form";
+@use "module/footer";
+@use "module/sidebar";
+@use "module/hamburger";
+@use "module/breadcrumb";
+
+/* --------------------------------------------------
+ pluginファイル 
+-------------------------------------------------- */
+@use "plugin/swiper";
+
+/* --------------------------------------------------
+ mixinファイル 
+-------------------------------------------------- */
+@use "mixin/mixin";
+
+/* --------------------------------------------------
+ commonファイル 
+-------------------------------------------------- */
+@use "common/heading";
+@use "common/description";
+@use "common/button";
+@use "common/link";
+@use "common/map";
+@use "common/vacancy-search";
+@use "common/plan";
+@use "common/drop-menu";
+@use "common/anchor-menu";
+@use "common/table";
+@use "common/img-list";
+@use "common/article-list";
+@use "common/paginating";
+@use "common/stepbar";
+@use "common/rooms-search";
+@use "common/tab";
+@use "common/modal";
+@use "common/calendar";
+@use "common/credit-card";
+@use "common/cancel-policy";
+@use "common/reservation-contents";
+@use "common/user-form";
+@use "common/inner-box";
+@use "common/inside-map";
+
+/* --------------------------------------------------
+ baseファイル
+-------------------------------------------------- */
+@use "base/base";
+
+/* --------------------------------------------------
+ pageファイル
+-------------------------------------------------- */
+@use "page/top";
+@use "page/rooms";
+@use "page/hot-spring";
+@use "page/cuisine";
+@use "page/facilities";
+@use "page/sightseeing";
+@use "page/access";
+@use "page/information";
+@use "page/article";
+@use "page/contact";
+@use "page/confirmation";
+@use "page/faq";
+@use "page/privacy-policy";
+@use "page/reservation";
+@use "page/reservation_selection";
+@use "page/reservation_info";
+@use "page/login";
+@use "page/sign-up";
+@use "page/mypage";
+@use "page/withdrawal";

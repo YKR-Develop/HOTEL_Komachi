@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>温泉 | HOTEL小町</title>
+    <meta content="蓼科温泉の歴史は戦国時代から続き、戦で傷ついた兵士たちが湯で傷を癒した場所とされております。その効能から武田信玄の隠し湯とされてきました。当館では、その源泉を利用した2種類の泉質の温泉をご用意しておりますので、お楽しみくださいませ。
+  日頃の喧騒を忘れた癒しのひと時をゆっくりとご堪能ください。" name="description">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="icon" href="/images/ico_favicon.svg">
+
+    <!-- ##### ⬇︎ OGP関連タグ ⬇︎ ##### -->
+    <meta property="og:title" content="温泉 | HOTEL小町" />
+    <meta property="og:description"
+      content="蓼科温泉の歴史は戦国時代から続き、戦で傷ついた兵士たちが湯で傷を癒した場所とされております。その効能から武田信玄の隠し湯とされてきました。当館では、その源泉を利用した2種類の泉質の温泉をご用意しておりますので、お楽しみくださいませ。" />
+    <meta property="og:type" content="ページの種類" />
+    <meta property="og:url" content="index.html" />
+    <meta property="og:image" content="サムネイル画像の URL" />
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:locale" content="ja_JP" />
+    <!-- ##### ⬆︎ OGP関連タグ ⬆︎ ##### -->
+
+    <!-- ##### ⬇︎ css / js 読み込み ⬇︎ ##### -->
+    <link rel="stylesheet" href="/style/css/style.css">
+    <link rel="stylesheet" href="/style/css/reset.css">
+
+    <!-- 下記トップページでのみ使用 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <!-- ======== ⬆︎ css / js 読み込み ⬆︎ ======== -->
+
+
+  </head>
+
+  <body>
+    <div class="container">
+
+      <!-- ======== ⬇︎ グローバルヘッダー ⬇︎ ======== -->
+      <header class="g-header js-fixed-header">
+
+        <div class="g-header__inner">
+          <h1 class="g-header__title">
+            <a class="g-header__title-link" href="/">
+              <img class="g-header__logo-img" src="/images/ico_site-logo.svg" alt="HOTEL小町">
+            </a>
+          </h1>
+
+          <nav class="g-nav">
+            <ul class="g-nav__list" id="js-header-list">
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/hot-spring.html">温泉</a>
+              </li>
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/rooms.html">客室</a>
+              </li>
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/cuisine.html">お料理</a>
+              </li>
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/facilities.html">館内ご案内</a>
+              </li>
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/sightseeing.html">周辺の観光地</a>
+              </li>
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/access.html">アクセス</a>
+              </li>
+
+              <li class="g-nav__item g-nav__item--col is-pc">
+                <ul class="g-nav__launguage-list">
+                  <li class="g-nav__launguage-item">
+                    <a class="g-nav__launguage-link" href="">日本語</a>
+                  </li>
+                  <li class="g-nav__launguage-item">
+                    <a class="g-nav__launguage-link" href="">English</a>
+                  </li>
+                  <li class="g-nav__launguage-item">
+                    <a class="g-nav__launguage-link" href="">繁体中文</a>
+                  </li>
+                  <li class="g-nav__launguage-item">
+                    <a class="g-nav__launguage-link" href="">한국어</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="g-header__info is-tab">
+            <p class="g-header__info-text">ご予約受付 9:00 ~ 18:00</p>
+            <p class="g-header__info-text g-header__info-text--large">TEL 01234-56-7890</p>
+          </div>
+        </div>
+
+        <div id="js-hamburger" class="hamburger is-pc">
+          <span class="hamburger__border hamburger__border--top"></span>
+          <span class="hamburger__border hamburger__border--center"></span>
+          <span class="hamburger__border hamburger__border--bottom"></span>
+        </div>
+        <div id="js-header-bg" class="g-header__bg"></div>
+
+
+        <!-- ======== ⬇︎ ※ SP / タブレット限定 固定ボトムメニュー ⬇︎ ======== -->
+        <nav class="drop-down is-pc">
+          <ul class="drop-down__menu">
+            <li class="drop-down__item">
+              <a class="drop-down__label" href="">
+                <span class="drop-down__icon">
+                  <img class="drop-down__icon-img" src="/images/icon/ico_phone.svg" alt="">
+                </span>
+                お電話予約
+              </a>
+            </li>
+            <li class="drop-down__item drop-down__item--accent">
+              <span class="drop-down__label" href="">
+                <span class="drop-down__icon">
+                  <img class="drop-down__icon-img" src="/images/icon/ico_form-calendar_white.svg" alt="">
+                </span>
+                宿泊ご予約
+              </span>
+              <ul class="drop-down__sub-menu">
+                <li class="drop-down__sub-item">
+                  <a class="drop-down__sub-link" href="/reservation/index.html#rooms-searh">空室検索</a>
+                </li>
+                <li class="drop-down__sub-item">
+                  <a class="drop-down__sub-link" href="/reservation/index.html?active-tab=tab-1#is-tab">宿泊プランから探す</a>
+                </li>
+                <li class="drop-down__sub-item">
+                  <a class="drop-down__sub-link" href="/reservation/index.html?active-tab=tab-2#is-tab">客室タイプから探す</a>
+                </li>
+              </ul>
+            </li>
+            <li class="drop-down__item drop-down__item--language is-sp">
+              <span class="drop-down__label" href="">
+                Language
+              </span>
+              <ul class="drop-down__sub-menu drop-down__sub-menu--language">
+                <li class="drop-down__sub-item drop-down__sub-item--language">
+                  <a class="drop-down__sub-link drop-down__sub-link--language" href="">English</a>
+                </li>
+                <li class="drop-down__sub-item drop-down__sub-item--language">
+                  <a class="drop-down__sub-link drop-down__sub-link--language" href="">简体中文</a>
+                </li>
+                <li class="drop-down__sub-item drop-down__sub-item--language">
+                  <a class="drop-down__sub-link drop-down__sub-link--language" href="">繁体中文</a>
+                </li>
+                <li class="drop-down__sub-item drop-down__sub-item--language">
+                  <a class="drop-down__sub-link drop-down__sub-link--language" href="">한국어</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- ======== ⬆︎ ※ SP / タブレット限定 固定ボトムメニュー ⬆︎ ======== -->
+      </header>
+      <!-- ======== ⬆︎ グローバルヘッダー ⬆︎ ======== -->
+
+      <!-- ======== ⬇︎ メインビジュアル ⬇︎ ======== -->
+      <div class="mv mv--hot-spring js-mv">
+        <div class="mv__inner">
+          <div class="mv__col">
+            <div class="mv__logo mv__logo--pages">
+              <img class="mv_top__logo-img" src="/images/icon/ico_mv-logo.svg" alt="HOTEL小町のロゴ">
+            </div>
+            <h1 class="mv__text mv__text--pages">
+              温泉
+            </h1>
+          </div>
+          <p class="mv__text mv__text--small">HOT SPRING</p>
+        </div>
+        <div class="scroll-down">
+          <span class="scroll-down__text">Scroll</span>
+        </div>
+      </div>
+      <!-- ======== ⬆︎ メインビジュアル ⬆︎ ======== -->
+
+      <!-- ==================================================================== -->
+
+      <main class="contents">
+
+        <div class="breadcrumb">
+          <div class="breadcrumb__inner">
+            <ol class="breadcrumb__list">
+              <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__link--home" href="/">ホーム</a></li>
+              <li class="breadcrumb__item">温泉</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- ======== ⬇︎ コンテンツ_テキスト / アンカーボタン ⬇︎ ======== -->
+        <div class="page-section page-section--anchor-menu">
+          <div class="page-section__inner">
+            <div class="desc-contents desc-contents--center">
+              <div class="desc-contents__inner">
+                <p class="desc-contents__catch">
+                  武田信玄も愛した名湯を使った源泉掛け流しの温泉
+                </p>
+                <p class="desc-contents__text">
+                  蓼科温泉の歴史は戦国時代から続き、戦で傷ついた兵士たちが湯で傷を癒した場所とされております。<br>
+                  その効能から武田信玄の隠し湯とされてきました。
+                </p>
+                <p class="desc-contents__text">
+                  当館では、その源泉を利用した2種類の泉質の温泉をご用意しておりますので、お楽しみくださいませ。
+                </p>
+              </div>
+
+              <!-- ======== ⬇︎ アンカーボタン ⬇︎ ======== -->
+              <div class="anchor-menu">
+                <ul class="anchor-menu__list">
+                  <!-- ##### 内湯『風見』 ##### -->
+                  <li class="anchor-menu__item">
+                    <a class="anchor-menu__link" href="#kazami">
+                      <div class="anchor-menu__thumb">
+                        <img class="anchor-menu__img" src="/images/hot-spring/img_anchor-link_hot-spring01.jpg"
+                          alt="内湯『風見』">
+                      </div>
+                      <span class="anchor-menu__label">内湯『風見』</span>
+                    </a>
+                  </li>
+
+                  <!-- ##### 露天風呂【四季】 ##### -->
+                  <li class="anchor-menu__item">
+                    <a class="anchor-menu__link" href="#shiki">
+                      <div class="anchor-menu__thumb">
+                        <img class="anchor-menu__img" src="/images/hot-spring/img_anchor-link_hot-spring02.jpg"
+                          alt="露天風呂【四季】">
+                      </div>
+                      <span class="anchor-menu__label">露天風呂【四季】</span>
+                    </a>
+                  </li>
+
+                  <!-- ##### その他 ##### -->
+                  <li class="anchor-menu__item">
+                    <a class="anchor-menu__link" href="#other">
+                      <div class="anchor-menu__thumb">
+                        <img class="anchor-menu__img" src="/images/hot-spring/img_anchor-link_hot-spring03.jpg"
+                          alt="その他">
+                      </div>
+                      <span class="anchor-menu__label">その他</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- ======== ⬆︎ アンカーボタン ⬆︎ ======== -->
+            </div>
+          </div>
+          <!-- ======== ⬆︎ コンテンツ_テキスト / アンカーボタン ⬆︎ ======== -->
+        </div>
+        <!-- ==================================================================== -->
+
+        <!-- ======== ⬇︎ コンテンツ_お部屋_内湯『風見』 ⬇︎ ======== -->
+        <section id="kazami" class="page-section hot-spring">
+          <h2 class="h2-heading">
+            <div class="h2-heading__inner">
+              <span class="h2-heading__text">内湯『風見』</span>
+            </div>
+          </h2>
+
+          <div class="page-section__col">
+            <!-- ##### サムネイル付きスライドショー ⬇︎ ##### -->
+
+            <div class="slider-wrap" id="slider-wrap">
+              <!-- メインのスライダー -->
+              <div class="slider-main" id="slider-main">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <img class="swiper-img" src="/images/hot-spring/img_hot-spring_kazami01.jpg" alt="">
+                  </li>
+                  <li class="swiper-slide">
+                    <img class="swiper-img" src="/images/hot-spring/img_hot-spring_kazami02.jpg" alt="">
+                  </li>
+                  <li class="swiper-slide">
+                    <img class="swiper-img" src="/images/hot-spring/img_hot-spring_kazami03.jpg" alt="">
+                  </li>
+                </ul>
+                <!-- 前後の矢印 -->
+                <div class="swiper-button-prev" id="swiper-button-prev"></div>
+                <div class="swiper-button-next" id="swiper-button-next"></div>
+              </div>
+              <!-- サムネイルのスライダー -->
+              <div class="slider-thumb" id="slider-thumb">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <img src="/images/hot-spring/img_hot-spring_kazami01.jpg" alt="">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="/images/hot-spring/img_hot-spring_kazami02.jpg" alt="">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="/images/hot-spring/img_hot-spring_kazami03.jpg" alt="">
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- ##### サムネイル付きスライドショー ⬆︎ ##### -->
+
+            <div class="page-section__info page-section__info--right">
+              <div class="desc-contents">
+                <div class="desc-contents__inner">
+                  <p class="desc-contents__catch">
+                    旅の疲れを体の芯から癒す
+                  </p>
+                  <p class="desc-contents__text">
+                    日頃の疲れをはじめ、旅の疲れ、観光、アウトドアで疲労した体にぴったりの温泉です。<br><br>
+                    弱酸性低張低温泉は傷などにも効果があると言われており、美肌の湯として利用する女性も多い温泉となっております。
+                  </p>
+                </div>
+              </div>
+
+              <table class="table">
+                <caption class="table__caption">基本情報</caption>
+                <tr class="table__tr">
+                  <th class="table__th">ご利用時間</th>
+                  <td class="table__td">15:00 ~ 24:00　朝 6:00 ~ 9:00</td>
+                </tr>
+                <tr class="table__tr">
+                  <th class="table__th">泉質</th>
+                  <td class="table__td">低張性酸性高温泉</td>
+                </tr>
+                <tr class="table__tr">
+                  <th class="table__th">効能</th>
+                  <td class="table__td">筋肉・関節のこわばり又は痛み、冷え性、ストレスによる諸症状、疲労回復、健康増進、美肌効果</td>
+                </tr>
+              </table>
+
+            </div>
+          </div>
+        </section>
+        <!-- ======== ⬆︎ コンテンツ_お部屋_内湯『風見』 ⬆︎ ======== -->
+
+        <!-- ==================================================================== -->
+
+        <!-- ======== ⬇︎ コンテンツ_お部屋_露天風呂『四季』 ⬇︎ ======== -->
+        <section id="kazami" class="page-section page-section--gray-bg hot-spring">
+          <h2 class="h2-heading">
+            <div class="h2-heading__inner">
+              <span class="h2-heading__text">露天風呂『四季』</span>
+            </div>
+          </h2>
+
+          <div class="page-section__col page-section__col--row-reverse">
+            <!-- ##### サムネイル付きスライドショー ⬇︎ ##### -->
+
+            <div class="slider-wrap" id="slider-wrap">
+              <!-- メインのスライダー -->
+              <div class="slider-main" id="slider-main">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <img class="swiper-img" src="/images/hot-spring/img_hot-spring_shiki01.jpg" alt="">
+                  </li>
+                  <li class="swiper-slide">
+                    <img class="swiper-img" src="/images/hot-spring/img_hot-spring_shiki02.jpg" alt="">
+                  </li>
+                  <li class="swiper-slide">
+                    <img class="swiper-img" src="/images/hot-spring/img_hot-spring_shiki03.jpg" alt="">
+                  </li>
+                </ul>
+                <!-- 前後の矢印 -->
+                <div class="swiper-button-prev" id="swiper-button-prev"></div>
+                <div class="swiper-button-next" id="swiper-button-next"></div>
+              </div>
+              <!-- サムネイルのスライダー -->
+              <div class="slider-thumb" id="slider-thumb">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <img src="/images/hot-spring/img_hot-spring_shiki01.jpg" alt="">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="/images/hot-spring/img_hot-spring_shiki02.jpg" alt="">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="/images/hot-spring/img_hot-spring_shiki03.jpg" alt="">
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- ##### サムネイル付きスライドショー ⬆︎ ##### -->
+
+            <div class="page-section__info page-section__info--left">
+              <div class="desc-contents">
+                <div class="desc-contents__inner">
+                  <p class="desc-contents__catch">
+                    蓼科を堪能できる至福のリラックスタイム
+                  </p>
+                  <p class="desc-contents__text">
+                    武田信玄の隠し湯として兵士の傷を癒したとされており、切り傷やすり傷などにも効果があると言われております。<br><br>
+                    入浴時に刺激が少ないため肌に優しく、リラックス効果や血行促進やストレスの緩和にもなります。
+                  </p>
+                </div>
+              </div>
+
+              <table class="table">
+                <caption class="table__caption">基本情報</caption>
+                <tr class="table__tr">
+                  <th class="table__th">ご利用時間</th>
+                  <td class="table__td">15:00 ~ 22:00 朝 6:00 ~ 9:00</td>
+                </tr>
+                <tr class="table__tr">
+                  <th class="table__th">泉質</th>
+                  <td class="table__td">単純温泉（弱酸性低張性低温泉）</td>
+                </tr>
+                <tr class="table__tr">
+                  <th class="table__th">効能</th>
+                  <td class="table__td">筋肉・関節のこわばり又は痛み、冷え性、ストレスによる諸症状、疲労回復、健康増進</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+        <!-- ======== ⬆︎ コンテンツ_お部屋_露天風呂『四季』 ⬆︎ ======== -->
+
+        <!-- ==================================================================== -->
+
+        <!-- ======== ⬇︎ コンテンツ_その他 ⬇︎ ======== -->
+        <section id="other" class="page-section hot-spring">
+          <h2 class="h2-heading">
+            <div class="h2-heading__inner">
+              <span class="h2-heading__text">その他</span>
+            </div>
+          </h2>
+
+          <div class="page-section__inner">
+            <div class="page-section__col">
+              <div class="page-section__info">
+                <figure class="hot-spring__figure">
+                  <img class="hot-spring__img" src="/images/hot-spring/img_hot-spring_sauna.jpg" alt="サウナ">
+                </figure>
+                <div class="desc-contents desc-contents--hot-spring">
+                  <div class="desc-contents__inner">
+                    <p class="desc-contents__text">
+                      営業時間： 15:00 ~ 21:00<br>
+                      <span class="desc-contents__text desc-contents__text--note">【注意】朝の営業は行っておりません。</span>
+                    </p>
+                    <p class="desc-contents__text">
+                      室温90度のサウナとなっております。<br><br>
+                      汗をかいたり血流が促進されたりすることでお肌の保湿効果が高まったり新陳代謝が促進され、お肌の調子も整います。
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="page-section__info">
+                <figure class="hot-spring__figure">
+                  <img class="hot-spring__img" src="/images/hot-spring/img_hot-spring_pawdar-room.jpg"
+                    alt="パウダールーム（女性限定）">
+                </figure>
+                <div class="desc-contents desc-contents--hot-spring">
+                  <div class="desc-contents__inner">
+                    <p class="desc-contents__text">
+                      女性用スパ限定でパウダールームをご用意しております。<br>
+                      カウンターごとにゆっくりと身支度をお支度いただけますので、<br>
+                      朝風呂入浴後のお出かけ前などにご利用ください。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ======== ⬆︎ コンテンツ_その他 ⬆︎ ======== -->
+
+      </main>
+
+      <!-- ======== ⬇︎ フッター ⬇︎ ======== -->
+      <footer class="footer">
+        <div class="footer__inner">
+
+          <!-- ##### フッター情報 ##### -->
+          <div class="footer__info">
+            <a href="/" class="footer__logo">
+              <img class="footer__logo-img" src="/images/ico_footer-logo.svg" alt="HOTEL小町のロゴ">
+            </a>
+            <div class="footer__address">
+              <p class="footer__address-text">
+                〒123-4456　長野県茅野市北山56789-10
+              </p>
+              <p class="footer__address-text">
+                TEL：<span class="footer__address-text footer__address-text--large">01234-56-7890</span><br>
+                受付時間 9:00 ~ 18:00
+              </p>
+              <p class="footer__address-text">
+                Mail：<a class="footer__address-link" href="メールアプリ起動">test-test@sample.com</a>
+              </p>
+            </div>
+            <div class="footer__sns">
+              <p class="footer__sns-label">SNS</p>
+              <ul class="footer__sns-list">
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-instagram.svg" alt="instagram">
+                  </a>
+                </li>
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-facebook.svg" alt="facebook">
+                  </a>
+                </li>
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-line.svg" alt="LINE">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <nav class="footer__nav">
+            <!-- ##### メインメニュー ##### -->
+            <ul class="footer__menu is-sp">
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/hot-spring.html">
+                  温泉
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/rooms.html">
+                  客室
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/cuisine.html">
+                  お料理
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/facilities.html">
+                  館内ご案内
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/sightseeing.html">
+                  周辺の観光地
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/access.html">
+                  アクセス
+                </a>
+              </li>
+            </ul>
+
+            <!-- ##### サブメニュー ##### -->
+            <ul class="footer__submenu footer__menu--sub">
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/information/index.html">
+                  インフォメーション
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/faq.html">
+                  よくあるご質問
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/contact/contact.html">
+                  お問い合わせ
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/privacy-policy.html">
+                  宿泊約款
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/privacy-policy.html#privacy-policy">
+                  個人情報保護方針
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <small class="footer__copyright">© 2024 Yuuki PortFolio</small>
+        </div>
+      </footer>
+      <!-- ======== ⬆︎ フッター ⬆︎ ======== -->
+
+      <!-- ==================================================================== -->
+
+      <!-- ======== ⬇︎ 固定サイドメニュー ⬇︎ ======== -->
+      <aside class="sidebar is-tab">
+
+        <nav id="js-side-slide_top" class="sidebar__nav">
+          <span class="sidebar__label">宿泊ご予約</span>
+          <ul class="sidebar__list">
+            <li class="sidebar__item"><a class="sidebar__link" href="/reservation/index.html#rooms-searh">空室検索</a></li>
+            <li class="sidebar__item"><a class="sidebar__link" href="/reservation/index.html?active-tab=tab-1#is-tab">宿泊プランから探す</a>
+            </li>
+            <li class="sidebar__item"><a class="sidebar__link" href="/reservation/index.html?active-tab=tab-2#is-tab">客室タイプから探す</a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav id="js-side-slide_bottom" class="sidebar__nav sidebar__nav--bottom">
+          <span class="sidebar__label">Language</span>
+          <ul class="sidebar__list">
+            <li class="sidebar__item"><a class="sidebar__link sidebar__link--black" href="#">English</a></li>
+            <li class="sidebar__item"><a class="sidebar__link sidebar__link--black" href="#">简体中文</a></li>
+            <li class="sidebar__item"><a class="sidebar__link sidebar__link--black" href="#">繁体中文</a></li>
+            <li class="sidebar__item"><a class="sidebar__link sidebar__link--black" href="#">한국어</a></li>
+          </ul>
+        </nav>
+
+      </aside>
+      <!-- ======== ⬆︎ 固定サイドメニュー ⬆︎ ======== -->
+
+    </div>
+
+
+    <!-- ======== ⬇︎ JQuery / プラグイン読み込み ⬇︎ ======== -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/javascript/common.js"></script>
+    <!-- ======== ⬆︎ JQuery/プラグイン読み込み ⬆︎ ======== -->
+  </body>
+
+</html>

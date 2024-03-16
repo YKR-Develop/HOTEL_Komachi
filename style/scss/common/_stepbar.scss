@@ -1,0 +1,213 @@
+/*===================================================
+ _stepbar.scss
+ お問い合わせフォーム / 予約フロー ステップバー
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/mq" as *;
+@use "../config/font" as *;
+@use "../mixin/mixin" as *;
+
+/* --------------------------------------------------
+ お問い合わせフォームステップバー
+-------------------------------------------------- */
+.stepbar {
+  max-width: 776px;
+  margin: 48px auto;
+
+  &--complete {
+    margin: 0 auto 48px auto;
+  }
+
+  @include mq(sp) {
+    width: 100%;
+    overflow-x: scroll;
+    word-break: keep-all;
+    white-space: nowrap;
+  }
+
+  &__list {
+    display: flex;
+    gap: 0 104px;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: $c_border;
+      position: absolute;
+      @include mq(sp) {
+        width: 100vw;
+        top: 8px;
+      }
+    }
+
+    @include mq(sp) {
+      gap: 0 32px;
+    }
+  }
+
+  &__item {
+    width: 188px;
+    text-align: center;
+    position: relative;
+    padding: 16px 0;
+    font-size: $font_medium;
+
+    @include mq(tab) {
+      width: 172px;
+      padding: 24px 0 8px 0;
+    }
+
+    &::after {
+      content: "";
+      width: 18px;
+      height: 18px;
+      background-color: $c_white;
+      border: 1px solid $c_border;
+      border-radius: 50px;
+      position: absolute;
+      top: -8px;
+      left: 45%;
+      z-index: 10;
+
+      @include mq(sp) {
+        top: 0px;
+      }
+    }
+
+    &--active {
+      &::after {
+        content: "";
+        width: 18px;
+        height: 18px;
+        border: none;
+        background-color: $c_main;
+        border-radius: 50px;
+        position: absolute;
+        top: -8px;
+        left: 45%;
+        z-index: 10;
+
+        @include mq(sp) {
+          top: 0px;
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------
+ 宿泊予約フォームステップバー
+-------------------------------------------------- */
+.stepbar-arrow {
+  margin-bottom: 40px;
+  position: relative;
+
+  @include mq(sp) {
+    width: 100%;
+    overflow-x: hidden;
+    height: 56px;
+  }
+
+  &__menu {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mq(sp) {
+      width: 880px;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      &--info {
+        left: -176px;
+      }
+
+      &--confirmation {
+        left: -392px;
+      }
+
+      &--complete {
+        left: -600px;
+      }
+
+      &--signup {
+        left: -56px;
+      }
+
+      &--signup-confirmation {
+        left: -288px;
+      }
+
+      &--signup-complete {
+        left: -516px;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 256px;
+    text-align: center;
+    padding: 16px;
+    background-color: $c_gray;
+    color: $c_black;
+    font-size: 14px;
+
+    &:not(:last-child)::before,
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      bottom: 0;
+      left: 100%;
+      border: 26px solid transparent;
+      border-left: 20px solid $c_gray;
+      margin: auto;
+    }
+
+    &:not(:last-child)::before {
+      margin-left: 1px;
+      border-left-color: $c_border;
+    }
+
+    &:last-child {
+      &:not(:last-child)::before,
+      &:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        border: 28px solid transparent;
+        border-left: 20px solid $c_gray;
+        margin: auto;
+      }
+    }
+
+    &--active {
+      z-index: 1;
+      color: $c_white;
+      background-color: $c_accent;
+      
+      &:not(:last-child)::after {
+        border-left-color: $c_accent;
+      }
+
+      &:not(:last-child)::before {
+        border-left: $c_accent;
+      }
+
+      @include mq(sp) {
+
+      }
+    }
+  }
+}

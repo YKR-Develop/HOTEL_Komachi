@@ -1,0 +1,38 @@
+/*===================================================
+ _map.scss
+ GoogleMapデザイン定義
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/font" as *;
+@use "../config/mq" as *;
+
+/* ==================================================
+ GoogleMap
+================================================== */
+.googlemap {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-right: 64px;
+
+  @include mq(tab) {
+    padding: 0 32px;
+    height: 400px;
+    padding-right: 0;
+  }
+
+  @include mq(sp) {
+    padding: 0 16px;
+    height: 400px;
+  }
+
+  &__contents {
+    width: 600px;
+    height: 400px;
+
+    @include mq(tab) {
+      width: 100%;
+    }
+  }
+}

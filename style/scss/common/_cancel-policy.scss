@@ -1,0 +1,82 @@
+/*===================================================
+ _cancel-policy.scss
+ キャンセルポリシー
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/font" as *;
+@use "../config/mq" as *;
+@use "../mixin/mixin" as *;
+
+.cancel-policy {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 32px;
+
+  &__text {
+    margin-bottom: 8px;
+  }
+
+  &__table {
+    width: 100%;
+  }
+
+  &__tbody {
+    display: flex;
+
+    @include mq(sp) {
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
+
+  &__tr {
+    width: calc(100% / 4);
+
+    @include mq(sp) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__th,
+  &__td {
+    width: 128px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+
+    @include mq(sp) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__th {
+    background-color: $c_main;
+    color: $c_white;
+    font-weight: 600;
+
+    @include mq(sp) {
+      width: 100%;
+    }
+  }
+
+  &__td {
+    border-top: 1px solid $c_border;
+    border-bottom: 1px solid $c_border;
+
+    &:last-child {
+      border-right: 1px solid $c_border;
+    }
+
+    @include mq(sp) {
+      width: 100%;
+      border: none;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}

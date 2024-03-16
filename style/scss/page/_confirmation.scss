@@ -1,0 +1,32 @@
+/*===================================================
+ _confirmation.scss
+ お問い合わせ確認ページのデザイン定義
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/mq" as *;
+@use "../config/font" as *;
+@use "../mixin/mixin" as *;
+
+.confirmation {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 40px 0;
+  }
+
+  &__item {
+    &:last-child {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    display: block;
+  }
+}

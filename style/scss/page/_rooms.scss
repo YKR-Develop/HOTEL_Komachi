@@ -1,0 +1,145 @@
+/*===================================================
+ _rooms.scss
+ 「客室」のデザイン定義
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/mq" as *;
+@use "../config/font" as *;
+@use "../mixin/mixin" as *;
+
+/* --------------------------------------------------
+ rooms-gallery サムネイルスライドショーの設定
+-------------------------------------------------- */
+.rooms-slide {
+  margin-bottom: 40px;
+}
+
+/* --------------------------------------------------
+ rooms-col コンテンツ2カラム設定
+-------------------------------------------------- */
+.rooms-info {
+
+  .desc-contents {
+    margin-bottom: 32px;
+  }
+
+  .table {
+    flex: 1;
+  }
+
+  &__col {
+    display: flex;
+    gap: 0 64px;
+    margin-bottom: 32px;
+  }
+
+  &__floor-map {
+    flex: 1;
+  }
+
+  &__floor-label {
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  &__floor-img {
+    text-align: center;
+    height: 251px;
+    background-color: $c_gray;
+    position: relative;
+    margin-bottom: 16px;
+  }
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__info-list {
+    display: flex;
+    gap: 0 32px;
+    margin-bottom: 32px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 0 8px;
+    padding: 8px;
+  }
+
+  &__icon-img {
+    vertical-align: -2px;
+  }
+
+
+  @include mq(tab) {
+    &__col {
+      display: block;
+      margin-bottom: 24px;
+    }
+
+    .table {
+      margin-bottom: 32px;
+    }
+
+    &__img {
+      padding: 16px;
+      width: 320px;
+      height: auto;
+    }
+  }
+}
+
+
+.rooms-overview {
+  @include ContentWidth;
+  &__common-list {
+    display: flex;
+    justify-content: center;
+    gap: 0 24px;
+    margin-bottom: 32px;
+  }
+
+  &__common-item {
+    width: 264px;
+    text-align: center;
+  }
+
+  &__icon-img {
+    margin-bottom: 8px;
+  }
+
+  &__common-icon {
+    margin-bottom: 8px;
+  }
+
+  &__icon-caption {
+    font-size: bold;
+  }
+
+  &__common-desc {
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  .desc-contents__text {
+    font-size: 14px;
+  }
+
+  @include mq(sp) {
+    text-align: center;
+    &__common-list {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 16px 0;
+    }
+
+    &__common-item {
+      width: 50%;
+    }
+  }
+}

@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お料理 | HOTEL小町</title>
+    <meta content="当館では、地元の茅野市をはじめ長野県内の各地で採れた新鮮なお野菜やお米を使用した料理を提供しております。採れたて新鮮な食材をご賞味ください。" name="description">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="icon" href="/images/ico_favicon.svg">
+
+    <!-- ##### ⬇︎ OGP関連タグ ⬇︎ ##### -->
+    <meta property="og:title" content="お料理 | HOTEL小町" />
+    <meta property="og:description" content="当館では、地元の茅野市をはじめ長野県内の各地で採れた新鮮なお野菜やお米を使用した料理を提供しております。採れたて新鮮な食材をご賞味ください。" />
+    <meta property="og:type" content="ページの種類" />
+    <meta property="og:url" content="index.html" />
+    <meta property="og:image" content="サムネイル画像の URL" />
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:locale" content="ja_JP" />
+    <!-- ##### ⬆︎ OGP関連タグ ⬆︎ ##### -->
+
+    <!-- ##### ⬇︎ css / js 読み込み ⬇︎ ##### -->
+    <link rel="stylesheet" href="/style/css/style.css">
+    <link rel="stylesheet" href="/style/css/reset.css">
+
+    <!-- 下記トップページでのみ使用 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <!-- ======== ⬆︎ css / js 読み込み ⬆︎ ======== -->
+
+
+  </head>
+
+  <body>
+    <div class="container">
+
+      <!-- ======== ⬇︎ グローバルヘッダー ⬇︎ ======== -->
+      <header class="g-header js-fixed-header">
+
+        <div class="g-header__inner">
+          <h1 class="g-header__title">
+            <a class="g-header__title-link" href="/">
+              <img class="g-header__logo-img" src="/images/ico_site-logo.svg" alt="HOTEL小町">
+            </a>
+          </h1>
+
+          <nav class="g-nav">
+            <ul class="g-nav__list" id="js-header-list">
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/hot-spring.html">温泉</a>
+              </li>
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/rooms.html">客室</a>
+              </li>
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/cuisine.html">お料理</a>
+              </li>
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/facilities.html">館内ご案内</a>
+              </li>
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/sightseeing.html">周辺の観光地</a>
+              </li>
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/access.html">アクセス</a>
+              </li>
+
+              <li class="g-nav__item g-nav__item--col is-pc">
+                <ul class="g-nav__launguage-list">
+                  <li class="g-nav__launguage-item">
+                    <a class="g-nav__launguage-link" href="">日本語</a>
+                  </li>
+                  <li class="g-nav__launguage-item">
+                    <a class="g-nav__launguage-link" href="">English</a>
+                  </li>
+                  <li class="g-nav__launguage-item">
+                    <a class="g-nav__launguage-link" href="">繁体中文</a>
+                  </li>
+                  <li class="g-nav__launguage-item">
+                    <a class="g-nav__launguage-link" href="">한국어</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="g-header__info is-tab">
+            <p class="g-header__info-text">ご予約受付 9:00 ~ 18:00</p>
+            <p class="g-header__info-text g-header__info-text--large">TEL 01234-56-7890</p>
+          </div>
+        </div>
+
+        <div id="js-hamburger" class="hamburger is-pc">
+          <span class="hamburger__border hamburger__border--top"></span>
+          <span class="hamburger__border hamburger__border--center"></span>
+          <span class="hamburger__border hamburger__border--bottom"></span>
+        </div>
+        <div id="js-header-bg" class="g-header__bg"></div>
+
+
+        <!-- ======== ⬇︎ ※ SP / タブレット限定 固定ボトムメニュー ⬇︎ ======== -->
+        <nav class="drop-down is-pc">
+          <ul class="drop-down__menu">
+            <li class="drop-down__item">
+              <a class="drop-down__label" href="">
+                <span class="drop-down__icon">
+                  <img class="drop-down__icon-img" src="/images/icon/ico_phone.svg" alt="">
+                </span>
+                お電話予約
+              </a>
+            </li>
+            <li class="drop-down__item drop-down__item--accent">
+              <span class="drop-down__label" href="">
+                <span class="drop-down__icon">
+                  <img class="drop-down__icon-img" src="/images/icon/ico_form-calendar_white.svg" alt="">
+                </span>
+                宿泊ご予約
+              </span>
+              <ul class="drop-down__sub-menu">
+                <li class="drop-down__sub-item">
+                  <a class="drop-down__sub-link" href="/reservation/index.html#rooms-searh">空室検索</a>
+                </li>
+                <li class="drop-down__sub-item">
+                  <a class="drop-down__sub-link" href="/reservation/index.html?active-tab=tab-1#is-tab">宿泊プランから探す</a>
+                </li>
+                <li class="drop-down__sub-item">
+                  <a class="drop-down__sub-link" href="/reservation/index.html?active-tab=tab-2#is-tab">客室タイプから探す</a>
+                </li>
+              </ul>
+            </li>
+            <li class="drop-down__item drop-down__item--language is-sp">
+              <span class="drop-down__label" href="">
+                Language
+              </span>
+              <ul class="drop-down__sub-menu drop-down__sub-menu--language">
+                <li class="drop-down__sub-item drop-down__sub-item--language">
+                  <a class="drop-down__sub-link drop-down__sub-link--language" href="">English</a>
+                </li>
+                <li class="drop-down__sub-item drop-down__sub-item--language">
+                  <a class="drop-down__sub-link drop-down__sub-link--language" href="">简体中文</a>
+                </li>
+                <li class="drop-down__sub-item drop-down__sub-item--language">
+                  <a class="drop-down__sub-link drop-down__sub-link--language" href="">繁体中文</a>
+                </li>
+                <li class="drop-down__sub-item drop-down__sub-item--language">
+                  <a class="drop-down__sub-link drop-down__sub-link--language" href="">한국어</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- ======== ⬆︎ ※ SP / タブレット限定 固定ボトムメニュー ⬆︎ ======== -->
+      </header>
+      <!-- ======== ⬆︎ グローバルヘッダー ⬆︎ ======== -->
+
+      <!-- ======== ⬇︎ メインビジュアル ⬇︎ ======== -->
+      <div class="mv mv--cuisine js-mv">
+        <div class="mv__inner">
+          <div class="mv__col">
+            <div class="mv__logo mv__logo--pages">
+              <img class="mv_top__logo-img" src="/images/icon/ico_mv-logo.svg" alt="HOTEL小町のロゴ">
+            </div>
+            <h1 class="mv__text mv__text--pages">
+              お料理
+            </h1>
+          </div>
+          <p class="mv__text mv__text--small">CUISINE</p>
+        </div>
+        <div class="scroll-down">
+          <span class="scroll-down__text">Scroll</span>
+        </div>
+      </div>
+      <!-- ======== ⬆︎ メインビジュアル ⬆︎ ======== -->
+
+      <!-- ==================================================================== -->
+
+      <main class="contents">
+
+        <div class="breadcrumb">
+          <div class="breadcrumb__inner">
+            <ol class="breadcrumb__list">
+              <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__link--home" href="/">ホーム</a></li>
+              <li class="breadcrumb__item">お料理</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- ======== ⬇︎ コンテンツ_テキスト / アンカーボタン ⬇︎ ======== -->
+        <div class="page-section page-section--anchor-menu">
+          <div class="page-section__inner">
+            <div class="desc-contents desc-contents--center">
+              <div class="desc-contents__inner">
+                <p class="desc-contents__catch">
+                  信州のとれたて新鮮な食材を使ったこだわりの料理
+                </p>
+                <ul class="desc-contents__text-list">
+                  <li class="desc-contents__text-item">和・洋・中の豊富な料理を揃えたバイキング</li>
+                  <li class="desc-contents__text-item">お部屋でゆっくりとご堪能できるお部屋食</li>
+                  <li class="desc-contents__text-item">蓼科湖や八ヶ岳を眺めながら和食料理を楽しめるレストラン</li>
+                </ul>
+                <p class="desc-contents__text">
+                  HOTEL小町では3つのお食事スタイルをご用意しております。<br><br>
+                  当館では、地元の茅野市をはじめ長野県内の各地で採れた新鮮なお野菜やお米を使用した料理を提供しております。<br>
+                  採れたて新鮮な食材をご賞味ください。
+                </p>
+
+              </div>
+
+              <!-- ======== ⬇︎ アンカーボタン ⬇︎ ======== -->
+              <div class="anchor-menu">
+                <ul class="anchor-menu__list">
+                  <!-- ##### お部屋食 ##### -->
+                  <li class="anchor-menu__item">
+                    <a class="anchor-menu__link" href="#room-cuisine">
+                      <div class="anchor-menu__thumb">
+                        <img class="anchor-menu__img" src="/images/cuisine/img_anchor-link_cuisine01.jpg" alt="お部屋食">
+                      </div>
+                      <span class="anchor-menu__label">お部屋食</span>
+                    </a>
+                  </li>
+
+                  <!-- ##### バイキング ##### -->
+                  <li class="anchor-menu__item">
+                    <a class="anchor-menu__link" href="#biking">
+                      <div class="anchor-menu__thumb">
+                        <img class="anchor-menu__img" src="/images/cuisine/img_anchor-link_cuisine02.jpg" alt="バイキング">
+                      </div>
+                      <span class="anchor-menu__label">バイキング</span>
+                    </a>
+                  </li>
+
+                  <!-- ##### YATUGATAKE ##### -->
+                  <li class="anchor-menu__item">
+                    <a class="anchor-menu__link" href="#yatugatake">
+                      <div class="anchor-menu__thumb">
+                        <img class="anchor-menu__img" src="/images/cuisine/img_anchor-link_cuisine03.jpg"
+                          alt="YATUGATAKE">
+                      </div>
+                      <span class="anchor-menu__label">YATUGATAKE</span>
+                    </a>
+                  </li>
+
+                  <!-- ##### ほろ酔 ##### -->
+                  <li class="anchor-menu__item">
+                    <a class="anchor-menu__link" href="#horoyoi">
+                      <div class="anchor-menu__thumb">
+                        <img class="anchor-menu__img" src="/images/cuisine/img_anchor-link_cuisine04.jpg" alt="ほろ酔">
+                      </div>
+                      <span class="anchor-menu__label">ほろ酔</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- ======== ⬆︎ アンカーボタン ⬆︎ ======== -->
+            </div>
+          </div>
+          <!-- ======== ⬆︎ コンテンツ_テキスト / アンカーボタン ⬆︎ ======== -->
+        </div>
+        <!-- ==================================================================== -->
+
+        <!-- ======== ⬇︎ コンテンツ_お部屋食 ⬇︎ ======== -->
+        <section id="room-cuisine" class="page-section cuisine">
+          <h2 class="h2-heading">
+            <div class="h2-heading__inner">
+              <span class="h2-heading__text">お部屋食</span>
+            </div>
+          </h2>
+          <div class="page-section__col">
+            <!-- ##### 画像 ⬇︎ ##### -->
+            <div class="page-section__thumb">
+              <img class="page-section__img" src="/images/cuisine/img_room-cuisine01.jpg"
+                alt="一人一人にのテーブルに配膳された御鍋料理のすき焼き">
+            </div>
+            <!-- ##### 画像 ⬆︎ ##### -->
+
+            <div class="page-section__info page-section__info--right">
+              <div class="desc-contents">
+                <div class="desc-contents__inner">
+                  <p class="desc-contents__text">
+                    お部屋でゆっくりと、お食事の時間を過ごしたい方向けのコースとなっております。<br><br>
+                    長野県産の新鮮な食材と季節の食材を使用し、長年にわたってHOTEL小町の味を守り続けてきた調理人のこだわりの詰まった和会席となっております。<br><br>
+                    ※食材の仕入れ状況により献立が変更になる可能性がございます。
+                  </p>
+                </div>
+                <table class="table">
+                  <tr class="table__tr">
+                    <th class="table__th">お食事時間</th>
+                    <td class="table__td">朝食：7:00 | 7:15 | 7:30 | 7:45 | 8:00<br>夕食：17:30 | 17:45 | 18:00 |
+                      19:30</td>
+                  </tr>
+                  <tr class="table__tr">
+                    <th class="table__th">献立（一例）</th>
+                    <td class="table__td">鮎の塩焼き、南瓜の煮付け、栗ご飯、信州蓼科牛のすき焼き</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <section class="img-list">
+            <h3 class="h3-heading">
+              <span class="h3-heading__inner">献立のご紹介（一例）</span>
+            </h3>
+            <div class="img-list__box">
+              <figure class="img-list__item">
+                <img class="img-list__img" src="/images/cuisine/img_room-cuisine02.jpg" alt="御鍋料理のすき焼き">
+                <figcaption class="img-list__caption">
+                  御鍋
+                </figcaption>
+              </figure>
+
+              <figure class="img-list__item">
+                <img class="img-list__img" src="/images/cuisine/img_room-cuisine03.jpg" alt="かぼちゃの煮物">
+                <figcaption class="img-list__caption">
+                  煮物
+                </figcaption>
+              </figure>
+
+              <figure class="img-list__item">
+                <img class="img-list__img" src="/images/cuisine/img_room-cuisine04.jpg" alt="土鍋の栗ご飯">
+                <figcaption class="img-list__caption">
+                  御食事
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+        </section>
+        <!-- ======== ⬆︎ コンテンツ_お部屋食 ⬆︎ ======== -->
+
+        <!-- ==================================================================== -->
+
+        <!-- ======== ⬇︎ コンテンツ_バイキング ⬇︎ ======== -->
+        <section id="biking" class="page-section page-section--gray-bg cuisine">
+          <h2 class="h2-heading">
+            <div class="h2-heading__inner">
+              <span class="h2-heading__text">バイキング</span>
+            </div>
+          </h2>
+          <div class="page-section__col page-section__col--row-reverse">
+            <!-- ##### 画像 ⬇︎ ##### -->
+            <div class="page-section__thumb">
+              <img class="page-section__img" src="/images/cuisine/img_biking-cuisine01.jpg"
+                alt="お刺身などのバイキングメニューが並んだテーブル">
+            </div>
+            <!-- ##### 画像 ⬆︎ ##### -->
+
+            <div class="page-section__info page-section__info--left">
+              <div class="desc-contents">
+                <div class="desc-contents__inner">
+                  <p class="desc-contents__text">
+                    和食・洋食・中華などの90品目に及ぶ幅広いお料理をお楽しみいただけます。<br><br>
+                    朝食バイキングには焼きたてのパンや採れたて新鮮なお野菜を使ったミックスサラダなどの朝の胃に優しいメニューをご用意しております。
+                  </p>
+                </div>
+                <table class="table">
+                  <tr class="table__tr">
+                    <th class="table__th">お食事時間</th>
+                    <td class="table__td">朝食：7:00 | 7:30 | 8:00 | 8:30<br>夕食：18:00 | 18:30 | 19:00 | 19:30</td>
+                  </tr>
+                  <tr class="table__tr">
+                    <th class="table__th">フロア</th>
+                    <td class="table__td">HOTEL小町 1F 御前の間</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <section class="img-list">
+            <h3 class="h3-heading">
+              <span class="h3-heading__inner">バイキングメニューのご紹介</span>
+            </h3>
+            <div class="img-list__box">
+              <figure class="img-list__item">
+                <img class="img-list__img" src="/images/cuisine/img_biking-cuisine02.jpg" alt="中華料理の焼売">
+                <figcaption class="img-list__caption">
+                  中華料理
+                </figcaption>
+              </figure>
+
+              <figure class="img-list__item">
+                <img class="img-list__img" src="/images/cuisine/img_biking-cuisine03.jpg" alt="お皿に盛られたミックスサラダ">
+                <figcaption class="img-list__caption">
+                  新鮮なお野菜
+                </figcaption>
+              </figure>
+
+              <figure class="img-list__item">
+                <img class="img-list__img" src="/images/cuisine/img_biking-cuisine04.jpg" alt="木カゴに並べられたロールパン">
+                <figcaption class="img-list__caption">
+                  朝食バイキングの焼きたてパン
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+        </section>
+        <!-- ======== ⬆︎ コンテンツ_バイキング ⬆︎ ======== -->
+
+        <!-- ==================================================================== -->
+
+        <!-- ======== ⬇︎ コンテンツ_YATUGATAKE ⬇︎ ======== -->
+        <section id="yatugatake" class="page-section cuisine">
+          <h2 class="h2-heading">
+            <div class="h2-heading__inner">
+              <span class="h2-heading__text">YATUGATAKE</span>
+            </div>
+          </h2>
+          <div class="page-section__col">
+            <!-- ##### 画像 ⬇︎ ##### -->
+            <div class="page-section__thumb">
+              <img class="page-section__img" src="/images/cuisine/img_cuisine_yatugatake01.jpg"
+                alt="食材を捌いている調理人と料理を盛るための食器が並べられている写真">
+            </div>
+            <!-- ##### 画像 ⬆︎ ##### -->
+
+            <div class="page-section__info page-section__info--right">
+              <div class="desc-contents">
+                <div class="desc-contents__inner">
+                  <p class="desc-contents__text">
+                    日本料理歴20年の調理人が作る信州の新鮮な食材を使った和食料理をご堪能いただけます。<br><br>
+                    展望席ではお昼の時間は八ヶ岳や蓼科山などの大自然を、夜には雄大な星空を眺めることができます。
+                  </p>
+                </div>
+                <table class="table">
+                  <tr class="table__tr">
+                    <th class="table__th">営業時間</th>
+                    <td class="table__td">ランチ：11:30 ~ 14:00<br>ディナー：17:30 ~ 20:00</td>
+                  </tr>
+                  <tr class="table__tr">
+                    <th class="table__th">フロア</th>
+                    <td class="table__td">HOTEL小町 7F 展望レストラン<br>『 YATUGATAKE 』</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <section class="img-list">
+            <h3 class="h3-heading">
+              <span class="h3-heading__inner">メニューのご紹介</span>
+            </h3>
+            <div class="img-list__box">
+              <figure class="img-list__item">
+                <img class="img-list__img" src="/images/cuisine/img_cuisine_yatugatake02.jpg" alt="中華料理の焼売">
+                <figcaption class="img-list__caption">
+                  和の御前料理 笹
+                </figcaption>
+              </figure>
+
+              <figure class="img-list__item">
+                <img class="img-list__img" src="/images/cuisine/img_cuisine_yatugatake03.jpg" alt="お皿に盛られたミックスサラダ">
+                <figcaption class="img-list__caption">
+                  和の御前料理 薙
+                </figcaption>
+              </figure>
+
+              <figure class="img-list__item">
+                <img class="img-list__img" src="/images/cuisine/img_cuisine_yatugatake04.jpg" alt="木カゴに並べられたロールパン">
+                <figcaption class="img-list__caption">
+                  和の御前料理 竹
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+        </section>
+        <!-- ======== ⬆︎ コンテンツ_YATUGATAKE ⬆︎ ======== -->
+
+        <!-- ==================================================================== -->
+
+        <!-- ======== ⬇︎ コンテンツ_ほろ酔 ⬇︎ ======== -->
+        <section id="horoyoi" class="page-section page-section--gray-bg cuisine">
+          <h2 class="h2-heading">
+            <div class="h2-heading__inner">
+              <span class="h2-heading__text">ほろ酔</span>
+            </div>
+          </h2>
+          <div class="page-section__col  page-section__col--row-reverse">
+            <!-- ##### 画像 ⬇︎ ##### -->
+            <div class="page-section__thumb">
+              <img class="page-section__img" src="/images/cuisine/img_cuisine_horoyoi01.jpg"
+                alt="お刺身などのほろ酔メニューが並んだテーブル">
+            </div>
+            <!-- ##### 画像 ⬆︎ ##### -->
+
+            <div class="page-section__info page-section__info--left">
+              <div class="desc-contents">
+                <div class="desc-contents__inner">
+                  <p class="desc-contents__text">
+                    信州の地酒をはじめ日本各地の日本酒を揃えたバーです。<br>
+                    お酒以外にもおつまみをご用意しておりますので、お気軽にお立ち寄り下さい。<br><br>
+                    夫婦やデート、ご友人同士でもピッタリの大人の至上空間で至福の時間をお過ごしください。<br><br>
+                    ※ 20歳未満の方はご利用いただけません。
+                  </p>
+                </div>
+                <table class="table">
+                  <tr class="table__tr">
+                    <th class="table__th">営業時間</th>
+                    <td class="table__td">PM 19:00 ~ 23:00</td>
+                  </tr>
+                  <tr class="table__tr">
+                    <th class="table__th">フロア</th>
+                    <td class="table__td">HOTEL小町 7F 日本酒バー「ほろ酔」</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <section class="img-list">
+            <h3 class="h3-heading">
+              <span class="h3-heading__inner">ほろ酔のご紹介</span>
+            </h3>
+            <div class="img-list__box">
+              <figure class="img-list__item">
+                <img class="img-list__img" src="/images/cuisine/img_cuisine_horoyoi02.jpg" alt="お酒">
+                <figcaption class="img-list__caption">
+                  〇〇酒
+                </figcaption>
+              </figure>
+
+              <figure class="img-list__item">
+                <img class="img-list__img" src="/images/cuisine/img_cuisine_horoyoi03.jpg" alt="お酒">
+                <figcaption class="img-list__caption">
+                  〇〇酒
+                </figcaption>
+              </figure>
+
+              <figure class="img-list__item">
+                <img class="img-list__img" src="/images/cuisine/img_cuisine_horoyoi04.jpg" alt="おつまみの焼き鳥">
+                <figcaption class="img-list__caption">
+                  おつまみ料理
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+        </section>
+        <!-- ======== ⬆︎ コンテンツ_ほろ酔 ⬆︎ ======== -->
+
+        <!-- ==================================================================== -->
+
+        <!-- ======== ⬇︎ コンテンツ_お子様・アレルギーへのご対応 ⬇︎ ======== -->
+        <section class="page-section cuisine-overview">
+          <h2 class="h2-heading">
+            <div class="h2-heading__inner">
+              <span class="h2-heading__text">お子様・アレルギーへのご対応</span>
+            </div>
+          </h2>
+
+          <section class="page-section__inner">
+            <p class="cuisine-overview__text">
+              HOTEL小町では安心してお食事をしていただけるよう、以下のサービス・サポートを行っております。<br>
+              お客様のご理解・ご協力のほどよろしくお願い致します。
+            </p>
+
+            <section class="cuisine-overview__contents">
+              <h3 class="h3-heading">
+                <span class="h3-heading__inner">お子様</span>
+              </h3>
+              <div class="desc-contents">
+                <p class="desc-contents__text">
+                  お子様連れでも安心してお食事を愉しんていただけるよう、下記サービスをご用意しております。<br>
+                  ご要望の際は、お気軽にお申し付けください。
+                </p>
+              </div>
+              <table class="table">
+                <tr class="table__tr">
+                  <th class="table__th">サービス</th>
+                  <td class="table__td">
+                    ・お子様用夕食・朝食メニュー<br>
+                    ・離乳食の手配<br>
+                    ・食器の熱湯消毒
+                  </td>
+                </tr>
+              </table>
+            </section>
+
+            <section class="cuisine-overview__contents">
+              <h3 class="h3-heading">
+                <span class="h3-heading__inner">アレルギー対応</span>
+              </h3>
+              <div class="desc-contents">
+                <p class="desc-contents__text">
+                  食物アレルギーをお持ちの方、妊娠中、投薬治療、宗教上の理由で食事制限のある方には、可能な限り対応させていただきますので、対象の食材とご人数などをご予約される際は、必ず事前にお知らせください。<br><br>
+                  当館ではアレルゲンの含まれる料理と同一の厨房を使用しているため、微量混入の可能性がございます。<br>
+                  申し訳ございませんが、ご利用の際はご了承の上でご予約をお願い致します。
+                </p>
+              </div>
+              <table class="table">
+                <tr class="table__tr">
+                  <th class="table__th">特定原材料7品目</th>
+                  <td class="table__td">
+                    卵、乳、小麦、そば、落花生、えび、かに<br>
+                    当館では特定原材料７品目の内、小麦以外の６品目【卵、乳、えび、かに、落花生、そば】に限り対応させて頂きます。
+                  </td>
+                </tr>
+                <tr class="table__tr">
+                  <th class="table__th">特定原材料に準ずる20品目</th>
+                  <td class="table__td">
+                    魚介類：あわび、いか、いくら、さけ、さば<br>
+                    肉類：牛肉、鶏肉、豚肉<br>
+                    果物：オレンジ、キウイ、バナナ、もも、りんご<br>
+                    その他：ゼラチン、くるみ、大豆、松茸、山芋、胡麻、カシューナッツ・アーモンド
+                  </td>
+                </tr>
+              </table>
+            </section>
+          </section>
+
+
+        </section>
+        <!-- ======== ⬆︎ コンテンツ_お子様・アレルギーへのご対応 ⬆︎ ======== -->
+
+      </main>
+
+      <!-- ======== ⬇︎ フッター ⬇︎ ======== -->
+      <footer class="footer">
+        <div class="footer__inner">
+
+          <!-- ##### フッター情報 ##### -->
+          <div class="footer__info">
+            <a href="/" class="footer__logo">
+              <img class="footer__logo-img" src="/images/ico_footer-logo.svg" alt="HOTEL小町のロゴ">
+            </a>
+            <div class="footer__address">
+              <p class="footer__address-text">
+                〒123-4456　長野県茅野市北山56789-10
+              </p>
+              <p class="footer__address-text">
+                TEL：<span class="footer__address-text footer__address-text--large">01234-56-7890</span><br>
+                受付時間 9:00 ~ 18:00
+              </p>
+              <p class="footer__address-text">
+                Mail：<a class="footer__address-link" href="メールアプリ起動">test-test@sample.com</a>
+              </p>
+            </div>
+            <div class="footer__sns">
+              <p class="footer__sns-label">SNS</p>
+              <ul class="footer__sns-list">
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-instagram.svg" alt="instagram">
+                  </a>
+                </li>
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-facebook.svg" alt="facebook">
+                  </a>
+                </li>
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-line.svg" alt="LINE">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <nav class="footer__nav">
+            <!-- ##### メインメニュー ##### -->
+            <ul class="footer__menu is-sp">
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/hot-spring.html">
+                  温泉
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/rooms.html">
+                  客室
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/cuisine.html">
+                  お料理
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/facilities.html">
+                  館内ご案内
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/sightseeing.html">
+                  周辺の観光地
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/access.html">
+                  アクセス
+                </a>
+              </li>
+            </ul>
+
+            <!-- ##### サブメニュー ##### -->
+            <ul class="footer__submenu footer__menu--sub">
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/information/index.html">
+                  インフォメーション
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/faq.html">
+                  よくあるご質問
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/contact/contact.html">
+                  お問い合わせ
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/privacy-policy.html">
+                  宿泊約款
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/privacy-policy.html#privacy-policy">
+                  個人情報保護方針
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <small class="footer__copyright">© 2024 Yuuki PortFolio</small>
+        </div>
+      </footer>
+      <!-- ======== ⬆︎ フッター ⬆︎ ======== -->
+
+      <!-- ==================================================================== -->
+
+      <!-- ======== ⬇︎ 固定サイドメニュー ⬇︎ ======== -->
+      <aside class="sidebar is-tab">
+
+        <nav id="js-side-slide_top" class="sidebar__nav">
+          <span class="sidebar__label">宿泊ご予約</span>
+          <ul class="sidebar__list">
+            <li class="sidebar__item"><a class="sidebar__link" href="/reservation/index.html#rooms-searh">空室検索</a></li>
+            <li class="sidebar__item"><a class="sidebar__link"
+                href="/reservation/index.html?active-tab=tab-1#is-tab">宿泊プランから探す</a>
+            </li>
+            <li class="sidebar__item"><a class="sidebar__link"
+                href="/reservation/index.html?active-tab=tab-2#is-tab">客室タイプから探す</a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav id="js-side-slide_bottom" class="sidebar__nav sidebar__nav--bottom">
+          <span class="sidebar__label">Language</span>
+          <ul class="sidebar__list">
+            <li class="sidebar__item"><a class="sidebar__link sidebar__link--black" href="#">English</a></li>
+            <li class="sidebar__item"><a class="sidebar__link sidebar__link--black" href="#">简体中文</a></li>
+            <li class="sidebar__item"><a class="sidebar__link sidebar__link--black" href="#">繁体中文</a></li>
+            <li class="sidebar__item"><a class="sidebar__link sidebar__link--black" href="#">한국어</a></li>
+          </ul>
+        </nav>
+
+      </aside>
+      <!-- ======== ⬆︎ 固定サイドメニュー ⬆︎ ======== -->
+
+    </div>
+
+
+    <!-- ======== ⬇︎ JQuery / プラグイン読み込み ⬇︎ ======== -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/javascript/common.js"></script>
+    <!-- ======== ⬆︎ JQuery/プラグイン読み込み ⬆︎ ======== -->
+  </body>
+
+</html>

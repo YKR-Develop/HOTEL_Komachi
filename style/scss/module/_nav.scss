@@ -1,0 +1,261 @@
+/*===================================================
+ _nav.scss
+ ナビゲーション / メニュー
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/font" as *;
+@use "../config/mq" as *;
+
+/* --------------------------------------------------
+ グローバルナビの指定
+-------------------------------------------------- */
+.g-nav {
+  @include mq(sp) {
+    position: fixed;
+    right: -320px;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    padding: 48px 0;
+    transition: all 0.6s;
+    z-index: 200;
+    overflow-y: auto;
+  }
+
+  &__list {
+    display: flex;
+    gap: 0 32px;
+    font-size: 14px;
+    color: $c_white;
+
+    @include mq(sp) {
+      margin: 0;
+      padding: 0 16px;
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    @include mq(sp) {
+      text-align: left;
+      padding: 20px;
+      border-bottom: 1px solid $c_white;
+
+      &:first-child {
+        border-top: 1px solid $c_white;
+      }
+
+      &--col {
+        border-bottom: none;
+        padding: 0;
+        margin-top: 16px;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding-bottom: 2px;
+    background-image: linear-gradient($c_white, $c_white);
+    background-size: 0 1px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    transition: all 0.5s;
+
+    &:hover {
+      background-size: 100% 1px;
+    }
+  }
+
+  @include mq(tab) {
+    &__launguage-list {
+      display: none;
+    }
+  }
+
+  @include mq(sp) {
+    &__launguage-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    &__launguage-item {
+      width: calc(100% / 2 - 8px);
+      height: 40px;
+      background-color: $c_gray;
+      line-height: 40px;
+      text-align: center;
+      color: $c_black;
+    }
+  }
+}
+
+.nav-open {
+  @include mq(sp) {
+
+    & .g-nav,
+    & .reserve-nav {
+      width: 100%;
+      height: 100vh;
+      right: 0;
+      padding-top: 60px;
+    }
+
+    & .g-header__bg,
+    .reserve-header__bg {
+      opacity: 0.9;
+      visibility: visible;
+    }
+
+    & .hamburger__border--top {
+      transform: rotate(45deg);
+      top: 20px;
+    }
+
+    & .hamburger__border--center {
+      width: 0;
+      left: 50%;
+    }
+
+    & .hamburger__border--bottom {
+      transform: rotate(-45deg);
+      top: 20px;
+    }
+  }
+}
+
+/* --------------------------------------------------
+ 宿泊予約 / マイページ ナビゲーション
+-------------------------------------------------- */
+.reserve-nav {
+  @include mq(sp) {
+    position: fixed;
+    right: -320px;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    padding: 48px 0;
+    transition: all 0.6s;
+    z-index: 200;
+    overflow-y: auto;
+  }
+
+  &__list {
+    display: flex;
+    gap: 0 32px;
+    font-size: 14px;
+    color: $c_white;
+
+    @include mq(sp) {
+      margin: 0;
+      padding: 0 16px;
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &--icon {
+      padding-left: 28px;
+
+      &::after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-image: url("/reservation/images/ico_mypage.svg");
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @include mq(sp) {
+          top: 30%;
+          left: 16px;
+        }
+      }
+    }
+
+    &--log-out {
+      padding-left: 28px;
+
+      &::after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-image: url("/mypage/images/ico_logout.svg");
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @include mq(sp) {
+          top: 30%;
+          left: 16px;
+        }
+      }
+    }
+
+    @include mq(sp) {
+      text-align: left;
+      padding: 20px;
+      border-bottom: 1px solid $c_white;
+
+      &:first-child {
+        border-top: 1px solid $c_white;
+      }
+
+      &--col {
+        border-bottom: none;
+        padding: 0;
+        margin-top: 16px;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding-bottom: 2px;
+    background-image: linear-gradient($c_white, $c_white);
+    background-size: 0 1px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    transition: all 0.5s;
+
+    &--icon,&--log-out {
+      @include mq(sp) {
+        padding-left: 24px;
+      }
+    }
+
+    &:hover {
+      background-size: 100% 1px;
+    }
+  }
+
+  @include mq(tab) {
+    &__launguage-list {
+      display: none;
+    }
+  }
+
+  @include mq(sp) {
+    &__launguage-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    &__launguage-item {
+      width: calc(100% / 2 - 8px);
+      height: 40px;
+      background-color: $c_gray;
+      line-height: 40px;
+      text-align: center;
+      color: $c_black;
+    }
+  }
+}

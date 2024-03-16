@@ -1,0 +1,317 @@
+/*===================================================
+ _mypage.scss
+ マイページ
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/font" as *;
+@use "../config/mq" as *;
+@use "../mixin/mixin" as *;
+
+/* --------------------------------------------------
+ 予約一覧 予約中カード
+-------------------------------------------------- */
+.reservation-list {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    margin-bottom: 32px;
+  }
+
+  &__text {
+    &--strong {
+      font-weight: bold;
+      color: $c_accent;
+      margin-right: 4px;
+      font-size: $font_large;
+    }
+  }
+}
+
+/* --------------------------------------------------
+ 予約一覧 予約中アイテム
+-------------------------------------------------- */
+.reservation-item {
+  border: 1px solid $c_border;
+
+  &__title {
+    background-color: $c_accent;
+    color: $c_white;
+    font-size: $font_h4;
+    padding: 8px;
+
+    @include mq(tab) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__inner {
+    padding: 24px;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 24px;
+    @include mq(sp) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__thumb {
+    width: 40%;
+
+    @include mq(sp) {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    height: 240px;
+  }
+
+  &__detail-list {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  &__detail-item {
+    position: relative;
+
+    &--capacity {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 20%;
+        background-image: url("/reservation/images/ico_capacity.svg");
+        background-repeat: no-repeat;
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &--cuisine {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 20%;
+        background-image: url("/reservation/images/ico_cuisine.svg");
+        background-repeat: no-repeat;
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &--rooms-area {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 25%;
+        background-image: url("/reservation/images/ico_room-area.svg");
+        background-repeat: no-repeat;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  &__text {
+    &--detail {
+      padding-left: 24px;
+    }
+  }
+
+  &__info {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__strong {
+    font-weight: 600;
+  }
+
+  &__number {
+    margin: 0 4px;
+    font-weight: 600;
+  }
+
+  &__summary-btn {
+    width: 100%;
+    display: block;
+    background-color: $c_gray;
+    border: 1px solid $c_border;
+    padding: 16px;
+    text-align: center;
+    color: $c_black;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+    &:hover {
+      background-color: $c_white;
+    }
+  }
+
+  &__summary-icon {
+    background-image: url("/reservation/images/ico_more.svg");
+  }
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------
+ 予約詳細
+-------------------------------------------------- */
+.reservation-detail {
+  .reservation-table {
+    margin-bottom: 32px;
+  }
+}
+
+/* --------------------------------------------------
+ ご予約番号
+-------------------------------------------------- */
+.reservation-number {
+  padding: 24px 0;
+  width: 100%;
+  background-color: $c_white;
+  border: 1px solid $c_border;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 32px;
+
+  @include mq(sp) {
+    flex-wrap: wrap;
+    gap: 16px;
+    text-align: center;
+  }
+
+  &__strong {
+    margin-left: 8px;
+    font-weight: bold;
+    color: $c_main;
+
+    &--cancel {
+      color: $c_note;
+    }
+  }
+
+  &__label,
+  &__situation {
+    @include mq(sp) {
+      width: 100%;
+    }
+  }
+}
+
+/* --------------------------------------------------
+ クーポン一覧
+-------------------------------------------------- */
+.coupon {
+  @include mq(sp) {
+    overflow-x: scroll;
+    word-break: keep-all;
+    white-space: nowrap;
+  }
+  &__table {
+    width: 100%;
+  }
+
+  &__th {
+    padding: 14px 16px;
+    background: $c_main;
+    color: $c_white;
+    font-size: 14px;
+    font-weight: 600;
+    border-right: 1px solid $c_border;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  &__td {
+    border: 1px solid $c_border;
+    padding: 14px 16px;
+    font-size: 14px;
+    vertical-align: middle;
+
+    &--modal {
+      text-align: center;
+    }
+  }
+
+  &__tr {
+    background-color: $c_white;
+
+    &.used {
+      opacity: 0.5;
+    }
+  }
+
+  &__btn {
+    width: 88px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 8px 0;
+    background-color: $c_btn-gray;
+    border: 1px solid $c_border;
+    transition: 0.3s;
+    font-weight: 600;
+
+    &:hover {
+      background-color: $c_secondary-btn_hover;
+    }
+  }
+
+
+  // クーポンバーコード表示モーダル
+  .modal {
+    &__container {
+      width: auto;
+      height: auto;
+
+      @include mq(sp) {
+        width: 95%;
+      }
+    }
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+  }
+
+  .desc-contents {
+    margin-bottom: 16px;
+  }
+
+  &__bar-code {
+    margin: 0 auto 32px auto;
+  }
+
+  &__code-img  {
+    width: 30%;
+
+    @include mq(tab) {
+      width: 80%;
+    }
+  }
+
+  &__caption {
+    margin-top: 16px;
+    font-weight: bold;
+    font-size: $font-medium;
+    color: $c_accent;
+  }
+}

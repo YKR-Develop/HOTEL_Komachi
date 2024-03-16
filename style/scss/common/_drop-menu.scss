@@ -1,0 +1,90 @@
+/*===================================================
+ _drop-menu.scss
+ ドロップダウンメニュー
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/mq" as *;
+@use "../config/font" as *;
+@use "../mixin/mixin" as *;
+
+/* --------------------------------------------------
+  SP / タブレット ドロップダウンメニュー
+--------------------------------------------------- */ 
+.drop-down {
+  z-index: 0;
+  &__menu {
+    display: flex;
+  }
+  
+  &__item {
+    flex: 1;
+    text-align: center;
+    color: $c_white;
+    font-size: 14px;
+    padding: 8px 0;
+    font-weight: 300;
+    position: relative;
+
+
+    &--accent {
+      background-color: $c_accent;
+      border-top: none;
+    }
+
+    &--language {
+      background-color: $c_gray;
+      color: $c_black;
+      border-top: none;
+    }
+
+    &:hover .drop-down__sub-menu {
+      visibility: visible;
+      transition: all 0.4s;
+      transform: translateY(10px);
+    }
+  }
+
+  &__icon-img {
+    vertical-align: -2px;
+  }
+
+  &__sub-menu {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 27px;
+    width: 100%;
+    padding: 16px 0;
+    background-color: $c_accent;
+    &:first-of-type {
+      border-top: 1px solid $c-border;
+    }
+
+    &--language {
+      background-color: $c_gray;
+    }
+  }
+
+  &__sub-item {
+    width: 100%;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $c_white;
+
+    &--language {
+      color: $c_black;
+    }
+  }
+
+  &__sub-link {
+    padding-bottom: 2px;
+    border-bottom: 0.5px solid $c_white;
+
+    &--language {
+      border-bottom: 0.5px solid $c_black;
+    }
+  }
+}

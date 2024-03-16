@@ -1,0 +1,20 @@
+/*===================================================
+ _withdrawal.scss
+ 退会手続きページ
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/font" as *;
+@use "../config/mq" as *;
+@use "../mixin/mixin" as *;
+
+/* --------------------------------------------------
+ withdrawal.html 退会手続き
+-------------------------------------------------- */
+.withdrawal {
+  @include ContentWidth;
+
+  .desc-contents {
+    margin-bottom: 32px;
+  }
+}

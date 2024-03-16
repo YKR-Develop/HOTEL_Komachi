@@ -1,0 +1,122 @@
+/*===================================================
+ _privacy-policy.scss
+ 宿泊約款・個人情報保護方針のデザイン定義
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/mq" as *;
+@use "../config/font" as *;
+@use "../mixin/mixin" as *;
+
+/* --------------------------------------------------
+ 宿泊約款・個人情報保護方針のパーツ定義
+-------------------------------------------------- */
+.privacy-policy {
+  @include ContentWidth;
+  &__label {
+    font-size: $font_h3;
+    color: $c_main;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__sub-list {
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &--mb {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__sub-item {
+    list-style-type: decimal;
+
+    &::marker {
+      font-weight: 600;
+    }
+  }
+
+  &__inner-list {
+    padding-left: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  &__inner-item {
+    list-style-type: decimal;
+    &::marker {
+      content: '（' counter(list-item) '）';
+    }
+  }
+
+  &__table-wrap {
+    overflow-x: scroll;
+    margin-bottom: 32px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+  font-size: $font_medium;
+  }
+
+  &__table-caption {
+    width: 100%;
+    font-weight: 600;
+    color: $c_main;
+    font-size: $font_h4;
+    margin-bottom: 8px;
+  }
+
+  &__tr {
+    border-top: 1px solid $c_border;
+    &:first-child {
+      border-top: none;
+    }
+     
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__th {
+    padding: 16px;
+    background-color: $c_main;
+    color: $c_white;
+    width: 200px;
+    font-weight: 300;
+    vertical-align: middle;
+    border-right: 1px solid $c_border;
+  }
+
+  &__td {
+    padding: 16px;
+    border-right: 1px solid $c_border;
+    border-top: 1px solid $c_border;
+    &--border-none {
+      border-right: none;
+    }
+  }
+
+  &__text {
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

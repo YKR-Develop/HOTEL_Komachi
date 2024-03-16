@@ -1,0 +1,83 @@
+/*===================================================
+ _faq.scss
+ FAQのデザイン定義
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/mq" as *;
+@use "../config/font" as *;
+@use "../mixin/mixin" as *;
+
+.qa {
+  @include ContentWidth;
+  display: flex;
+  flex-direction: column;
+  gap: 32px 0;
+  &__item {
+    width: 100%;
+    margin-bottom: 7px;
+    border: 1px solid #d6dde3;
+    border-radius: 5px;
+  }
+
+  &__question {
+    margin-right: 16px;
+    font-weight: 600;
+  }
+
+  &__label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding: 24px 24px;
+    color: $c_main;
+    font-size: $font_large;
+    font-weight: 600;
+    cursor: pointer;
+
+    &::after {
+      transform: translateY(-25%) rotate(45deg);
+      width: 12px;
+      height: 12px;
+      margin-left: auto;
+      border-bottom: 3px solid $c_accent;
+      border-right: 3px solid $c_accent;
+      content: "";
+      transition: transform 0.5s;
+    }
+  }
+
+  &__item[open] &__label::after {
+    transform: rotate(225deg);
+  }
+
+  &__answer-box {
+    display: flex;
+    align-items: top;
+    padding: 24px 24px;
+  }
+
+  &__answer {
+    margin-right: 16px;
+    font-size: $font_large;
+    color: $c_note;
+    font-weight: 600;
+  }
+
+  &__answer-text {
+    position: relative;
+    transform: translateY(-16px);
+    opacity: 0;
+    margin: 0;
+    color: #333;
+    transition:
+      transform 0.5s,
+      opacity 0.5s;
+  }
+
+  &__item[open] &__answer-text {
+    transform: none;
+    opacity: 1;
+  }
+}

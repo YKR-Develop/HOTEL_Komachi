@@ -1,0 +1,28 @@
+/*===================================================
+ _paginating.scss
+ 画像一覧のデザイン定義
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/mq" as *;
+@use "../config/font" as *;
+@use "../mixin/mixin" as *;
+
+.pagination-container {
+  text-align: center;
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+  }
+
+  a {
+    padding: 16px 24px;
+    border: 1px solid $c_border;
+  }
+
+  .navi-active {
+    background-color: $c_accent;
+    color: $c_white;
+  }
+}

@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>予約情報入力 | HOTEL小町</title>
+    <meta content="当館の宿泊予約を承っております。ご希望の日時・プラン・お部屋をご選択の上、ご予約してください。最適なプランもご提案させていただきます。" name="description">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="icon" href="/images/ico_favicon.svg">
+
+    <!-- ##### ⬇︎ OGP関連タグ ⬇︎ ##### -->
+    <meta property="og:title" content="予約情報入力 | HOTEL小町" />
+    <meta property="og:description" content="当館の宿泊予約を承っております。ご希望の日時・プラン・お部屋をご選択の上、ご予約してください。最適なプランもご提案させていただきます。" />
+    <meta property="og:type" content="ページの種類" />
+    <meta property="og:url" content="index.html" />
+    <meta property="og:image" content="サムネイル画像の URL" />
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:locale" content="ja_JP" />
+    <!-- ##### ⬆︎ OGP関連タグ ⬆︎ ##### -->
+
+    <!-- ##### ⬇︎ css / js 読み込み ⬇︎ ##### -->
+    <link rel="stylesheet" href="/style/css/style.css">
+    <link rel="stylesheet" href="/style/css/reset.css">
+
+    <!-- 下記トップページでのみ使用 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <!-- ======== ⬆︎ css / js 読み込み ⬆︎ ======== -->
+  </head>
+
+  <body>
+    <div class="container container--reservation">
+
+      <!-- ======== ⬇︎ グローバルヘッダー ⬇︎ ======== -->
+      <header class="reserve-header">
+
+        <div class="reserve-header__inner">
+          <h1 class="reserve-header__title">
+            <a class="reserve-header__title-link" href="/">
+              <img class="reserve-header__logo-img" src="/images/ico_site-logo.svg" alt="HOTEL小町">
+            </a>
+          </h1>
+
+          <nav class="reserve-nav">
+            <ul class="reserve-nav__list" id="js-header-list">
+              <li class="reserve-nav__item">
+                <a class="reserve-nav__link" href="./rooms-number.html">ご予約の確認・キャンセル</a>
+              </li>
+              <li class="reserve-nav__item reserve-nav__item--icon">
+                <a class="reserve-nav__link reserve-nav__link--icon" href="/mypage/login.html">マイページ</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div id="js-hamburger" class="hamburger is-pc">
+          <span class="hamburger__border hamburger__border--top"></span>
+          <span class="hamburger__border hamburger__border--center"></span>
+          <span class="hamburger__border hamburger__border--bottom"></span>
+        </div>
+        <div id="js-header-bg" class="reserve-header__bg"></div>
+
+      </header>
+      <!-- ======== ⬆︎ グローバルヘッダー ⬆︎ ======== -->
+
+      <!-- ==================================================================== -->
+
+      <main class="contents">
+
+        <div class="breadcrumb">
+          <div class="breadcrumb__inner">
+            <ol class="breadcrumb__list">
+              <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__link--home" href="/">ホーム</a></li>
+              <li class="breadcrumb__item">予約情報入力</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- ======== ⬇︎ コンテンツ_ご宿泊予約 ⬇︎ ======== -->
+        <section class="page-section reservation">
+          <h1 class="h2-heading">
+            <div class="h2-heading__inner">
+              <span class="h2-heading__text">ご宿泊予約</span>
+            </div>
+          </h1>
+          <div class="page-section__inner">
+
+            <!-- ##### ↓ 宿泊予約ステップバー ↓ ##### -->
+            <div class="stepbar-arrow">
+              <ul class="stepbar-arrow__menu stepbar-arrow__menu--info">
+                <li class="stepbar-arrow__item">
+                  プラン・客室選択
+                </li>
+                <li class="stepbar-arrow__item stepbar-arrow__item--active">
+                  予約情報入力
+                </li>
+                <li class="stepbar-arrow__item">
+                  お支払い手続き
+                </li>
+                <li class="stepbar-arrow__item">
+                  予約完了
+                </li>
+              </ul>
+            </div>
+            <!-- ##### ↑ 宿泊予約ステップバー ↑ ##### -->
+
+            <!-- ==================================================================== -->
+
+            <!-- ##### ↓ 宿泊情報 ↓ ##### -->
+            <section class="reservation__box">
+              <table class="reservation-table">
+                <tr class="reservation-table__tr">
+                  <th class="reservation-table__th">宿泊予定日</th>
+                  <td class="reservation-table__td">
+                    2024年03月03日 ~
+                  </td>
+                </tr>
+                <tr class="reservation-table__tr">
+                  <th class="reservation-table__th">客室</th>
+                  <td class="reservation-table__td">
+                    小町亭 和室20畳
+                  </td>
+                </tr>
+                <tr class="reservation-table__tr">
+                  <th class="reservation-table__th">宿泊プラン</th>
+                  <td class="reservation-table__td">
+                    蓼科高原 周遊観光プラン
+                  </td>
+                </tr>
+                <tr class="reservation-table__tr">
+                  <th class="reservation-table__th">宿泊料金</th>
+                  <td class="reservation-table__td">
+                    お一人 ¥25,000（小学生以下：¥22,000）
+                  </td>
+                </tr>
+              </table>
+
+            </section>
+            <!-- ##### ↑ 宿泊情報 ↑ ##### -->
+
+            <!-- ==================================================================== -->
+
+            <!-- ##### ⬇︎ 予約情報入力 ⬇︎ ##### -->
+            <section class="reservation__box">
+              <h2 class="reservation__title">予約情報入力</h2>
+
+              <form class="reservation-form" onsubmit="return validateForm()">
+                <table class="reservation-form__table">
+                  <tr class="reservation-form__tr">
+                    <th class="reservation-form__th">
+                      <label class="reservation-form__label" for="check-in-date">宿泊日<span
+                          class="reservation-form__required">必須</span></label>
+                    </th>
+                    <td class="reservation-form__td">
+                      <p class="reservation-form__td-text reservation-form__td-text--accomedate">2024年03月03日（日曜日） ~ </p>
+                    </td>
+                  </tr>
+
+                  <tr class="reservation-form__tr">
+                    <th class="reservation-form__th">
+                      <label class="reservation-form__label" for="stay-duration">宿泊数<span
+                          class="reservation-form__required">必須</span></label>
+                    </th>
+                    <td class="reservation-form__td">
+                      <div class="reservation-form__item">
+                        <div class="reservation-form__select-wrap">
+                          <select class="reservation-form__select" id="stay-duration" name="stay-duration" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">5</option>
+                            <option value="4">6</option>
+                            <option value="4">7</option>
+                            <option value="4">8</option>
+                            <option value="4">9</option>
+                          </select>
+                        </div>
+                        <p class="reservation-form__td-text">　泊</p>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr class="reservation-form__tr">
+                    <th class="reservation-form__th">
+                      <label class="reservation-form__label" for="guest-count">宿泊人数<span
+                          class="reservation-form__required">必須</span></label>
+                    </th>
+                    <td class="reservation-form__td reservation-form__td--col">
+                      <div class="reservation-form__item">
+                        <p class="reservation-form__td-text">大人（１部屋あたり）</p>
+                        <div class="reservation-form__select-wrap">
+                          <select class="reservation-form__select" id="guest-count" name="guest-count" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="4">5</option>
+                            <option value="4">6</option>
+                            <option value="4">7</option>
+                            <option value="4">8</option>
+                            <option value="4">9</option>
+                          </select>
+                        </div>
+                        <p class="reservation-form__td-text">　名</p>
+                      </div>
+
+                      <div class="reservation-form__item">
+                        <p class="reservation-form__td-text">小学生</p>
+                        <div class="reservation-form__select-wrap">
+                          <select class="reservation-form__select" id="child-count" name="child-count">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="4">5</option>
+                            <option value="4">6</option>
+                            <option value="4">7</option>
+                            <option value="4">8</option>
+                            <option value="4">9</option>
+                          </select>
+                        </div>
+                        <p class="reservation-form__td-text">　名</p>
+                      </div>
+
+                      <div class="reservation-form__item">
+                        <p class="reservation-form__td-text">幼児（4 ~ 6歳）</p>
+                        <div class="reservation-form__select-wrap">
+                          <select class="reservation-form__select" id="infant-count" name="infant-count">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="4">5</option>
+                            <option value="4">6</option>
+                            <option value="4">7</option>
+                            <option value="4">8</option>
+                            <option value="4">9</option>
+                          </select>
+                        </div>
+                        <p class="reservation-form__td-text">　名</p>
+                      </div>
+
+                      <div class="reservation-form__item">
+                        <p class="reservation-form__td-text">乳児（0 ~ 3歳）</p>
+                        <div class="reservation-form__select-wrap">
+                          <select class="reservation-form__select" id="baby-count" name="baby-count">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="4">5</option>
+                            <option value="4">6</option>
+                            <option value="4">7</option>
+                            <option value="4">8</option>
+                            <option value="4">9</option>
+                          </select>
+                        </div>
+                        <p class="reservation-form__td-text">　名</p>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr class="reservation-form__tr">
+                    <th class="reservation-form__th">
+                      <label class="reservation-form__label">送迎バスご予約<span
+                          class="reservation-form__required">必須</span></label>
+                    </th>
+                    <td class="reservation-form__td">
+                      <label class="reservation-form__label-radio"><input class="reservation-form__radio" type="radio"
+                          name="shuttle" value="no" required>希望しない</label><br>
+                      <label class="reservation-form__label-radio"><input class="reservation-form__radio" type="radio"
+                          name="shuttle" value="10:30">茅野駅 10:30発</label><br>
+                      <label class="reservation-form__label-radio"><input class="reservation-form__radio" type="radio"
+                          name="shuttle" value="12:30">茅野駅 12:30発</label><br>
+                      <label><input class="reservation-form__radio" type="radio" name="shuttle" value="14:30">茅野駅
+                        14:30発</label>
+                    </td>
+                  </tr>
+
+                  <tr class="reservation-form__tr">
+                    <th class="reservation-form__th">
+                      <label class="reservation-form__label">朝食<span
+                          class="reservation-form__required">必須</span></label>
+                    </th>
+                    <td class="reservation-form__td">
+                      <label><input class="reservation-form__radio" type="radio" name="breakfast" value="buffet"
+                          required>バイキング</label><br>
+                      <label><input class="reservation-form__radio" type="radio" name="breakfast"
+                          value="room-service">お部屋食</label><br>
+                      <label><input class="reservation-form__radio" type="radio" name="breakfast"
+                          value="none">なし</label>
+                    </td>
+                  </tr>
+
+                  <tr class="reservation-form__tr">
+                    <th class="reservation-form__th">
+                      <label class="reservation-form__label">夕食<span
+                          class="reservation-form__required">必須</span></label>
+                    </th>
+                    <td class="reservation-form__td">
+                      <label><input class="reservation-form__radio" type="radio" name="dinner" value="buffet"
+                          required>バイキング</label><br>
+                      <label><input class="reservation-form__radio" type="radio" name="dinner"
+                          value="room-service">お部屋食</label><br>
+                      <label><input class="reservation-form__radio" type="radio" name="dinner" value="none">なし</label>
+                    </td>
+                  </tr>
+
+                  <tr class="reservation-form__tr">
+                    <th class="reservation-form__th">
+                      <label class="reservation-form__label" for="allergy">アレルギー<span
+                          class="reservation-form__required">必須</span></label>
+                    </th>
+                    <td class="reservation-form__td"><textarea class="reservation-form__textarea" id="allergy"
+                        name="allergy" placeholder="無しの場合は「無し」と入力してください。"></textarea>
+                      <p class="reservation-form__td-text reservation-form__td-text--note">アレルギーをお持ちのお客様は必ず入力してください。</p>
+                    </td>
+                  </tr>
+
+                  <tr class="reservation-form__tr">
+                    <th class="reservation-form__th">
+                      <label class="reservation-form__label" for="requests">ご要望・ご質問<span>任意</span></label>
+                    </th>
+                    <td class="reservation-form__td"><textarea class="reservation-form__textarea" id="requests"
+                        name="requests"></textarea></td>
+                  </tr>
+
+                  <tr class="reservation-form__tr">
+                    <th class="reservation-form__th">
+                      <label class="reservation-form__label" for="last-name">お名前<span
+                          class="reservation-form__required">必須</span>
+                      </label>
+                    </th>
+                    <td class="reservation-form__td reservation-form__td--col">
+                      <div class="reservation-form__item reservation-form__item--wrap">
+                        <p class="reservation-form__td-text">姓</p>
+                        <input class="reservation-form__text" type="text" id="last-name" name="last-name"
+                          placeholder="山本" required>
+                      </div>
+                      <div class="reservation-form__item reservation-form__item--wrap">
+                        <p class="reservation-form__td-text">名</p>
+                        <input class="reservation-form__text" type="text" id="first-name" name="first-name"
+                          placeholder="太郎" required>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr class="reservation-form__tr">
+                    <th class="reservation-form__th">
+                      <label class="reservation-form__label" for="last-name-kana">フリガナ
+                        <span class="reservation-form__required">必須</span>
+                      </label>
+                    </th>
+                    <td class="reservation-form__td reservation-form__td--col">
+                      <div class="reservation-form__item reservation-form__item--wrap">
+                        <p class="reservation-form__td-text">セイ</p>
+                        <input class="reservation-form__text" type="text" id="last-name-kana" name="last-name-kana"
+                          placeholder="ヤマモト" required>
+                      </div>
+                      <div class="reservation-form__item reservation-form__item--wrap">
+                        <p class="reservation-form__td-text">メイ</p>
+                        <input class="reservation-form__text" type="text" id="first-name-kana" name="first-name-kana"
+                          placeholder="タロウ" required>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr class="reservation-form__tr">
+                    <th class="reservation-form__th">
+                      <label class="reservation-form__label" for="email">メールアドレス<span
+                          class="reservation-form__required">必須</span>
+                      </label>
+                    </th>
+                    <td class="reservation-form__td">
+                      <input class="reservation-form__text reservation-form__text--long" type="email" id="email"
+                        name="email" placeholder="sample@sample.com" required>
+                    </td>
+                  </tr>
+                  <tr class="reservation-form__tr">
+                    <th class="reservation-form__th">
+                      <label class="reservation-form__label" for="confirm-email">メールアドレス確認用<span
+                          class="reservation-form__required">必須</span>
+                      </label>
+                    </th>
+                    <td class="reservation-form__td">
+                      <input class="reservation-form__text reservation-form__text--long" type="email" id="confirm-email"
+                        name="confirm-email" placeholder="sample@sample.com" required>
+                    </td>
+                  </tr>
+
+                  <tr class="reservation-form__tr">
+                    <th class="reservation-form__th">
+                      <label class="signup-form__label" for="birthdate">生年月<span
+                          class="reservation-form__required">必須</span></label>
+                    </th>
+                    <td class="reservation-form__td reservation-form__td--col">
+
+                      <div class="reservation-form__item">
+                        <div class="reservation-form__select-wrap">
+                          <select class="reservation-form__select reservation-form__select--medium" id="birth-year"
+                            name="birth-year" required>
+                            <option value="">年</option>
+                            <!-- 年の選択肢を追加 -->
+                            <option value="1990">1990年</option>
+                            <option value="1991">1991年</option>
+                            <!-- 他の年も続く -->
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="reservation-form__item">
+                        <div class="reservation-form__select-wrap">
+                          <select class="reservation-form__select" id="birth-month" name="birth-month" required>
+                            <option value="">月</option>
+                            <!-- 月の選択肢を追加 -->
+                            <option value="1">1月</option>
+                            <option value="2">2月</option>
+                            <!-- 他の月も続く -->
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr class="reservation-form__tr">
+                    <th class="reservation-form__th">
+                      <label class="reservation-form__label" for="phone-number">電話番号<span
+                          class="reservation-form__required">必須</span>
+                      </label>
+                    </th>
+                    <td class="reservation-form__td">
+                      <input class="reservation-form__text reservation-form__text--long" type="tel" id="phone-number"
+                        name="phone-number" placeholder="00-0000-0000" required>
+                    </td>
+                  </tr>
+
+                  <tr class="reservation-form__tr">
+                    <th class="reservation-form__th">
+                      <label class="reservation-form__label" for="postal-code">郵便番号<span
+                          class="reservation-form__required">必須</span></label>
+                    </th>
+                    <td class="reservation-form__td"><input class="reservation-form__text" type="text" id="postal-code"
+                        name="postal-code" placeholder="000-0000" required></td>
+                  </tr>
+
+                  <tr class="reservation-form__tr">
+                    <th class="reservation-form__th">
+                      <label class="reservation-form__label" for="prefecture">住所<span
+                          class="reservation-form__required">必須</span></label>
+                    </th>
+
+                    <td class="reservation-form__td">
+                      <div class="reservation-form__item reservation-form__item--mb">
+                        <div class="reservation-form__select-wrap">
+                          <select class="reservation-form__select reservation-form__select--medium" id="prefecture"
+                            name="prefecture" required>
+                            <option value="">都道府県を選択</option>
+                            <option value="北海道">北海道</option>
+                            <option value="青森県">青森県</option>
+                            <option value="岩手県">岩手県</option>
+                            <!-- 他の都道府県も続く -->
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="reservation-form__item">
+                        <input class="reservation-form__text reservation-form__text--long" type="text" id="address"
+                          name="address" placeholder="市町村番地 建物名" required>
+                      </div>
+                    </td>
+                  </tr>
+
+                </table>
+                <div id="error-message" style="color: red; margin-top: 10px;"></div>
+
+                <!-- キャンセルポリシー -->
+                <section class="cancel-policy">
+                  <h3 class="reservation-form__title">キャンセル規定</h3>
+                  <p class="cancel-policy__text">ご予約をキャンセル・変更時の場合、以下のキャンセル料金が発生いたします。</p>
+                  <table class="cancel-policy__table">
+                    <tbody class="cancel-policy__tbody">
+                      <tr class="cancel-policy__tr">
+                        <th class="cancel-policy__th">1週間前</th>
+                        <td class="cancel-policy__td">20%</td>
+                      </tr>
+                      <tr class="cancel-policy__tr">
+                        <th class="cancel-policy__th">2日前</th>
+                        <td class="cancel-policy__td">30%</td>
+                      </tr>
+                      <tr class="cancel-policy__tr">
+                        <th class="cancel-policy__th">1日前</th>
+                        <td class="cancel-policy__td">50%</td>
+                      </tr>
+                      <tr class="cancel-policy__tr">
+                        <th class="cancel-policy__th">当日</th>
+                        <td class="cancel-policy__td">100%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </section>
+
+                <!-- プライバシーポリシー -->
+                <div class="reservation-form__privacy-policy">
+                  <h3 class="reservation-form__title">プライバシーポリシー</h3>
+                  <p class="contact__text">
+                    お客様の個人情報は、プライバシーポリシーに基づき安全に管理いたします。<br>
+                    個人情報の取り扱いにつきましては、<a class="contact__link" href="/privacy-policy.html#privacy-policy"
+                      target="_blank">プライバシーポリシー</a>をご参照ください。
+                  </p>
+                  <div class="form__box">
+                    <input class="form__checkbox" type="checkbox" id="agree" />
+                    <label for="agree">プライバシーポリシーに同意する</label>
+                  </div>
+                </div>
+
+                <div class="button-box">
+                  <button type="button" class="form-btn" id="submit-btn"
+                    onclick="location.href='reservation_confirmation.html'" disabled>お支払い手続きへ進む</button>
+                </div>
+              </form>
+
+            </section>
+            <!-- ##### ⬆︎ 予約情報入力 ⬆︎ ##### -->
+          </div>
+        </section>
+      </main>
+
+      <!-- ======== ⬇︎ フッター ⬇︎ ======== -->
+      <footer class="footer">
+        <div class="footer__inner">
+
+          <!-- ##### フッター情報 ##### -->
+          <div class="footer__info">
+            <a href="/" class="footer__logo">
+              <img class="footer__logo-img" src="/images/ico_footer-logo.svg" alt="HOTEL小町のロゴ">
+            </a>
+            <div class="footer__address">
+              <p class="footer__address-text">
+                〒123-4456　長野県茅野市北山56789-10
+              </p>
+              <p class="footer__address-text">
+                TEL：<span class="footer__address-text footer__address-text--large">01234-56-7890</span><br>
+                受付時間 9:00 ~ 18:00
+              </p>
+              <p class="footer__address-text">
+                Mail：<a class="footer__address-link" href="メールアプリ起動">test-test@sample.com</a>
+              </p>
+            </div>
+            <div class="footer__sns">
+              <p class="footer__sns-label">SNS</p>
+              <ul class="footer__sns-list">
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-instagram.svg" alt="instagram">
+                  </a>
+                </li>
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-facebook.svg" alt="facebook">
+                  </a>
+                </li>
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-line.svg" alt="LINE">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <nav class="footer__nav">
+            <!-- ##### メインメニュー ##### -->
+            <ul class="footer__menu is-sp">
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/hot-spring.html">
+                  温泉
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/rooms.html">
+                  客室
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/cuisine.html">
+                  お料理
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/facilities.html">
+                  館内ご案内
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/sightseeing.html">
+                  周辺の観光地
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/access.html">
+                  アクセス
+                </a>
+              </li>
+            </ul>
+
+            <!-- ##### サブメニュー ##### -->
+            <ul class="footer__submenu footer__menu--sub">
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/information/index.html">
+                  インフォメーション
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/faq.html">
+                  よくあるご質問
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/contact/contact.html">
+                  お問い合わせ
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/privacy-policy.html">
+                  宿泊約款
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/privacy-policy.html#privacy-policy">
+                  個人情報保護方針
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <small class="footer__copyright">© 2024 Yuuki PortFolio</small>
+        </div>
+      </footer>
+      <!-- ======== ⬆︎ フッター ⬆︎ ======== -->
+    </div>
+
+
+    <!-- ======== ⬇︎ JQuery / プラグイン読み込み ⬇︎ ======== -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/javascript/calendar.js"></script>
+    <script type="text/javascript" src="/javascript/common.js"></script>
+    <!-- ======== ⬆︎ JQuery/プラグイン読み込み ⬆︎ ======== -->
+  </body>
+
+</html>

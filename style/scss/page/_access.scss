@@ -1,0 +1,98 @@
+/*===================================================
+ _access.scss
+ 「アクセス」のデザイン定義
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/mq" as *;
+@use "../config/font" as *;
+@use "../mixin/mixin" as *;
+
+/* --------------------------------------------------
+ アクセスパーツ
+-------------------------------------------------- */
+.access {
+  &__info {
+    width: 100%;
+
+    @include mq(tab) {
+      width: 100%;
+      position: relative;
+    }
+  }
+
+  &__title {
+    font-size: $font_large;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+  }
+
+  &__col {
+    @include mq(tab) {
+      flex-wrap: wrap;
+    } 
+  }
+
+  &__item {
+    width: 100%;
+    text-align: center;
+    background-color: $c_main;
+  }
+
+  &__label {
+    color: $c_white;
+    padding: 12px;
+  }
+
+  &__text {
+    text-align: center;
+    position: relative;
+    padding: 40px 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 50%;
+      width: 1px;
+      height: 32px;
+      background-color: $c_black;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 50%;
+      width: 1px;
+      height: 32px;
+      background-color: $c_black;
+    }
+  }
+
+  &__hr {
+    width: 100%;
+    background-color: $c_border;
+  }
+
+  &__mb {
+    margin-bottom: 64px;
+    @include mq(tab) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__map {
+    .goole-map {
+      width: 100%;
+    }
+  }
+  
+}

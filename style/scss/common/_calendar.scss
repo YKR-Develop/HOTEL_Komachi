@@ -1,0 +1,155 @@
+/*===================================================
+ _calendar.scss
+ 予約カレンダー
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/font" as *;
+@use "../config/mq" as *;
+@use "../mixin/mixin" as *;
+
+.calendar {
+  width: 664px;
+  
+  @include mq(tab) {
+    width: 100%;
+  }
+
+  @include mq(sp) {
+    width: 664px;
+    overflow-y:scroll;
+  }
+
+  &__table {
+    border-collapse: collapse;
+    width: 664px;
+
+    @include mq(tab) {
+      width: 100%;
+    }
+
+    @include mq(sp) {
+      width: 664px;
+      overflow-y:scroll;
+    }
+  }
+
+  &__next-prev {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+
+  &__prev-month {
+    color: $c_accent;
+    padding-bottom: 2px;
+    border-bottom: 1px solid $c_accent;
+    position: relative;
+    padding-left: 16px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 25%;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background-image: url("/reservation/images/ico_calendar-arrow.svg");
+      background-repeat: no-repeat;
+    }
+
+    &:hover {
+      color: $c_btn-hover;
+    }
+  }
+
+  &__next-month {
+    color: $c_accent;
+    padding-bottom: 2px;
+    border-bottom: 1px solid $c_accent;
+    position: relative;
+    padding-right: 16px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10%;
+      right: 0;
+      width: 16px;
+      height: 16px;
+      background-image: url("/reservation/images/ico_calendar-arrow.svg");
+      background-repeat: no-repeat;
+      transform: rotate(180deg);
+      vertical-align: middle;
+    }
+
+    &:hover {
+      color: $c_btn-hover;
+    }
+  }
+
+
+  &__header {
+    background-color: $c_white;
+  }
+
+  &__day {
+    border: 1px solid #ddd;
+    padding: 8px 0px;
+    text-align: center;
+    font-size: 14px;
+    color: $c_black;
+  }
+
+  &__sunday {
+    background-color: #FFD9D9;
+    color: $c_calendar-sunday;
+  }
+
+  &__saturday {
+    background-color: #E7F4F7;
+    color: $c_calendar-saturday;
+  }
+
+  &__unavailable {
+    color: $c_calendar-no_active;
+  }
+  
+  &__reservation-link {
+    color: $c_accent;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+
+
+.past-day {
+  color: #888888;
+}
+
+.future-day {
+  background-color: #f9f9f9;
+}
+
+.grayed-out {
+  color: #888888;
+  background-color: #f9f9f9;
+  pointer-events: none;
+}
+
+.disabled-link {
+  color: $c_calendar-no_active;
+  pointer-events: none;
+
+  .calendar__reservation-link {
+    color: $c_calendar-no_active;
+  }
+
+  .calendar__unavailable {
+    color: $c_calendar-no_active;
+  }
+}

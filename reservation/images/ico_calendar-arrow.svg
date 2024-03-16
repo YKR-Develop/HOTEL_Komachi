@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+  <g id="ico_arrow-double" transform="translate(0)">
+    <g id="グループ_13388" data-name="グループ 13388">
+      <path id="Icon_ionic-ios-arrow-back" data-name="Icon ionic-ios-arrow-back" d="M13.059,12.192,17.03,7.655a.942.942,0,0,0,0-1.211.688.688,0,0,0-1.062,0l-4.5,5.141a.947.947,0,0,0-.022,1.182l4.518,5.176a.689.689,0,0,0,1.062,0,.942.942,0,0,0,0-1.211Z" transform="translate(-11.251 -6.194)" fill="#30312d"/>
+      <path id="Icon_ionic-ios-arrow-back-2" data-name="Icon ionic-ios-arrow-back" d="M13.059,12.192,17.03,7.655a.942.942,0,0,0,0-1.211.688.688,0,0,0-1.062,0l-4.5,5.141a.947.947,0,0,0-.022,1.182l4.518,5.176a.689.689,0,0,0,1.062,0,.942.942,0,0,0,0-1.211Z" transform="translate(-5.251 -6.194)" fill="#30312d"/>
+    </g>
+  </g>
+</svg>

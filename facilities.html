@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>館内ご案内 | HOTEL小町</title>
+  <meta content="当館は全階7階建となっており、お部屋以外にもアミューズメントを楽しめるゲームセンターや会議室、お土産屋など退屈することのない施設をご用意しております。" name="description">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" href="/images/ico_favicon.svg">
+
+  <!-- ##### ⬇︎ OGP関連タグ ⬇︎ ##### -->
+  <meta property="og:title" content="館内ご案内 | HOTEL小町" />
+  <meta property="og:description"
+    content="当館は全階7階建となっており、お部屋以外にもアミューズメントを楽しめるゲームセンターや会議室、お土産屋など退屈することのない施設をご用意しております。" />
+  <meta property="og:type" content="ページの種類" />
+  <meta property="og:url" content="index.html" />
+  <meta property="og:image" content="サムネイル画像の URL" />
+  <meta property="og:site_name" content="サイト名" />
+  <meta property="og:locale" content="ja_JP" />
+  <!-- ##### ⬆︎ OGP関連タグ ⬆︎ ##### -->
+
+  <!-- ##### ⬇︎ css / js 読み込み ⬇︎ ##### -->
+  <link rel="stylesheet" href="/style/css/style.css">
+  <link rel="stylesheet" href="/style/css/reset.css">
+
+  <!-- 下記トップページでのみ使用 -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <!-- ======== ⬆︎ css / js 読み込み ⬆︎ ======== -->
+
+
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- ======== ⬇︎ グローバルヘッダー ⬇︎ ======== -->
+    <header class="g-header js-fixed-header">
+
+      <div class="g-header__inner">
+        <h1 class="g-header__title">
+          <a class="g-header__title-link" href="/">
+            <img class="g-header__logo-img" src="/images/ico_site-logo.svg" alt="HOTEL小町">
+          </a>
+        </h1>
+
+        <nav class="g-nav">
+          <ul class="g-nav__list" id="js-header-list">
+            <li class="g-nav__item">
+              <a class="g-nav__link" href="/hot-spring.html">温泉</a>
+            </li>
+            <li class="g-nav__item">
+              <a class="g-nav__link" href="/rooms.html">客室</a>
+            </li>
+            <li class="g-nav__item">
+              <a class="g-nav__link" href="/cuisine.html">お料理</a>
+            </li>
+            <li class="g-nav__item">
+              <a class="g-nav__link" href="/facilities.html">館内ご案内</a>
+            </li>
+            <li class="g-nav__item">
+              <a class="g-nav__link" href="/sightseeing.html">周辺の観光地</a>
+            </li>
+            <li class="g-nav__item">
+              <a class="g-nav__link" href="/access.html">アクセス</a>
+            </li>
+
+            <li class="g-nav__item g-nav__item--col is-pc">
+              <ul class="g-nav__launguage-list">
+                <li class="g-nav__launguage-item">
+                  <a class="g-nav__launguage-link" href="">日本語</a>
+                </li>
+                <li class="g-nav__launguage-item">
+                  <a class="g-nav__launguage-link" href="">English</a>
+                </li>
+                <li class="g-nav__launguage-item">
+                  <a class="g-nav__launguage-link" href="">繁体中文</a>
+                </li>
+                <li class="g-nav__launguage-item">
+                  <a class="g-nav__launguage-link" href="">한국어</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="g-header__info is-tab">
+          <p class="g-header__info-text">ご予約受付 9:00 ~ 18:00</p>
+          <p class="g-header__info-text g-header__info-text--large">TEL 01234-56-7890</p>
+        </div>
+      </div>
+
+      <div id="js-hamburger" class="hamburger is-pc">
+        <span class="hamburger__border hamburger__border--top"></span>
+        <span class="hamburger__border hamburger__border--center"></span>
+        <span class="hamburger__border hamburger__border--bottom"></span>
+      </div>
+      <div id="js-header-bg" class="g-header__bg"></div>
+
+
+      <!-- ======== ⬇︎ ※ SP / タブレット限定 固定ボトムメニュー ⬇︎ ======== -->
+      <nav class="drop-down is-pc">
+        <ul class="drop-down__menu">
+          <li class="drop-down__item">
+            <a class="drop-down__label" href="">
+              <span class="drop-down__icon">
+                <img class="drop-down__icon-img" src="/images/icon/ico_phone.svg" alt="">
+              </span>
+              お電話予約
+            </a>
+          </li>
+          <li class="drop-down__item drop-down__item--accent">
+            <span class="drop-down__label" href="">
+              <span class="drop-down__icon">
+                <img class="drop-down__icon-img" src="/images/icon/ico_form-calendar_white.svg" alt="">
+              </span>
+              宿泊ご予約
+            </span>
+            <ul class="drop-down__sub-menu">
+              <li class="drop-down__sub-item">
+                <a class="drop-down__sub-link" href="/reservation/index.html#rooms-searh">空室検索</a>
+              </li>
+              <li class="drop-down__sub-item">
+                <a class="drop-down__sub-link" href="/reservation/index.html?active-tab=tab-1#is-tab">宿泊プランから探す</a>
+              </li>
+              <li class="drop-down__sub-item">
+                <a class="drop-down__sub-link" href="/reservation/index.html?active-tab=tab-2#is-tab">客室タイプから探す</a>
+              </li>
+            </ul>
+          </li>
+          <li class="drop-down__item drop-down__item--language is-sp">
+            <span class="drop-down__label" href="">
+              Language
+            </span>
+            <ul class="drop-down__sub-menu drop-down__sub-menu--language">
+              <li class="drop-down__sub-item drop-down__sub-item--language">
+                <a class="drop-down__sub-link drop-down__sub-link--language" href="">English</a>
+              </li>
+              <li class="drop-down__sub-item drop-down__sub-item--language">
+                <a class="drop-down__sub-link drop-down__sub-link--language" href="">简体中文</a>
+              </li>
+              <li class="drop-down__sub-item drop-down__sub-item--language">
+                <a class="drop-down__sub-link drop-down__sub-link--language" href="">繁体中文</a>
+              </li>
+              <li class="drop-down__sub-item drop-down__sub-item--language">
+                <a class="drop-down__sub-link drop-down__sub-link--language" href="">한국어</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- ======== ⬆︎ ※ SP / タブレット限定 固定ボトムメニュー ⬆︎ ======== -->
+    </header>
+    <!-- ======== ⬆︎ グローバルヘッダー ⬆︎ ======== -->
+
+    <!-- ======== ⬇︎ メインビジュアル ⬇︎ ======== -->
+    <div class="mv mv--facilities js-mv">
+      <div class="mv__inner">
+        <div class="mv__col">
+          <div class="mv__logo mv__logo--pages">
+            <img class="mv_top__logo-img" src="/images/icon/ico_mv-logo.svg" alt="HOTEL小町のロゴ">
+          </div>
+          <h1 class="mv__text mv__text--pages">
+            館内ご案内
+          </h1>
+        </div>
+        <p class="mv__text mv__text--small">CUISINE</p>
+      </div>
+      <div class="scroll-down">
+        <span class="scroll-down__text">Scroll</span>
+      </div>
+    </div>
+    <!-- ======== ⬆︎ メインビジュアル ⬆︎ ======== -->
+
+    <!-- ==================================================================== -->
+
+    <main class="contents">
+
+      <div class="breadcrumb">
+        <div class="breadcrumb__inner">
+          <ol class="breadcrumb__list">
+            <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__link--home" href="/">ホーム</a></li>
+            <li class="breadcrumb__item">館内ご案内</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- ======== ⬇︎ コンテンツ_テキスト / アンカーボタン ⬇︎ ======== -->
+      <div class="page-section">
+        <div class="page-section__inner">
+          <div class="desc-contents desc-contents--center">
+            <div class="desc-contents__inner">
+              <p class="desc-contents__catch">
+                退屈することのない思い出づくりの空間をご提供
+              </p>
+              <p class="desc-contents__text">
+                当館は全階7階建となっており、お部屋以外にもアミューズメントを楽しめるゲームセンターや会議室、<br>
+                お土産屋など退屈することのない施設をご用意しております。
+              </p>
+            </div>
+
+            <!-- ======== ⬇︎ アンカーボタン ⬇︎ ======== -->
+            <section class="anchor-facilities">
+              <h3 class="h3-heading">
+                <span class="h3-heading__inner">HOTEL小町　全館図</span>
+              </h3>
+
+              <div class="inside-map">
+                <div class="inside-map__inner">
+                  <!-- 8F -->
+                  <div class="inside-map__item">
+                    <p class="inside-map__floa">8F</p>
+                    <div class="inside-map__box inside-map__box--long">
+                      <a class="inside-map__link" href="#restaurant">お食事処</a>
+                    </div>
+                    <div class="inside-map__box inside-map__box--medium">
+                      <a class="inside-map__link" href="#rooftop">屋上庭園</a>
+                    </div>
+                  </div>
+
+                  <!-- 7F ~ 3F -->
+                  <div class="inside-map__item">
+                    <p class="inside-map__floa">7F</p>
+                    <div class="inside-map__box inside-map__box--x-long">
+                      <p class="nside-map__rooms">客室 76 ~ 80</p>
+                    </div>
+                  </div>
+                  <div class="inside-map__item">
+                    <p class="inside-map__floa">6F</p>
+                    <div class="inside-map__box inside-map__box--x-long">
+                      <p class="nside-map__rooms">客室 61 ~ 75</p>
+                    </div>
+                  </div>
+                  <div class="inside-map__item">
+                    <p class="inside-map__floa">5F</p>
+                    <div class="inside-map__box inside-map__box--x-long">
+                      <p class="nside-map__rooms">客室 46 ~ 60</p>
+                    </div>
+                  </div>
+                  <div class="inside-map__item">
+                    <p class="inside-map__floa">4F</p>
+                    <div class="inside-map__box inside-map__box--long">
+                      <p class="nside-map__rooms">客室 31 ~ 45</p>
+                    </div>
+                    <div class="inside-map__box inside-map__box--medium">
+                      <p class="nside-map__rooms">ランドリー</p>
+                    </div>
+                  </div>
+                  <div class="inside-map__item">
+                    <p class="inside-map__floa">3F</p>
+                    <div class="inside-map__box inside-map__box--x-long">
+                      <p class="nside-map__rooms">客室 06 ~ 30</p>
+                    </div>
+                  </div>
+
+                  <!-- 2F -->
+                  <div class="inside-map__item">
+                    <p class="inside-map__floa">2F</p>
+                    <div class="inside-map__box inside-map__box--short">
+                      <a class="inside-map__link" href="#game-center">ゲームセンター</a>
+                    </div>
+                    <div class="inside-map__box inside-map__box--short">
+                      <a class="inside-map__link" href="#conference-room">会議室</a>
+                    </div>
+                    <div class="inside-map__box inside-map__box--long">
+                      <p class="nside-map__rooms">バイキング会場 御前の間</p>
+                    </div>
+                  </div>
+
+                  <!-- 1F -->
+                  <div class="inside-map__item">
+                    <p class="inside-map__floa">1F</p>
+                    <div class="inside-map__box inside-map__box--short">
+                      <a class="inside-map__link" href="#flont">フロント</a>
+                    </div>
+                    <div class="inside-map__box inside-map__box--medium">
+                      <a class="inside-map__link" href="#hakurei">お土産屋『博麗』</a>
+                    </div>
+                    <div class="inside-map__box inside-map__box--short">
+                      <a class="inside-map__link inside-map__link--another-link" href="/hot-spring.html">温泉 <span
+                          class="dli-arrow-right"></span></a>
+                    </div>
+                    <div class="inside-map__box inside-map__box--long">
+                      <a class="inside-map__link" href="#momizi">リラクゼーション『椛』</a>
+                    </div>
+                    <div class="inside-map__box inside-map__box--long">
+                      <p class="nside-map__rooms">客室 01 ~ 05</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </section>
+            <!-- ======== ⬆︎ アンカーボタン ⬆︎ ======== -->
+          </div>
+        </div>
+        <!-- ======== ⬆︎ コンテンツ_テキスト / アンカーボタン ⬆︎ ======== -->
+      </div>
+      <!-- ==================================================================== -->
+
+      <!-- ======== ⬇︎ コンテンツ_8F 最上階フロア ⬇︎ ======== -->
+      <section class="page-section">
+        <div class="page-section__mv">
+          <h2 class="h2-heading">
+            <div class="h2-heading__inner">
+              <span class="h2-heading__text">8F 最上階フロア</span>
+            </div>
+          </h2>
+        </div>
+
+        <!-- ### 屋上 ### -->
+        <section id="rooftop" class="page-section__box">
+          <h3 class="h3-heading">
+            <span class="h3-heading__inner">屋上庭園</span>
+          </h3>
+
+          <div class="page-section__col">
+
+            <!-- ##### サムネイル付きスライドショー ⬇︎ ##### -->
+            <div class="slider-wrap" id="slider-wrap">
+              <!-- メインのスライダー -->
+              <div class="slider-main" id="slider-main">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <img class="swiper-img" src="/images/facilities/img_in-house-facilities_rooftop-garden.jpg"
+                      alt="屋上庭園">
+                  </li>
+                  <li class="swiper-slide">
+                    <img class="swiper-img" src="/images/facilities/img_in-house-facilities_rooftop-pool.jpg"
+                      alt="屋上プール">
+                  </li>
+                  <li class="swiper-slide">
+                    <img class="swiper-img" src="/images/facilities/img_starry-sky_8f.jpg" alt="屋上の星空">
+                  </li>
+                </ul>
+                <!-- 前後の矢印 -->
+                <div class="swiper-button-prev" id="swiper-button-prev"></div>
+                <div class="swiper-button-next" id="swiper-button-next"></div>
+              </div>
+              <!-- サムネイルのスライダー -->
+              <div class="slider-thumb" id="slider-thumb">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <img src="/images/facilities/img_in-house-facilities_rooftop-garden.jpg" alt="">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="/images/facilities/img_in-house-facilities_rooftop-pool.jpg" alt="">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="/images/facilities/img_starry-sky_8f.jpg" alt="">
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- ##### サムネイル付きスライドショー ⬆︎ ##### -->
+
+            <section class="page-section__info page-section__info--right">
+              <div class="desc-contents">
+                <div class="desc-contents__inner">
+                  <p class="desc-contents__text">
+                    四季折々の植物と花に囲まれた空間で蓼科の自然を感じつつゆっくりとリラックスできます。<br><br>
+                    夜には雄大な星空を眺めることができますので、お風呂上がりに星の観察をお楽しみください。<br><br>
+                    また、夏には期間限定で屋上のプールを開放しております。<br>
+                    蓼科の大自然の中でオアシスを感じながらゆっくりとお過ごしいただけます。<br><br>
+                    ※天候により開放をしない場合がございます。
+                  </p>
+                </div>
+                <table class="table">
+                  <tr class="table__tr">
+                    <th class="table__th">開放時間</th>
+                    <td class="table__td">AM 7:00 ~ PM 22:00<br>プール：AM 10:00 ~ PM 19:00</td>
+                  </tr>
+                  <tr class="table__tr">
+                    <th class="table__th">フロア</th>
+                    <td class="table__td">HOTEL小町 8F　屋上エリア 南側出口</td>
+                  </tr>
+                  <tr class="table__tr">
+                    <th class="table__th">【プール】ご利用料金</th>
+                    <td class="table__td">お一人：¥700</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <!-- ### 屋上 ### -->
+        <section id="restaurant" class="page-section__box">
+          <h3 class="h3-heading">
+            <span class="h3-heading__inner">お食事処</span>
+          </h3>
+          <div class="link-img">
+            <a href="#" class="link-img__item">
+              <div class="link-img__thumb">
+                <img class="link-img__img" src="/images/top/img_yatugatake-link.jpg" alt="レストラン「YATUGATAKE」">
+
+                <div class="link-img__info">
+                  <p class="link-img__label">
+                    蓼科の景色と和食で舌鼓<br>
+                    【YATUGATAKE】
+                  </p>
+                  <p class="link-img__time">
+                    営業時間：11:00 ~ 14:00
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" class="link-img__item">
+              <div class="link-img__thumb">
+                <img class="link-img__img" src="/images/top/img_horoyoi-link.jpg" alt="日本酒バー「ほろ酔い」">
+                <div class="link-img__info">
+                  <p class="link-img__label">
+                    信州・日本各地の地酒を味わえる<br>
+                    【ほろ酔い】
+                  </p>
+                  <p class="link-img__time">
+                    営業時間：PM19:00 ~ PM 23:00
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+      </section>
+      <!-- ======== ⬆︎ コンテンツ_8F 最上階フロア ⬆︎ ======== -->
+
+      <!-- ==================================================================== -->
+
+      <!-- ======== ⬇︎ コンテンツ_2F フロア ⬇︎ ======== -->
+      <section class="page-section page-section--gray-bg facilities">
+        <h2 class="h2-heading">
+          <div class="h2-heading__inner">
+            <span class="h2-heading__text">2F フロア</span>
+          </div>
+        </h2>
+
+        <!-- ### ゲームセンター ### -->
+        <section id="game-center" class="page-section__box">
+          <h3 class="h3-heading">
+            <span class="h3-heading__inner">ゲームセンター</span>
+          </h3>
+
+          <div class="page-section__col page-section__col--row-reverse">
+
+            <!-- ##### 画像 ⬇︎ ##### -->
+            <div class="page-section__thumb">
+              <img class="page-section__img" src="/images/facilities/img_in-house-facilities_game-center.jpg"
+                alt="お刺身などのバイキングメニューが並んだテーブル">
+            </div>
+            <!-- ##### 画像 ⬆︎ ##### -->
+
+            <section class="page-section__info page-section__info--left">
+              <div class="desc-contents">
+                <div class="desc-contents__inner">
+                  <p class="desc-contents__text">
+                    卓球台やホッケーなどの定番ゲームや、最新のアーケードゲームなども完備しておりますので、仲間や家族との思い出づくりにぜひご利用ください。
+                  </p>
+                </div>
+                <table class="table">
+                  <tr class="table__tr">
+                    <th class="table__th">営業時間</th>
+                    <td class="table__td">AM 8:00 ~ PM 22:00</td>
+                  </tr>
+                  <tr class="table__tr">
+                    <th class="table__th">ご利用料金</th>
+                    <td class="table__td">一部無料 / ¥100~</td>
+                  </tr>
+                  <tr class="table__tr">
+                    <th class="table__th">フロア</th>
+                    <td class="table__td">HOTEL小町 2F</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <!-- ### 会議室 ### -->
+        <section id="conference-room" class="page-section__box">
+          <h3 class="h3-heading">
+            <span class="h3-heading__inner">会議室</span>
+          </h3>
+          <div class="page-section__col">
+            <!-- ##### 画像 ⬇︎ ##### -->
+            <div class="page-section__thumb">
+              <img class="page-section__img" src="/images/facilities/img_in-house-facilities_conference room.jpg"
+                alt="椅子が並びスクリーンがある会議室">
+            </div>
+            <!-- ##### 画像 ⬆︎ ##### -->
+
+            <section class="page-section__info page-section__info--right">
+              <div class="desc-contents">
+                <div class="desc-contents__inner">
+                  <p class="desc-contents__text">
+                    各種パーティや企業の研修、学校の課外授業など幅広くご利用いただけます。<br><br>
+                    人数や用途に分けて最適な会場をご提供いたします。
+                  </p>
+                </div>
+                <table class="table">
+                  <tr class="table__tr">
+                    <th class="table__th">営業時間</th>
+                    <td class="table__td">AM 8:00 ~ PM 21:00</td>
+                  </tr>
+                  <tr class="table__tr">
+                    <th class="table__th">ご予約</th>
+                    <td class="table__td">TEL：01234-56-7890<br>（ご予約は現在、お電話のみで承っております）</td>
+                  </tr>
+                  <tr class="table__tr">
+                    <th class="table__th">定員数</th>
+                    <td class="table__td">最低：2人　最大：60人</td>
+                  </tr>
+                  <tr class="table__tr">
+                    <th class="table__th">フロア</th>
+                    <td class="table__td">HOTEL小町 2F南通路</td>
+                  </tr>
+                </table>
+                <div class="button-box">
+                  <a href="#" class="secondary-btn secondary-btn--pdf" target="_blank">利用規約はこちら</a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+      </section>
+      <!-- ======== ⬆︎ コンテンツ_2F フロア ⬆︎ ======== -->
+
+      <!-- ==================================================================== -->
+
+      <!-- ======== ⬇︎ コンテンツ_1F フロア ⬇︎ ======== -->
+      <section class="page-section facilities">
+        <h2 class="h2-heading">
+          <div class="h2-heading__inner">
+            <span class="h2-heading__text">1F フロア</span>
+          </div>
+        </h2>
+
+        <!-- ### お土産屋【博麗】 ### -->
+        <section id="hakurei" class="page-section__box  facilities">
+          <h3 class="h3-heading">
+            <span class="h3-heading__inner">お土産屋【博麗】</span>
+          </h3>
+          <div class="page-section__col page-section__col--row-reverse">
+            <!-- ##### 画像 ⬇︎ ##### -->
+            <div class="page-section__thumb">
+              <img class="page-section__img" src="/images/facilities/img_in-house-facilities_souvenir.jpg"
+                alt="店頭に並んだ商品の写真">
+            </div>
+            <!-- ##### 画像 ⬆︎ ##### -->
+
+            <section class="page-section__info page-section__info--left">
+              <div class="desc-contents">
+                <div class="desc-contents__inner">
+                  <p class="desc-contents__text">
+                    地元の特産品をはじめ、お土産や信州の地酒など幅広く商品を扱っております。<br><br>
+                    お部屋でつまめる軽食やお菓子、ソフトクリームなどもございますので、お気軽にお立ち寄りください。
+                  </p>
+                </div>
+                <table class="table">
+                  <tr class="table__tr">
+                    <th class="table__th">営業時間</th>
+                    <td class="table__td">AM 7:30 ~ PM 22:00</td>
+                  </tr>
+                  <tr class="table__tr">
+                    <th class="table__th">フロア</th>
+                    <td class="table__td">HOTEL小町 1F</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+          </div>
+
+          <section class="img-list">
+            <h3 class="h3-heading">
+              <span class="h3-heading__inner">お取り扱い商品（一例）</span>
+            </h3>
+            <div class="img-list__box">
+              <figure class="img-list__item">
+                <img class="img-list__img" src="/images/facilities/img_anchor-link_souvenir-shop01.jpg"
+                  alt="フルーツに囲まれたオレンジとグリーンとトマトのジュース">
+                <figcaption class="img-list__caption">
+                  新鮮お野菜・フルーツジュース
+                </figcaption>
+              </figure>
+
+              <figure class="img-list__item">
+                <img class="img-list__img" src="/images/facilities/img_anchor-link_souvenir-shop02.jpg" alt="グレープとジャム">
+                <figcaption class="img-list__caption">
+                  蓼科のグレープジャム
+                </figcaption>
+              </figure>
+
+              <figure class="img-list__item">
+                <img class="img-list__img" src="/images/facilities/img_anchor-link_souvenir-shop03.jpg"
+                  alt="陶器のお猪口とポット">
+                <figcaption class="img-list__caption">
+                  陶器
+                </figcaption>
+              </figure>
+              <figure class="img-list__item">
+                <img class="img-list__img" src="/images/facilities/img_anchor-link_souvenir-shop04.jpg"
+                  alt="お米と稲とお盆に乗った日本酒の入ったお猪口とコップ">
+                <figcaption class="img-list__caption">
+                  蓼科日本酒
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+        </section>
+
+        <!-- ### リラクゼーション【椛】 ### -->
+        <section id="momizi" class="page-section__box">
+          <h3 class="h3-heading">
+            <span class="h3-heading__inner">リラクゼーション【椛】</span>
+          </h3>
+          <div class="page-section__col">
+            <!-- ##### サムネイル付きスライドショー ⬇︎ ##### -->
+            <div class="slider-wrap" id="slider-wrap">
+              <!-- メインのスライダー -->
+              <div class="slider-main" id="slider-main">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <img class="swiper-img" src="/images/facilities/img_in-house-facilities_aromatherapy.jpg" alt="アロマオイルを手に垂らしている女性">
+                  </li>
+                  <li class="swiper-slide">
+                    <img class="swiper-img" src="/images/facilities/img_in-house-facilities_bodycare.jpg" alt="背中をもむほぐす女性">
+                  </li>
+                  <li class="swiper-slide">
+                    <img class="swiper-img" src="/images/facilities/img_in-house-facilities_facemassage.jpg" alt="">
+                  </li>
+                </ul>
+                <!-- 前後の矢印 -->
+                <div class="swiper-button-prev" id="swiper-button-prev"></div>
+                <div class="swiper-button-next" id="swiper-button-next"></div>
+              </div>
+              <!-- サムネイルのスライダー -->
+              <div class="slider-thumb" id="slider-thumb">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <img src="/images/facilities/img_in-house-facilities_aromatherapy.jpg" alt="">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="/images/facilities/img_in-house-facilities_bodycare.jpg" alt="">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="/images/facilities/img_in-house-facilities_facemassage.jpg" alt="">
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- ##### サムネイル付きスライドショー ⬆︎ ##### -->
+
+            <section class="page-section__info page-section__info--right">
+              <div class="desc-contents">
+                <div class="desc-contents__inner">
+                  <p class="desc-contents__text">
+                    日常のストレスや旅の疲れを癒す贅沢なひとときをぜひお試しください。<br><br>
+                    アロマオイルなどの多彩なメニューで快適な旅行をサポートいたします。
+                  </p>
+                </div>
+                <table class="table">
+                  <tr class="table__tr">
+                    <th class="table__th">営業時間</th>
+                    <td class="table__td">AM 10:00 ~ PM 23:00<br>（最終受付：PM22:30）</td>
+                  </tr>
+                  <tr class="table__tr">
+                    <th class="table__th">施術メニュー</th>
+                    <td class="table__td">
+                      ・アロマセラピー<br>
+                      ・ボディケア<br>
+                      ・フェイスマッサージ
+                    </td>
+                  </tr>
+                  <tr class="table__tr">
+                    <th class="table__th">フロア</th>
+                    <td class="table__td">HOTEL小町 1F</td>
+                  </tr>
+                </table>
+
+                <div class="button-box button-box--col">
+                  <a href="#" class="primary-btn primary-btn--external-link" target="_blank">事前予約はこちら</a>
+                  <a href="#" class="secondary-btn secondary-btn--pdf" target="_blank">施術内容の詳細はこちら</a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <!-- ### フロント・ロビー ### -->
+        <section id="flont" class="page-section__box">
+          <h3 class="h3-heading">
+            <span class="h3-heading__inner">フロント・ロビー</span>
+          </h3>
+          <div class="page-section__col page-section__col--row-reverse">
+            <!-- ##### 画像 ⬇︎ ##### -->
+            <div class="page-section__thumb">
+              <img class="page-section__img" src="/images/facilities/img_in-house-facilities_lobby.jpg"
+                alt="畳の上に座布団が並んでいてその先に木々の自然が広がっているロビーの待合所の写真">
+            </div>
+            <!-- ##### 画像 ⬆︎ ##### -->
+
+            <section class="page-section__info page-section__info--left">
+              <div class="desc-contents">
+                <div class="desc-contents__inner">
+                  <p class="desc-contents__text">
+                    広々としたロビーには和をテイストにした自然を眺めつつ待ち合わせ場所や休憩場所としても利用できる畳フロアがございます。<br><br>
+                    自然を観察しながらごゆっくりとお過ごしいただけます。
+                  </p>
+                </div>
+                <table class="table">
+                  <tr class="table__tr">
+                    <th class="table__th">フロント対応時間</th>
+                    <td class="table__td">AM 9:00 ~ PM 23:00</td>
+                  </tr>
+                  <tr class="table__tr">
+                    <th class="table__th">フロア</th>
+                    <td class="table__td">HOTEL小町 1F</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+          </div>
+        </section>
+
+      </section>
+      <!-- ======== ⬆︎ コンテンツ_1F フロア ⬆︎ ======== -->
+
+    </main>
+
+    <!-- ======== ⬇︎ フッター ⬇︎ ======== -->
+    <footer class="footer">
+      <div class="footer__inner">
+
+        <!-- ##### フッター情報 ##### -->
+        <div class="footer__info">
+          <a href="/" class="footer__logo">
+            <img class="footer__logo-img" src="/images/ico_footer-logo.svg" alt="HOTEL小町のロゴ">
+          </a>
+          <div class="footer__address">
+            <p class="footer__address-text">
+              〒123-4456　長野県茅野市北山56789-10
+            </p>
+            <p class="footer__address-text">
+              TEL：<span class="footer__address-text footer__address-text--large">01234-56-7890</span><br>
+              受付時間 9:00 ~ 18:00
+            </p>
+            <p class="footer__address-text">
+              Mail：<a class="footer__address-link" href="メールアプリ起動">test-test@sample.com</a>
+            </p>
+          </div>
+          <div class="footer__sns">
+            <p class="footer__sns-label">SNS</p>
+            <ul class="footer__sns-list">
+              <li class="footer__sns-item">
+                <a class="footer__sns-link" href="">
+                  <img class="footer__sns-icon" src="/images/icon/ico_footer-instagram.svg" alt="instagram">
+                </a>
+              </li>
+              <li class="footer__sns-item">
+                <a class="footer__sns-link" href="">
+                  <img class="footer__sns-icon" src="/images/icon/ico_footer-facebook.svg" alt="facebook">
+                </a>
+              </li>
+              <li class="footer__sns-item">
+                <a class="footer__sns-link" href="">
+                  <img class="footer__sns-icon" src="/images/icon/ico_footer-line.svg" alt="LINE">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <nav class="footer__nav">
+          <!-- ##### メインメニュー ##### -->
+          <ul class="footer__menu is-sp">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="/hot-spring.html">
+                温泉
+              </a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="/rooms.html">
+                客室
+              </a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="/cuisine.html">
+                お料理
+              </a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="/facilities.html">
+                館内ご案内
+              </a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="/sightseeing.html">
+                周辺の観光地
+              </a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="/access.html">
+                アクセス
+              </a>
+            </li>
+          </ul>
+
+          <!-- ##### サブメニュー ##### -->
+          <ul class="footer__submenu footer__menu--sub">
+            <li class="footer__submenu-item">
+              <a class="footer__submenu-link" href="/information/index.html">
+                インフォメーション
+              </a>
+            </li>
+            <li class="footer__submenu-item">
+              <a class="footer__submenu-link" href="/faq.html">
+                よくあるご質問
+              </a>
+            </li>
+            <li class="footer__submenu-item">
+              <a class="footer__submenu-link" href="/contact/contact.html">
+                お問い合わせ
+              </a>
+            </li>
+            <li class="footer__submenu-item">
+              <a class="footer__submenu-link" href="/privacy-policy.html">
+                宿泊約款
+              </a>
+            </li>
+            <li class="footer__submenu-item">
+              <a class="footer__submenu-link" href="/privacy-policy.html#privacy-policy">
+                個人情報保護方針
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <small class="footer__copyright">© 2024 Yuuki PortFolio</small>
+      </div>
+    </footer>
+    <!-- ======== ⬆︎ フッター ⬆︎ ======== -->
+
+    <!-- ==================================================================== -->
+
+    <!-- ======== ⬇︎ 固定サイドメニュー ⬇︎ ======== -->
+    <aside class="sidebar is-tab">
+
+      <nav id="js-side-slide_top" class="sidebar__nav">
+        <span class="sidebar__label">宿泊ご予約</span>
+        <ul class="sidebar__list">
+          <li class="sidebar__item"><a class="sidebar__link" href="/reservation/index.html#rooms-searh">空室検索</a></li>
+          <li class="sidebar__item"><a class="sidebar__link"
+              href="/reservation/index.html?active-tab=tab-1#is-tab">宿泊プランから探す</a>
+          </li>
+          <li class="sidebar__item"><a class="sidebar__link"
+              href="/reservation/index.html?active-tab=tab-2#is-tab">客室タイプから探す</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav id="js-side-slide_bottom" class="sidebar__nav sidebar__nav--bottom">
+        <span class="sidebar__label">Language</span>
+        <ul class="sidebar__list">
+          <li class="sidebar__item"><a class="sidebar__link sidebar__link--black" href="#">English</a></li>
+          <li class="sidebar__item"><a class="sidebar__link sidebar__link--black" href="#">简体中文</a></li>
+          <li class="sidebar__item"><a class="sidebar__link sidebar__link--black" href="#">繁体中文</a></li>
+          <li class="sidebar__item"><a class="sidebar__link sidebar__link--black" href="#">한국어</a></li>
+        </ul>
+      </nav>
+
+    </aside>
+    <!-- ======== ⬆︎ 固定サイドメニュー ⬆︎ ======== -->
+
+  </div>
+
+
+  <!-- ======== ⬇︎ JQuery / プラグイン読み込み ⬇︎ ======== -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/javascript/common.js"></script>
+  <!-- ======== ⬆︎ JQuery/プラグイン読み込み ⬆︎ ======== -->
+</body>
+
+</html>

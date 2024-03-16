@@ -1,0 +1,95 @@
+/*===================================================
+ _reservation_selection.scss
+ 宿泊選択ページ
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/font" as *;
+@use "../config/mq" as *;
+@use "../mixin/mixin" as *;
+
+.selection {
+  @include ContentWidth;
+
+  &__wrapper {
+    display: flex;
+
+    @include mq(tab) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .table {
+      width: 300px;
+      height: 100%;
+      border: 1px solid $c_border;
+
+      @include mq(tab) {
+        width: 100%;
+        margin-bottom: 32px;
+      }
+
+      &__caption {
+        font-size: $font-large;
+        margin-bottom: 16px;
+      }
+      
+      &__tr {
+        border: none;
+        font-size: 14px;
+
+        @include mq(tab) {
+          border-bottom: 1px solid $c_border;
+          &:first-child {
+            border-top: 1px solid $c_border;
+          }
+        }
+      }
+
+      &__th {
+        @include mq(pc) {
+          width: 100%;
+          padding: 16px 0;
+          display: block;
+          background-color: $c_main;
+          color: $c_white;
+          border-top: 1px solid $c_border;
+          border-bottom: 1px solid $c_border;
+        }
+
+        @include mq(tab) {
+          width: 240px;
+        }
+
+        @include mq(sp) {
+          width: 100%;
+        }
+      }
+
+      &__td {
+        width: 100%;
+        display: block;
+        padding: 16px;
+      }
+    }
+  }
+
+  &__calendar {
+    margin-left: auto;
+    @include mq(tab) {
+      margin-left: inherit;
+    }
+    
+    @include mq(sp) {
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+
+  .calendar {
+    @include mq(sp) {
+      width: 100%;
+      overflow-x: scroll;
+    }
+  }
+}

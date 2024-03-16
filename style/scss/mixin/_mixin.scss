@@ -1,0 +1,40 @@
+/*===================================================
+ _mixin.scss
+ 共通デザインの指定
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/mq" as *;
+
+/* --------------------------------------------------
+  最大コンテンツ幅
+--------------------------------------------------- */
+@mixin maxWidth {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------
+  コンテンツ幅
+--------------------------------------------------- */
+@mixin ContentWidth {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------
+  ▶︎ 矢印
+--------------------------------------------------- */
+@mixin TextlinkArrow($color: $c-accent) {
+  display: inline-block;
+  vertical-align: middle;
+  color: $color;
+  line-height: 1;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 6px 8px;
+  border-left-color: currentColor;
+  border-right: 0;
+}

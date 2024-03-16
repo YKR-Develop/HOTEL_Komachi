@@ -1,0 +1,7136 @@
+@charset "UTF-8";
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/* ==================================================
+ _function.scss
+ 関数 定義
+================================================== */
+/* ==================================================
+ フォントのvw単位計算
+ ※以下は他scssファイルでの定義方法
+ p {
+	font-size: responsiveFontSizeClamp(最小フォントサイズ,最大フォントサイズ,最小ウィンドウサイズ,最大ウィンドウサイズ);
+ }
+================================================== */
+/*===================================================
+ _mq.scss
+ メディアクエリ定義
+================================================== */
+/* --------------------------------------------------
+ PC / SP指定の非表示
+-------------------------------------------------- */
+@media screen and (min-width: 1025px) {
+  .is-pc {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .is-tab {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .is-sp {
+    display: none !important;
+  }
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _variables.scss
+ 共通使用変数 定義ファイル
+================================================== */
+/* --------------------------------------------------
+ セクション背景
+-------------------------------------------------- */
+/* --------------------------------------------------
+ Site-color サイトカラー
+-------------------------------------------------- */
+/* --------------------------------------------------
+ White/Black-color 白/黒
+-------------------------------------------------- */
+/* --------------------------------------------------
+ Button-color ボタン
+-------------------------------------------------- */
+/* --------------------------------------------------
+ Calendar-color カレンダー
+-------------------------------------------------- */
+/* --------------------------------------------------
+ border-color 線
+-------------------------------------------------- */
+/* --------------------------------------------------
+ opacity
+-------------------------------------------------- */
+/* --------------------------------------------------
+ header
+-------------------------------------------------- */
+/* --------------------------------------------------
+ footer
+-------------------------------------------------- */
+/* --------------------------------------------------
+ shadow 影
+-------------------------------------------------- */
+/* --------------------------------------------------
+ フォームtd背景
+-------------------------------------------------- */
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _variables.scss
+ 共通使用変数 定義ファイル
+================================================== */
+/* --------------------------------------------------
+ ##### Font #####
+ フォント
+-------------------------------------------------- */
+body {
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #30312D;
+}
+
+/* ==================================================
+ 見出しフォントサイズ
+
+================================================== */
+/* ==================================================
+ フォントサイズ
+================================================== */
+/* --------------------------------------------------
+ moduleファイル 
+-------------------------------------------------- */
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _variables.scss
+ 共通使用変数 定義ファイル
+================================================== */
+/* --------------------------------------------------
+ index.html メインビジュアルの指定
+-------------------------------------------------- */
+.mv {
+  grid-row: main;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (max-width: 1024px) {
+  .mv {
+    height: 80vh;
+    background-position: bottom 50px;
+  }
+}
+.mv--rooms {
+  background-image: url("/images/rooms/img_mv-rooms.jpg");
+}
+.mv--hot-spring {
+  background-image: url("/images/hot-spring/img_hot-spring_mv.jpg");
+}
+.mv--cuisine {
+  background-image: url("/images/cuisine/img_cuisine_mv.jpg");
+}
+.mv--facilities {
+  background-image: url("/images/facilities/img_facilities_mv.jpg");
+}
+.mv--sightseeing {
+  background-image: url("/images/sightseeing/img_sightseeing_mv.jpg");
+}
+.mv--access {
+  background-image: url("/images/access/img_access_mv.jpg");
+}
+.mv--information {
+  background-image: url("/images/information/img_information_mv.jpg");
+  background-position: 20% 30%;
+  background-size: cover;
+  height: 50vh;
+}
+@media screen and (max-width: 1024px) {
+  .mv--information {
+    background-size: cover;
+    background-position: center;
+    background-position: 25% 30%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .mv--information {
+    width: 100%;
+    background-size: cover;
+    background-position-x: 25%;
+  }
+}
+.mv--contact {
+  background-image: url("/images/contact-faq/img_contact-mv.jpg");
+  background-size: 100% 400px cover;
+  background-position: top left;
+  height: 50vh;
+}
+@media screen and (max-width: 1024px) {
+  .mv--contact {
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .mv--contact {
+    width: 100%;
+    background-size: cover;
+    background-position: center right;
+  }
+}
+.mv--faq {
+  background-image: url("/images/contact-faq/img_faq-mv.jpg");
+  background-size: contain;
+  background-position: top left;
+  height: 50vh;
+}
+@media screen and (max-width: 1024px) {
+  .mv--faq {
+    background-size: cover;
+    background-position: center center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .mv--faq {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+}
+.mv__col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 16px;
+}
+.mv__inner {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: #FAFAFA;
+}
+@media screen and (max-width: 1024px) {
+  .mv__inner {
+    width: 100%;
+    padding: 0 16px;
+  }
+}
+.mv__logo {
+  width: 64px;
+}
+@media screen and (max-width: 1024px) {
+  .mv__logo {
+    width: 40px;
+  }
+}
+.mv__text {
+  font-size: 24px;
+  text-align: left;
+}
+@media screen and (max-width: 767px) {
+  .mv__text {
+    font-size: 18px;
+  }
+}
+.mv__text--top {
+  text-align: center;
+}
+.mv__text--pages {
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+@media screen and (max-width: 767px) {
+  .mv__text--pages {
+    font-size: 32px;
+  }
+}
+.mv__text--large {
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+@media screen and (max-width: 767px) {
+  .mv__text--large {
+    font-size: 40px;
+  }
+}
+.mv__text--small {
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  margin-top: 8px;
+}
+@media screen and (max-width: 767px) {
+  .mv__text--small {
+    font-size: 14px;
+  }
+}
+
+/* --------------------------------------------------
+ メインビジュアル スクロールアイコン
+-------------------------------------------------- */
+.scroll-down {
+  position: absolute;
+  bottom: 10px;
+  height: 56px;
+  left: 50%;
+  z-index: 10;
+}
+.scroll-down__text {
+  position: absolute;
+  color: #FAFAFA;
+  left: -20px;
+  top: -20px;
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+  letter-spacing: 0.1em;
+}
+.scroll-down::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 1.5px;
+  height: 32px;
+  background-color: #FAFAFA;
+  animation: upDownEffect 2s ease-in-out infinite;
+  opacity: 0;
+}
+@keyframes upDownEffect {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 50px;
+    opacity: 0;
+  }
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _mixin.scss
+ 共通デザインの指定
+================================================== */
+/* --------------------------------------------------
+  最大コンテンツ幅
+--------------------------------------------------- */
+/* --------------------------------------------------
+  コンテンツ幅
+--------------------------------------------------- */
+/* --------------------------------------------------
+  ▶︎ 矢印
+--------------------------------------------------- */
+/* --------------------------------------------------
+ グローバルヘッダー
+-------------------------------------------------- */
+.g-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  transition: 0.3s;
+}
+@media screen and (max-width: 1024px) {
+  .g-header {
+    background-color: rgba(69, 51, 51, 0.95);
+  }
+}
+.g-header__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  .g-header__inner {
+    height: 72px;
+    padding: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .g-header__inner {
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .g-header__logo-img {
+    width: 96px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .g-header__logo-img {
+    width: 80px;
+  }
+}
+.g-header__info-text {
+  color: #FAFAFA;
+}
+.g-header__info-text--large {
+  font-size: clamp(1rem, 0.947rem + 0.26vw, 1.125rem);
+}
+@media screen and (min-width: 1025px) {
+  .g-header.transform {
+    background-color: rgba(69, 51, 51, 0.95);
+  }
+}
+@media screen and (max-width: 767px) {
+  .g-header__bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(69, 51, 51, 0.95);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s;
+    cursor: pointer;
+  }
+}
+
+/* --------------------------------------------------
+ 宿泊予約 / マイページヘッダー
+-------------------------------------------------- */
+.reserve-header {
+  width: 100%;
+  z-index: 100;
+  transition: 0.3s;
+  background-color: #453B33;
+}
+@media screen and (max-width: 1024px) {
+  .reserve-header {
+    background-color: rgba(69, 51, 51, 0.95);
+  }
+}
+.reserve-header__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  .reserve-header__inner {
+    height: 72px;
+    padding: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .reserve-header__inner {
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .reserve-header__logo-img {
+    width: 96px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .reserve-header__logo-img {
+    width: 80px;
+  }
+}
+.reserve-header__info-text {
+  color: #FAFAFA;
+}
+.reserve-header__info-text--large {
+  font-size: clamp(1rem, 0.947rem + 0.26vw, 1.125rem);
+}
+@media screen and (min-width: 1025px) {
+  .reserve-header.transform {
+    background-color: rgba(69, 51, 51, 0.95);
+  }
+}
+@media screen and (max-width: 767px) {
+  .reserve-header__bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(69, 51, 51, 0.95);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s;
+    cursor: pointer;
+  }
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _nav.scss
+ ナビゲーション / メニュー
+================================================== */
+/* --------------------------------------------------
+ グローバルナビの指定
+-------------------------------------------------- */
+@media screen and (max-width: 767px) {
+  .g-nav {
+    position: fixed;
+    right: -320px;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    padding: 48px 0;
+    transition: all 0.6s;
+    z-index: 200;
+    overflow-y: auto;
+  }
+}
+.g-nav__list {
+  display: flex;
+  gap: 0 32px;
+  font-size: 14px;
+  color: #FAFAFA;
+}
+@media screen and (max-width: 767px) {
+  .g-nav__list {
+    margin: 0;
+    padding: 0 16px;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 767px) {
+  .g-nav__item {
+    text-align: left;
+    padding: 20px;
+    border-bottom: 1px solid #FAFAFA;
+  }
+  .g-nav__item:first-child {
+    border-top: 1px solid #FAFAFA;
+  }
+  .g-nav__item--col {
+    border-bottom: none;
+    padding: 0;
+    margin-top: 16px;
+  }
+}
+.g-nav__link {
+  display: inline-block;
+  padding-bottom: 2px;
+  background-image: linear-gradient(#FAFAFA, #FAFAFA);
+  background-size: 0 1px;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+}
+.g-nav__link:hover {
+  background-size: 100% 1px;
+}
+@media screen and (max-width: 1024px) {
+  .g-nav__launguage-list {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .g-nav__launguage-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  .g-nav__launguage-item {
+    width: calc(50% - 8px);
+    height: 40px;
+    background-color: #F0F0F0;
+    line-height: 40px;
+    text-align: center;
+    color: #30312D;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nav-open .g-nav, .nav-open .reserve-nav {
+    width: 100%;
+    height: 100vh;
+    right: 0;
+    padding-top: 60px;
+  }
+  .nav-open .g-header__bg,
+  .nav-open .reserve-header__bg {
+    opacity: 0.9;
+    visibility: visible;
+  }
+  .nav-open .hamburger__border--top {
+    transform: rotate(45deg);
+    top: 20px;
+  }
+  .nav-open .hamburger__border--center {
+    width: 0;
+    left: 50%;
+  }
+  .nav-open .hamburger__border--bottom {
+    transform: rotate(-45deg);
+    top: 20px;
+  }
+}
+
+/* --------------------------------------------------
+ 宿泊予約 / マイページ ナビゲーション
+-------------------------------------------------- */
+@media screen and (max-width: 767px) {
+  .reserve-nav {
+    position: fixed;
+    right: -320px;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    padding: 48px 0;
+    transition: all 0.6s;
+    z-index: 200;
+    overflow-y: auto;
+  }
+}
+.reserve-nav__list {
+  display: flex;
+  gap: 0 32px;
+  font-size: 14px;
+  color: #FAFAFA;
+}
+@media screen and (max-width: 767px) {
+  .reserve-nav__list {
+    margin: 0;
+    padding: 0 16px;
+    flex-direction: column;
+  }
+}
+.reserve-nav__item {
+  position: relative;
+}
+.reserve-nav__item--icon {
+  padding-left: 28px;
+}
+.reserve-nav__item--icon::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("/reservation/images/ico_mypage.svg");
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media screen and (max-width: 767px) {
+  .reserve-nav__item--icon::after {
+    top: 30%;
+    left: 16px;
+  }
+}
+.reserve-nav__item--log-out {
+  padding-left: 28px;
+}
+.reserve-nav__item--log-out::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("/mypage/images/ico_logout.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media screen and (max-width: 767px) {
+  .reserve-nav__item--log-out::after {
+    top: 30%;
+    left: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .reserve-nav__item {
+    text-align: left;
+    padding: 20px;
+    border-bottom: 1px solid #FAFAFA;
+  }
+  .reserve-nav__item:first-child {
+    border-top: 1px solid #FAFAFA;
+  }
+  .reserve-nav__item--col {
+    border-bottom: none;
+    padding: 0;
+    margin-top: 16px;
+  }
+}
+.reserve-nav__link {
+  display: inline-block;
+  padding-bottom: 2px;
+  background-image: linear-gradient(#FAFAFA, #FAFAFA);
+  background-size: 0 1px;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+}
+@media screen and (max-width: 767px) {
+  .reserve-nav__link--icon, .reserve-nav__link--log-out {
+    padding-left: 24px;
+  }
+}
+.reserve-nav__link:hover {
+  background-size: 100% 1px;
+}
+@media screen and (max-width: 1024px) {
+  .reserve-nav__launguage-list {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .reserve-nav__launguage-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  .reserve-nav__launguage-item {
+    width: calc(50% - 8px);
+    height: 40px;
+    background-color: #F0F0F0;
+    line-height: 40px;
+    text-align: center;
+    color: #30312D;
+  }
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _form.scss
+ フォーム要素指定
+================================================== */
+input[type=checkbox] {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #536B4E;
+  vertical-align: -5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type=checkbox]:checked:before {
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  transform: rotate(50deg);
+  width: 5px;
+  height: 8px;
+  border-right: 2px solid #536B4E;
+  border-bottom: 2px solid #536B4E;
+  content: "";
+}
+
+input[type=checkbox]:checked:before {
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  transform: rotate(50deg);
+  width: 5px;
+  height: 8px;
+  border-right: 2px solid #536B4E;
+  border-bottom: 2px solid #536B4E;
+  content: "";
+}
+
+/* --------------------------------------------------
+ 空室検索フォーム
+-------------------------------------------------- */
+.form-room {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 1px;
+}
+.form-room .search-heading {
+  font-size: clamp(1.125rem, 1.072rem + 0.26vw, 1.25rem);
+}
+@media screen and (max-width: 767px) {
+  .form-room {
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+}
+.form-room__item {
+  background-color: #FAFAFA;
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.form-room__item--search {
+  width: 108px;
+  height: 79px;
+  padding-right: 16px;
+  text-align: center;
+  background-color: #F0F0F0;
+}
+@media screen and (max-width: 767px) {
+  .form-room__item--search {
+    width: 100%;
+  }
+}
+.form-room__item:hover {
+  background-color: #F0F0F0;
+}
+.form-room__item--search:hover {
+  background-color: #FAFAFA;
+}
+@media screen and (max-width: 767px) {
+  .form-room__item {
+    width: calc(50% - 2px);
+  }
+}
+.form-room__date {
+  padding: 40px 24px 16px 16px;
+  letter-spacing: 0.1em;
+  position: relative;
+  cursor: pointer;
+}
+.form-room__date::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.form-room__date::-webkit-clear-button {
+  -webkit-appearance: none;
+}
+.form-room__date::-webkit-calendar-picker-indicator {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.form-room__date::after {
+  content: "";
+  position: absolute;
+  top: 54%;
+  right: 16px;
+  width: 16px;
+  height: 16px;
+  background-image: url("/images/icon/ico_form-calendar.svg");
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 767px) {
+  .form-room__date {
+    width: 100%;
+  }
+}
+.form-room__select {
+  padding: 40px 56px 18px 16px;
+  letter-spacing: 0.1em;
+  position: relative;
+  cursor: pointer;
+}
+.form-room__select::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.form-room__select::-webkit-clear-button {
+  -webkit-appearance: none;
+}
+.form-room__select::-webkit-calendar-picker-indicator {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.form-room__select::after {
+  content: "";
+  position: absolute;
+  top: 54%;
+  right: 16px;
+  width: 16px;
+  height: 16px;
+  background-image: url("/images/icon/ico_form-calendar.svg");
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 767px) {
+  .form-room__select {
+    width: 100%;
+  }
+}
+.form-room__text {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+.form-room__arrow {
+  position: absolute;
+  top: 57%;
+  right: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #333;
+  line-height: 1;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 0.64952em 0.375em;
+  border-top-color: currentColor;
+  border-bottom: 0;
+}
+@media screen and (max-width: 767px) {
+  .form-room__arrow {
+    margin-left: 16px;
+  }
+}
+.form-room__search-icon {
+  position: absolute;
+  right: 16px;
+  background-image: url("/images/icon/ico_form-search.svg");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+*:focus {
+  outline: none;
+}
+
+/* --------------------------------------------------
+ お問い合わせフォーム
+-------------------------------------------------- */
+.form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.form__inner {
+  text-align: left;
+}
+.form__label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+}
+.form__required {
+  font-size: 10px;
+  padding: 4px;
+  background-color: #EA4C4C;
+  color: #FAFAFA;
+  margin-left: 16px;
+  vertical-align: 2px;
+}
+.form__any {
+  font-size: 10px;
+  padding: 4px;
+  background-color: #453B33;
+  color: #FAFAFA;
+  margin-left: 16px;
+  vertical-align: 2px;
+}
+.form__input {
+  margin-bottom: 40px;
+  width: 100%;
+  background-color: white;
+  padding: 16px;
+  border: 1px solid #C4C4C4;
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+}
+.form__message {
+  width: 100%;
+  height: 272px;
+  background-color: white;
+  padding: 16px;
+  border: 1px solid #C4C4C4;
+  margin-bottom: 40px;
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+}
+.form__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.form__checkbox {
+  margin-right: 8px;
+}
+.form__checkbox[disabled] {
+  opacity: 0.5;
+}
+
+/* --------------------------------------------------
+ 内容確認ボタン
+-------------------------------------------------- */
+.form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  width: 264px;
+  height: 56px;
+  background-color: #536B4E;
+  color: #FAFAFA;
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+  transition: 0.6s;
+  padding-right: 16px;
+  border-radius: 2px;
+  /* --------------------------------------------------
+   入力内容を修正するボタン
+  -------------------------------------------------- */
+}
+.form-btn::after {
+  position: absolute;
+  right: 1em;
+  transform: translateY(-50%);
+  transform-origin: left;
+  width: 24px;
+  height: 0.5em;
+  background-color: #FAFAFA;
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 70% 40%, 70% 90%, 0% 90%);
+          clip-path: polygon(0 100%, 100% 100%, 70% 40%, 70% 90%, 0% 90%);
+  content: "";
+  transition: transform 0.3s;
+}
+.form-btn:hover {
+  background-color: #6D865E;
+  color: #FAFAFA;
+}
+.form-btn:hover::after {
+  transform: translateY(-50%) scaleX(1.2);
+  background-color: #FAFAFA;
+}
+.form-btn--return {
+  background: transparent;
+  border: 1px solid #536B4E;
+  color: #536B4E;
+  padding-right: 0;
+  transform: translateY(none);
+}
+.form-btn--return::after {
+  content: none;
+}
+.form-btn--return:hover {
+  background-color: #e5e5e5;
+  color: #536B4E;
+}
+.form-btn--return:hover::after {
+  content: none;
+}
+
+.form-btn[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+  /* クリック不可のカーソルを表示 */
+}
+.form-btn[disabled]:hover::after {
+  transform: translateY(-50%) scaleX(1);
+  background-color: #FAFAFA;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _footer.scss
+ フッターデザイン
+================================================== */
+/* --------------------------------------------------
+  フッター
+--------------------------------------------------- */
+.footer {
+  background-color: #EDEDED;
+  /* -------- ⬇︎ 営業情報 ⬇︎ -------- */
+  /* -------- ⬆︎ 営業情報 ⬆︎ -------- */
+  /* -------- ⬇︎ sns情報 ⬇︎ -------- */
+  /* -------- ⬆︎ sns情報 ⬆︎ -------- */
+  /* -------- ⬇︎ メインナビ ⬇︎ -------- */
+}
+.footer__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 64px;
+}
+@media screen and (max-width: 1024px) {
+  .footer__inner {
+    padding: 48px 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__inner {
+    padding: 48px 16px;
+  }
+}
+.footer__info {
+  display: flex;
+  align-items: center;
+  padding-bottom: 32px;
+  border-bottom: dotted 2px #C4C4C4;
+}
+@media screen and (max-width: 767px) {
+  .footer__info {
+    flex-direction: column;
+  }
+}
+.footer__logo {
+  margin-right: 80px;
+}
+@media screen and (max-width: 767px) {
+  .footer__logo {
+    width: 140px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__logo {
+    width: 112px;
+    height: 48px;
+    margin: 0 auto 16px auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__address {
+    margin-bottom: 32px;
+  }
+}
+.footer__address-text {
+  font-size: clamp(0.75rem, 0.697rem + 0.26vw, 0.875rem);
+  margin-bottom: 8px;
+}
+.footer__address-text:last-child {
+  margin-bottom: 0;
+}
+.footer__address-text--large {
+  font-size: clamp(1rem, 0.947rem + 0.26vw, 1.125rem);
+  font-weight: 600;
+}
+@media screen and (max-width: 1024px) {
+  .footer__address-text {
+    font-size: 14px;
+  }
+  .footer__address-text--large {
+    font-size: clamp(1rem, 0.947rem + 0.26vw, 1.125rem);
+    font-weight: 600;
+  }
+}
+.footer__address-link {
+  display: inline-block;
+  border-bottom: 1px solid #C4C4C4;
+}
+.footer__sns {
+  margin-left: auto;
+}
+@media screen and (max-width: 767px) {
+  .footer__sns {
+    margin-left: inherit;
+  }
+}
+.footer__sns-label {
+  text-align: center;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+  position: relative;
+}
+.footer__sns-label::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 1px;
+  background-color: #C4C4C4;
+}
+.footer__sns-list {
+  display: flex;
+  gap: 0 24px;
+}
+.footer__sns-item {
+  position: relative;
+  display: inline-block;
+}
+.footer__sns-link {
+  transition: 0.3s;
+}
+.footer__sns-link:hover {
+  transform: scale(1.3);
+}
+.footer__nav {
+  padding: 32px 0 24px 0;
+}
+.footer__menu {
+  display: flex;
+  justify-content: center;
+  gap: 0 40px;
+  margin-bottom: 32px;
+}
+@media screen and (max-width: 767px) {
+  .footer__menu {
+    display: none;
+  }
+}
+.footer__menu-item {
+  position: relative;
+  padding-left: 16px;
+  font-size: clamp(0.75rem, 0.697rem + 0.26vw, 0.875rem);
+}
+@media screen and (max-width: 1024px) {
+  .footer__menu-item {
+    font-size: 14px;
+  }
+}
+.footer__menu-item::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 8px;
+  height: 1px;
+  background-color: #30312D;
+}
+.footer__menu-link, .footer__submenu-link {
+  font-weight: 600;
+  background-image: linear-gradient(#30312D, #30312D);
+  background-size: 0 1px;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+}
+.footer__menu-link:hover, .footer__submenu-link:hover {
+  background-size: 100% 1px;
+}
+.footer__submenu {
+  display: flex;
+  justify-content: center;
+  gap: 0 40px;
+}
+@media screen and (max-width: 1024px) {
+  .footer__submenu {
+    gap: 0 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__submenu {
+    text-align: center;
+    flex-direction: column;
+    gap: 16px 0;
+  }
+}
+.footer__submenu-link {
+  font-size: clamp(0.75rem, 0.697rem + 0.26vw, 0.875rem);
+  font-weight: 300;
+}
+@media screen and (max-width: 1024px) {
+  .footer__submenu-link {
+    display: inline-block;
+    letter-spacing: 0;
+    font-size: 14px;
+  }
+}
+.footer__copyright {
+  display: block;
+  text-align: center;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _sidebar.scss
+ 宿泊ご予約 / Language固定メニュー
+================================================== */
+/* --------------------------------------------------
+  サイドバー
+--------------------------------------------------- */
+.sidebar__nav {
+  margin-right: 0;
+  z-index: 99;
+  position: fixed;
+  bottom: 208px;
+  right: -188px;
+  background: #536B4E;
+  width: 232px;
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.sidebar__nav--bottom {
+  bottom: 0;
+  background: #F0F0F0;
+  color: #30312D;
+}
+@media screen and (max-width: 1024px) {
+  .sidebar__nav {
+    font-size: 14px;
+  }
+}
+.sidebar__label {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.225em;
+  padding: 0 12px;
+}
+.sidebar__list {
+  font-size: 14px;
+  padding: 24px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px 0;
+  text-align: left;
+}
+.sidebar__item {
+  display: block;
+  margin-bottom: 10px;
+}
+.sidebar__link {
+  display: inline-block;
+  border-bottom: 1px solid #C4C4C4;
+  padding-bottom: 2px;
+}
+.sidebar__link:hover {
+  color: #F0F0F0;
+  border-color: #F0F0F0;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _hamburger.scss
+ ハンバーガーメニュー
+================================================== */
+/* --------------------------------------------------
+ ハンバーガーメニューの指定
+-------------------------------------------------- */
+@media screen and (max-width: 767px) {
+  .hamburger {
+    position: absolute;
+    right: 0;
+    top: 8px;
+    width: 30px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 300;
+    margin-right: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hamburger__border {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #FAFAFA;
+    transition: all 0.6s;
+    border-radius: 1px;
+  }
+  .hamburger__border--top {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FAFAFA;
+  }
+  .hamburger__border--center {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 22px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FAFAFA;
+  }
+  .hamburger__border--bottom {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 32px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FAFAFA;
+  }
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _breadcrumbs.scss
+ パンくずリスト
+================================================== */
+/* --------------------------------------------------
+ パンくずリストの指定
+-------------------------------------------------- */
+.breadcrumb {
+  background-color: #F0F0F0;
+}
+@media screen and (max-width: 1024px) {
+  .breadcrumb {
+    overflow: auto;
+    word-break: keep-all;
+    white-space: nowrap;
+  }
+}
+.breadcrumb__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  .breadcrumb__inner {
+    padding: 0 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .breadcrumb__inner {
+    padding: 0 16px;
+  }
+}
+.breadcrumb__list {
+  height: 50px;
+  display: flex;
+  gap: 0 20px;
+  list-style: none;
+  padding: 0;
+  font-size: clamp(0.75rem, 0.697rem + 0.26vw, 0.875rem);
+}
+.breadcrumb__item {
+  display: flex;
+  align-items: center;
+}
+.breadcrumb__item:last-child {
+  padding-right: 16px;
+}
+.breadcrumb__item:not(:last-child)::after {
+  display: inline-block;
+  width: 0.3em;
+  height: 0.6em;
+  margin-left: 12px;
+  background-color: #30312d;
+  -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
+          clip-path: polygon(0 0, 100% 50%, 0 100%);
+  content: "";
+}
+.breadcrumb__link {
+  color: #30312d;
+  transition: 0.2s;
+}
+.breadcrumb__link--home {
+  padding-bottom: 2px;
+  border-bottom: 1px solid #C4C4C4;
+}
+.breadcrumb__link:hover {
+  color: #453B33;
+}
+
+/* --------------------------------------------------
+ pluginファイル 
+-------------------------------------------------- */
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _swiper.scss
+ スライドショーの定義
+================================================== */
+/* --------------------------------------------------
+ index.html メインビジュアルスライドの指定
+-------------------------------------------------- */
+.swiper-mv {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.swiper-mv .swiper-wrapper, .swiper-mv .swiper-slide > div {
+  width: 100%;
+  height: 100%;
+}
+.swiper-mv .swiper-slide.sw-1 > div {
+  position: relative;
+  background: url("/images/top/img_mv-swiper01.jpg") center center/cover no-repeat;
+}
+.swiper-mv .swiper-slide.sw-2 > div {
+  background: url("/images/top/img_mv-swiper02.jpg") center center/cover no-repeat;
+}
+.swiper-mv .swiper-slide.sw-3 > div {
+  background: url("/images/top/img_mv-swiper03.jpg") center center/cover no-repeat;
+}
+
+@keyframes zoomUp {
+  /* ズームアップで1.15倍させる指定 */
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+.swiper-slide-active > div,
+.swiper-slide-duplicate-active > div,
+.swiper-slide-prev > div {
+  animation: zoomUp 10s linear 0s 1 normal both;
+}
+
+.img-opacity {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(49, 49, 49, 0.4);
+}
+
+/* --------------------------------------------------
+ index.html コンテンツ内スライドショーの指定
+-------------------------------------------------- */
+.top-contents .swiper {
+  max-width: 640px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  .top-contents .swiper {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .top-contents .swiper {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+.top-contents .swiper-top .production_achieve {
+  text-align: center;
+}
+.top-contents .swiper-top .swiper-top .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: auto;
+  background-color: #f5f5f5;
+}
+
+.top-sightseeing .swiper {
+  width: 100%;
+  margin: 64px auto 48px auto;
+}
+@media screen and (max-width: 767px) {
+  .top-sightseeing .swiper {
+    margin: 48px auto 32px auto;
+  }
+}
+
+/* --------------------------------------------------
+ デフォルトの矢印を削除
+-------------------------------------------------- */
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: "" !important;
+  /*ここでデフォルトの矢印を上書き*/
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(250, 250, 250, 0.7);
+}
+@media screen and (max-width: 1024px) {
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50%;
+  border: 1px solid #C4C4C4;
+  transition: 0.3s;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: rgb(250, 250, 250);
+}
+@media screen and (max-width: 1024px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+/* 前へ矢印 配置 */
+.swiper-button-prev {
+  left: 13% !important;
+  right: auto;
+  position: relative;
+}
+
+/* 次へ矢印 配置 */
+.swiper-button-next {
+  right: 13% !important;
+  left: auto;
+  position: relative;
+}
+
+/* 前への矢印カスタマイズ */
+.swiper-button-prev:before {
+  content: "";
+  width: 24px;
+  height: 10px;
+  background-image: url("/images/icon/ico_left-arrow.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 次への矢印カスタマイズ */
+.swiper-button-next:before {
+  content: "";
+  width: 24px;
+  height: 10px;
+  background-image: url("/images/icon/ico_right-arrow.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* --------------------------------------------------
+ スライドのページネーションのスタイル
+-------------------------------------------------- */
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  margin: 16px;
+  border: 1px solid #FAFAFA;
+  background-color: transparent;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 1;
+}
+
+/*アクティブなときのスタイル*/
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  transform: scale(1.4);
+  background-color: #FAFAFA;
+}
+
+/* --------------------------------------------------
+ hot-spring / facilities.html サイドカラムレイアウト
+-------------------------------------------------- */
+.page-section #slider-wrap {
+  width: 640px;
+}
+@media screen and (max-width: 1024px) {
+  .page-section #slider-wrap {
+    width: 100%;
+  }
+}
+.page-section .swiper-img {
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .page-section .swiper-img {
+    width: 100%;
+  }
+}
+.page-section .swiper-slide {
+  width: 100%;
+}
+.page-section #slider-thumb {
+  width: 100%;
+  padding-left: 64px;
+  margin-top: 8px;
+}
+.page-section #slider-thumb .swiper-wrapper .swiper-slide {
+  cursor: pointer;
+  width: 176px;
+  height: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .page-section #slider-thumb {
+    width: 100%;
+    padding: 0 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .page-section #slider-thumb {
+    width: 100%;
+    padding: 0 16px;
+  }
+}
+
+.page-section__col--row-reverse #slider-thumb {
+  padding-left: 0;
+  padding-right: 64px;
+}
+@media screen and (max-width: 1024px) {
+  .page-section__col--row-reverse #slider-thumb {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+/* --------------------------------------------------
+ rooms.html 部屋スライドショー
+-------------------------------------------------- */
+.rooms .contents-slide,
+.sightseeing .contents-slide {
+  width: 100%;
+  margin-bottom: 48px;
+}
+.rooms #slider-wrap,
+.sightseeing #slider-wrap {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+@media screen and (max-width: 1024px) {
+  .rooms #slider-wrap,
+  .sightseeing #slider-wrap {
+    width: 100%;
+  }
+}
+.rooms #slider-main,
+.sightseeing #slider-main {
+  width: 100%;
+}
+.rooms .slide-img,
+.sightseeing .slide-img {
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .rooms .slide-img,
+  .sightseeing .slide-img {
+    width: 100%;
+  }
+}
+.rooms #slider-thumb,
+.sightseeing #slider-thumb {
+  width: 50%;
+  margin-left: auto;
+}
+.rooms #slider-thumb ul li,
+.sightseeing #slider-thumb ul li {
+  cursor: pointer;
+  width: 110px;
+  height: 100%;
+}
+.rooms #slider-thumb ul li img,
+.sightseeing #slider-thumb ul li img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .rooms #slider-thumb,
+  .sightseeing #slider-thumb {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/* --------------------------------------------------
+ mixinファイル 
+-------------------------------------------------- */
+/* --------------------------------------------------
+ commonファイル 
+-------------------------------------------------- */
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _heading.scss
+ 見出し指定
+================================================== */
+/* --------------------------------------------------
+ h2-heading
+-------------------------------------------------- */
+.h2-heading {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 48px;
+}
+.h2-heading__inner {
+  position: relative;
+  padding: 24px;
+}
+@media screen and (max-width: 1024px) {
+  .h2-heading__inner {
+    padding: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .h2-heading__inner {
+    padding: 12px;
+  }
+}
+.h2-heading__inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 1px;
+  background-color: #453B33;
+}
+.h2-heading__inner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 1px;
+  background-color: #453B33;
+}
+.h2-heading__text {
+  font-size: clamp(1.25rem, 1.197rem + 0.26vw, 1.375rem);
+  text-align: center;
+  font-weight: bold;
+  color: #453B33;
+}
+
+/* --------------------------------------------------
+ h3-heading
+-------------------------------------------------- */
+.h3-heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.h3-heading__inner {
+  font-size: clamp(1.125rem, 1.072rem + 0.26vw, 1.25rem);
+  color: #453B33;
+  font-weight: 600;
+  position: relative;
+  padding: 0 32px;
+}
+.h3-heading__inner::after, .h3-heading__inner::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background-color: #453B33;
+  position: absolute;
+  top: 50%;
+  display: block;
+}
+.h3-heading__inner::after {
+  left: 0;
+}
+.h3-heading__inner::before {
+  right: 0;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _variables.scss
+ 文章のデザイン定義
+================================================== */
+/* ==================================================
+ 説明文共通スタイル
+================================================== */
+.desc-contents {
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+  display: flex;
+  flex-direction: column;
+  gap: 32px 0;
+}
+.desc-contents--center {
+  text-align: center;
+}
+.desc-contents__box {
+  margin-bottom: 32px;
+}
+.desc-contents__box:last-child {
+  margin-bottom: 0;
+}
+.desc-contents__label {
+  font-weight: 600;
+  font-size: clamp(1rem, 0.947rem + 0.26vw, 1.125rem);
+  margin-bottom: 8px;
+}
+.desc-contents__catch {
+  font-size: clamp(1rem, 0.947rem + 0.26vw, 1.125rem);
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+.desc-contents__text {
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+  margin-bottom: 16px;
+}
+.desc-contents__text:last-child {
+  margin-bottom: 0;
+}
+.desc-contents__text--note {
+  color: #EA4C4C;
+}
+.desc-contents__text-bold {
+  font-weight: 600;
+}
+.desc-contents__text-list {
+  margin-bottom: 16px;
+}
+.desc-contents__btn {
+  margin-top: auto;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _button.scss
+ ボタン指定
+================================================== */
+.button-box {
+  display: flex;
+  justify-content: center;
+  gap: 0 32px;
+}
+@media screen and (max-width: 767px) {
+  .button-box {
+    flex-wrap: wrap;
+    gap: 32px 0;
+  }
+}
+
+/* --------------------------------------------------
+  primary-btn メインボタン
+--------------------------------------------------- */
+.primary-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  width: 264px;
+  height: 56px;
+  background-color: #536B4E;
+  color: #FAFAFA;
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+  transition: 0.6s;
+  padding-right: 16px;
+  border-radius: 2px;
+}
+@media screen and (max-width: 767px) {
+  .primary-btn {
+    height: 48px;
+  }
+}
+.primary-btn::after {
+  position: absolute;
+  right: 1em;
+  transform: translateY(-50%);
+  transform-origin: left;
+  width: 24px;
+  height: 0.5em;
+  background-color: #FAFAFA;
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 70% 40%, 70% 90%, 0% 90%);
+          clip-path: polygon(0 100%, 100% 100%, 70% 40%, 70% 90%, 0% 90%);
+  content: "";
+  transition: transform 0.3s;
+}
+.primary-btn:hover {
+  background-color: #6D865E;
+  color: #FAFAFA;
+}
+.primary-btn:hover::after {
+  transform: translateY(-50%) scaleX(1.2);
+  background-color: #FAFAFA;
+}
+
+/* --------------------------------------------------
+  Secondary-btn セカンダリーボタン
+--------------------------------------------------- */
+.secondary-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  width: 264px;
+  height: 56px;
+  border: 1px solid #536B4E;
+  color: #536B4E;
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+  transition: 0.6s;
+  padding-right: 16px;
+  border-radius: 2px;
+  /* --------------------------------------------------
+    external-link 外部リンクボタン
+  --------------------------------------------------- */
+  /* --------------------------------------------------
+    pdf PDFアイコンボタン
+  --------------------------------------------------- */
+}
+@media screen and (max-width: 767px) {
+  .secondary-btn {
+    height: 48px;
+  }
+}
+.secondary-btn::after {
+  position: absolute;
+  right: 1em;
+  transform: translateY(-50%);
+  transform-origin: left;
+  width: 24px;
+  height: 0.5em;
+  background-color: #453B33;
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 70% 40%, 70% 90%, 0% 90%);
+          clip-path: polygon(0 100%, 100% 100%, 70% 40%, 70% 90%, 0% 90%);
+  content: "";
+  transition: transform 0.3s;
+}
+.secondary-btn:hover::after {
+  transform: translateY(-50%) scaleX(1.2);
+  background-color: #453B33;
+}
+.secondary-btn:hover {
+  background-color: #e5e5e5;
+}
+.secondary-btn--external-link::after {
+  content: "";
+  position: absolute;
+  top: 35%;
+  right: 1em;
+  background-image: url("/images/icon/ico_feather-external-link.svg");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  -webkit-clip-path: none;
+          clip-path: none;
+  transition: unset;
+  transform: unset;
+  transform-origin: unset;
+}
+.secondary-btn--external-link:hover::after {
+  transform: none;
+  background-color: transparent;
+}
+.secondary-btn--pdf::after {
+  content: none;
+}
+.secondary-btn--pdf::before {
+  content: "";
+  position: absolute;
+  top: 35%;
+  right: 1em;
+  width: 12px;
+  height: 16px;
+  background-image: url("/images/icon/ico_pdf.svg");
+  background-repeat: no-repeat;
+}
+
+/* --------------------------------------------------
+  search-btn 検索ボタン
+--------------------------------------------------- */
+.search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  width: 264px;
+  height: 56px;
+  border: 1px solid #C4C4C4;
+  color: #30312D;
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+  transition: 0.6s;
+  padding-right: 16px;
+  border-radius: 2px;
+  background-color: #F0F0F0;
+}
+@media screen and (max-width: 767px) {
+  .search-btn {
+    height: 48px;
+  }
+}
+.search-btn::after {
+  content: "";
+  position: absolute;
+  top: 35%;
+  right: 16px;
+  width: 16px;
+  height: 16px;
+  background-image: url("/reservation/images/ico_search-btn.svg");
+}
+.search-btn:hover {
+  background-color: #e5e5e5;
+}
+
+/* --------------------------------------------------
+  more-btn もっと見るボタン
+--------------------------------------------------- */
+.more-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  width: 264px;
+  height: 56px;
+  border: 1px solid #C4C4C4;
+  color: #30312D;
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+  transition: 0.6s;
+  padding-right: 16px;
+  border-radius: 2px;
+  background-color: #F0F0F0;
+}
+.more-btn::after {
+  content: "";
+  position: absolute;
+  top: 35%;
+  right: 16px;
+  width: 14px;
+  height: 14px;
+  background-image: url("/reservation/images/ico_more.svg");
+}
+.more-btn:hover {
+  background-color: #e5e5e5;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _button.scss
+ ボタン指定
+================================================== */
+/* --------------------------------------------------
+ テキストリンク
+-------------------------------------------------- */
+.link-text {
+  color: #536B4E;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0 16px 2px 0;
+  text-align: center;
+  border-bottom: 1px solid #536B4E;
+  position: relative;
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+}
+.link-text--white {
+  color: #FAFAFA;
+  border-bottom: 1px solid #FAFAFA;
+}
+.link-text--margin {
+  margin-right: 16px;
+}
+.link-text::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  right: 0;
+  display: inline-block;
+  vertical-align: middle;
+  color: #536B4E;
+  line-height: 1;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 6px 8px;
+  border-left-color: currentColor;
+  border-right: 0;
+  transition: 0.3s;
+}
+.link-text--white::before {
+  display: inline-block;
+  vertical-align: middle;
+  color: #FAFAFA;
+  line-height: 1;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 6px 8px;
+  border-left-color: currentColor;
+  border-right: 0;
+}
+.link-text:hover::before {
+  right: -8px;
+}
+.link-text:hover {
+  opacity: 0.7;
+}
+
+/* --------------------------------------------------
+ 画像リンク
+-------------------------------------------------- */
+.link-img {
+  display: flex;
+  justify-content: center;
+  gap: 0 32px;
+}
+@media screen and (max-width: 767px) {
+  .link-img {
+    flex-direction: column;
+    gap: 24px 0;
+  }
+}
+.link-img__thumb {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.link-img__thumb::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  background-color: rgba(49, 49, 49, 0.3);
+}
+.link-img__thumb:hover::after {
+  background-color: rgba(49, 49, 49, 0.2);
+}
+.link-img__img {
+  width: 100%;
+}
+.link-img__img:hover {
+  transform: scale(1.5);
+}
+.link-img__info {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FAFAFA;
+  z-index: 2;
+  text-align: center;
+}
+.link-img__label {
+  font-size: clamp(1rem, 0.947rem + 0.26vw, 1.125rem);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.link-img__time {
+  font-size: clamp(0.75rem, 0.697rem + 0.26vw, 0.875rem);
+}
+
+/* --------------------------------------------------
+ おすすめ宿泊プランリンク
+-------------------------------------------------- */
+.plan-recome {
+  display: flex;
+  gap: 0 32px;
+}
+@media screen and (max-width: 767px) {
+  .plan-recome {
+    flex-direction: column;
+  }
+}
+.plan-recome__item {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+@media screen and (max-width: 767px) {
+  .plan-recome__item {
+    width: 100%;
+  }
+}
+.plan-recome__title {
+  display: block;
+  text-align: center;
+  font-size: clamp(1rem, 0.947rem + 0.26vw, 1.125rem);
+  color: #536B4E;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.plan-recome__thumb {
+  width: 100%;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+.plan-recome__img {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+.plan-recome__img:hover {
+  transform: scale(1.1);
+}
+.plan-recome__desc {
+  flex-grow: 1;
+  margin-bottom: 16px;
+}
+.plan-recome__price {
+  margin-bottom: 8px;
+}
+.plan-recome__price--green {
+  margin-left: 16px;
+  color: #453B33;
+  font-weight: 600;
+}
+.plan-recome__text-link {
+  text-align: center;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _map.scss
+ GoogleMapデザイン定義
+================================================== */
+/* ==================================================
+ GoogleMap
+================================================== */
+.googlemap {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-right: 64px;
+}
+@media screen and (max-width: 1024px) {
+  .googlemap {
+    padding: 0 32px;
+    height: 400px;
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .googlemap {
+    padding: 0 16px;
+    height: 400px;
+  }
+}
+.googlemap__contents {
+  width: 600px;
+  height: 400px;
+}
+@media screen and (max-width: 1024px) {
+  .googlemap__contents {
+    width: 100%;
+  }
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _vacancy-search.scss
+ 空室検索
+================================================== */
+/* ==================================================
+ 空室検索
+================================================== */
+.search-heading {
+  text-align: center;
+  color: #FAFAFA;
+  font-size: clamp(1.125rem, 1.072rem + 0.26vw, 1.25rem);
+  font-weight: 600;
+  letter-spacing: 0.5em;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 767px) {
+  .search-heading {
+    padding: 0 16px;
+  }
+}
+
+.vacancy-search__menu {
+  display: flex;
+  justify-content: center;
+  gap: 0 48px;
+  margin-bottom: 24px;
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _plan.scss
+ プランカード / プランコンテンツのデザイン定義
+================================================== */
+/* --------------------------------------------------
+ おすすめ宿泊プランリンク
+-------------------------------------------------- */
+.plan-recome {
+  display: flex;
+  gap: 0 32px;
+}
+@media screen and (max-width: 767px) {
+  .plan-recome {
+    flex-direction: column;
+    gap: 32px 0;
+  }
+}
+.plan-recome__item {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+}
+@media screen and (max-width: 767px) {
+  .plan-recome__item {
+    width: 100%;
+  }
+}
+.plan-recome__title {
+  display: block;
+  text-align: center;
+  font-size: clamp(1rem, 0.947rem + 0.26vw, 1.125rem);
+  color: #536B4E;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.plan-recome__thumb {
+  width: 100%;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+.plan-recome__img {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+.plan-recome__img:hover {
+  transform: scale(1.1);
+}
+.plan-recome__desc {
+  flex-grow: 1;
+  margin-bottom: 16px;
+  text-align: left;
+}
+.plan-recome__price {
+  margin-bottom: 8px;
+}
+.plan-recome__price--green {
+  margin-left: 16px;
+  color: #453B33;
+  font-weight: 600;
+}
+.plan-recome__text-link {
+  text-align: center;
+}
+
+/* --------------------------------------------------
+ 宿泊予約 プランコンテンツ
+-------------------------------------------------- */
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _drop-menu.scss
+ ドロップダウンメニュー
+================================================== */
+/* --------------------------------------------------
+  SP / タブレット ドロップダウンメニュー
+--------------------------------------------------- */
+.drop-down {
+  z-index: 0;
+}
+.drop-down__menu {
+  display: flex;
+}
+.drop-down__item {
+  flex: 1;
+  text-align: center;
+  color: #FAFAFA;
+  font-size: 14px;
+  padding: 8px 0;
+  font-weight: 300;
+  position: relative;
+}
+.drop-down__item--accent {
+  background-color: #536B4E;
+  border-top: none;
+}
+.drop-down__item--language {
+  background-color: #F0F0F0;
+  color: #30312D;
+  border-top: none;
+}
+.drop-down__item:hover .drop-down__sub-menu {
+  visibility: visible;
+  transition: all 0.4s;
+  transform: translateY(10px);
+}
+.drop-down__icon-img {
+  vertical-align: -2px;
+}
+.drop-down__sub-menu {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 27px;
+  width: 100%;
+  padding: 16px 0;
+  background-color: #536B4E;
+}
+.drop-down__sub-menu:first-of-type {
+  border-top: 1px solid #C4C4C4;
+}
+.drop-down__sub-menu--language {
+  background-color: #F0F0F0;
+}
+.drop-down__sub-item {
+  width: 100%;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FAFAFA;
+}
+.drop-down__sub-item--language {
+  color: #30312D;
+}
+.drop-down__sub-link {
+  padding-bottom: 2px;
+  border-bottom: 0.5px solid #FAFAFA;
+}
+.drop-down__sub-link--language {
+  border-bottom: 0.5px solid #30312D;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _anchor-menu.scss
+ アンカーメニューのデザイン定義
+================================================== */
+/* --------------------------------------------------
+ rooms.html アンカーリンク
+-------------------------------------------------- */
+.anchor-menu--mt {
+  margin-top: 40px;
+}
+.anchor-menu__list {
+  display: flex;
+  justify-content: space-between;
+}
+.anchor-menu__item {
+  width: 100%;
+  margin: 0 auto;
+  padding: 8px;
+  border-bottom: 1px solid #C4C4C4;
+}
+.anchor-menu__link {
+  display: block;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.anchor-menu__link::after {
+  content: url("/images/icon/ico_anchor-link_arrow.svg");
+  position: absolute;
+  bottom: -40px;
+}
+.anchor-menu__link:hover::after {
+  transform: scale(1.3);
+  transition: 0.3s;
+  animation: updown 1s infinite ease-in-out;
+}
+.anchor-menu__thumb {
+  margin-bottom: 8px;
+}
+@keyframes updown {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -4px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@media screen and (max-width: 767px) {
+  .anchor-menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 0;
+  }
+  .anchor-menu__item {
+    width: 50%;
+    padding: 0;
+  }
+  .anchor-menu__link {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .anchor-menu__link::after {
+    content: url("/images/icon/ico_anchor-link_arrow.svg");
+    position: absolute;
+    bottom: -24px;
+  }
+  .anchor-menu__link:hover::after {
+    transform: scale(1.3);
+    transition: 0.3s;
+    animation: updown 1s infinite ease-in-out;
+  }
+}
+
+/* --------------------------------------------------
+ facilities.html 館内図アンカーリンク
+-------------------------------------------------- */
+.anchor-facilities {
+  overflow: visible;
+}
+@media screen and (max-width: 767px) {
+  .anchor-facilities {
+    overflow: hidden;
+  }
+}
+.anchor-facilities__ {
+  font-size: clamp(1.125rem, 1.072rem + 0.26vw, 1.25rem);
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+.anchor-facilities__inner {
+  width: 100%;
+  height: 792px;
+  position: relative;
+}
+@media screen and (max-width: 1024px) {
+  .anchor-facilities__inner {
+    width: 100%;
+    height: 600px;
+  }
+}
+.anchor-facilities__map {
+  width: 640px;
+}
+.anchor-facilities__map-sp {
+  max-width: 320px;
+}
+.anchor-facilities .link-img {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 10px;
+  position: absolute;
+  background-color: rgba(49, 49, 49, 0.4);
+  padding: 16px;
+}
+.anchor-facilities .link-img--left {
+  top: 0;
+  left: 64px;
+}
+.anchor-facilities .link-img--right {
+  bottom: 180px;
+  right: 64px;
+}
+.anchor-facilities .link-img--bottom {
+  bottom: 0;
+  right: 0;
+  flex-direction: row;
+}
+.anchor-facilities .link-img__head {
+  font-size: clamp(1rem, 0.947rem + 0.26vw, 1.125rem);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.anchor-facilities .link-img__item {
+  width: 100%;
+}
+.anchor-facilities .link-img__label {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 1024px) {
+  .anchor-facilities .link-img__thumb {
+    width: 160px;
+  }
+  .anchor-facilities .link-img--left {
+    top: 50px;
+    left: 0;
+  }
+  .anchor-facilities .link-img--right {
+    bottom: 180px;
+    right: 0;
+  }
+  .anchor-facilities .link-img--bottom {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    justify-content: flex-start;
+    overflow-y: scroll;
+  }
+}
+@media screen and (max-width: 767px) {
+  .anchor-facilities .link-img {
+    padding: 8px;
+  }
+  .anchor-facilities .link-img__head {
+    width: 100%;
+    margin-bottom: 0;
+    flex: 1;
+    text-align: right;
+  }
+  .anchor-facilities .link-img__thumb {
+    width: 160px;
+    position: relative;
+  }
+  .anchor-facilities .link-img__thumb::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 160px;
+    height: 80px;
+    background-color: rgba(49, 49, 49, 0.35);
+    transition: 0.3s;
+  }
+  .anchor-facilities .link-img__link-contents {
+    position: relative;
+    width: 100%;
+  }
+  .anchor-facilities .link-img__label {
+    font-size: 14px;
+  }
+  .anchor-facilities .link-img__item {
+    width: auto;
+  }
+  .anchor-facilities .link-img--left, .anchor-facilities .link-img--right, .anchor-facilities .link-img--bottom {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: scroll;
+  }
+  .anchor-facilities .link-img--left {
+    top: 32px;
+    right: 0;
+    margin-left: 200px;
+  }
+  .anchor-facilities .link-img--right {
+    bottom: 180px;
+    left: 200px;
+  }
+  .anchor-facilities .link-img--bottom {
+    left: 0;
+    bottom: 0;
+  }
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _table.scss
+ テーブルのデザイン定義
+================================================== */
+/* --------------------------------------------------
+ テーブルの基本定義
+-------------------------------------------------- */
+.table {
+  width: 100%;
+  table-layout: fixed;
+}
+.table__caption {
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.table__tr {
+  height: 48px;
+  border-top: 1px solid #C4C4C4;
+  border-bottom: 1px solid #C4C4C4;
+  border-collapse: collapse;
+  font-size: 14px;
+  font-weight: 600;
+}
+.table__th {
+  width: 216px;
+  background-color: #453B33;
+  color: #FAFAFA;
+  font-weight: 300;
+  text-align: center;
+  vertical-align: middle;
+  padding: 8px;
+  font-weight: 600;
+}
+.table__td {
+  width: 100%;
+  padding: 20px;
+  vertical-align: middle;
+}
+@media screen and (max-width: 767px) {
+  .table tr {
+    border-top: none;
+    border-bottom: none;
+  }
+  .table th,
+  .table td {
+    width: 100%;
+    display: block;
+    padding: 16px;
+  }
+}
+
+.reservation-table {
+  width: 100%;
+  table-layout: fixed;
+}
+.reservation-table__tr {
+  height: 48px;
+  border-top: 1px solid #C4C4C4;
+  border-bottom: 1px solid #C4C4C4;
+  border-collapse: collapse;
+  font-size: 14px;
+  font-weight: 600;
+}
+.reservation-table__th {
+  width: 240px;
+  background-color: #F0F0F0;
+  color: #30312D;
+  font-weight: 300;
+  vertical-align: middle;
+  font-weight: 600;
+  padding: 20px;
+}
+.reservation-table__td {
+  width: 100%;
+  padding: 20px;
+  vertical-align: middle;
+}
+.reservation-table__text {
+  margin-bottom: 8px;
+}
+.reservation-table__text:last-child {
+  margin-bottom: 0;
+}
+.reservation-table__text--strong {
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+  font-weight: 600;
+  margin: 0 4px;
+  color: #536B4E;
+}
+.reservation-table__text--price {
+  padding-bottom: 2px;
+  border-bottom: 1px solid #536B4E;
+}
+@media screen and (max-width: 767px) {
+  .reservation-table tr {
+    border-top: none;
+    border-bottom: none;
+  }
+  .reservation-table th,
+  .reservation-table td {
+    width: 100%;
+    display: block;
+    padding: 16px;
+  }
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _img-list.scss
+ 画像一覧のデザイン定義
+================================================== */
+/* --------------------------------------------------
+ cuisine.html / facilities 画像リスト
+-------------------------------------------------- */
+.img-list {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  .img-list {
+    padding: 0 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .img-list {
+    padding: 0 16px;
+    margin-bottom: 0;
+  }
+}
+.img-list__box {
+  display: flex;
+  justify-content: center;
+  gap: 0 32px;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  .img-list__box {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .img-list__box {
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .img-list__item {
+    width: calc(50% - 16px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .img-list__item {
+    width: calc(50% - 8px);
+  }
+}
+.img-list__img {
+  margin-bottom: 8px;
+}
+.img-list__caption {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+}
+.img-list__text {
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _article.scss
+ 記事一覧のデザイン定義
+================================================== */
+/* --------------------------------------------------
+ information/ index.html 記事一覧
+-------------------------------------------------- */
+.article-list {
+  margin-bottom: 32px;
+}
+.article-list__card {
+  padding: 24px;
+  border-bottom: 1px dotted #C4C4C4;
+  transition: 0.3s;
+}
+.article-list__card:hover {
+  background-color: #F0F0F0;
+}
+.article-list__link {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+@media screen and (max-width: 767px) {
+  .article-list__link {
+    flex-wrap: wrap;
+  }
+}
+.article-list__info {
+  display: flex;
+  align-items: center;
+  gap: 0 24px;
+  margin-bottom: 16px;
+}
+@media screen and (max-width: 767px) {
+  .article-list__thumb {
+    width: 100%;
+  }
+}
+.article-list__thumb-img {
+  width: 160px;
+  height: 120px;
+}
+@media screen and (max-width: 767px) {
+  .article-list__thumb-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.article-list__category {
+  width: 140px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #453B33;
+  color: #FAFAFA;
+  font-size: 14px;
+}
+.article-list__desc {
+  width: 80%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  .article-list__desc {
+    width: 100%;
+  }
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _paginating.scss
+ 画像一覧のデザイン定義
+================================================== */
+.pagination-container {
+  text-align: center;
+}
+.pagination-container .pagination {
+  display: flex;
+  justify-content: center;
+}
+.pagination-container a {
+  padding: 16px 24px;
+  border: 1px solid #C4C4C4;
+}
+.pagination-container .navi-active {
+  background-color: #536B4E;
+  color: #FAFAFA;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _stepbar.scss
+ お問い合わせフォーム / 予約フロー ステップバー
+================================================== */
+/* --------------------------------------------------
+ お問い合わせフォームステップバー
+-------------------------------------------------- */
+.stepbar {
+  max-width: 776px;
+  margin: 48px auto;
+}
+.stepbar--complete {
+  margin: 0 auto 48px auto;
+}
+@media screen and (max-width: 767px) {
+  .stepbar {
+    width: 100%;
+    overflow-x: scroll;
+    word-break: keep-all;
+    white-space: nowrap;
+  }
+}
+.stepbar__list {
+  display: flex;
+  gap: 0 104px;
+  position: relative;
+}
+.stepbar__list::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #C4C4C4;
+  position: absolute;
+}
+@media screen and (max-width: 767px) {
+  .stepbar__list::after {
+    width: 100vw;
+    top: 8px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .stepbar__list {
+    gap: 0 32px;
+  }
+}
+.stepbar__item {
+  width: 188px;
+  text-align: center;
+  position: relative;
+  padding: 16px 0;
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+}
+@media screen and (max-width: 1024px) {
+  .stepbar__item {
+    width: 172px;
+    padding: 24px 0 8px 0;
+  }
+}
+.stepbar__item::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-color: #FAFAFA;
+  border: 1px solid #C4C4C4;
+  border-radius: 50px;
+  position: absolute;
+  top: -8px;
+  left: 45%;
+  z-index: 10;
+}
+@media screen and (max-width: 767px) {
+  .stepbar__item::after {
+    top: 0px;
+  }
+}
+.stepbar__item--active::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border: none;
+  background-color: #453B33;
+  border-radius: 50px;
+  position: absolute;
+  top: -8px;
+  left: 45%;
+  z-index: 10;
+}
+@media screen and (max-width: 767px) {
+  .stepbar__item--active::after {
+    top: 0px;
+  }
+}
+
+/* --------------------------------------------------
+ 宿泊予約フォームステップバー
+-------------------------------------------------- */
+.stepbar-arrow {
+  margin-bottom: 40px;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .stepbar-arrow {
+    width: 100%;
+    overflow-x: hidden;
+    height: 56px;
+  }
+}
+.stepbar-arrow__menu {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .stepbar-arrow__menu {
+    width: 880px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .stepbar-arrow__menu--info {
+    left: -176px;
+  }
+  .stepbar-arrow__menu--confirmation {
+    left: -392px;
+  }
+  .stepbar-arrow__menu--complete {
+    left: -600px;
+  }
+  .stepbar-arrow__menu--signup {
+    left: -56px;
+  }
+  .stepbar-arrow__menu--signup-confirmation {
+    left: -288px;
+  }
+  .stepbar-arrow__menu--signup-complete {
+    left: -516px;
+  }
+}
+.stepbar-arrow__item {
+  position: relative;
+  width: 256px;
+  text-align: center;
+  padding: 16px;
+  background-color: #F0F0F0;
+  color: #30312D;
+  font-size: 14px;
+}
+.stepbar-arrow__item:not(:last-child)::before, .stepbar-arrow__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  border: 26px solid transparent;
+  border-left: 20px solid #F0F0F0;
+  margin: auto;
+}
+.stepbar-arrow__item:not(:last-child)::before {
+  margin-left: 1px;
+  border-left-color: #C4C4C4;
+}
+.stepbar-arrow__item:last-child:not(:last-child)::before, .stepbar-arrow__item:last-child:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  border: 28px solid transparent;
+  border-left: 20px solid #F0F0F0;
+  margin: auto;
+}
+.stepbar-arrow__item--active {
+  z-index: 1;
+  color: #FAFAFA;
+  background-color: #536B4E;
+}
+.stepbar-arrow__item--active:not(:last-child)::after {
+  border-left-color: #536B4E;
+}
+.stepbar-arrow__item--active:not(:last-child)::before {
+  border-left: #536B4E;
+}
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _rooms-search.scss
+ 宿泊予約ページ 空室検索フォーム
+================================================== */
+.rooms-search__table {
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 24px;
+  table-layout: fixed;
+  word-break: break-all;
+  word-wrap: break-all;
+  overflow: hidden;
+}
+.rooms-search__tr {
+  width: 100%;
+  border-bottom: 1px solid #C4C4C4;
+  height: 64px;
+}
+@media screen and (max-width: 1024px) {
+  .rooms-search__tr {
+    width: 100%;
+    border-bottom: 1px solid #C4C4C4;
+  }
+}
+@media screen and (max-width: 767px) {
+  .rooms-search__tr {
+    border-bottom: none;
+  }
+}
+.rooms-search__th {
+  width: 240px;
+  border-right: 1px solid #C4C4C4;
+  border-bottom: 1px solid #C4C4C4;
+  background-color: #F0F0F0;
+  vertical-align: middle;
+  padding: 0 16px;
+}
+@media screen and (max-width: 767px) {
+  .rooms-search__th {
+    height: 48px;
+    line-height: 48px;
+    display: block;
+    width: 100%;
+    border: none;
+  }
+}
+.rooms-search__td {
+  padding: 16px;
+  vertical-align: middle;
+}
+@media screen and (max-width: 1024px) {
+  .rooms-search__td {
+    display: block;
+  }
+}
+.rooms-search__td-col {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.rooms-search__td-col:last-child {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 767px) {
+  .rooms-search__td-col {
+    flex-wrap: wrap;
+  }
+}
+.rooms-search__select-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+@media screen and (max-width: 1024px) {
+  .rooms-search__select-box {
+    width: 100%;
+  }
+}
+.rooms-search__item {
+  display: flex;
+  align-items: center;
+}
+.rooms-search__td-text {
+  margin-right: 8px;
+}
+.rooms-search__date {
+  width: 182px;
+  padding: 16px 24px;
+  border: 1px solid #C4C4C4;
+  padding: 8px;
+  letter-spacing: 0.2em;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .rooms-search__date {
+    width: 50%;
+  }
+}
+.rooms-search__date::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  right: 16px;
+  background-image: url("/images/icon/ico_form-calendar.svg");
+  width: 16px;
+  height: 16px;
+}
+.rooms-search__date::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.rooms-search__date::-webkit-clear-button {
+  -webkit-appearance: none;
+}
+.rooms-search__date::-webkit-calendar-picker-indicator {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.rooms-search__checkbox {
+  margin-left: 24px;
+  vertical-align: middle;
+}
+.rooms-search__checkbox-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+.rooms-search__select-wrap {
+  position: relative;
+}
+.rooms-search__select-wrap::after {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 45%;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #30312D;
+  border-left: 2px solid #30312D;
+  transform: translateY(-50%) rotate(-135deg);
+  pointer-events: none;
+}
+.rooms-search__select {
+  width: 80px;
+  padding: 8px 16px;
+  border: 1px solid #C4C4C4;
+  vertical-align: middle;
+}
+.rooms-search__select--price {
+  width: 120px;
+}
+@media screen and (max-width: 767px) {
+  .rooms-search__td-col {
+    flex-wrap: wrap;
+  }
+  .rooms-search__td-text {
+    width: 170px;
+  }
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _tab.scss
+ タブメニューのデザイン定義
+================================================== */
+/* --------------------------------------------------
+ 宿泊予約ページ タブメニュー
+-------------------------------------------------- */
+.tab {
+  margin: 32px 0;
+}
+.tab__menu {
+  display: flex;
+  border-bottom: 1px solid #C4C4C4;
+}
+.tab__menu-item {
+  width: 50%;
+  text-align: center;
+  padding-bottom: 4px;
+  cursor: pointer;
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+}
+.tab__menu-item.is-active {
+  color: #536B4E;
+  border-bottom: 2px solid #536B4E;
+  font-weight: 600;
+}
+.tab__container {
+  margin-top: 32px;
+  /* fadein・outのために指定 */
+  position: relative;
+}
+.tab__contents {
+  width: 100%;
+  display: none;
+}
+.tab__contents.is-active {
+  display: block;
+  animation: panel-show 0.3s ease-in-out forwards;
+}
+@keyframes panel-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/************* メニュー *************/
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _modal.scss
+ モーダル表示
+================================================== */
+/* --------------------------------------------------
+ モーダル内コンテンツ 客室詳細
+-------------------------------------------------- */
+.modal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.modal__layer {
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.modal__container {
+  background: #FAFAFA;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: auto;
+}
+@media screen and (max-width: 1024px) {
+  .modal__container {
+    width: 95%;
+    height: 60%;
+  }
+}
+.modal__inner {
+  position: relative;
+  height: 100%;
+  padding: 24px;
+}
+@media screen and (max-width: 1024px) {
+  .modal__inner {
+    overflow-y: scroll;
+    padding: 16px;
+  }
+}
+.modal__btn-wrapper {
+  text-align: center;
+}
+.modal__close-btn {
+  width: 120px;
+  height: 48px;
+  margin: 24px auto 0 auto;
+  background-color: #F0F0F0;
+  text-align: center;
+  border: 1px solid #C4C4C4;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.modal__close-btn:hover {
+  background-color: #e5e5e5;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _calendar.scss
+ 予約カレンダー
+================================================== */
+.calendar {
+  width: 664px;
+}
+@media screen and (max-width: 1024px) {
+  .calendar {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .calendar {
+    width: 664px;
+    overflow-y: scroll;
+  }
+}
+.calendar__table {
+  border-collapse: collapse;
+  width: 664px;
+}
+@media screen and (max-width: 1024px) {
+  .calendar__table {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .calendar__table {
+    width: 664px;
+    overflow-y: scroll;
+  }
+}
+.calendar__next-prev {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+.calendar__prev-month {
+  color: #536B4E;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #536B4E;
+  position: relative;
+  padding-left: 16px;
+}
+.calendar__prev-month::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-image: url("/reservation/images/ico_calendar-arrow.svg");
+  background-repeat: no-repeat;
+}
+.calendar__prev-month:hover {
+  color: #6D865E;
+}
+.calendar__next-month {
+  color: #536B4E;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #536B4E;
+  position: relative;
+  padding-right: 16px;
+}
+.calendar__next-month::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  background-image: url("/reservation/images/ico_calendar-arrow.svg");
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+  vertical-align: middle;
+}
+.calendar__next-month:hover {
+  color: #6D865E;
+}
+.calendar__header {
+  background-color: #FAFAFA;
+}
+.calendar__day {
+  border: 1px solid #ddd;
+  padding: 8px 0px;
+  text-align: center;
+  font-size: 14px;
+  color: #30312D;
+}
+.calendar__sunday {
+  background-color: #FFD9D9;
+  color: #CB2B2B;
+}
+.calendar__saturday {
+  background-color: #E7F4F7;
+  color: #5881C7;
+}
+.calendar__unavailable {
+  color: #D3D3D3;
+}
+.calendar__reservation-link {
+  color: #536B4E;
+}
+.calendar__reservation-link:hover {
+  text-decoration: underline;
+}
+
+.past-day {
+  color: #888888;
+}
+
+.future-day {
+  background-color: #f9f9f9;
+}
+
+.grayed-out {
+  color: #888888;
+  background-color: #f9f9f9;
+  pointer-events: none;
+}
+
+.disabled-link {
+  color: #D3D3D3;
+  pointer-events: none;
+}
+.disabled-link .calendar__reservation-link {
+  color: #D3D3D3;
+}
+.disabled-link .calendar__unavailable {
+  color: #D3D3D3;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _credit-card.scss
+ クレジットカード登録情報
+================================================== */
+.credit-card__table {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 1024px) {
+  .credit-card__table {
+    width: 100%;
+  }
+}
+.credit-card__label {
+  display: flex;
+  justify-content: space-between;
+}
+.credit-card__required {
+  color: #EA4C4C;
+}
+.credit-card__tr {
+  border-bottom: 1px solid #C4C4C4;
+  height: 48px;
+}
+.credit-card__tr:first-child {
+  border-top: 1px solid #C4C4C4;
+}
+@media screen and (max-width: 767px) {
+  .credit-card__tr {
+    width: 100%;
+    border: none;
+  }
+}
+.credit-card__th {
+  width: 240px;
+  border-right: 1px solid #C4C4C4;
+  background-color: #F0F0F0;
+  vertical-align: middle;
+  padding: 0 16px;
+}
+@media screen and (max-width: 767px) {
+  .credit-card__th {
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    display: block;
+    border: none;
+  }
+}
+.credit-card__td {
+  padding: 16px;
+  vertical-align: middle;
+}
+.credit-card__td--col {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.credit-card__td--one-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media screen and (max-width: 767px) {
+  .credit-card__td {
+    display: block;
+    width: 100%;
+  }
+}
+.credit-card__item {
+  display: flex;
+  align-items: center;
+}
+.credit-card__item--wrap {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+@media screen and (max-width: 767px) {
+  .credit-card__item {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .credit-card__item:last-child {
+    margin-bottom: 0;
+  }
+}
+.credit-card__td-text {
+  margin-right: 4px;
+}
+.credit-card__td-text--note {
+  color: #EA4C4C;
+}
+.credit-card__td-text--width {
+  width: 96px;
+}
+.credit-card__td-text--bold {
+  font-weight: 600;
+}
+.credit-card__date {
+  width: 182px;
+  height: 32px;
+  border: 1px solid #C4C4C4;
+  padding: 16px;
+  letter-spacing: 0.2em;
+}
+.credit-card__checkbox {
+  margin-left: 24px;
+  vertical-align: middle;
+}
+.credit-card__checkbox-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+.credit-card__select-wrap {
+  position: relative;
+}
+.credit-card__select-wrap::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #30312D;
+  border-left: 2px solid #30312D;
+  transform: translateY(-50%) rotate(-135deg);
+  pointer-events: none;
+}
+.credit-card__select {
+  width: 65px;
+  padding: 8px 16px;
+  border: 1px solid #C4C4C4;
+  vertical-align: middle;
+  background-color: #FAFAFA;
+}
+.credit-card__select--medium {
+  width: 160px;
+}
+.credit-card__radio {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #453B33;
+  border-radius: 50%;
+  vertical-align: -2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-right: 8px;
+}
+.credit-card__radio:checked::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #453B33;
+  content: "";
+}
+.credit-card__text {
+  width: 160px;
+  padding: 16px;
+  border: 1px solid #C4C4C4;
+  background-color: #FAFAFA;
+}
+@media screen and (max-width: 767px) {
+  .credit-card__text {
+    width: 100%;
+  }
+}
+.credit-card__text--long {
+  width: 384px;
+}
+@media screen and (max-width: 767px) {
+  .credit-card__text--long {
+    width: 100%;
+  }
+}
+.credit-card__text--short {
+  width: 120px;
+}
+.credit-card__textarea {
+  width: 440px;
+  height: 160px;
+  background-color: #FAFAFA;
+  padding: 16px;
+  border: 1px solid #C4C4C4;
+  font-size: 14px;
+}
+@media screen and (max-width: 767px) {
+  .credit-card__textarea {
+    width: 100%;
+  }
+}
+.credit-card__privacy-policy {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _cancel-policy.scss
+ キャンセルポリシー
+================================================== */
+.cancel-policy {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+.cancel-policy__text {
+  margin-bottom: 8px;
+}
+.cancel-policy__table {
+  width: 100%;
+}
+.cancel-policy__tbody {
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .cancel-policy__tbody {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+.cancel-policy__tr {
+  width: 25%;
+}
+@media screen and (max-width: 767px) {
+  .cancel-policy__tr {
+    display: block;
+    width: 100%;
+  }
+}
+.cancel-policy__th, .cancel-policy__td {
+  width: 128px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .cancel-policy__th, .cancel-policy__td {
+    display: block;
+    width: 100%;
+  }
+}
+.cancel-policy__th {
+  background-color: #453B33;
+  color: #FAFAFA;
+  font-weight: 600;
+}
+@media screen and (max-width: 767px) {
+  .cancel-policy__th {
+    width: 100%;
+  }
+}
+.cancel-policy__td {
+  border-top: 1px solid #C4C4C4;
+  border-bottom: 1px solid #C4C4C4;
+}
+.cancel-policy__td:last-child {
+  border-right: 1px solid #C4C4C4;
+}
+@media screen and (max-width: 767px) {
+  .cancel-policy__td {
+    width: 100%;
+    border: none;
+  }
+  .cancel-policy__td:last-child {
+    border-right: none;
+  }
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _reservation.scss
+ 宿泊予約ページ
+================================================== */
+/* --------------------------------------------------
+ 共通設定
+-------------------------------------------------- */
+.reservation-plan__title,
+.reservation-rooms__title {
+  background-color: #536B4E;
+  color: #FAFAFA;
+  font-size: clamp(1rem, 0.947rem + 0.26vw, 1.125rem);
+  padding: 12px;
+}
+@media screen and (max-width: 1024px) {
+  .reservation-plan__title,
+  .reservation-rooms__title {
+    margin-bottom: 16px;
+  }
+}
+.reservation-plan__item,
+.reservation-rooms__item {
+  margin-bottom: 64px;
+  background-color: #F0F0F0;
+}
+.reservation-plan__item--selection,
+.reservation-rooms__item--selection {
+  padding-bottom: 48px;
+  margin-top: 32px;
+  border: none;
+}
+@media screen and (max-width: 767px) {
+  .reservation-plan__item,
+  .reservation-rooms__item {
+    border: none;
+  }
+}
+.reservation-plan__info,
+.reservation-rooms__info {
+  font-size: 14px;
+  font-weight: 600;
+}
+.reservation-plan__inner,
+.reservation-rooms__inner {
+  padding: 24px 24px 0 24px;
+}
+@media screen and (max-width: 1024px) {
+  .reservation-plan__inner,
+  .reservation-rooms__inner {
+    padding: 16px;
+  }
+}
+.reservation-plan__info-text,
+.reservation-rooms__info-text {
+  padding-left: 24px;
+}
+.reservation-plan__text-label,
+.reservation-rooms__text-label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.reservation-plan__text,
+.reservation-rooms__text {
+  margin-bottom: 16px;
+}
+.reservation-plan__text--strong,
+.reservation-rooms__text--strong {
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0 4px;
+}
+.reservation-plan .link-text,
+.reservation-rooms .link-text {
+  font-size: 14px;
+}
+.reservation-plan .link-text:first-child,
+.reservation-rooms .link-text:first-child {
+  margin-right: 16px;
+}
+
+/* --------------------------------------------------
+ プラン予約一覧
+-------------------------------------------------- */
+.reservation-plan__col {
+  display: flex;
+  gap: 32px;
+}
+@media screen and (max-width: 767px) {
+  .reservation-plan__col {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 767px) {
+  .reservation-plan__thumb {
+    width: 100%;
+  }
+}
+.reservation-plan__info {
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .reservation-plan__info {
+    padding: 0 16px;
+  }
+}
+.reservation-plan__info-list {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.reservation-plan__info-item {
+  position: relative;
+}
+.reservation-plan__info-item--checktime::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  background-image: url("/reservation/images/ico_clock.svg");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+.reservation-plan__info-item--period::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  background-image: url("/reservation/images/ico_calendar.svg");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+.reservation-plan__info-item--cuisine::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  background-image: url("/reservation/images/ico_cuisine.svg");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+.reservation-plan__more-contents {
+  position: relative;
+  height: auto;
+  max-height: 88px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+.reservation-plan__more-contents::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  background: linear-gradient(to bottom, transparent 0%, #F0F0F0 100%);
+}
+.reservation-plan__more-contents.open::after {
+  content: "";
+  z-index: -1;
+  opacity: 0;
+}
+.reservation-plan__desc {
+  margin-bottom: 16px;
+}
+.reservation-plan__desc:last-child {
+  margin-bottom: 0;
+}
+.reservation-plan__desc-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.reservation-plan__desc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.reservation-plan__more-btn {
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  position: relative;
+  height: 48px;
+  transition: 0.3s;
+}
+.reservation-plan__more-btn::after {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 14px;
+  background-image: url("/reservation/images/ico_more-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.reservation-plan__more-btn:hover {
+  color: #453B33;
+}
+.reservation-plan .reservation-plan__item.is-hide {
+  display: none;
+}
+
+/* --------------------------------------------------
+ 客室予約一覧
+-------------------------------------------------- */
+.reservation-rooms__info {
+  padding: 16px;
+}
+.reservation-rooms__info-item {
+  position: relative;
+  font-size: 14px;
+}
+.reservation-rooms__info-item--cuisine::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  background-image: url("/reservation/images/ico_cuisine.svg");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+.reservation-rooms__info-item--capacity::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  background-image: url("/reservation/images/ico_capacity.svg");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+.reservation-rooms__info-item--rooms-area::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  background-image: url("/reservation/images/ico_room-area.svg");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+.reservation-rooms__info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.reservation-rooms__desc {
+  margin-bottom: 16px;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _user-form.scss
+ マイページ 新規会員登録画面 / 会員情報変更フォーム
+================================================== */
+.user-form__table {
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+@media screen and (max-width: 1024px) {
+  .user-form__table {
+    width: 100%;
+  }
+}
+.user-form__label {
+  display: flex;
+  justify-content: space-between;
+}
+.user-form__required {
+  color: #EA4C4C;
+}
+.user-form__tr {
+  border-bottom: 1px solid #C4C4C4;
+  height: 48px;
+}
+.user-form__tr:first-child {
+  border-top: 1px solid #C4C4C4;
+}
+@media screen and (max-width: 767px) {
+  .user-form__tr {
+    width: 100%;
+    border: none;
+  }
+}
+.user-form__th {
+  width: 240px;
+  border-right: 1px solid #C4C4C4;
+  background-color: #F0F0F0;
+  vertical-align: middle;
+  padding: 0 16px;
+}
+@media screen and (max-width: 767px) {
+  .user-form__th {
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    display: block;
+    border: none;
+  }
+}
+.user-form__td {
+  padding: 16px;
+  vertical-align: middle;
+}
+.user-form__td--col {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.user-form__td--one-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media screen and (max-width: 767px) {
+  .user-form__td {
+    display: block;
+    width: 100%;
+  }
+}
+.user-form__td-text {
+  font-size: 14px;
+}
+.user-form__td-text--mg-top {
+  margin-top: 8px;
+}
+.user-form__item {
+  display: flex;
+  align-items: center;
+}
+.user-form__item--mb {
+  margin-bottom: 8px;
+}
+.user-form__item:last-child {
+  margin-bottom: 0;
+}
+.user-form__item--wrap {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+@media screen and (max-width: 767px) {
+  .user-form__item {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .user-form__item:last-child {
+    margin-bottom: 0;
+  }
+}
+.user-form__checkbox {
+  margin-left: 24px;
+  vertical-align: middle;
+}
+.user-form__checkbox-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+.user-form__select-wrap {
+  position: relative;
+}
+.user-form__select-wrap::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #30312D;
+  border-left: 2px solid #30312D;
+  transform: translateY(-50%) rotate(-135deg);
+  pointer-events: none;
+}
+.user-form__select {
+  width: 65px;
+  padding: 12px 16px;
+  border: 1px solid #C4C4C4;
+  vertical-align: middle;
+  background-color: #FAFAFA;
+}
+.user-form__select--medium {
+  width: 160px;
+}
+.user-form__radio {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #453B33;
+  border-radius: 50%;
+  vertical-align: -2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-right: 8px;
+}
+.user-form__radio:checked::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #453B33;
+  content: "";
+}
+.user-form__text {
+  width: 160px;
+  padding: 16px;
+  border: 1px solid #C4C4C4;
+  background-color: #FAFAFA;
+}
+@media screen and (max-width: 767px) {
+  .user-form__text {
+    width: 100%;
+  }
+}
+.user-form__text--long {
+  width: 384px;
+}
+@media screen and (max-width: 767px) {
+  .user-form__text--long {
+    width: 100%;
+  }
+}
+.user-form__text--short {
+  width: 120px;
+}
+.user-form__privacy-policy {
+  width: 640px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .user-form__privacy-policy {
+    width: 100%;
+  }
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _inner-box.scss
+ キャンセルポリシー
+================================================== */
+/* --------------------------------------------------
+  テキストベース
+--------------------------------------------------- */
+.inner-box {
+  padding: 24px;
+  border: 1px dotted #C4C4C4;
+  margin-bottom: 32px;
+}
+.inner-box__title {
+  font-size: clamp(1rem, 0.947rem + 0.26vw, 1.125rem);
+  margin-bottom: 10px;
+}
+.inner-box__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 24px;
+  margin-bottom: 16px;
+}
+.inner-box__item {
+  list-style-type: decimal;
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+}
+.inner-box__item--checkbox {
+  display: flex;
+  align-items: center;
+}
+
+/* --------------------------------------------------
+  テーブル形式
+--------------------------------------------------- */
+.cancel-policy {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+.cancel-policy__text {
+  margin-bottom: 8px;
+}
+.cancel-policy__table {
+  width: 100%;
+}
+.cancel-policy__tbody {
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .cancel-policy__tbody {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+.cancel-policy__tr {
+  width: 25%;
+}
+@media screen and (max-width: 767px) {
+  .cancel-policy__tr {
+    display: block;
+    width: 100%;
+  }
+}
+.cancel-policy__th, .cancel-policy__td {
+  width: 128px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .cancel-policy__th, .cancel-policy__td {
+    display: block;
+    width: 100%;
+  }
+}
+.cancel-policy__th {
+  background-color: #453B33;
+  color: #FAFAFA;
+  font-weight: 600;
+}
+@media screen and (max-width: 767px) {
+  .cancel-policy__th {
+    width: 100%;
+  }
+}
+.cancel-policy__td {
+  border-top: 1px solid #C4C4C4;
+  border-bottom: 1px solid #C4C4C4;
+}
+.cancel-policy__td:last-child {
+  border-right: 1px solid #C4C4C4;
+}
+@media screen and (max-width: 767px) {
+  .cancel-policy__td {
+    width: 100%;
+    border: none;
+  }
+  .cancel-policy__td:last-child {
+    border-right: none;
+  }
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _inside-map.scss
+ 館内図
+================================================== */
+.inside-map {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  .inside-map {
+    overflow-x: auto;
+  }
+}
+.inside-map__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.inside-map__item {
+  display: flex;
+  height: 56px;
+  line-height: 56px;
+}
+.inside-map__floa {
+  min-width: 68px;
+  text-align: center;
+  margin-right: 16px;
+  border: 1px solid #C4C4C4;
+}
+.inside-map__box {
+  height: 56px;
+  border: 1px solid #C4C4C4;
+  transition: 0.3s;
+  background-color: #f1edea;
+  color: #30312D;
+  font-size: 14px;
+  font-weight: 600;
+}
+.inside-map__box--x-long {
+  width: 520px;
+}
+@media screen and (max-width: 1024px) {
+  .inside-map__box--x-long {
+    min-width: 396px;
+  }
+}
+.inside-map__box--long {
+  width: 300px;
+}
+@media screen and (max-width: 1024px) {
+  .inside-map__box--long {
+    min-width: 220px;
+  }
+}
+.inside-map__box--medium {
+  width: 220px;
+}
+@media screen and (max-width: 1024px) {
+  .inside-map__box--medium {
+    min-width: 176px;
+  }
+}
+.inside-map__box--short {
+  width: 176px;
+}
+@media screen and (max-width: 1024px) {
+  .inside-map__box--short {
+    min-width: 176px;
+  }
+}
+.inside-map__link {
+  position: relative;
+  height: 54px;
+  background-color: #536B4E;
+  color: #FAFAFA;
+  transition: 0.3s;
+}
+.inside-map__link::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  right: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #FAFAFA;
+  line-height: 1;
+  width: 8px;
+  height: 8px;
+  border: 2px solid currentColor;
+  border-left: 0;
+  border-bottom: 0;
+  box-sizing: border-box;
+  transform: translateY(-25%) rotate(135deg);
+}
+.inside-map__link--another-link::after {
+  content: "";
+  color: #536B4E;
+  border: none;
+}
+.inside-map__link:hover {
+  background-color: #6D865E;
+}
+.inside-map .dli-arrow-right {
+  display: inline-block;
+  vertical-align: 4px;
+  color: #FAFAFA;
+  line-height: 1;
+  position: relative;
+  width: 1em;
+  height: 1.5px;
+  background: currentColor;
+}
+.inside-map .dli-arrow-right::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border: 1.5px solid currentColor;
+  border-left: 0;
+  border-bottom: 0;
+  transform: rotate(45deg);
+  transform-origin: top right;
+  position: absolute;
+  top: 50%;
+  right: -2px;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------
+ baseファイル
+-------------------------------------------------- */
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _base.scss
+ ページ内共通設定
+================================================== */
+/* //////////// 変数読み込み ここから //////////// */
+/* //////////// 変数読み込み ここまで //////////// */
+/* ==================================================
+ タグ共通設定
+================================================== */
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #F7F7F7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  border: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+/* --------------------------------------------------
+ container ページ全体のdiv
+-------------------------------------------------- */
+.container {
+  position: relative;
+}
+@media screen and (min-width: 1025px) {
+  .container {
+    min-width: 1400px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    margin-top: 108px;
+  }
+  .container--reservation {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    margin-top: 101px;
+  }
+  .container--reservation {
+    margin-top: 0;
+  }
+}
+
+/* --------------------------------------------------
+ page-section ページ内コンテンツの基本設定
+-------------------------------------------------- */
+.page-section {
+  padding: 80px 0;
+}
+@media screen and (max-width: 1024px) {
+  .page-section {
+    padding: 72px 0;
+  }
+}
+.page-section--gray-bg {
+  background-color: #f1edea;
+}
+.page-section--green {
+  background-color: #453B33;
+}
+.page-section--anchor-menu {
+  padding: 64px 0 40px 0;
+}
+.page-section--mypage {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.page-section__mv {
+  width: 100%;
+  height: 320px;
+  position: relative;
+  background-image: url("/images/facilities/img_facilities-8f.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 56px;
+}
+.page-section__mv .h2-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.page-section__mv .h2-heading__inner::before {
+  background-color: #FAFAFA;
+}
+.page-section__mv .h2-heading__inner::after {
+  background-color: #FAFAFA;
+}
+.page-section__mv .h2-heading__text {
+  color: #FAFAFA;
+}
+.page-section__col {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 64px;
+}
+@media screen and (max-width: 1024px) {
+  .page-section__col {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .page-section__col {
+    gap: 40px;
+  }
+}
+.page-section__col--top {
+  gap: 0 64px;
+}
+.page-section__col--sightseeing, .page-section__col--access, .page-section__col--access-traffic {
+  gap: 0 64px;
+}
+@media screen and (max-width: 1024px) {
+  .page-section__col--sightseeing, .page-section__col--access, .page-section__col--access-traffic {
+    flex-wrap: wrap;
+    gap: 48px 0;
+  }
+}
+.page-section__col--row-reverse {
+  flex-direction: row-reverse;
+}
+.page-section__bg-image {
+  width: 100%;
+  height: 600px;
+  background: url("/images/top/img_map-bg.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+@media screen and (max-width: 1024px) {
+  .page-section__bg-image {
+    background-image: none;
+    height: auto;
+  }
+}
+.page-section__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  .page-section__inner {
+    padding: 0 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .page-section__inner {
+    padding: 0 16px;
+  }
+}
+.page-section__thumb {
+  width: 100%;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 767px) {
+  .page-section__thumb img {
+    height: 240px;
+  }
+}
+.page-section__contents {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.page-section__img {
+  width: 100%;
+  height: 400px;
+}
+.page-section__info {
+  width: 100%;
+  position: relative;
+}
+.page-section__info--right {
+  padding-right: 64px;
+}
+.page-section__info--left {
+  padding-left: 64px;
+}
+@media screen and (max-width: 1024px) {
+  .page-section__info {
+    padding: 0 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .page-section__info {
+    padding: 0 16px;
+  }
+}
+.page-section__box {
+  margin-bottom: 80px;
+}
+.page-section__box:last-of-type {
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------
+ pageファイル
+-------------------------------------------------- */
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _top.scss
+ トップページデザイン
+================================================== */
+/* --------------------------------------------------
+  トップ 温泉
+--------------------------------------------------- */
+.top-contents--center {
+  margin-bottom: 64px;
+}
+.top-contents__kv {
+  width: 100%;
+  margin: 0 auto 64px auto;
+}
+@media screen and (max-width: 767px) {
+  .top-contents__kv {
+    margin: 0 auto 48px auto;
+  }
+}
+.top-contents__kv--right {
+  padding-right: 64px;
+}
+@media screen and (max-width: 1024px) {
+  .top-contents__kv--right {
+    padding-right: 32px;
+  }
+}
+.top-contents__kv--left {
+  padding-left: 64px;
+}
+@media screen and (max-width: 1024px) {
+  .top-contents__kv--left {
+    padding-left: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .top-contents__kv {
+    padding: 0;
+  }
+}
+.top-contents__kv-inner {
+  position: relative;
+}
+.top-contents__kv-catch {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: clamp(1.125rem, 1.072rem + 0.26vw, 1.25rem);
+  color: #FAFAFA;
+}
+.top-contents__kv-catch--right {
+  right: 128px;
+}
+.top-contents__kv-catch--left {
+  left: 128px;
+}
+.top-contents__kv-catch--center {
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 1024px) {
+  .top-contents__kv-catch {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+  }
+}
+.top-contents__kv-img {
+  width: 100%;
+  height: 360px;
+}
+@media screen and (max-width: 1024px) {
+  .top-contents__kv-img {
+    height: 280px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+.top-contents__col {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+.top-contents__col--row-reverse {
+  flex-direction: row-reverse;
+}
+@media screen and (max-width: 1024px) {
+  .top-contents__col {
+    gap: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .top-contents__col {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 767px) {
+  .top-contents__slide {
+    width: 100%;
+  }
+}
+.top-contents__thumb {
+  width: 100%;
+  height: 432px;
+}
+@media screen and (max-width: 767px) {
+  .top-contents__thumb {
+    width: 100%;
+    height: 100%;
+  }
+}
+.top-contents__img {
+  width: 100%;
+  height: 432px;
+}
+@media screen and (max-width: 767px) {
+  .top-contents__img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.top-contents__info {
+  width: 100%;
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+}
+.top-contents__info--right {
+  padding-right: 64px;
+}
+@media screen and (max-width: 1024px) {
+  .top-contents__info--right {
+    padding-right: 32px;
+  }
+}
+.top-contents__info--left {
+  padding-left: 64px;
+}
+@media screen and (max-width: 1024px) {
+  .top-contents__info--left {
+    padding-left: 32px;
+  }
+}
+.top-contents__info--center {
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  .top-contents__info--center {
+    text-align: left;
+    padding: 0 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .top-contents__info {
+    padding: 0 16px;
+  }
+}
+.top-contents .img-list {
+  padding-top: 48px;
+  margin-bottom: 32px;
+}
+.top-contents__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  .top-contents__inner {
+    padding: 0 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .top-contents__inner {
+    padding: 0 16px;
+  }
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _rooms.scss
+ 「客室」のデザイン定義
+================================================== */
+/* --------------------------------------------------
+ rooms-gallery サムネイルスライドショーの設定
+-------------------------------------------------- */
+.rooms-slide {
+  margin-bottom: 40px;
+}
+
+/* --------------------------------------------------
+ rooms-col コンテンツ2カラム設定
+-------------------------------------------------- */
+.rooms-info .desc-contents {
+  margin-bottom: 32px;
+}
+.rooms-info .table {
+  flex: 1;
+}
+.rooms-info__col {
+  display: flex;
+  gap: 0 64px;
+  margin-bottom: 32px;
+}
+.rooms-info__floor-map {
+  flex: 1;
+}
+.rooms-info__floor-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.rooms-info__floor-img {
+  text-align: center;
+  height: 251px;
+  background-color: #F0F0F0;
+  position: relative;
+  margin-bottom: 16px;
+}
+.rooms-info__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.rooms-info__info-list {
+  display: flex;
+  gap: 0 32px;
+  margin-bottom: 32px;
+}
+.rooms-info__item {
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+  padding: 8px;
+}
+.rooms-info__icon-img {
+  vertical-align: -2px;
+}
+@media screen and (max-width: 1024px) {
+  .rooms-info__col {
+    display: block;
+    margin-bottom: 24px;
+  }
+  .rooms-info .table {
+    margin-bottom: 32px;
+  }
+  .rooms-info__img {
+    padding: 16px;
+    width: 320px;
+    height: auto;
+  }
+}
+
+.rooms-overview {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.rooms-overview__common-list {
+  display: flex;
+  justify-content: center;
+  gap: 0 24px;
+  margin-bottom: 32px;
+}
+.rooms-overview__common-item {
+  width: 264px;
+  text-align: center;
+}
+.rooms-overview__icon-img {
+  margin-bottom: 8px;
+}
+.rooms-overview__common-icon {
+  margin-bottom: 8px;
+}
+.rooms-overview__icon-caption {
+  font-size: bold;
+}
+.rooms-overview__common-desc {
+  font-weight: 600;
+  font-size: 12px;
+}
+.rooms-overview .desc-contents__text {
+  font-size: 14px;
+}
+@media screen and (max-width: 767px) {
+  .rooms-overview {
+    text-align: center;
+  }
+  .rooms-overview__common-list {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 16px 0;
+  }
+  .rooms-overview__common-item {
+    width: 50%;
+  }
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _hot-spring.scss
+ 「温泉」のデザイン定義
+================================================== */
+/* --------------------------------------------------
+ hot-spring_slide サムネイルスライドショーの設定
+-------------------------------------------------- */
+@media screen and (max-width: 1024px) {
+  .hot-spring .page-section__info {
+    width: 100%;
+  }
+}
+.hot-spring__figure img {
+  width: 100%;
+}
+.hot-spring .desc-contents {
+  margin-bottom: 48px;
+}
+.hot-spring .desc-contents--hot-spring {
+  padding: 16px;
+}
+@media screen and (max-width: 1024px) {
+  .hot-spring .desc-contents--hot-spring {
+    padding: 16px 0 0;
+    margin-bottom: 0;
+  }
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _cusine.scss
+ 「お料理」のデザイン定義
+================================================== */
+/* --------------------------------------------------
+ ページ全体のデザイン定義
+-------------------------------------------------- */
+.cuisine .page-section__col {
+  margin-bottom: 56px;
+}
+
+/* --------------------------------------------------
+ お子様・アレルギーへのご対応のデザイン定義
+-------------------------------------------------- */
+.cuisine-overview .page-section__inner {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.cuisine-overview__text {
+  margin-bottom: 40px;
+}
+.cuisine-overview__contents {
+  margin-bottom: 48px;
+}
+.cuisine-overview__contents:last-child {
+  margin-bottom: 0;
+}
+.cuisine-overview .desc-contents {
+  margin-bottom: 24px;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _facilities.scss
+ 館内ご案内のデザイン定義
+================================================== */
+/* --------------------------------------------------
+ page-section__col 下余白の指定 お土産屋『博麗』
+-------------------------------------------------- */
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _sightseeing.scss
+ 周辺の観光地
+================================================== */
+/* //////////// 変数読み込み ここから //////////// */
+/* //////////// 変数読み込み ここまで //////////// */
+/* ==================================================
+ 周辺の観光地 スライド下余白
+================================================== */
+.sightseeing .desc-contents {
+  margin-bottom: 32px;
+}
+.sightseeing__slide {
+  width: 100%;
+  margin-bottom: 64px;
+}
+.sightseeing__info {
+  width: 50%;
+}
+.sightseeing__info .table {
+  margin-bottom: 32px;
+}
+@media screen and (max-width: 1024px) {
+  .sightseeing__info {
+    width: 100%;
+  }
+}
+.sightseeing__map {
+  flex: 1;
+}
+@media screen and (max-width: 1024px) {
+  .sightseeing__map {
+    width: 100%;
+  }
+}
+.sightseeing .google-map {
+  width: 100%;
+  height: 320px;
+}
+.sightseeing__label {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _access.scss
+ 「アクセス」のデザイン定義
+================================================== */
+/* --------------------------------------------------
+ アクセスパーツ
+-------------------------------------------------- */
+.access__info {
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .access__info {
+    width: 100%;
+    position: relative;
+  }
+}
+.access__title {
+  font-size: clamp(1rem, 0.947rem + 0.26vw, 1.125rem);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.access__box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px 0;
+}
+@media screen and (max-width: 1024px) {
+  .access__col {
+    flex-wrap: wrap;
+  }
+}
+.access__item {
+  width: 100%;
+  text-align: center;
+  background-color: #453B33;
+}
+.access__label {
+  color: #FAFAFA;
+  padding: 12px;
+}
+.access__text {
+  text-align: center;
+  position: relative;
+  padding: 40px 0;
+}
+.access__text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 1px;
+  height: 32px;
+  background-color: #30312D;
+}
+.access__text::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  width: 1px;
+  height: 32px;
+  background-color: #30312D;
+}
+.access__hr {
+  width: 100%;
+  background-color: #C4C4C4;
+}
+.access__mb {
+  margin-bottom: 64px;
+}
+@media screen and (max-width: 1024px) {
+  .access__mb {
+    margin-bottom: 48px;
+  }
+}
+.access__map .goole-map {
+  width: 100%;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _information.scss
+ インフォメーションパーツ
+================================================== */
+/* --------------------------------------------------
+ index.html インフォメーション一覧
+-------------------------------------------------- */
+.information-list {
+  width: 100%;
+  margin: 0 auto 40px auto;
+}
+.information-list__item {
+  display: flex;
+  gap: 0 24px;
+  align-items: center;
+  padding: 24px 32px;
+  border-bottom: dotted 1px #C4C4C4;
+}
+@media screen and (max-width: 767px) {
+  .information-list__item {
+    flex-wrap: wrap;
+    padding: 20px 8px;
+  }
+}
+.information-list__year {
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+  line-height: 1.4;
+}
+.information-list__date {
+  font-size: 18px;
+}
+.information-list__category {
+  width: 140px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #453B33;
+  color: #FAFAFA;
+  font-size: 14px;
+  padding: 0 16px;
+}
+.information-list__link-box {
+  width: 80%;
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  .information-list__link-box {
+    width: 100%;
+  }
+}
+.information-list__link {
+  display: block;
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+  color: #536B4E;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  transition: 0.3s;
+}
+.information-list__link:hover {
+  color: #453B33;
+}
+@media screen and (max-width: 767px) {
+  .information-list__link {
+    flex-grow: 1;
+    margin-top: 12px;
+  }
+}
+
+/* --------------------------------------------------
+ information.html インフォメーション一覧
+-------------------------------------------------- */
+.information {
+  display: flex;
+  gap: 0 64px;
+}
+.information__main {
+  width: 80%;
+}
+@media screen and (max-width: 1024px) {
+  .information__main {
+    margin-bottom: 48px;
+  }
+}
+.information__category {
+  display: flex;
+  padding: 0 16px 8px 16px;
+  border-bottom: 1px solid #C4C4C4;
+}
+.information__category-label {
+  font-size: clamp(1.125rem, 1.072rem + 0.26vw, 1.25rem);
+  font-weight: 600;
+  color: #453B33;
+}
+.information__category-info {
+  margin-left: auto;
+}
+.information__category-text {
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+}
+.information__category-text--number {
+  font-size: clamp(1.125rem, 1.072rem + 0.26vw, 1.25rem);
+  margin: 0 16px;
+  font-weight: 600;
+  color: #453B33;
+}
+.information__side {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px 0;
+}
+.information__menu-label {
+  text-align: center;
+  font-size: clamp(1.125rem, 1.072rem + 0.26vw, 1.25rem);
+  margin-bottom: 12px;
+}
+.information__menu-item {
+  padding: 16px 16px 16px 32px;
+  border-top: 1px solid #C4C4C4;
+  position: relative;
+}
+.information__menu-item:last-child {
+  border-bottom: 1px solid #C4C4C4;
+}
+.information__menu-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 40%;
+  background-image: url("/images/information/ico_arrow-menu.svg");
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  margin-left: 16px;
+}
+.information__menu-link {
+  display: inline-block;
+  background-image: linear-gradient(#30312D, #30312D);
+  background-size: 0 1px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+}
+.information__menu-link:hover {
+  background-size: 100% 1px;
+}
+@media screen and (max-width: 1024px) {
+  .information {
+    flex-wrap: wrap;
+  }
+  .information__main {
+    width: 100%;
+  }
+  .information__side {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 48px 0;
+  }
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _information.scss
+ インフォメーションパーツ
+================================================== */
+.article__title {
+  font-size: clamp(1.25rem, 1.197rem + 0.26vw, 1.375rem);
+  color: #453B33;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.article__info {
+  display: flex;
+  gap: 0 32px;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #C4C4C4;
+  margin-bottom: 32px;
+}
+.article__category {
+  width: 140px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #453B33;
+  color: #FAFAFA;
+  font-size: 14px;
+}
+.article__thumb {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.article__thumb-img {
+  width: 100%;
+  height: 400px;
+}
+.article__inner {
+  margin-bottom: 48px;
+}
+.article__h3-heading {
+  font-size: clamp(1.125rem, 1.072rem + 0.26vw, 1.25rem);
+  font-weight: 600;
+  color: #453B33;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #453B33;
+  margin-bottom: 24px;
+}
+.article__h4-heading {
+  font-size: clamp(1rem, 0.947rem + 0.26vw, 1.125rem);
+  color: #453B33;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.article__text {
+  margin-bottom: 24px;
+}
+.article__figure {
+  margin-bottom: 24px;
+}
+.article__img {
+  width: 100%;
+  height: auto;
+}
+.article__caption {
+  margin-top: 8px;
+  text-align: center;
+}
+.article__col {
+  display: flex;
+  gap: 0 24px;
+}
+@media screen and (max-width: 767px) {
+  .article__col {
+    flex-wrap: wrap;
+  }
+}
+.article .link-text {
+  margin-bottom: 24px;
+}
+.article .button-box {
+  margin-bottom: 24px;
+}
+.article .button-box:last-child {
+  margin-bottom: 0;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _access.scss
+ 「アクセス」のデザイン定義
+================================================== */
+/* --------------------------------------------------
+ アクセスパーツ
+-------------------------------------------------- */
+.contact {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.contact__text {
+  margin-bottom: 24px;
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+}
+.contact__link {
+  display: inline-block;
+  color: #536B4E;
+  border-bottom: 1px solid #536B4E;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _confirmation.scss
+ お問い合わせ確認ページのデザイン定義
+================================================== */
+.confirmation__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px 0;
+}
+.confirmation__item:last-child {
+  margin-bottom: 32px;
+}
+.confirmation__label {
+  display: block;
+  margin-bottom: 8px;
+}
+.confirmation__text {
+  display: block;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _faq.scss
+ FAQのデザイン定義
+================================================== */
+.qa {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px 0;
+}
+.qa__item {
+  width: 100%;
+  margin-bottom: 7px;
+  border: 1px solid #d6dde3;
+  border-radius: 5px;
+}
+.qa__question {
+  margin-right: 16px;
+  font-weight: 600;
+}
+.qa__label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  padding: 24px 24px;
+  color: #453B33;
+  font-size: clamp(1rem, 0.947rem + 0.26vw, 1.125rem);
+  font-weight: 600;
+  cursor: pointer;
+}
+.qa__label::after {
+  transform: translateY(-25%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  margin-left: auto;
+  border-bottom: 3px solid #536B4E;
+  border-right: 3px solid #536B4E;
+  content: "";
+  transition: transform 0.5s;
+}
+.qa__item[open] .qa__label::after {
+  transform: rotate(225deg);
+}
+.qa__answer-box {
+  display: flex;
+  align-items: top;
+  padding: 24px 24px;
+}
+.qa__answer {
+  margin-right: 16px;
+  font-size: clamp(1rem, 0.947rem + 0.26vw, 1.125rem);
+  color: #EA4C4C;
+  font-weight: 600;
+}
+.qa__answer-text {
+  position: relative;
+  transform: translateY(-16px);
+  opacity: 0;
+  margin: 0;
+  color: #333;
+  transition: transform 0.5s, opacity 0.5s;
+}
+.qa__item[open] .qa__answer-text {
+  transform: none;
+  opacity: 1;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _privacy-policy.scss
+ 宿泊約款・個人情報保護方針のデザイン定義
+================================================== */
+/* --------------------------------------------------
+ 宿泊約款・個人情報保護方針のパーツ定義
+-------------------------------------------------- */
+.privacy-policy {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.privacy-policy__label {
+  font-size: clamp(1.125rem, 1.072rem + 0.26vw, 1.25rem);
+  color: #453B33;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.privacy-policy__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.privacy-policy__sub-list {
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.privacy-policy__sub-list--mb {
+  margin-bottom: 16px;
+}
+.privacy-policy__sub-item {
+  list-style-type: decimal;
+}
+.privacy-policy__sub-item::marker {
+  font-weight: 600;
+}
+.privacy-policy__inner-list {
+  padding-left: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+.privacy-policy__inner-item {
+  list-style-type: decimal;
+}
+.privacy-policy__inner-item::marker {
+  content: "（" counter(list-item) "）";
+}
+.privacy-policy__table-wrap {
+  overflow-x: scroll;
+  margin-bottom: 32px;
+}
+.privacy-policy__table-wrap:last-child {
+  margin-bottom: 0;
+}
+.privacy-policy__table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+}
+.privacy-policy__table-caption {
+  width: 100%;
+  font-weight: 600;
+  color: #453B33;
+  font-size: clamp(1rem, 0.947rem + 0.26vw, 1.125rem);
+  margin-bottom: 8px;
+}
+.privacy-policy__tr {
+  border-top: 1px solid #C4C4C4;
+}
+.privacy-policy__tr:first-child {
+  border-top: none;
+}
+.privacy-policy__tr:last-child {
+  border-bottom: none;
+}
+.privacy-policy__th {
+  padding: 16px;
+  background-color: #453B33;
+  color: #FAFAFA;
+  width: 200px;
+  font-weight: 300;
+  vertical-align: middle;
+  border-right: 1px solid #C4C4C4;
+}
+.privacy-policy__td {
+  padding: 16px;
+  border-right: 1px solid #C4C4C4;
+  border-top: 1px solid #C4C4C4;
+}
+.privacy-policy__td--border-none {
+  border-right: none;
+}
+.privacy-policy__text {
+  margin-bottom: 8px;
+}
+.privacy-policy__text:last-child {
+  margin-bottom: 0;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _reservation.scss
+ 宿泊予約ページ
+================================================== */
+/* --------------------------------------------------
+ 宿泊予約トップページ
+-------------------------------------------------- */
+.reservation {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.reservation__box {
+  margin-bottom: 64px;
+}
+.reservation__box:last-child {
+  margin-bottom: 0;
+}
+.reservation__title {
+  width: 100%;
+  font-size: clamp(1rem, 0.947rem + 0.26vw, 1.125rem);
+  text-align: center;
+  background-color: #453B33;
+  color: #FAFAFA;
+  padding: 16px;
+}
+.reservation__col {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 32px;
+}
+@media screen and (max-width: 1024px) {
+  .reservation__col {
+    flex-wrap: wrap;
+  }
+}
+.reservation .desc-contents {
+  margin-bottom: 32px;
+}
+
+/* --------------------------------------------------
+ 検索結果 / 絞り込み
+-------------------------------------------------- */
+.results {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.results__number {
+  font-size: clamp(1rem, 0.947rem + 0.26vw, 1.125rem);
+  color: #536B4E;
+  font-weight: 600;
+  padding: 0 8px;
+}
+.results__filter-box {
+  margin-left: auto;
+}
+.results__label {
+  margin-right: 16px;
+}
+.results__label:last-child {
+  margin-right: 0;
+}
+
+/* --------------------------------------------------
+ お部屋リスト
+-------------------------------------------------- */
+.rooms-type,
+.plan-type {
+  margin-top: 32px;
+}
+.rooms-type__item,
+.plan-type__item {
+  border-top: 1px solid #C4C4C4;
+  padding: 24px 16px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 48px;
+}
+@media screen and (max-width: 1024px) {
+  .rooms-type__item,
+  .plan-type__item {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .rooms-type__item,
+  .plan-type__item {
+    justify-content: center;
+  }
+}
+.rooms-type__label,
+.plan-type__label {
+  width: 380px;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  .rooms-type__label,
+  .plan-type__label {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .rooms-type__label,
+  .plan-type__label {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+.rooms-type__thumb,
+.plan-type__thumb {
+  width: 168px;
+  height: 80px;
+  margin-right: 16px;
+}
+@media screen and (max-width: 767px) {
+  .rooms-type__thumb,
+  .plan-type__thumb {
+    width: 100%;
+    height: 200px;
+    margin-right: 0;
+  }
+}
+.rooms-type__img,
+.plan-type__img {
+  min-width: 160px;
+  height: 80px;
+}
+@media screen and (max-width: 767px) {
+  .rooms-type__img,
+  .plan-type__img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.rooms-type__category,
+.plan-type__category {
+  width: 96px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  background-color: #453B33;
+  color: #FAFAFA;
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: block;
+  font-size: 12px;
+}
+.rooms-type__rooms-title,
+.plan-type__rooms-title {
+  font-weight: 600;
+}
+.rooms-type__info,
+.plan-type__info {
+  display: flex;
+  gap: 32px;
+}
+@media screen and (max-width: 767px) {
+  .rooms-type__info,
+  .plan-type__info {
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+  }
+}
+.rooms-type__btn-box,
+.plan-type__btn-box {
+  display: flex;
+  gap: 16px;
+}
+@media screen and (max-width: 1024px) {
+  .rooms-type__btn-box,
+  .plan-type__btn-box {
+    margin: 0 auto;
+  }
+}
+.rooms-type__price,
+.plan-type__price {
+  font-weight: 600;
+  font-size: 16px;
+  color: #453B33;
+}
+.rooms-type__modal-btn,
+.plan-type__modal-btn {
+  background-color: #F0F0F0;
+  border: 1px solid #C4C4C4;
+  width: 108px;
+  height: 32px;
+  text-align: center;
+  transition: 0.3s;
+}
+.rooms-type__modal-btn:hover,
+.plan-type__modal-btn:hover {
+  background-color: #e5e5e5;
+}
+.rooms-type__modal-icon,
+.plan-type__modal-icon {
+  margin-left: 8px;
+  content: url("/reservation/images/ico_modal.svg");
+}
+.rooms-type__link-btn,
+.plan-type__link-btn {
+  width: 108px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  background-color: #536B4E;
+  color: #FAFAFA;
+  transition: 0.3s;
+  margin-left: auto;
+}
+.rooms-type__link-btn:hover,
+.plan-type__link-btn:hover {
+  background-color: #6D865E;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _reservation_selection.scss
+ 宿泊選択ページ
+================================================== */
+.selection {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.selection__wrapper {
+  display: flex;
+}
+@media screen and (max-width: 1024px) {
+  .selection__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.selection__wrapper .table {
+  width: 300px;
+  height: 100%;
+  border: 1px solid #C4C4C4;
+}
+@media screen and (max-width: 1024px) {
+  .selection__wrapper .table {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+}
+.selection__wrapper .table__caption {
+  font-size: clamp(1rem, 0.947rem + 0.26vw, 1.125rem);
+  margin-bottom: 16px;
+}
+.selection__wrapper .table__tr {
+  border: none;
+  font-size: 14px;
+}
+@media screen and (max-width: 1024px) {
+  .selection__wrapper .table__tr {
+    border-bottom: 1px solid #C4C4C4;
+  }
+  .selection__wrapper .table__tr:first-child {
+    border-top: 1px solid #C4C4C4;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .selection__wrapper .table__th {
+    width: 100%;
+    padding: 16px 0;
+    display: block;
+    background-color: #453B33;
+    color: #FAFAFA;
+    border-top: 1px solid #C4C4C4;
+    border-bottom: 1px solid #C4C4C4;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .selection__wrapper .table__th {
+    width: 240px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .selection__wrapper .table__th {
+    width: 100%;
+  }
+}
+.selection__wrapper .table__td {
+  width: 100%;
+  display: block;
+  padding: 16px;
+}
+.selection__calendar {
+  margin-left: auto;
+}
+@media screen and (max-width: 1024px) {
+  .selection__calendar {
+    margin-left: inherit;
+  }
+}
+@media screen and (max-width: 767px) {
+  .selection__calendar {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 767px) {
+  .selection .calendar {
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _reservation_info.scss
+ 宿泊予約ページ
+================================================== */
+/* --------------------------------------------------
+ 宿泊予約フォーム
+-------------------------------------------------- */
+.reservation-form__title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.reservation-form__table {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  table-layout: fixed;
+  word-break: break-all;
+  word-wrap: break-all;
+  overflow: hidden;
+}
+@media screen and (max-width: 1024px) {
+  .reservation-form__table {
+    width: 100%;
+  }
+}
+.reservation-form__label {
+  display: flex;
+  justify-content: space-between;
+}
+.reservation-form__required {
+  color: #EA4C4C;
+}
+.reservation-form__tr {
+  border-bottom: 1px solid #C4C4C4;
+  height: 48px;
+}
+.reservation-form__tr:first-child {
+  border-top: 1px solid #C4C4C4;
+}
+@media screen and (max-width: 767px) {
+  .reservation-form__tr {
+    width: 100%;
+    border: none;
+  }
+}
+.reservation-form__th {
+  width: 240px;
+  border-right: 1px solid #C4C4C4;
+  background-color: #F0F0F0;
+  vertical-align: middle;
+  padding: 0 16px;
+}
+@media screen and (max-width: 767px) {
+  .reservation-form__th {
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    display: block;
+    border: none;
+  }
+}
+.reservation-form__td {
+  padding: 20px;
+  vertical-align: middle;
+}
+.reservation-form__td--col {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.reservation-form__td--one-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media screen and (max-width: 767px) {
+  .reservation-form__td {
+    display: block;
+    width: 100%;
+  }
+}
+.reservation-form__item {
+  display: flex;
+  align-items: center;
+}
+.reservation-form__item--mb {
+  margin-bottom: 8px;
+}
+.reservation-form__item:last-child {
+  margin-bottom: 0;
+}
+.reservation-form__item--wrap {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+@media screen and (max-width: 767px) {
+  .reservation-form__item {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .reservation-form__item:last-child {
+    margin-bottom: 0;
+  }
+}
+.reservation-form__td-text {
+  margin-right: 4px;
+}
+.reservation-form__td-text--note {
+  color: #EA4C4C;
+}
+.reservation-form__td-text--width {
+  width: 96px;
+}
+.reservation-form__td-text--bold {
+  font-weight: 600;
+}
+@media screen and (max-width: 767px) {
+  .reservation-form__td-text {
+    width: 170px;
+  }
+  .reservation-form__td-text--accomedate {
+    width: 100%;
+  }
+}
+.reservation-form__date {
+  width: 182px;
+  height: 32px;
+  border: 1px solid #C4C4C4;
+  padding: 16px;
+  letter-spacing: 0.2em;
+}
+.reservation-form__checkbox {
+  margin-left: 24px;
+  vertical-align: middle;
+}
+.reservation-form__checkbox-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+.reservation-form__select-wrap {
+  position: relative;
+}
+.reservation-form__select-wrap::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 45%;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #30312D;
+  border-left: 2px solid #30312D;
+  transform: translateY(-50%) rotate(-135deg);
+  pointer-events: none;
+}
+.reservation-form__select {
+  width: 65px;
+  padding: 12px 16px;
+  border: 1px solid #C4C4C4;
+  vertical-align: middle;
+  background-color: #FAFAFA;
+}
+.reservation-form__select--medium {
+  width: 160px;
+}
+.reservation-form__radio {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #453B33;
+  border-radius: 50%;
+  vertical-align: -2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-right: 8px;
+}
+.reservation-form__radio:checked::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #453B33;
+  content: "";
+}
+.reservation-form__text {
+  width: 160px;
+  padding: 16px;
+  border: 1px solid #C4C4C4;
+  background-color: #FAFAFA;
+}
+@media screen and (max-width: 767px) {
+  .reservation-form__text {
+    width: 100%;
+  }
+}
+.reservation-form__text--long {
+  width: 384px;
+}
+@media screen and (max-width: 767px) {
+  .reservation-form__text--long {
+    width: 100%;
+  }
+}
+.reservation-form__text--short {
+  width: 120px;
+}
+.reservation-form__textarea {
+  width: 440px;
+  height: 160px;
+  background-color: #FAFAFA;
+  padding: 16px;
+  border: 1px solid #C4C4C4;
+  font-size: 14px;
+}
+@media screen and (max-width: 767px) {
+  .reservation-form__textarea {
+    width: 100%;
+  }
+}
+.reservation-form__privacy-policy {
+  width: 640px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .reservation-form__privacy-policy {
+    width: 100%;
+  }
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _login.scss
+ ログイン画面
+================================================== */
+.login {
+  max-width: 552px;
+  margin: 0 auto 40px auto;
+}
+.login__form {
+  flex-direction: column;
+}
+.login__item {
+  margin-bottom: 32px;
+}
+.login__item--center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.login__label {
+  display: block;
+  margin-bottom: 12px;
+}
+.login__text {
+  width: 552px;
+  padding: 16px;
+  background-color: #FAFAFA;
+  border: 1px solid #C4C4C4;
+}
+@media screen and (max-width: 1024px) {
+  .login__text {
+    width: 100%;
+  }
+}
+.login .link-text {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _user-form.scss
+ マイページ 新規会員登録画面
+================================================== */
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _mypage.scss
+ マイページ
+================================================== */
+/* --------------------------------------------------
+ 予約一覧 予約中カード
+-------------------------------------------------- */
+.reservation-list__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  margin-bottom: 32px;
+}
+.reservation-list__text--strong {
+  font-weight: bold;
+  color: #536B4E;
+  margin-right: 4px;
+  font-size: clamp(1rem, 0.947rem + 0.26vw, 1.125rem);
+}
+
+/* --------------------------------------------------
+ 予約一覧 予約中アイテム
+-------------------------------------------------- */
+.reservation-item {
+  border: 1px solid #C4C4C4;
+}
+.reservation-item__title {
+  background-color: #536B4E;
+  color: #FAFAFA;
+  font-size: clamp(1rem, 0.947rem + 0.26vw, 1.125rem);
+  padding: 8px;
+}
+@media screen and (max-width: 1024px) {
+  .reservation-item__title {
+    margin-bottom: 16px;
+  }
+}
+.reservation-item__inner {
+  padding: 24px;
+}
+.reservation-item__wrapper {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 767px) {
+  .reservation-item__wrapper {
+    flex-wrap: wrap;
+  }
+}
+.reservation-item__thumb {
+  width: 40%;
+}
+@media screen and (max-width: 767px) {
+  .reservation-item__thumb {
+    width: 100%;
+  }
+}
+.reservation-item__img {
+  height: 240px;
+}
+.reservation-item__detail-list {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.reservation-item__detail-item {
+  position: relative;
+}
+.reservation-item__detail-item--capacity::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  background-image: url("/reservation/images/ico_capacity.svg");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+.reservation-item__detail-item--cuisine::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  background-image: url("/reservation/images/ico_cuisine.svg");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+.reservation-item__detail-item--rooms-area::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  background-image: url("/reservation/images/ico_room-area.svg");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+.reservation-item__text--detail {
+  padding-left: 24px;
+}
+.reservation-item__info {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.reservation-item__strong {
+  font-weight: 600;
+}
+.reservation-item__number {
+  margin: 0 4px;
+  font-weight: 600;
+}
+.reservation-item__summary-btn {
+  width: 100%;
+  display: block;
+  background-color: #F0F0F0;
+  border: 1px solid #C4C4C4;
+  padding: 16px;
+  text-align: center;
+  color: #30312D;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+}
+.reservation-item__summary-btn:hover {
+  background-color: #FAFAFA;
+}
+.reservation-item__summary-icon {
+  background-image: url("/reservation/images/ico_more.svg");
+}
+.reservation-item::-webkit-details-marker {
+  display: none;
+}
+
+/* --------------------------------------------------
+ 予約詳細
+-------------------------------------------------- */
+.reservation-detail .reservation-table {
+  margin-bottom: 32px;
+}
+
+/* --------------------------------------------------
+ ご予約番号
+-------------------------------------------------- */
+.reservation-number {
+  padding: 24px 0;
+  width: 100%;
+  background-color: #FAFAFA;
+  border: 1px solid #C4C4C4;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+@media screen and (max-width: 767px) {
+  .reservation-number {
+    flex-wrap: wrap;
+    gap: 16px;
+    text-align: center;
+  }
+}
+.reservation-number__strong {
+  margin-left: 8px;
+  font-weight: bold;
+  color: #453B33;
+}
+.reservation-number__strong--cancel {
+  color: #EA4C4C;
+}
+@media screen and (max-width: 767px) {
+  .reservation-number__label, .reservation-number__situation {
+    width: 100%;
+  }
+}
+
+/* --------------------------------------------------
+ クーポン一覧
+-------------------------------------------------- */
+@media screen and (max-width: 767px) {
+  .coupon {
+    overflow-x: scroll;
+    word-break: keep-all;
+    white-space: nowrap;
+  }
+}
+.coupon__table {
+  width: 100%;
+}
+.coupon__th {
+  padding: 14px 16px;
+  background: #453B33;
+  color: #FAFAFA;
+  font-size: 14px;
+  font-weight: 600;
+  border-right: 1px solid #C4C4C4;
+}
+.coupon__th:last-child {
+  border-right: none;
+}
+.coupon__td {
+  border: 1px solid #C4C4C4;
+  padding: 14px 16px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+.coupon__td--modal {
+  text-align: center;
+}
+.coupon__tr {
+  background-color: #FAFAFA;
+}
+.coupon__tr.used {
+  opacity: 0.5;
+}
+.coupon__btn {
+  width: 88px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 8px 0;
+  background-color: #F0F0F0;
+  border: 1px solid #C4C4C4;
+  transition: 0.3s;
+  font-weight: 600;
+}
+.coupon__btn:hover {
+  background-color: #e5e5e5;
+}
+.coupon .modal__container {
+  width: auto;
+  height: auto;
+}
+@media screen and (max-width: 767px) {
+  .coupon .modal__container {
+    width: 95%;
+  }
+}
+.coupon .modal__inner {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.coupon .desc-contents {
+  margin-bottom: 16px;
+}
+.coupon__bar-code {
+  margin: 0 auto 32px auto;
+}
+.coupon__code-img {
+  width: 30%;
+}
+@media screen and (max-width: 1024px) {
+  .coupon__code-img {
+    width: 80%;
+  }
+}
+.coupon__caption {
+  margin-top: 16px;
+  font-weight: bold;
+  font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+  color: #536B4E;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+/*===================================================
+ _withdrawal.scss
+ 退会手続きページ
+================================================== */
+/* --------------------------------------------------
+ withdrawal.html 退会手続き
+-------------------------------------------------- */
+.withdrawal {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.withdrawal .desc-contents {
+  margin-bottom: 32px;
+}/*# sourceMappingURL=style.css.map */

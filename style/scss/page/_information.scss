@@ -1,0 +1,183 @@
+/*===================================================
+ _information.scss
+ インフォメーションパーツ
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/font" as *;
+@use "../config/mq" as *;
+@use "../mixin/mixin" as *;
+
+/* --------------------------------------------------
+ index.html インフォメーション一覧
+-------------------------------------------------- */ 
+.information-list {
+  width: 100%;
+  margin: 0 auto 40px auto;
+  &__item {
+    display: flex;
+    gap: 0 24px;
+    align-items: center;
+    padding: 24px 32px;
+    border-bottom: dotted 1px $c_border;
+
+    @include mq(sp) {
+      flex-wrap: wrap;
+      padding: 20px 8px;
+    }
+  }
+
+  &__year {
+    font-size: $font_medium;
+    line-height: 1.4;
+  }
+
+  &__date {
+    font-size: 18px;
+  }
+
+  &__category {
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: $c_main;
+    color: $c_white;
+    font-size: 14px;
+    padding: 0 16px;
+  }
+
+  &__link-box {
+    width: 80%;
+    overflow: hidden;
+    @include mq(sp) {
+      width: 100%;
+    }
+  }
+
+  &__link {
+    display: block;
+    font-size: $font_medium;
+    color: $c_accent;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    transition: 0.3s;
+    
+    &:hover {
+      color: $c_main;
+    }
+
+    @include mq(sp) {
+      flex-grow: 1;
+      margin-top: 12px;
+    }
+  }
+}
+
+/* --------------------------------------------------
+ information.html インフォメーション一覧
+-------------------------------------------------- */ 
+.information {
+  display: flex;
+  gap: 0 64px;
+
+  &__main {
+    width: 80%;
+    @include mq(tab) {
+      margin-bottom: 48px;
+    }
+  }
+
+  // 件数表示
+  &__category {
+    display: flex;
+    padding: 0 16px 8px 16px;
+    border-bottom: 1px solid $c_border;
+  }
+
+  &__category-label {
+    font-size: $font_x-large;
+    font-weight: 600;
+    color: $c_main;
+  }
+
+  &__category-info {
+    margin-left: auto;
+  }
+
+  &__category-text {
+    font-size: $font_medium;
+
+    &--number {
+      font-size: $font_x-large;
+      margin: 0 16px;
+      font-weight: 600;
+      color: $c_main;
+    }
+  }
+  
+
+  // サイドメニューの指定
+  &__side {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px 0;
+  }
+
+  &__menu-label {
+    text-align: center;
+    font-size: $font_x-large;
+    margin-bottom: 12px;
+  }
+
+  &__menu-item {
+    padding: 16px 16px 16px 32px;
+    border-top: 1px solid $c_border;
+    position: relative;
+    &:last-child {
+      border-bottom: 1px solid $c_border;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 40%;
+      background-image: url("/images/information/ico_arrow-menu.svg");
+      width: 16px;
+      height: 16px;
+      background-repeat: no-repeat;
+      margin-left: 16px;
+    }
+  }
+
+  &__menu-link {
+    display: inline-block;
+    background-image: linear-gradient( $c_black, $c_black);
+    background-size: 0 1px;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    transition: all 0.5s;
+    
+    &:hover {
+      background-size: 100% 1px;
+    }
+  }
+
+  @include mq(tab) {
+    flex-wrap: wrap;
+
+    &__main {
+      width: 100%;
+    }
+
+    &__side {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 48px 0;
+    }
+  }
+}

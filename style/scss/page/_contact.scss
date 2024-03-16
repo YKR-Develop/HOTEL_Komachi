@@ -1,0 +1,27 @@
+/*===================================================
+ _access.scss
+ 「アクセス」のデザイン定義
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/mq" as *;
+@use "../config/font" as *;
+@use "../mixin/mixin" as *;
+
+/* --------------------------------------------------
+ アクセスパーツ
+-------------------------------------------------- */
+.contact {
+  @include ContentWidth;
+  &__text {
+    margin-bottom: 24px;
+    font-size: $font_medium;
+  }
+  
+  &__link {
+    display: inline-block;
+    color: $c_accent;
+    border-bottom: 1px solid $c_accent;
+  }
+
+}

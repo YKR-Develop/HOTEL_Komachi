@@ -1,0 +1,59 @@
+/*===================================================
+ _information.scss
+ インフォメーションパーツ
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/font" as *;
+@use "../config/mq" as *;
+@use "../mixin/mixin" as *;
+
+/* --------------------------------------------------
+ index.html インフォメーション一覧
+-------------------------------------------------- */ 
+.information-list {
+  width: 100%;
+  margin: 0 auto 40px auto;
+  &__item {
+    display: flex;
+    gap: 0 24px;
+    align-items: center;
+    padding: 24px 32px;
+    border-bottom: dotted 2px $c_border;
+
+    @include mq(sp) {
+      flex-wrap: wrap;
+      padding: 20px 8px;
+    }
+  }
+
+  &__year {
+    font-size: $font_medium;
+    line-height: 1.4;
+  }
+
+  &__date {
+    font-size: 18px;
+  }
+
+  &__category {
+    width: 108px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: $c_main;
+    color: $c_white;
+    font-size: 14px;
+  }
+
+  &__link {
+    width: 100%;
+    display: block;
+    font-size: $font_medium;
+
+    @include mq(sp) {
+      flex-grow: 1;
+      margin-top: 12px;
+    }
+  }
+}

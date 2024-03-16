@@ -1,0 +1,228 @@
+/*===================================================
+ _button.scss
+ ボタン指定
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/font" as *;
+@use "../config/mq" as *;
+
+.button-box {
+  display: flex;
+  justify-content: center;
+  gap: 0 32px;
+
+  @include mq(sp) {
+    flex-wrap: wrap;
+    gap: 32px 0;
+  }
+}
+
+/* --------------------------------------------------
+  primary-btn メインボタン
+--------------------------------------------------- */
+.primary-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  width: 264px;
+  height: 56px;
+  background-color: $c_accent;
+  color: $c_white;
+  font-size: $font_medium;
+  transition: 0.6s;
+  padding-right: 16px;
+  border-radius: 2px;
+
+  @include mq(sp) {
+    height: 48px;
+  }
+
+  &::after {
+    position: absolute;
+    right: 1em;
+    transform: translateY(-50%);
+    transform-origin: left;
+    width: 24px;
+    height: 0.5em;
+    background-color: $c_white;
+    clip-path: polygon(0 100%, 100% 100%, 70% 40%, 70% 90%, 0% 90%);
+    content: "";
+    transition: transform 0.3s;
+  }
+
+  &:hover {
+    background-color: $c_btn-hover;
+    color: $c_white;
+  }
+
+  &:hover::after {
+    transform: translateY(-50%) scaleX(1.2);
+    background-color: $c_white;
+  }
+}
+
+/* --------------------------------------------------
+  Secondary-btn セカンダリーボタン
+--------------------------------------------------- */
+.secondary-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  width: 264px;
+  height: 56px;
+  border: 1px solid $c_accent;
+  color: $c_accent;
+  font-size: $font_medium;
+  transition: 0.6s;
+  padding-right: 16px;
+  border-radius: 2px;
+  @include mq(sp) {
+    height: 48px;
+  }
+
+  &::after {
+    position: absolute;
+    right: 1em;
+    transform: translateY(-50%);
+    transform-origin: left;
+    width: 24px;
+    height: 0.5em;
+    background-color: $c_main;
+    clip-path: polygon(0 100%, 100% 100%, 70% 40%, 70% 90%, 0% 90%);
+    content: "";
+    transition: transform 0.3s;
+  }
+
+  &:hover::after {
+    transform: translateY(-50%) scaleX(1.2);
+    background-color: $c_main;
+  }
+
+  &:hover {
+    background-color: $c_secondary-btn_hover;
+  }
+
+  /* --------------------------------------------------
+  external-link 外部リンクボタン
+--------------------------------------------------- */
+  &--external-link {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 35%;
+      right: 1em;
+      background-image: url("/images/icon/ico_feather-external-link.svg");
+      background-repeat: no-repeat;
+      width: 16px;
+      height: 16px;
+      background-color: transparent;
+      clip-path: none;
+      transition: unset;
+      transform: unset;
+      transform-origin: unset;
+    }
+
+    &:hover::after {
+      transform: none;
+      background-color: transparent;
+    }
+  }
+
+  /* --------------------------------------------------
+  pdf PDFアイコンボタン
+--------------------------------------------------- */
+  &--pdf {
+
+    &::after {
+      content: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 35%;
+      right: 1em;
+      width: 12px;
+      height: 16px;
+      background-image: url("/images/icon/ico_pdf.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+/* --------------------------------------------------
+  search-btn 検索ボタン
+--------------------------------------------------- */
+.search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  width: 264px;
+  height: 56px;
+  border: 1px solid $c_border;
+  color: $c_black;
+  font-size: $font_medium;
+  transition: 0.6s;
+  padding-right: 16px;
+  border-radius: 2px;
+  background-color: $c_gray;
+
+  @include mq(sp) {
+    height: 48px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 35%;
+    right: 16px;
+    width: 16px;
+    height: 16px;
+    background-image: url("/reservation/images/ico_search-btn.svg");
+  }
+
+  &:hover {
+    background-color: $c_secondary-btn_hover;
+  }
+}
+
+/* --------------------------------------------------
+  more-btn もっと見るボタン
+--------------------------------------------------- */
+.more-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  width: 264px;
+  height: 56px;
+  border: 1px solid $c_border;
+  color: $c_black;
+  font-size: $font_medium;
+  transition: 0.6s;
+  padding-right: 16px;
+  border-radius: 2px;
+  background-color: $c_gray;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 35%;
+    right: 16px;
+    width: 14px;
+    height: 14px;
+    background-image: url("/reservation/images/ico_more.svg");
+  }
+
+  &:hover {
+    background-color: $c_secondary-btn_hover;
+  }
+}

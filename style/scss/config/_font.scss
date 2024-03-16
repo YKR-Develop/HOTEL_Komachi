@@ -1,0 +1,38 @@
+/*===================================================
+ _variables.scss
+ 共通使用変数 定義ファイル
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+
+/* --------------------------------------------------
+ ##### Font #####
+ フォント
+-------------------------------------------------- */
+body {
+	font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho",
+		serif;
+	line-height: 1.5;
+	letter-spacing: 0.1rem;
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	color: $c_black;
+}
+
+/* ==================================================
+ 見出しフォントサイズ
+
+================================================== */
+$font_h1: responsiveFontSizeClamp(24, 28, 320, 1080);
+$font_h2: responsiveFontSizeClamp(20, 22, 320, 1080);
+$font_h3: responsiveFontSizeClamp(18, 20, 320, 1080);
+$font_h4: responsiveFontSizeClamp(16, 18, 320, 1080);
+
+/* ==================================================
+ フォントサイズ
+================================================== */
+$font_x-small: responsiveFontSizeClamp(10, 12, 320, 1080);
+$font_small: responsiveFontSizeClamp(12, 14, 320, 1080);
+$font_medium: responsiveFontSizeClamp(14, 16, 320, 1080);
+$font_large: responsiveFontSizeClamp(16, 18, 320, 1080);
+$font_x-large: responsiveFontSizeClamp(18, 20, 320, 1080);

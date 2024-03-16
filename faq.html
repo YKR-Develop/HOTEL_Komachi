@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>よくあるご質問 | HOTEL小町</title>
+    <meta content="HOTEL小町に多く寄せられるお客様からいただくご質問をまとめております。" name="description">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="icon" href="/images/ico_favicon.svg">
+
+    <!-- ##### ⬇︎ OGP関連タグ ⬇︎ ##### -->
+    <meta property="og:title" content="よくあるご質問 | HOTEL小町" />
+    <meta property="og:description" content="HOTEL小町に多く寄せられるお客様からいただくご質問をまとめております。" />
+    <meta property="og:type" content="ページの種類" />
+    <meta property="og:url" content="index.html" />
+    <meta property="og:image" content="サムネイル画像の URL" />
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:locale" content="ja_JP" />
+    <!-- ##### ⬆︎ OGP関連タグ ⬆︎ ##### -->
+
+    <!-- ##### ⬇︎ css / js 読み込み ⬇︎ ##### -->
+    <link rel="stylesheet" href="/style/css/style.css">
+    <link rel="stylesheet" href="/style/css/reset.css">
+
+    <!-- 下記トップページでのみ使用 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <!-- ======== ⬆︎ css / js 読み込み ⬆︎ ======== -->
+
+  </head>
+
+  <body>
+    <div class="container">
+
+      <!-- ======== ⬇︎ グローバルヘッダー ⬇︎ ======== -->
+      <header class="g-header js-fixed-header">
+
+        <div class="g-header__inner">
+          <h1 class="g-header__title">
+            <a class="g-header__title-link" href="/">
+              <img class="g-header__logo-img" src="/images/ico_site-logo.svg" alt="HOTEL小町">
+            </a>
+          </h1>
+
+          <nav class="g-nav">
+            <ul class="g-nav__list" id="js-header-list">
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/hot-spring.html">温泉</a>
+              </li>
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/rooms.html">客室</a>
+              </li>
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/cuisine.html">お料理</a>
+              </li>
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/facilities.html">館内ご案内</a>
+              </li>
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/sightseeing.html">周辺の観光地</a>
+              </li>
+              <li class="g-nav__item">
+                <a class="g-nav__link" href="/access.html">アクセス</a>
+              </li>
+
+              <li class="g-nav__item g-nav__item--col is-pc">
+                <ul class="g-nav__launguage-list">
+                  <li class="g-nav__launguage-item">
+                    <a class="g-nav__launguage-link" href="">日本語</a>
+                  </li>
+                  <li class="g-nav__launguage-item">
+                    <a class="g-nav__launguage-link" href="">English</a>
+                  </li>
+                  <li class="g-nav__launguage-item">
+                    <a class="g-nav__launguage-link" href="">繁体中文</a>
+                  </li>
+                  <li class="g-nav__launguage-item">
+                    <a class="g-nav__launguage-link" href="">한국어</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="g-header__info is-tab">
+            <p class="g-header__info-text">ご予約受付 9:00 ~ 18:00</p>
+            <p class="g-header__info-text g-header__info-text--large">TEL 01234-56-7890</p>
+          </div>
+        </div>
+
+        <div id="js-hamburger" class="hamburger is-pc">
+          <span class="hamburger__border hamburger__border--top"></span>
+          <span class="hamburger__border hamburger__border--center"></span>
+          <span class="hamburger__border hamburger__border--bottom"></span>
+        </div>
+        <div id="js-header-bg" class="g-header__bg"></div>
+
+
+        <!-- ======== ⬇︎ ※ SP / タブレット限定 固定ボトムメニュー ⬇︎ ======== -->
+        <nav class="drop-down is-pc">
+          <ul class="drop-down__menu">
+            <li class="drop-down__item">
+              <a class="drop-down__label" href="">
+                <span class="drop-down__icon">
+                  <img class="drop-down__icon-img" src="/images/icon/ico_phone.svg" alt="">
+                </span>
+                お電話予約
+              </a>
+            </li>
+            <li class="drop-down__item drop-down__item--accent">
+              <span class="drop-down__label" href="">
+                <span class="drop-down__icon">
+                  <img class="drop-down__icon-img" src="/images/icon/ico_form-calendar_white.svg" alt="">
+                </span>
+                宿泊ご予約
+              </span>
+              <ul class="drop-down__sub-menu">
+                <li class="drop-down__sub-item">
+                  <a class="drop-down__sub-link" href="/reservation/index.html#rooms-searh">空室検索</a>
+                </li>
+                <li class="drop-down__sub-item">
+                  <a class="drop-down__sub-link" href="/reservation/index.html?active-tab=tab-1#is-tab">宿泊プランから探す</a>
+                </li>
+                <li class="drop-down__sub-item">
+                  <a class="drop-down__sub-link" href="/reservation/index.html?active-tab=tab-2#is-tab">客室タイプから探す</a>
+                </li>
+              </ul>
+            </li>
+            <li class="drop-down__item drop-down__item--language is-sp">
+              <span class="drop-down__label" href="">
+                Language
+              </span>
+              <ul class="drop-down__sub-menu drop-down__sub-menu--language">
+                <li class="drop-down__sub-item drop-down__sub-item--language">
+                  <a class="drop-down__sub-link drop-down__sub-link--language" href="">English</a>
+                </li>
+                <li class="drop-down__sub-item drop-down__sub-item--language">
+                  <a class="drop-down__sub-link drop-down__sub-link--language" href="">简体中文</a>
+                </li>
+                <li class="drop-down__sub-item drop-down__sub-item--language">
+                  <a class="drop-down__sub-link drop-down__sub-link--language" href="">繁体中文</a>
+                </li>
+                <li class="drop-down__sub-item drop-down__sub-item--language">
+                  <a class="drop-down__sub-link drop-down__sub-link--language" href="">한국어</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- ======== ⬆︎ ※ SP / タブレット限定 固定ボトムメニュー ⬆︎ ======== -->
+      </header>
+      <!-- ======== ⬆︎ グローバルヘッダー ⬆︎ ======== -->
+
+      <!-- ======== ⬇︎ メインビジュアル ⬇︎ ======== -->
+      <div class="mv mv--faq js-mv">
+        <div class="mv__inner">
+          <div class="mv__col">
+            <div class="mv__logo mv__logo">
+              <img class="mv_top__logo-img" src="/images/icon/ico_mv-logo.svg" alt="HOTEL小町のロゴ">
+            </div>
+            <h1 class="mv__text mv__text--pages">
+              よくあるご質問
+            </h1>
+          </div>
+          <p class="mv__text mv__text--small">FAQ</p>
+        </div>
+        <div class="scroll-down">
+          <span class="scroll-down__text">Scroll</span>
+        </div>
+      </div>
+      <!-- ======== ⬆︎ メインビジュアル ⬆︎ ======== -->
+
+      <!-- ==================================================================== -->
+
+      <main class="contents">
+
+        <div class="breadcrumb">
+          <div class="breadcrumb__inner">
+            <ol class="breadcrumb__list">
+              <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__link--home" href="/">ホーム</a></li>
+              <li class="breadcrumb__item">よくあるご質問</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- ======== ⬇︎ コンテンツ_テキスト / アンカーリンク ⬇︎ ======== -->
+        <div class="page-section">
+          <div class="page-section__inner">
+            <!-- ======== ⬇︎ アンカーボタン ⬇︎ ======== -->
+            <div class="anchor-menu">
+              <ul class="anchor-menu__list">
+
+                <!-- ##### ご宿泊について ##### -->
+                <li class="anchor-menu__item">
+                  <a class="anchor-menu__link" href="#stay_about">
+                    <span class="anchor-menu__label">ご宿泊について</span>
+                  </a>
+                </li>
+
+                <!-- ##### お部屋について ##### -->
+                <li class="anchor-menu__item">
+                  <a class="anchor-menu__link" href="#rooms_about">
+                    <span class="anchor-menu__label">お部屋について</span>
+                  </a>
+                </li>
+
+                <!-- ##### 温泉について ##### -->
+                <li class="anchor-menu__item">
+                  <a class="anchor-menu__link" href="#hot-spring_about">
+                    <span class="anchor-menu__label">温泉について</span>
+                  </a>
+                </li>
+
+                <!-- ##### お料理について ##### -->
+                <li class="anchor-menu__item">
+                  <a class="anchor-menu__link" href="#cuisine_about">
+                    <span class="anchor-menu__label">お料理について</span>
+                  </a>
+                </li>
+
+                <!-- ##### アクセスについて ##### -->
+                <li class="anchor-menu__item">
+                  <a class="anchor-menu__link" href="#access_about">
+                    <span class="anchor-menu__label">アクセスについて</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- ======== ⬆︎ アンカーボタン ⬆︎ ======== -->
+          </div>
+          <!-- ======== ⬆︎ コンテンツ_テキスト ⬆︎ ======== -->
+        </div>
+        <!-- ======== ⬆︎ コンテンツ_テキスト / アンカーリンク ⬆︎ ======== -->
+
+        <!-- ==================================================================== -->
+        <div class="page-section">
+
+          <div class="page-section__inner">
+
+            <!-- ======== ⬇︎ コンテンツ_ご宿泊について ⬇︎ ======== -->
+            <section id="stay_about" class="page-section__box">
+              <h2 class="h3-heading">
+                <span class="h3-heading__inner">ご宿泊について</span>
+              </h2>
+              <div class="qa">
+
+                <!-- 質問項目 -->
+                <details class="qa__item">
+                  <summary class="qa__label">
+                    <span class="qa__question">Q</span>
+                    <p class="qa__question-text">チェックイン・チェックアウトについて</p>
+                  </summary>
+                  <div class="qa__answer-box">
+                    <span class="qa__answer">A</span>
+                    <p class="qa__answer-text">
+                      チェックインは15：00/チェックアウトは11：00でございます。（一部宿泊プランを除く）
+                    </p>
+                  </div>
+                </details>
+
+                <!-- 質問項目 -->
+                <details class="qa__item">
+                  <summary class="qa__label">
+                    <span class="qa__question">Q</span>
+                    <p class="qa__question-text">ご予約の変更、キャンセル等について</p>
+                  </summary>
+                  <div class="qa__answer-box">
+                    <span class="qa__answer">A</span>
+                    <p class="qa__answer-text">
+                      <span class="text-bold">【公式サイトからのご予約】</span><br>
+                      お電話 または マイページ にてご確認をお願いいたします。<br>
+                      電話番号：01234-56-7890（9:00～18:00）
+                      <br><br>
+                      <span class="text-bold">【キャンセル料について】</span><br>
+                      キャンセル料は以下の通りとなります。<br>
+                      ・1週間前：20％<br>
+                      ・2日前：30%<br>
+                      ・1日前：50%<br>
+                      ・当日：100%
+                    </p>
+                  </div>
+                </details>
+
+                <!-- 質問項目 -->
+                <details class="qa__item">
+                  <summary class="qa__label">
+                    <span class="qa__question">Q</span>
+                    <p class="qa__question-text">お支払い方法について</p>
+                  </summary>
+                  <div class="qa__answer-box">
+                    <span class="qa__answer">A</span>
+                    <p class="qa__answer-text">
+                      現金でのお支払い または 各種クレジットカードでのご精算承っております。<br>
+                      VISA/MASTER、JCB、AMEX、DINER‘S CLUB、DC、UC、UFJ、NICOS、銀聯カード、paypay
+                      <br><br>
+                      下記の電子マネーを売店でご利用いただけます。<br>
+                      QUICPAY、iD、交通系
+                    </p>
+                  </div>
+                </details>
+
+                <!-- 質問項目 -->
+                <details class="qa__item">
+                  <summary class="qa__label">
+                    <span class="qa__question">Q</span>
+                    <p class="qa__question-text">ペット同伴でのご宿泊について</p>
+                  </summary>
+                  <div class="qa__answer-box">
+                    <span class="qa__answer">A</span>
+                    <p class="qa__answer-text">
+                      小型犬二匹までのご宿泊が可能です。<br>
+                      ご利用に当たっては、宿泊約款・注意事項の確認とペット同伴宿泊滞在同意書のご提出をお願いいたします。<br><br>
+                      <a class="link-text" href="rooms.html#pet-room">ドッグルームの詳細はこちら</a>
+                      <br><br>
+                      <a class="link-text" href="#">ペット同伴宿泊滞在同意書</a>
+                    </p>
+                  </div>
+                </details>
+              </div>
+            </section>
+            <!-- ======== ⬆︎ コンテンツ_ご宿泊について ⬆︎ ======== -->
+
+            <!-- ==================================================================== -->
+
+            <!-- ======== ⬇︎ コンテンツ_お部屋について ⬇︎ ======== -->
+            <section id="rooms_about" class="page-section__box">
+              <h2 class="h3-heading">
+                <span class="h3-heading__inner">お部屋について</span>
+              </h2>
+              <div class="qa">
+
+                <!-- 質問項目 -->
+                <details class="qa__item">
+                  <summary class="qa__label">
+                    <span class="qa__question">Q</span>
+                    <p class="qa__question-text">お部屋で（ホテル内で）インターネットは利用について</p>
+                  </summary>
+                  <div class="qa__answer-box">
+                    <span class="qa__answer">A</span>
+                    <p class="qa__answer-text">
+                      チェックインは15：00/全館無料のWiFiをご用意しております。<br>
+                      各客室ごとにWi-fiのパスワードを設定して頂いております。
+                    </p>
+                  </div>
+                </details>
+
+                <!-- 質問項目 -->
+                <details class="qa__item">
+                  <summary class="qa__label">
+                    <span class="qa__question">Q</span>
+                    <p class="qa__question-text">トイレのウォシュレットについて</p>
+                  </summary>
+                  <div class="qa__answer-box">
+                    <span class="qa__answer">A</span>
+                    <p class="qa__answer-text">
+                      全室ウォシュレットを完備しております。
+                    </p>
+                  </div>
+                </details>
+
+                <!-- 質問項目 -->
+                <details class="qa__item">
+                  <summary class="qa__label">
+                    <span class="qa__question">Q</span>
+                    <p class="qa__question-text">喫煙について</p>
+                  </summary>
+                  <div class="qa__answer-box">
+                    <span class="qa__answer">A</span>
+                    <p class="qa__answer-text">
+                      全室禁煙となっております。<br>
+                      喫煙をされる際は、2階の喫煙所をご利用ください。
+                    </p>
+                  </div>
+                </details>
+
+                <!-- 質問項目 -->
+                <details class="qa__item">
+                  <summary class="qa__label">
+                    <span class="qa__question">Q</span>
+                    <p class="qa__question-text">部屋にタオル等の用意について</p>
+                  </summary>
+                  <div class="qa__answer-box">
+                    <span class="qa__answer">A</span>
+                    <p class="qa__answer-text">
+                      ご利用人数分のバスタオル・フェイスタオル・ハンドタオルをご用意しております。
+                    </p>
+                  </div>
+                </details>
+
+                <!-- 質問項目 -->
+                <details class="qa__item">
+                  <summary class="qa__label">
+                    <span class="qa__question">Q</span>
+                    <p class="qa__question-text">子供用のアメニティについて</p>
+                  </summary>
+                  <div class="qa__answer-box">
+                    <span class="qa__answer">A</span>
+                    <p class="qa__answer-text">
+                      子供用作務衣（120㎝）、スリッパ、ナイトウェア、お子様用の歯ブラシをご用意しております。<br>
+                      数に限りがございますので、予めご了承ください。
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+            </section>
+            <!-- ======== ⬆︎ コンテンツ_お部屋について ⬆︎ ======== -->
+
+            <!-- ==================================================================== -->
+
+            <!-- ======== ⬇︎ コンテンツ_温泉について ⬇︎ ======== -->
+            <section id="hot-spring_about" class="page-section__box">
+              <h2 class="h3-heading">
+                <span class="h3-heading__inner">温泉について</span>
+              </h2>
+              <div class="qa">
+
+                <!-- 質問項目 -->
+                <details class="qa__item">
+                  <summary class="qa__label">
+                    <span class="qa__question">Q</span>
+                    <p class="qa__question-text">入浴時間について</p>
+                  </summary>
+                  <div class="qa__answer-box">
+                    <span class="qa__answer">A</span>
+                    <p class="qa__answer-text">
+                      ご宿泊のお客様は13時～24時、翌朝6時～9時でございます。
+                    </p>
+                  </div>
+                </details>
+
+                <!-- 質問項目 -->
+                <details class="qa__item">
+                  <summary class="qa__label">
+                    <span class="qa__question">Q</span>
+                    <p class="qa__question-text">ロッカーについて</p>
+                  </summary>
+                  <div class="qa__answer-box">
+                    <span class="qa__answer">A</span>
+                    <p class="qa__answer-text">
+                      鍵付きのロッカーと貴重品ロッカーがございます。
+                    </p>
+                  </div>
+                </details>
+
+                <!-- 質問項目 -->
+                <details class="qa__item">
+                  <summary class="qa__label">
+                    <span class="qa__question">Q</span>
+                    <p class="qa__question-text">タトゥー（刺青）の入浴について</p>
+                  </summary>
+                  <div class="qa__answer-box">
+                    <span class="qa__answer">A</span>
+                    <p class="qa__answer-text">
+                      大変申し訳ございませんが、入浴はお断りさせていただいております。
+                    </p>
+                  </div>
+                </details>
+
+                <!-- 質問項目 -->
+                <details class="qa__item">
+                  <summary class="qa__label">
+                    <span class="qa__question">Q</span>
+                    <p class="qa__question-text">お子様・幼児のご入浴について</p>
+                  </summary>
+                  <div class="qa__answer-box">
+                    <span class="qa__answer">A</span>
+                    <p class="qa__answer-text">
+                      公衆浴場条例により9歳までのお子様は入浴可能です。
+                      オムツの取れていない乳幼児のご利用はお断りをしております。
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+            </section>
+            <!-- ======== ⬆︎ コンテンツ_温泉について ⬆︎ ======== -->
+
+            <!-- ==================================================================== -->
+
+            <!-- ======== ⬇︎ コンテンツ_お料理について ⬇︎ ======== -->
+            <section id="cuisine_about" class="page-section__box">
+              <h2 class="h3-heading">
+                <span class="h3-heading__inner">温泉について</span>
+              </h2>
+              <div class="qa">
+
+                <!-- 質問項目 -->
+                <details class="qa__item">
+                  <summary class="qa__label">
+                    <span class="qa__question">Q</span>
+                    <p class="qa__question-text">朝食の営業時間について</p>
+                  </summary>
+                  <div class="qa__answer-box">
+                    <span class="qa__answer">A</span>
+                    <p class="qa__answer-text">
+                      <span class="text-bold">【お部屋食】</span><br>
+                      AM7:00 ~ AM8:15<br>
+                      7:00 | 7:15 | 7:30 | 7:45 | 8:00 5部制<br>
+                      受付時にご希望のお時間をお申し付けください。
+                      <br><br>
+                      <span class="text-bold">【バイキング】</span><br>
+                      朝食：7:00 | 7:30 | 8:00 | 8:30<br>
+                      座席数が限られている為入店者数の制限を設けております。<br>
+                      入れ替え制にて入店時間を分けてご案内させて頂いておりますので、ご理解とご協力をお願いいたします。
+                    </p>
+                  </div>
+                </details>
+
+                <!-- 質問項目 -->
+                <details class="qa__item">
+                  <summary class="qa__label">
+                    <span class="qa__question">Q</span>
+                    <p class="qa__question-text">夕食の営業時間について</p>
+                  </summary>
+                  <div class="qa__answer-box">
+                    <span class="qa__answer">A</span>
+                    <p class="qa__answer-text">
+                      <span class="text-bold">【お部屋食】</span><br>
+                      PM17:30 ~ PM19:30<br>
+                      夕食：17:30 | 17:45 | 18:00 | 19:30 4部制<br>
+                      受付時にご希望のお時間をお申し付けください。
+                      <br><br>
+                      <span class="text-bold">【バイキング】</span><br>
+                      夕食：17:30 | 17:45 | 18:00 | 19:30<br>
+                      座席数が限られている為入店者数の制限を設けております。<br>
+                      入れ替え制にて入店時間を分けてご案内させて頂いておりますので、ご理解とご協力をお願いいたします。
+                      <br><br>
+                      <span class="text-bold">【YATUGATAKE】</span><br>
+                      ディナー：17:30 ~ 20:00
+                    </p>
+                  </div>
+                </details>
+
+                <!-- 質問項目 -->
+                <details class="qa__item">
+                  <summary class="qa__label">
+                    <span class="qa__question">Q</span>
+                    <p class="qa__question-text">離乳食について</p>
+                  </summary>
+                  <div class="qa__answer-box">
+                    <span class="qa__answer">A</span>
+                    <p class="qa__answer-text">
+                      ご用意しております。<br>
+                      ご希望の際は、受付時にお申し付けください。<br>
+                      お持ち込みも可能でございます。
+                    </p>
+                  </div>
+                </details>
+
+                <!-- 質問項目 -->
+                <details class="qa__item">
+                  <summary class="qa__label">
+                    <span class="qa__question">Q</span>
+                    <p class="qa__question-text">アレルギー対応について</p>
+                  </summary>
+                  <div class="qa__answer-box">
+                    <span class="qa__answer">A</span>
+                    <p class="qa__answer-text">
+                      必ずご予約時に予約フォームの「アレルギー欄」にご入力の上、お申し付け下さい。
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+            </section>
+            <!-- ======== ⬆︎ コンテンツ_お料理について ⬆︎ ======== -->
+
+            <!-- ==================================================================== -->
+
+            <!-- ======== ⬇︎ コンテンツ_アクセスについて ⬇︎ ======== -->
+            <section id="access_about" class="page-section__box">
+              <h2 class="h3-heading">
+                <span class="h3-heading__inner">アクセスについて</span>
+              </h2>
+              <div class="qa">
+
+                <!-- 質問項目 -->
+                <details class="qa__item">
+                  <summary class="qa__label">
+                    <span class="qa__question">Q</span>
+                    <p class="qa__question-text">駅からの送迎について</p>
+                  </summary>
+                  <div class="qa__answer-box">
+                    <span class="qa__answer">A</span>
+                    <p class="qa__answer-text">
+                      JR茅野駅東口から当館への無料送迎バスを運行しております。<br>
+                      ご利用のお客様は、宿泊日前日18；00までにご予約をお済ませください。
+                      <br><br>
+                      <span class="text-bold">【茅野駅発】</span><br>
+                      10:30 / 12:30 / 14:30 / 16:30
+                      <br><br>
+                      <span class="text-bold">【HOTEL小町発】</span><br>
+                      9:15 / 10:15
+                    </p>
+                  </div>
+                </details>
+
+                <!-- 質問項目 -->
+                <details class="qa__item">
+                  <summary class="qa__label">
+                    <span class="qa__question">Q</span>
+                    <p class="qa__question-text">冬期タイヤチェーンの装着について</p>
+                  </summary>
+                  <div class="qa__answer-box">
+                    <span class="qa__answer">A</span>
+                    <p class="qa__answer-text">
+                      冬季にご来館のお客様は、スタッドレスタイヤ装着をおすすめしております。
+                    </p>
+
+                  </div>
+                </details>
+
+                <!-- 質問項目 -->
+                <details class="qa__item">
+                  <summary class="qa__label">
+                    <span class="qa__question">Q</span>
+                    <p class="qa__question-text">茅野駅からのバス・タクシーの料金について</p>
+                  </summary>
+                  <div class="qa__answer-box">
+                    <span class="qa__answer">A</span>
+                    <p class="qa__answer-text">
+                      タクシー：片道5500円前後<br>
+                      バス：茅野駅（メルヘン街道バス） ↔ 緑山　片道1100円前後
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+            </section>
+            <!-- ======== ⬆︎ コンテンツ_アクセスについて ⬆︎ ======== -->
+          </div>
+        </div>
+
+        <!-- ==================================================================== -->
+
+      </main>
+
+      <!-- ======== ⬇︎ フッター ⬇︎ ======== -->
+      <footer class="footer">
+        <div class="footer__inner">
+
+          <!-- ##### フッター情報 ##### -->
+          <div class="footer__info">
+            <a href="/" class="footer__logo">
+              <img class="footer__logo-img" src="/images/ico_footer-logo.svg" alt="HOTEL小町のロゴ">
+            </a>
+            <div class="footer__address">
+              <p class="footer__address-text">
+                〒123-4456　長野県茅野市北山56789-10
+              </p>
+              <p class="footer__address-text">
+                TEL：<span class="footer__address-text footer__address-text--large">01234-56-7890</span><br>
+                受付時間 9:00 ~ 18:00
+              </p>
+              <p class="footer__address-text">
+                Mail：<a class="footer__address-link" href="メールアプリ起動">test-test@sample.com</a>
+              </p>
+            </div>
+            <div class="footer__sns">
+              <p class="footer__sns-label">SNS</p>
+              <ul class="footer__sns-list">
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-instagram.svg" alt="instagram">
+                  </a>
+                </li>
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-facebook.svg" alt="facebook">
+                  </a>
+                </li>
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-line.svg" alt="LINE">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <nav class="footer__nav">
+            <!-- ##### メインメニュー ##### -->
+            <ul class="footer__menu is-sp">
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/hot-spring.html">
+                  温泉
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/rooms.html">
+                  客室
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/cuisine.html">
+                  お料理
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/facilities.html">
+                  館内ご案内
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/sightseeing.html">
+                  周辺の観光地
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/access.html">
+                  アクセス
+                </a>
+              </li>
+            </ul>
+
+            <!-- ##### サブメニュー ##### -->
+            <ul class="footer__submenu footer__menu--sub">
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/information/index.html">
+                  インフォメーション
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/faq.html">
+                  よくあるご質問
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/contact/contact.html">
+                  お問い合わせ
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/privacy-policy.html">
+                  宿泊約款
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/privacy-policy.html#privacy-policy">
+                  個人情報保護方針
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <small class="footer__copyright">© 2024 Yuuki PortFolio</small>
+        </div>
+      </footer>
+      <!-- ======== ⬆︎ フッター ⬆︎ ======== -->
+
+      <!-- ==================================================================== -->
+
+      <!-- ======== ⬇︎ 固定サイドメニュー ⬇︎ ======== -->
+      <aside class="sidebar is-tab">
+
+        <nav id="js-side-slide_top" class="sidebar__nav">
+          <span class="sidebar__label">宿泊ご予約</span>
+          <ul class="sidebar__list">
+            <li class="sidebar__item"><a class="sidebar__link" href="/reservation/index.html#rooms-searh">空室検索</a></li>
+            <li class="sidebar__item"><a class="sidebar__link"
+                href="/reservation/index.html?active-tab=tab-1#is-tab">宿泊プランから探す</a>
+            </li>
+            <li class="sidebar__item"><a class="sidebar__link"
+                href="/reservation/index.html?active-tab=tab-2#is-tab">客室タイプから探す</a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav id="js-side-slide_bottom" class="sidebar__nav sidebar__nav--bottom">
+          <span class="sidebar__label">Language</span>
+          <ul class="sidebar__list">
+            <li class="sidebar__item"><a class="sidebar__link sidebar__link--black" href="#">English</a></li>
+            <li class="sidebar__item"><a class="sidebar__link sidebar__link--black" href="#">简体中文</a></li>
+            <li class="sidebar__item"><a class="sidebar__link sidebar__link--black" href="#">繁体中文</a></li>
+            <li class="sidebar__item"><a class="sidebar__link sidebar__link--black" href="#">한국어</a></li>
+          </ul>
+        </nav>
+
+      </aside>
+      <!-- ======== ⬆︎ 固定サイドメニュー ⬆︎ ======== -->
+
+    </div>
+
+
+    <!-- ======== ⬇︎ JQuery / プラグイン読み込み ⬇︎ ======== -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/javascript/common.js"></script>
+    <!-- ======== ⬆︎ JQuery/プラグイン読み込み ⬆︎ ======== -->
+  </body>
+
+</html>

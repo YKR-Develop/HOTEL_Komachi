@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>キャンセル手続き | HOTEL小町</title>
+    <meta content="当館の宿泊予約を承っております。ご希望の日時・プラン・お部屋をご選択の上、ご予約してください。最適なプランもご提案させていただきます。" name="description">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="icon" href="/images/ico_favicon.svg">
+
+    <!-- ##### ⬇︎ OGP関連タグ ⬇︎ ##### -->
+    <meta property="og:title" content="キャンセル手続き | HOTEL小町" />
+    <meta property="og:description" content="当館の宿泊予約を承っております。ご希望の日時・プラン・お部屋をご選択の上、ご予約してください。最適なプランもご提案させていただきます。" />
+    <meta property="og:type" content="ページの種類" />
+    <meta property="og:url" content="index.html" />
+    <meta property="og:image" content="サムネイル画像の URL" />
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:locale" content="ja_JP" />
+    <!-- ##### ⬆︎ OGP関連タグ ⬆︎ ##### -->
+
+    <!-- ##### ⬇︎ css / js 読み込み ⬇︎ ##### -->
+    <link rel="stylesheet" href="/style/css/style.css">
+    <link rel="stylesheet" href="/style/css/reset.css">
+
+    <!-- 下記トップページでのみ使用 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <!-- ======== ⬆︎ css / js 読み込み ⬆︎ ======== -->
+  </head>
+
+  <body>
+    <div class="container container--reservation">
+
+      <!-- ======== ⬇︎ グローバルヘッダー ⬇︎ ======== -->
+      <header class="reserve-header">
+
+        <div class="reserve-header__inner">
+          <h1 class="reserve-header__title">
+            <a class="reserve-header__title-link" href="/">
+              <img class="reserve-header__logo-img" src="/images/ico_site-logo.svg" alt="HOTEL小町">
+            </a>
+          </h1>
+
+          <nav class="reserve-nav">
+            <ul class="reserve-nav__list" id="js-header-list">
+              <li class="reserve-nav__item">
+                <a class="reserve-nav__link" href="./rooms-number.html">ご予約の確認・キャンセル</a>
+              </li>
+              <li class="reserve-nav__item reserve-nav__item--icon">
+                <a class="reserve-nav__link reserve-nav__link--icon" href="/mypage/login.html">マイページ</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div id="js-hamburger" class="hamburger is-pc">
+          <span class="hamburger__border hamburger__border--top"></span>
+          <span class="hamburger__border hamburger__border--center"></span>
+          <span class="hamburger__border hamburger__border--bottom"></span>
+        </div>
+        <div id="js-header-bg" class="reserve-header__bg"></div>
+
+      </header>
+      <!-- ======== ⬆︎ グローバルヘッダー ⬆︎ ======== -->
+
+      <!-- ==================================================================== -->
+
+      <main class="contents">
+
+        <!-- <div class="breadcrumb">
+        <div class="breadcrumb__inner">
+          <ol class="breadcrumb__list">
+            <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__link--home" href="/">ホーム</a></li>
+            <li class="breadcrumb__item">キャンセル手続き</li>
+          </ol>
+        </div>
+      </div> -->
+
+        <!-- ======== ⬇︎ コンテンツ_お支払い手続き ⬇︎ ======== -->
+        <section class="page-section reservation">
+          <h1 class="h2-heading">
+            <div class="h2-heading__inner">
+              <span class="h2-heading__text">キャンセル手続き</span>
+            </div>
+          </h1>
+
+          <div class="page-section__inner">
+
+            <!-- ##### ↓ 宿泊情報 ↓ ##### -->
+            <section class="reservation__box">
+
+              <div class="reservation-number">
+                <p class="reservation-number__label">ご予約番号<span class="reservation-number__strong">ABC12345678</span>
+                </p>
+                <p class="reservation-number__situation">予約状態<span class="reservation-number__strong">予約中</span></p>
+              </div>
+
+
+              <table class="reservation-table">
+                <tr class="reservation-table__tr">
+                  <th class="reservation-table__th">宿泊日</th>
+                  <td class="reservation-table__td">
+                    <p class="reservation-table__text">
+                      2024年03月03日（日曜日） ~ 03月04日（月曜日）
+                      <span class="reservation-table__text reservation-table__text--strong">1</span>泊
+                      <span class="reservation-table__text reservation-table__text--strong">2</span>日
+                    </p>
+                  </td>
+                </tr>
+                <tr class="reservation-table__tr">
+                  <th class="reservation-table__th">客室</th>
+                  <td class="reservation-table__td">
+                    <p class="reservation-table__text">小町亭 和室20畳</p>
+                  </td>
+                </tr>
+                <tr class="reservation-table__tr">
+                  <th class="reservation-table__th">宿泊プラン</th>
+                  <td class="reservation-table__td">
+                    <p class="reservation-table__text">蓼科高原 周遊観光プラン</p>
+                  </td>
+                </tr>
+                <tr class="reservation-table__tr">
+                  <th class="reservation-table__th">送迎バスのご予約</th>
+                  <td class="reservation-table__td">
+                    <p class="reservation-table__text">希望なし</p>
+                  </td>
+                </tr>
+                <tr class="reservation-table__tr">
+                  <th class="reservation-table__th">お食事</th>
+                  <td class="reservation-table__td">
+                    <p class="reservation-table__text">朝食：お部屋食</p>
+                    <p class="reservation-table__text">夕食：バイキング</p>
+                  </td>
+                </tr>
+                <tr class="reservation-table__tr">
+                  <th class="reservation-table__th">アレルギー</th>
+                  <td class="reservation-table__td">
+                    <p class="reservation-table__text">なし</p>
+                  </td>
+                </tr>
+                <tr class="reservation-table__tr">
+                  <th class="reservation-table__th">ご要望・ご質問</th>
+                  <td class="reservation-table__td">
+                  </td>
+                </tr>
+                <tr class="reservation-table__tr">
+                  <th class="reservation-table__th">料金詳細</th>
+                  <td class="reservation-table__td">
+                    <p class="reservation-table__text">大人
+                      <span class="reservation-table__text reservation-table__text--strong">2</span>名 × <span
+                        class="reservation-table__text reservation-table__text--strong">¥50,000</span>
+                    </p>
+                    <p class="reservation-table__text">小学生 / 幼児（4 ~ 6歳）
+                      <span class="reservation-table__text reservation-table__text--strong">3</span>名 × <span
+                        class="reservation-table__text reservation-table__text--strong">¥66,000</span>
+                    </p>
+                    <p class="reservation-table__text">【お知らせ】<br>お1人様ご1泊につき入湯税150円を別途頂戴いたします。</p>
+                  </td>
+                </tr>
+                <tr class="reservation-table__tr">
+                  <th class="reservation-table__th">お支払い金額</th>
+                  <td class="reservation-table__td">
+                    <p class="reservation-table__text">合計金額（税込）：¥116,000</p>
+                    <p class="reservation-table__text reservation-table__text--strong">お支払い金額（税込）：<span
+                        class="reservation-table__text reservation-table__text--price">¥116,000</span></p>
+                  </td>
+                </tr>
+              </table>
+            </section>
+            <!-- ##### ↑ 宿泊情報 ↑ ##### -->
+
+            <!-- ==================================================================== -->
+
+            <!-- ##### ⬇︎ ※キャンセル前に必ずご確認ください ⬇︎ ##### -->
+            <section class="inner-box cancel">
+              <h2 class="inner-box__title">
+                【注意】キャンセル前に必ずご確認ください
+              </h2>
+
+              <ol class="inner-box__list">
+                <li class="inner-box__item">
+                  <p class="inner-box__text">誤ってキャンセルされた際は取り消しができません。改めて予約の手続きを行なってください。</p>
+                </li>
+                <li class="inner-box__item">
+                  <p class="inner-box__text">キャンセルされる宿泊内容をご確認の上、「キャンセルを確定」ボタンをクリックしてください。</p>
+                </li>
+                <li class="inner-box__item">
+                  <p class="inner-box__text">ご予約をキャンセル・変更時の場合、以下のキャンセル料金が発生いたします。
+                  <ul class="inner-box__sub-list">
+                    <li class="inner-box__sub-item">
+                      <p class="inner-box__text">当日　　　 ：宿泊料金の100%</p>
+                    </li>
+                    <li class="inner-box__sub-item">
+                      <p class="inner-box__text">前日　　　 ：宿泊料金の50%</p>
+                    </li>
+                    <li class="inner-box__sub-item">
+                      <p class="inner-box__text">2日前から　：宿泊料金の30%</p>
+                    </li>
+                    <li class="inner-box__sub-item">
+                      <p class="inner-box__text">3日前から　：宿泊料金の20%</p>
+                    </li>
+                  </ul>
+                  </p>
+                </li>
+                <li class="inner-box__item">
+                  <p class="inner-box__text">連絡なしの不泊については以下の通り頂戴いたします。<br>不泊/不着：宿泊料金の100%
+                  </p>
+                </li>
+              </ol>
+
+              <div class="inner-box__item inner-box__item--checkbox">
+                <input class="form__checkbox" type="checkbox" id="agree" />
+                <label for="agree">上記事項に同意の上、キャンセル手続きを行います。</label>
+              </div>
+            </section>
+
+            <div class="button-box button-box--col">
+              <button type="submit" class="form-btn form-btn--return"
+                onclick="location.href='/mypage/mypage.html'">戻る</button>
+              <button type="button" class="form-btn" onclick="location.href='cancel_complete.html'" id="submit-btn"
+                disabled>キャンセルを確定</button>
+            </div>
+
+            <!-- ##### ⬆︎ ※キャンセル前に必ずご確認ください ⬆︎ ##### -->
+
+          </div>
+        </section>
+        <!-- ======== ⬆︎ コンテンツ_お支払い手続き ⬆︎ ======== -->
+      </main>
+
+      <!-- ======== ⬇︎ フッター ⬇︎ ======== -->
+      <footer class="footer">
+        <div class="footer__inner">
+
+          <!-- ##### フッター情報 ##### -->
+          <div class="footer__info">
+            <a href="/" class="footer__logo">
+              <img class="footer__logo-img" src="/images/ico_footer-logo.svg" alt="HOTEL小町のロゴ">
+            </a>
+            <div class="footer__address">
+              <p class="footer__address-text">
+                〒123-4456　長野県茅野市北山56789-10
+              </p>
+              <p class="footer__address-text">
+                TEL：<span class="footer__address-text footer__address-text--large">01234-56-7890</span><br>
+                受付時間 9:00 ~ 18:00
+              </p>
+              <p class="footer__address-text">
+                Mail：<a class="footer__address-link" href="メールアプリ起動">test-test@sample.com</a>
+              </p>
+            </div>
+            <div class="footer__sns">
+              <p class="footer__sns-label">SNS</p>
+              <ul class="footer__sns-list">
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-instagram.svg" alt="instagram">
+                  </a>
+                </li>
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-facebook.svg" alt="facebook">
+                  </a>
+                </li>
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-line.svg" alt="LINE">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <nav class="footer__nav">
+            <!-- ##### メインメニュー ##### -->
+            <ul class="footer__menu is-sp">
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/hot-spring.html">
+                  温泉
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/rooms.html">
+                  客室
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/cuisine.html">
+                  お料理
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/facilities.html">
+                  館内ご案内
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/sightseeing.html">
+                  周辺の観光地
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/access.html">
+                  アクセス
+                </a>
+              </li>
+            </ul>
+
+            <!-- ##### サブメニュー ##### -->
+            <ul class="footer__submenu footer__menu--sub">
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/information/index.html">
+                  インフォメーション
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/faq.html">
+                  よくあるご質問
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/contact/contact.html">
+                  お問い合わせ
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/privacy-policy.html">
+                  宿泊約款
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/privacy-policy.html#privacy-policy">
+                  個人情報保護方針
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <small class="footer__copyright">© 2024 Yuuki PortFolio</small>
+        </div>
+      </footer>
+      <!-- ======== ⬆︎ フッター ⬆︎ ======== -->
+
+    </div>
+
+    <!-- ======== ⬇︎ JQuery / プラグイン読み込み ⬇︎ ======== -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/javascript/calendar.js"></script>
+    <script type="text/javascript" src="/javascript/common.js"></script>
+    <!-- ======== ⬆︎ JQuery/プラグイン読み込み ⬆︎ ======== -->
+  </body>
+
+</html>

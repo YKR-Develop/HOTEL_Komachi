@@ -1,0 +1,159 @@
+/*===================================================
+ _header.scss
+ ヘッダー
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/font" as *;
+@use "../config/mq" as *;
+@use "../mixin/mixin" as *;
+
+/* --------------------------------------------------
+ グローバルヘッダー
+-------------------------------------------------- */ 
+.g-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  transition: 0.3s;
+  @include mq(tab) {
+    background-color: $fixed-header_bg;
+  }
+
+  &__inner {
+    @include maxWidth;
+    position: relative;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq(tab) {
+      height: 72px;
+      padding: 32px;
+    }
+
+    @include mq(sp) {
+      height: 60px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+
+  &__logo-img {
+    @include mq(tab) {
+      width: 96px;
+    }
+  }
+  &__logo-img {
+    @include mq(sp) {
+      width: 80px;
+    }
+  }
+
+  &__info-text {
+    color: $c_white;
+    &--large {
+      font-size: $font-large;
+    }
+  }
+
+  &.transform {
+    @include mq(pc) {
+      background-color: $fixed-header_bg;
+    }
+  }
+
+  &__bg {
+    @include mq(sp) {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 100;
+      background-color: $fixed-header_bg;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.6s;
+      cursor: pointer;
+    }
+  }
+}
+
+/* --------------------------------------------------
+ 宿泊予約 / マイページヘッダー
+-------------------------------------------------- */ 
+.reserve-header {
+  width: 100%;
+  z-index: 100;
+  transition: 0.3s;
+  background-color: $c_main;
+  @include mq(tab) {
+    background-color: $fixed-header_bg;
+  }
+
+  &__inner {
+    @include maxWidth;
+    position: relative;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq(tab) {
+      height: 72px;
+      padding: 32px;
+    }
+
+    @include mq(sp) {
+      height: 60px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+
+  &__logo-img {
+    @include mq(tab) {
+      width: 96px;
+    }
+  }
+  &__logo-img {
+    @include mq(sp) {
+      width: 80px;
+    }
+  }
+
+  &__info-text {
+    color: $c_white;
+    &--large {
+      font-size: $font-large;
+    }
+  }
+
+  &.transform {
+    @include mq(pc) {
+      background-color: $fixed-header_bg;
+    }
+  }
+
+  &__bg {
+    @include mq(sp) {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 100;
+      background-color: $fixed-header_bg;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.6s;
+      cursor: pointer;
+    }
+  }
+}

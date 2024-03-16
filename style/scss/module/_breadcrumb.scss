@@ -1,0 +1,74 @@
+/*===================================================
+ _breadcrumbs.scss
+ パンくずリスト
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/mq" as *;
+@use "../config/font" as *;
+@use "../mixin/mixin" as *;
+
+/* --------------------------------------------------
+ パンくずリストの指定
+-------------------------------------------------- */
+.breadcrumb {
+  background-color: $c_gray;
+  @include mq(tab) {
+    overflow: auto;
+    word-break: keep-all;
+    white-space: nowrap;
+  }
+  &__inner {
+    @include maxWidth;
+
+    @include mq(tab) {
+      padding: 0 32px;
+    }
+
+    @include mq(sp) {
+      padding: 0 16px;
+    }
+  }
+
+  &__list {
+    height: 50px;
+    display: flex;
+    gap: 0 20px;
+    list-style: none;
+    padding: 0;
+    font-size: $font_small;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      padding-right: 16px;
+    }
+
+    &:not(:last-child)::after {
+      display: inline-block;
+      width: .3em;
+      height: .6em;
+      margin-left: 12px;
+      background-color: #30312d;
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+      content: '';
+    }
+  }
+
+  &__link {
+    color: #30312d;
+    transition: 0.2s;
+
+    &--home {
+      padding-bottom: 2px;
+      border-bottom: 1px solid $c_border;
+    }
+
+    &:hover {
+      color: $c_main;
+    }
+  }
+}

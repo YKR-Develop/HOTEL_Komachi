@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>退会手続き | HOTEL小町</title>
+    <meta content="当館の宿泊予約を承っております。ご希望の日時・プラン・お部屋をご選択の上、ご予約してください。最適なプランもご提案させていただきます。" name="description">
+    <meta name="robots" content="noindex,nofollow">
+
+    <!-- ##### ⬇︎ OGP関連タグ ⬇︎ ##### -->
+    <meta property="og:title" content="退会手続き | HOTEL小町" />
+    <meta property="og:description" content="当館の宿泊予約を承っております。ご希望の日時・プラン・お部屋をご選択の上、ご予約してください。最適なプランもご提案させていただきます。" />
+    <meta property="og:type" content="ページの種類" />
+    <meta property="og:url" content="index.html" />
+    <meta property="og:image" content="サムネイル画像の URL" />
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:locale" content="ja_JP" />
+    <!-- ##### ⬆︎ OGP関連タグ ⬆︎ ##### -->
+
+    <!-- ##### ⬇︎ css / js 読み込み ⬇︎ ##### -->
+    <link rel="stylesheet" href="/style/css/style.css">
+    <link rel="stylesheet" href="/style/css/reset.css">
+
+    <!-- 下記トップページでのみ使用 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <!-- ======== ⬆︎ css / js 読み込み ⬆︎ ======== -->
+  </head>
+
+  <body>
+    <div class="container container--user">
+
+      <!-- ======== ⬇︎ グローバルヘッダー ⬇︎ ======== -->
+      <header class="reserve-header">
+
+        <div class="reserve-header__inner">
+          <h1 class="reserve-header__title">
+            <a class="reserve-header__title-link" href="/">
+              <img class="reserve-header__logo-img" src="/images/ico_site-logo.svg" alt="HOTEL小町">
+            </a>
+          </h1>
+
+          <nav class="reserve-nav">
+            <ul class="reserve-nav__list" id="js-header-list">
+              <li class="reserve-nav__item reserve-nav__item--log-out">
+                <a class="reserve-nav__link reserve-nav__link--log-out" href="/mypage/login.html">ログアウト</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div id="js-hamburger" class="hamburger is-pc">
+          <span class="hamburger__border hamburger__border--top"></span>
+          <span class="hamburger__border hamburger__border--center"></span>
+          <span class="hamburger__border hamburger__border--bottom"></span>
+        </div>
+        <div id="js-header-bg" class="reserve-header__bg"></div>
+
+      </header>
+      <!-- ======== ⬆︎ グローバルヘッダー ⬆︎ ======== -->
+
+      <!-- ==================================================================== -->
+
+      <main class="contents">
+
+        <div class="breadcrumb">
+          <div class="breadcrumb__inner">
+            <ol class="breadcrumb__list">
+              <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__link--home"
+                  href="/reservation/">ホーム</a></li>
+              <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__link--home"
+                  href="/reservation/index.html">ご宿泊予約</a></li>
+              <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__link--home" href="login.html">ログイン</a>
+              </li>
+              <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__link--home"
+                  href="mypage.html">マイページ</a></li>
+              <li class="breadcrumb__item">退会手続き</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- ======== ⬇︎ コンテンツ_退会手続き ⬇︎ ======== -->
+        <section class="page-section withdrawal">
+          <h1 class="h2-heading">
+            <div class="h2-heading__inner">
+              <span class="h2-heading__text">退会手続き</span>
+            </div>
+          </h1>
+          <div class="page-section__inner">
+
+            <!-- ==================================================================== -->
+
+            <div class="desc-contents">
+              <div class="desc-contents__inner">
+                <p class="desc-contents__text">
+                  退会の手続きを行います。<br>
+                  注意事項をご確認いただき、必要事項をご入力の上「退会を完了する」ボタンを押してください。
+                </p>
+              </div>
+            </div>
+
+
+            <section class="inner-box">
+              <h2 class="inner-box__title">
+                注意事項・同意
+              </h2>
+
+              <ol class="inner-box__list">
+                <li class="inner-box__item">
+                  <p class="inner-box__text">退会は取り消しできません。</p>
+                </li>
+                <li class="inner-box__item">
+                  <p class="inner-box__text">退会後は、特典・クーポンは全て利用できなくなります。</p>
+                </li>
+                <li class="inner-box__item">
+                  <p class="inner-box__text">ご登録いただいてるお客様情報が次回の予約以降、反映されなくなります。
+                </li>
+              </ol>
+
+              <div class="inner-box__item inner-box__item--checkbox">
+                <input class="form__checkbox" type="checkbox" id="agree" /><label
+                  for="agree">上記事項に同意の上、退会手続きを行います。</label>
+              </div>
+            </section>
+
+            <form class="user-form" onsubmit="return validateForm()">
+              <table class="user-form__table">
+
+                <tr class="user-form__tr">
+                  <th class="user-form__th">
+                    <label class="user-form__label" for="last-name">お名前<span class="user-form__required">必須</span>
+                    </label>
+                  </th>
+                  <td class="user-form__td">
+                    <input class="user-form__text user-form__text--long" type="name" id="name" name="name"
+                      placeholder="山本太郎" required>
+                  </td>
+                </tr>
+
+                <tr class="user-form__tr">
+                  <th class="user-form__th">
+                    <label class="user-form__label" for="email">メールアドレス<span class="user-form__required">必須</span>
+                    </label>
+                  </th>
+                  <td class="user-form__td">
+                    <input class="user-form__text user-form__text--long" type="email" id="email" name="email"
+                      placeholder="sample@sample.com" required>
+                  </td>
+                </tr>
+
+              </table>
+            </form>
+
+            <div class="button-box">
+              <a href="mypage.html" class="secondary-btn">キャンセル</a>
+              <a href="withdrawal-complete.html" class="primary-btn">退会を完了する</a>
+            </div>
+
+          </div>
+        </section>
+      </main>
+
+      <!-- ======== ⬇︎ フッター ⬇︎ ======== -->
+      <footer class="footer">
+        <div class="footer__inner">
+
+          <!-- ##### フッター情報 ##### -->
+          <div class="footer__info">
+            <a href="/" class="footer__logo">
+              <img class="footer__logo-img" src="/images/ico_footer-logo.svg" alt="HOTEL小町のロゴ">
+            </a>
+            <div class="footer__address">
+              <p class="footer__address-text">
+                〒123-4456　長野県茅野市北山56789-10
+              </p>
+              <p class="footer__address-text">
+                TEL：<span class="footer__address-text footer__address-text--large">01234-56-7890</span><br>
+                受付時間 9:00 ~ 18:00
+              </p>
+              <p class="footer__address-text">
+                Mail：<a class="footer__address-link" href="メールアプリ起動">test-test@sample.com</a>
+              </p>
+            </div>
+            <div class="footer__sns">
+              <p class="footer__sns-label">SNS</p>
+              <ul class="footer__sns-list">
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-instagram.svg" alt="instagram">
+                  </a>
+                </li>
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-facebook.svg" alt="facebook">
+                  </a>
+                </li>
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-line.svg" alt="LINE">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <nav class="footer__nav">
+            <!-- ##### メインメニュー ##### -->
+            <ul class="footer__menu is-sp">
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/hot-spring.html">
+                  温泉
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/rooms.html">
+                  客室
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/cuisine.html">
+                  お料理
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/facilities.html">
+                  館内ご案内
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/sightseeing.html">
+                  周辺の観光地
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/access.html">
+                  アクセス
+                </a>
+              </li>
+            </ul>
+
+            <!-- ##### サブメニュー ##### -->
+            <ul class="footer__submenu footer__menu--sub">
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/information/index.html">
+                  インフォメーション
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/faq.html">
+                  よくあるご質問
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/contact/contact.html">
+                  お問い合わせ
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/privacy-policy.html">
+                  宿泊約款
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/privacy-policy.html#privacy-policy">
+                  個人情報保護方針
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <small class="footer__copyright">© 2024 Yuuki PortFolio</small>
+        </div>
+      </footer>
+      <!-- ======== ⬆︎ フッター ⬆︎ ======== -->
+    </div>
+
+
+    <!-- ======== ⬇︎ JQuery / プラグイン読み込み ⬇︎ ======== -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/javascript/common.js"></script>
+    <!-- ======== ⬆︎ JQuery/プラグイン読み込み ⬆︎ ======== -->
+  </body>
+
+</html>

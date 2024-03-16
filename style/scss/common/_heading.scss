@@ -1,0 +1,94 @@
+/*===================================================
+ _heading.scss
+ 見出し指定
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/font" as *;
+@use "../config/mq" as *;
+
+/* --------------------------------------------------
+ h2-heading
+-------------------------------------------------- */
+.h2-heading {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 48px;
+
+  &__inner {
+    position: relative;
+    padding: 24px;
+
+    @include mq(tab) {
+      padding: 16px;
+    }
+
+    @include mq(sp) {
+      padding: 12px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 24px;
+      height: 1px;
+      background-color: $c_main;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 24px;
+      height: 1px;
+      background-color: $c_main;
+    }
+  }
+
+  &__text {
+    font-size: $font_h2;
+    text-align: center;
+    font-weight: bold;
+    color: $c_main;
+  }
+}
+
+/* --------------------------------------------------
+ h3-heading
+-------------------------------------------------- */
+.h3-heading {
+  text-align: center;
+  margin-bottom: 32px;
+  &__inner {
+    font-size: $font_h3;
+    color: $c_main;
+    font-weight: 600;
+    position: relative;
+    padding: 0 32px;
+
+    &::after,
+    &::before {
+      content: "";
+      width: 24px;
+      height: 1px;
+      background-color: $c_main;
+      position: absolute;
+      top: 50%;
+      display: block;
+    }
+
+    &::after {
+      left: 0;
+    }
+
+    &::before {
+      right: 0;
+    }
+  }
+}
+

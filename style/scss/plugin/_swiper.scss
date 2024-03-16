@@ -1,0 +1,318 @@
+/*===================================================
+ _swiper.scss
+ スライドショーの定義
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/mq" as *;
+@use "../mixin/mixin" as *;
+
+/* --------------------------------------------------
+ index.html メインビジュアルスライドの指定
+-------------------------------------------------- */
+.swiper-mv {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  & .swiper-wrapper,
+  & .swiper-slide > div {
+    width: 100%;
+    height: 100%;
+  }
+
+  & .swiper-slide.sw-1 > div {
+    position: relative;
+    background: url("/images/top/img_mv-swiper01.jpg") center center / cover no-repeat;
+  }
+
+  & .swiper-slide.sw-2 > div {
+    background: url("/images/top/img_mv-swiper02.jpg") center center / cover no-repeat;
+  }
+
+  & .swiper-slide.sw-3 > div {
+    background: url("/images/top/img_mv-swiper03.jpg") center center / cover no-repeat;
+  }
+}
+
+@keyframes zoomUp {
+  /* ズームアップで1.15倍させる指定 */
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+.swiper-slide-active > div,
+.swiper-slide-duplicate-active > div,
+.swiper-slide-prev > div {
+  animation: zoomUp 10s linear 0s 1 normal both;
+}
+
+.img-opacity {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $opacity;
+}
+
+/* --------------------------------------------------
+ index.html コンテンツ内スライドショーの指定
+-------------------------------------------------- */
+.top-contents {
+  .swiper {
+    max-width: 640px;
+    margin: 0 auto;
+
+    @include mq(tab) {
+      width: 400px;
+    }
+
+    @include mq(sp) {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  .swiper-top .production_achieve {
+    text-align: center;
+  }
+
+  .swiper-top .swiper-top .swiper-wrapper .swiper-slide {
+    width: 100%;
+    height: auto;
+    background-color: #f5f5f5;
+  }
+}
+
+.top-sightseeing {
+  .swiper {
+    width: 100%;
+    margin: 64px auto 48px auto;
+
+    @include mq(sp) {
+      margin: 48px auto 32px auto;
+    }
+  }
+}
+
+/* --------------------------------------------------
+ デフォルトの矢印を削除
+-------------------------------------------------- */
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: "" !important;
+  /*ここでデフォルトの矢印を上書き*/
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(250, 250, 250, 0.7);
+
+  @include mq(tab) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50%;
+  border: 1px solid $c_border;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: rgba(250, 250, 250, 1);
+  }
+
+  @include mq(tab) {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+/* 前へ矢印 配置 */
+.swiper-button-prev {
+  left: 13% !important;
+  right: auto;
+  position: relative;
+}
+
+/* 次へ矢印 配置 */
+.swiper-button-next {
+  right: 13% !important;
+  left: auto;
+  position: relative;
+}
+
+/* 前への矢印カスタマイズ */
+.swiper-button-prev:before {
+  content: "";
+  width: 24px;
+  height: 10px;
+  background-image: url("/images/icon/ico_left-arrow.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 次への矢印カスタマイズ */
+.swiper-button-next:before {
+  content: "";
+  width: 24px;
+  height: 10px;
+  background-image: url("/images/icon/ico_right-arrow.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* --------------------------------------------------
+ スライドのページネーションのスタイル
+-------------------------------------------------- */
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  margin: 16px;
+  border: 1px solid $c_white;
+  background-color: transparent;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 1;
+}
+
+/*アクティブなときのスタイル*/
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  transform: scale(1.4);
+  background-color: $c_white;
+}
+
+/* --------------------------------------------------
+ hot-spring / facilities.html サイドカラムレイアウト
+-------------------------------------------------- */
+.page-section {
+  #slider-wrap {
+    width: 640px;
+
+    @include mq(tab) {
+      width: 100%;
+    }
+  }
+
+  .swiper-img {
+    width: 100%;
+
+    @include mq(tab) {
+      width: 100%;
+    }
+  }
+
+  .swiper-slide {
+    width: 100%;
+  }
+
+  #slider-thumb {
+    width: 100%;
+    padding-left: 64px;
+    margin-top: 8px;
+
+    .swiper-wrapper {
+      .swiper-slide {
+        cursor: pointer;
+        width: 176px;
+        height: 100%;
+      }
+    }
+
+    @include mq(tab) {
+      width: 100%;
+      padding: 0 32px;
+    }
+
+    @include mq(sp) {
+      width: 100%;
+      padding: 0 16px;
+    }
+  }
+}
+
+.page-section__col--row-reverse {
+  #slider-thumb {
+    padding-left: 0;
+    padding-right: 64px;
+
+    @include mq(tab) {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+}
+
+/* --------------------------------------------------
+ rooms.html 部屋スライドショー
+-------------------------------------------------- */
+.rooms,
+.sightseeing {
+  .contents-slide {
+    width: 100%;
+    margin-bottom: 48px;
+  }
+
+  #slider-wrap {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    @include mq(tab) {
+      width: 100%;
+    }
+  }
+
+  #slider-main {
+    width: 100%;
+  }
+
+  .slide-img {
+    width: 100%;
+
+    @include mq(tab) {
+      width: 100%;
+    }
+  }
+
+  #slider-thumb {
+    width: 50%;
+    margin-left: auto;
+
+    ul {
+      li {
+        cursor: pointer;
+        width: 110px;
+        height: 100%;
+
+        img {
+          object-fit: cover;
+          object-position: center center;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    @include mq(tab) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}

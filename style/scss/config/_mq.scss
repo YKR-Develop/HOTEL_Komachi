@@ -1,0 +1,43 @@
+/*===================================================
+ _mq.scss
+ メディアクエリ定義
+================================================== */
+$breakpoints: (
+  // 767px以下(スマホ)のモニタで適用
+  "sp": "screen and (max-width: 767px)",
+  // 768px以上のタブレットやモニタで適用
+  "tab": "screen and (max-width: 1024px)",
+  // 1025px以上のモニタで適用
+  "pc": "screen and (min-width: 1025px)",
+) !default;
+
+@mixin mq($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/* --------------------------------------------------
+ PC / SP指定の非表示
+-------------------------------------------------- */ 
+// 画面 768px以上の場合に非表示
+.is-pc {
+  @include mq(pc) {
+    display: none !important;
+  }
+}
+
+// タブレット画面 768px以上の場合に非表示
+.is-tab {
+  @include mq(tab) {
+    display: none !important;
+  }
+}
+
+// スマホ画面 767px以下の場合に非表示
+.is-sp {
+  @include mq(sp) {
+    display: none !important;
+  }
+}
+

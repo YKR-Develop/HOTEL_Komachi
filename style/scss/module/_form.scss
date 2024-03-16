@@ -1,0 +1,355 @@
+/*===================================================
+ _form.scss
+ フォーム要素指定
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/font" as *;
+@use "../config/mq" as *;
+@use "../mixin/mixin" as *;
+
+input[type="checkbox"] {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border: 1px solid $c_accent;
+  vertical-align: -5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type="checkbox"]:checked:before {
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  transform: rotate(50deg);
+  width: 5px;
+  height: 8px;
+  border-right: 2px solid $c_accent;
+  border-bottom: 2px solid $c_accent;
+  content: "";
+}
+
+input[type="checkbox"]:checked:before {
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  transform: rotate(50deg);
+  width: 5px;
+  height: 8px;
+  border-right: 2px solid $c_accent;
+  border-bottom: 2px solid $c_accent;
+  content: "";
+}
+
+/* --------------------------------------------------
+ 空室検索フォーム
+-------------------------------------------------- */
+.form-room {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 1px;
+
+  .search-heading {
+    font-size: $font_h3;
+  }
+
+  @include mq(sp) {
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+
+  &__item {
+    background-color: $c_white;
+    position: relative;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+
+    &--search {
+      width: 108px;
+      height: 79px;
+      padding-right: 16px;
+      text-align: center;
+      background-color: $c_btn-gray;
+
+      @include mq(sp) {
+        width: 100%;
+      }
+    }
+
+    &:hover {
+      background-color: $c_gray;
+    }
+
+    &--search:hover {
+      background-color: $c_white;
+    }
+
+    @include mq(sp) {
+      width: calc(100% / 2 - 2px);
+    }
+  }
+
+  &__date {
+    padding: 40px 24px 16px 16px;
+    letter-spacing: 0.1em;
+    position: relative;
+    cursor: pointer;
+
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+    &::-webkit-clear-button {
+      -webkit-appearance: none;
+    }
+    &::-webkit-calendar-picker-indicator {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 54%;
+      right: 16px;
+      width: 16px;
+      height: 16px;
+      background-image: url("/images/icon/ico_form-calendar.svg");
+      background-repeat: no-repeat;
+    }
+
+    @include mq(sp) {
+      width: 100%;
+    }
+  }
+
+  &__select {
+    padding: 40px 56px 18px 16px;
+    letter-spacing: 0.1em;
+    position: relative;
+    cursor: pointer;
+
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+    &::-webkit-clear-button {
+      -webkit-appearance: none;
+    }
+    &::-webkit-calendar-picker-indicator {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 54%;
+      right: 16px;
+      width: 16px;
+      height: 16px;
+      background-image: url("/images/icon/ico_form-calendar.svg");
+      background-repeat: no-repeat;
+    }
+
+    @include mq(sp) {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 57%;
+    right: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #333;
+    line-height: 1;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0.64952em 0.375em;
+    border-top-color: currentColor;
+    border-bottom: 0;
+
+    @include mq(sp) {
+      margin-left: 16px;
+    }
+  }
+
+  &__search-icon {
+    position: absolute;
+    right: 16px;
+    background-image: url("/images/icon/ico_form-search.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+*:focus {
+  outline: none;
+}
+/* --------------------------------------------------
+ お問い合わせフォーム
+-------------------------------------------------- */
+.form {
+  max-width: 500px;
+  margin: 0 auto;
+
+  &__inner {
+    text-align: left;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: $font_medium;
+  }
+
+  &__required {
+    font-size: 10px;
+    padding: 4px;
+    background-color: $c_note;
+    color: $c_white;
+    margin-left: 16px;
+    vertical-align: 2px;
+  }
+
+  &__any {
+    font-size: 10px;
+    padding: 4px;
+    background-color: $c_main;
+    color: $c_white;
+    margin-left: 16px;
+    vertical-align: 2px;
+  }
+
+  &__input {
+    margin-bottom: 40px;
+    width: 100%;
+    background-color: white;
+    padding: 16px;
+    border: 1px solid $c_border;
+    font-size: $font_medium;
+  }
+
+  &__message {
+    width: 100%;
+    height: 272px;
+    background-color: white;
+    padding: 16px;
+    border: 1px solid $c_border;
+    margin-bottom: 40px;
+    font-size: $font_medium;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+
+  &__checkbox {
+    margin-right: 8px;
+  }
+
+  &__checkbox[disabled] {
+    opacity: 0.5;
+  }
+}
+
+/* --------------------------------------------------
+ 内容確認ボタン
+-------------------------------------------------- */
+.form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  width: 264px;
+  height: 56px;
+  background-color: $c_accent;
+  color: $c_white;
+  font-size: $font_medium;
+  transition: 0.6s;
+  padding-right: 16px;
+  border-radius: 2px;
+
+  &::after {
+    position: absolute;
+    right: 1em;
+    transform: translateY(-50%);
+    transform-origin: left;
+    width: 24px;
+    height: 0.5em;
+    background-color: $c_white;
+    clip-path: polygon(0 100%, 100% 100%, 70% 40%, 70% 90%, 0% 90%);
+    content: "";
+    transition: transform 0.3s;
+  }
+
+  &:hover {
+    background-color: $c_btn-hover;
+    color: $c_white;
+  }
+
+  &:hover::after {
+    transform: translateY(-50%) scaleX(1.2);
+    background-color: $c_white;
+  }
+
+  /* --------------------------------------------------
+ 入力内容を修正するボタン
+-------------------------------------------------- */
+  &--return {
+    background: transparent;
+    border: 1px solid $c_accent;
+    color: $c_accent;
+    padding-right: 0;
+    transform: translateY(none);
+
+    &::after {
+      content: none;
+    }
+
+    &:hover {
+      background-color: $c_secondary-btn_hover;
+      color: $c_accent;
+    }
+
+    &:hover::after {
+      content: none;
+    }
+  }
+}
+
+.form-btn[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+
+  /* クリック不可のカーソルを表示 */
+  &:hover::after {
+    transform: translateY(-50%) scaleX(1);
+    background-color: $c_white;
+  }
+}

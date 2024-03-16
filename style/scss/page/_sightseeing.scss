@@ -1,0 +1,52 @@
+/*===================================================
+ _sightseeing.scss
+ 周辺の観光地
+================================================== */
+/* //////////// 変数読み込み ここから //////////// */
+@use "../config/variables" as *;
+@use "../config/function" as *;
+@use "../config/mq" as *;
+@use "../mixin/mixin" as *;
+/* //////////// 変数読み込み ここまで //////////// */
+
+/* ==================================================
+ 周辺の観光地 スライド下余白
+================================================== */
+.sightseeing {
+  .desc-contents {
+    margin-bottom: 32px;
+  }
+  
+  &__slide {
+    width: 100%;
+    margin-bottom: 64px;
+  }
+
+  &__info {
+    width: 50%;
+    .table {
+      margin-bottom: 32px;
+    }
+
+    @include mq(tab) {
+      width: 100%;
+    }
+  }
+
+  &__map {
+    flex: 1;  
+    @include mq(tab) {
+      width: 100%;
+    }
+  }
+
+  .google-map {
+    width: 100%;
+    height: 320px;
+  }
+
+  &__label {
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+}

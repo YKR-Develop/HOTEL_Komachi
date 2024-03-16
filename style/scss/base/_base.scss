@@ -1,0 +1,229 @@
+/*===================================================
+ _base.scss
+ ページ内共通設定
+================================================== */
+/* //////////// 変数読み込み ここから //////////// */
+@use "../config/variables" as *;
+@use "../config/function" as *;
+@use "../config/mq" as *;
+@use "../mixin/mixin" as *;
+/* //////////// 変数読み込み ここまで //////////// */
+
+/* ==================================================
+ タグ共通設定
+================================================== */
+html {
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+}
+
+body {
+	box-sizing: border-box;
+	background-color: $c_base;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+	overflow: hidden;
+	border: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	display: block;
+	text-decoration: none;
+}
+
+/* --------------------------------------------------
+ container ページ全体のdiv
+-------------------------------------------------- */
+.container {
+	@include mq(pc) {
+		min-width: 1400px;
+	}
+	position: relative;
+
+	@include mq(tab) {
+		margin-top: 108px;
+		&--reservation {
+			margin-top: 0;
+		}
+	}
+
+	@include mq(sp) {
+		margin-top: 101px;	
+
+		&--reservation {
+			margin-top: 0;
+		}
+	}
+}
+
+/* --------------------------------------------------
+ page-section ページ内コンテンツの基本設定
+-------------------------------------------------- */
+.page-section {
+	padding: 80px 0;
+
+	@include mq(tab) {
+		padding: 72px 0;
+	}
+
+	&--gray-bg {
+		background-color: $background_gray;
+	}
+
+	&--green {
+		background-color: $c_main;
+	}
+
+	&--anchor-menu {
+		padding: 64px 0 40px 0;
+	}
+
+	&--mypage {
+		@include ContentWidth;
+	}
+
+	&__mv {
+		width: 100%;
+		height: 320px;
+		position: relative;
+		background-image: url("/images/facilities/img_facilities-8f.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin-bottom: 56px;
+
+		.h2-heading {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			&__inner {
+				&::before {
+					background-color: $c_white;
+				}
+				&::after {
+					background-color: $c_white;
+				}
+			}
+			&__text {
+				color: $c_white;
+			}
+		}
+	}
+
+	&__col {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 64px;
+
+		@include mq(tab) {
+			flex-wrap: wrap;
+		}
+
+		@include mq(tab) {
+			gap: 40px;
+		}
+
+		&--top {
+			gap: 0 64px;
+		}
+
+		&--sightseeing,
+		&--access,
+		&--access-traffic {
+			gap: 0 64px;
+			@include mq(tab) {
+				flex-wrap: wrap;
+				gap: 48px 0;
+			}
+		}
+
+		&--row-reverse {
+			flex-direction: row-reverse;
+		}
+	}
+
+	&__bg-image {
+		width: 100%;
+		height: 600px;
+		background: url("/images/top/img_map-bg.svg");
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		@include mq(tab) {
+			background-image: none;
+			height: auto;
+		}
+	}
+
+	&__inner {
+		@include maxWidth;
+
+		@include mq(tab) {
+			padding: 0 32px;
+		}
+		@include mq(sp) {
+			padding: 0 16px;
+		}
+	}
+
+	&__thumb {
+		width: 100%;
+		margin-bottom: 0;
+		img {
+			@include mq(sp) {
+				height: 240px;
+			}
+		}
+	}
+
+	&__contents {
+		@include ContentWidth;
+	}
+
+	&__img {
+		width: 100%;
+		height: 400px;
+	}
+
+	&__info {
+		width: 100%;
+		position: relative;
+
+		&--right {
+			padding-right: 64px;
+		}
+
+		&--left {
+			padding-left: 64px;
+		}
+
+		@include mq(tab) {
+			padding: 0 32px;
+		}
+		@include mq(sp) {
+			padding: 0 16px;
+		}
+	}
+
+	&__box {
+		margin-bottom: 80px;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}

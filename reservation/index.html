@@ -1,0 +1,2013 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ご宿泊予約 | HOTEL小町</title>
+    <meta content="当館の宿泊予約を承っております。ご希望の日時・プラン・お部屋をご選択の上、ご予約してください。最適なプランもご提案させていただきます。" name="description">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="icon" href="/images/ico_favicon.svg">
+
+    <!-- ##### ⬇︎ OGP関連タグ ⬇︎ ##### -->
+    <meta property="og:title" content="ご宿泊予約 | HOTEL小町" />
+    <meta property="og:description" content="当館の宿泊予約を承っております。ご希望の日時・プラン・お部屋をご選択の上、ご予約してください。最適なプランもご提案させていただきます。" />
+    <meta property="og:type" content="ページの種類" />
+    <meta property="og:url" content="index.html" />
+    <meta property="og:image" content="サムネイル画像の URL" />
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:locale" content="ja_JP" />
+    <!-- ##### ⬆︎ OGP関連タグ ⬆︎ ##### -->
+
+    <!-- ##### ⬇︎ css / js 読み込み ⬇︎ ##### -->
+    <link rel="stylesheet" href="/style/css/style.css">
+    <link rel="stylesheet" href="/style/css/reset.css">
+
+    <!-- 下記トップページでのみ使用 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <!-- ======== ⬆︎ css / js 読み込み ⬆︎ ======== -->
+  </head>
+
+  <body>
+    <div class="container container--reservation">
+
+      <!-- ======== ⬇︎ グローバルヘッダー ⬇︎ ======== -->
+      <header class="reserve-header">
+
+        <div class="reserve-header__inner">
+          <h1 class="reserve-header__title">
+            <a class="reserve-header__title-link" href="/">
+              <img class="reserve-header__logo-img" src="/images/ico_site-logo.svg" alt="HOTEL小町">
+            </a>
+          </h1>
+
+          <nav class="reserve-nav">
+            <ul class="reserve-nav__list" id="js-header-list">
+              <li class="reserve-nav__item">
+                <a class="reserve-nav__link" href="./rooms-number.html">ご予約の確認・キャンセル</a>
+              </li>
+              <li class="reserve-nav__item reserve-nav__item--icon">
+                <a class="reserve-nav__link reserve-nav__link--icon" href="/mypage/login.html">マイページ</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div id="js-hamburger" class="hamburger is-pc">
+          <span class="hamburger__border hamburger__border--top"></span>
+          <span class="hamburger__border hamburger__border--center"></span>
+          <span class="hamburger__border hamburger__border--bottom"></span>
+        </div>
+        <div id="js-header-bg" class="reserve-header__bg"></div>
+
+      </header>
+      <!-- ======== ⬆︎ グローバルヘッダー ⬆︎ ======== -->
+
+      <!-- ==================================================================== -->
+
+      <main class="contents">
+
+        <div class="breadcrumb">
+          <div class="breadcrumb__inner">
+            <ol class="breadcrumb__list">
+              <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__link--home" href="/">ホーム</a></li>
+              <li class="breadcrumb__item">ご宿泊予約</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- ======== ⬇︎ コンテンツ_ご宿泊予約 ⬇︎ ======== -->
+        <section class="page-section reservation">
+          <h1 class="h2-heading">
+            <div class="h2-heading__inner">
+              <span class="h2-heading__text">ご宿泊予約</span>
+            </div>
+          </h1>
+          <div class="page-section__inner">
+
+            <!-- ##### ↓ 宿泊予約ステップバー ↓ ##### -->
+            <div class="stepbar-arrow">
+              <ul class="stepbar-arrow__menu">
+                <li class="stepbar-arrow__item stepbar-arrow__item--active">
+                  プラン・客室選択
+                </li>
+                <li class="stepbar-arrow__item">
+                  予約情報入力
+                </li>
+                <li class="stepbar-arrow__item">
+                  お支払い手続き
+                </li>
+                <li class="stepbar-arrow__item">
+                  予約完了
+                </li>
+              </ul>
+            </div>
+            <!-- ##### ↑ 宿泊予約ステップバー ↑ ##### -->
+
+            <!-- ==================================================================== -->
+
+            <!-- ##### ↓ 空室検索 ↓ ##### -->
+            <section id="rooms-searh" class="reservation__box">
+              <h2 class="reservation__title">空室検索</h2>
+
+              <form class="rooms-search" action="#" method="post">
+                <table class="rooms-search__table">
+                  <tbody class="rooms-search__table-body">
+                    <tr class="rooms-search__tr">
+                      <th class="rooms-search__th">
+                        <label>宿泊日</label>
+                      </th>
+                      <td class="rooms-search__td">
+                        <input class="rooms-search__date" id="accommodation-date" type="date"
+                          placeholder="年 / 月 / 日"></input>
+                      </td>
+                    </tr>
+
+                    <tr class="rooms-search__tr">
+                      <th class="rooms-search__th">
+                        <label for="number-of-guests">宿泊人数</label>
+                      </th>
+                      <td class="rooms-search__td rooms-search__td--wrap">
+
+                        <div class="rooms-search__select-box">
+                          <div class="rooms-search__item">
+                            <p class="rooms-search__td-text">大人（一部屋あたり）</p>
+                            <div class="rooms-search__select-wrap">
+                              <select class="rooms-search__select" name="adult-number">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="3">4</option>
+                                <option value="3">5</option>
+                                <option value="3">6</option>
+                                <option value="3">7</option>
+                                <option value="3">8</option>
+                                <option value="3">9</option>
+                              </select>
+                            </div>
+                            <p class="rooms-search__td-text">　名</p>
+                          </div>
+
+                          <div class="rooms-search__item">
+                            <p class="rooms-search__td-text">小学生</p>
+                            <div class="rooms-search__select-wrap">
+                              <select class="rooms-search__select" name="shougakusei-number">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="3">4</option>
+                                <option value="3">5</option>
+                                <option value="3">6</option>
+                                <option value="3">7</option>
+                                <option value="3">8</option>
+                                <option value="3">9</option>
+                              </select>
+                            </div>
+                            <p class="rooms-search__td-text">　名</p>
+                          </div>
+
+                          <div class="rooms-search__item">
+                            <p class="rooms-search__td-text">幼児（4 ~ 6歳）</p>
+                            <div class="rooms-search__select-wrap">
+                              <select class="rooms-search__select" name="youji-number">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="3">4</option>
+                                <option value="3">5</option>
+                                <option value="3">6</option>
+                                <option value="3">7</option>
+                                <option value="3">8</option>
+                                <option value="3">9</option>
+                              </select>
+                            </div>
+                            <p class="rooms-search__td-text">　名</p>
+                          </div>
+
+                          <div class="rooms-search__item">
+                            <p class="rooms-search__td-text">乳児（0 ~ 3歳）</p>
+                            <div class="rooms-search__select-wrap">
+                              <select class="rooms-search__select" name="youji-number">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="3">4</option>
+                                <option value="3">5</option>
+                                <option value="3">6</option>
+                                <option value="3">7</option>
+                                <option value="3">8</option>
+                                <option value="3">9</option>
+                              </select>
+                            </div>
+                            <p class="rooms-search__td-text">　名</p>
+                          </div>
+                        </div>
+
+                      </td>
+                    </tr>
+
+                    <tr class="rooms-search__tr">
+                      <th class="rooms-search__th">
+                        <label>宿泊数</label>
+                      </th>
+                      <td class="rooms-search__td">
+                        <div class="rooms-search__td-col">
+                          <div class="rooms-search__select-wrap">
+                            <select class="rooms-search__select" name="adult-number">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="3">4</option>
+                              <option value="3">5</option>
+                              <option value="3">6</option>
+                              <option value="3">7</option>
+                              <option value="3">8</option>
+                              <option value="3">9</option>
+                            </select>
+                          </div>
+                          <p class="rooms-search__td-text">泊</p>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr class="rooms-search__tr">
+                      <th class="rooms-search__th">
+                        <label>お部屋数</label>
+                      </th>
+                      <td class="rooms-search__td">
+                        <div class="rooms-search__td-col">
+                          <div class="rooms-search__select-wrap">
+                            <select class="rooms-search__select" name="adult-number">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="3">4</option>
+                            </select>
+                          </div>
+                          <p class="rooms-search__td-text">部屋</p>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr class="rooms-search__tr">
+                      <th class="rooms-search__th">
+                        <label>1室または1人あたりの料金</label>
+                      </th>
+                      <td class="rooms-search__td">
+                        <div class="rooms-search__td-col">
+                          <div class="rooms-search__select-wrap">
+                            <select class="rooms-search__select rooms-search__select--price" name="adult-number">
+                              <option value="1">上限なし</option>
+                              <option value="2">5,000円</option>
+                              <option value="3">6,000円</option>
+                              <option value="3">7,000円</option>
+                              <option value="3">8,000円</option>
+                              <option value="3">9,000円</option>
+                              <option value="3">10,000円</option>
+                              <option value="3">11,000円</option>
+                              <option value="3">12,000円</option>
+                              <option value="3">14,000円</option>
+                              <option value="3">16,000円</option>
+                              <option value="3">18,000円</option>
+                              <option value="3">20,000円</option>
+                              <option value="3">30,000円</option>
+                              <option value="3">40,000円</option>
+                              <option value="3">50,000円</option>
+                              <option value="3">60,000円</option>
+                            </select>
+                          </div>
+                          〜
+                          <div class="rooms-search__select-wrap">
+                            <select class="rooms-search__select rooms-search__select--price" name="adult-number">
+                              <option value="1">下限なし</option>
+                              <option value="2">5,000円</option>
+                              <option value="3">6,000円</option>
+                              <option value="3">7,000円</option>
+                              <option value="3">8,000円</option>
+                              <option value="3">9,000円</option>
+                              <option value="3">10,000円</option>
+                              <option value="3">11,000円</option>
+                              <option value="3">12,000円</option>
+                              <option value="3">14,000円</option>
+                              <option value="3">16,000円</option>
+                              <option value="3">18,000円</option>
+                              <option value="3">20,000円</option>
+                              <option value="3">30,000円</option>
+                              <option value="3">40,000円</option>
+                              <option value="3">50,000円</option>
+                              <option value="3">60,000円</option>
+                            </select>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="button-box">
+                  <button type="submit" class="search-btn" id="search-btn">この条件で空室状況を検索</button>
+                </div>
+              </form>
+
+            </section>
+            <!-- ##### ↑ 空室検索 ↑ ##### -->
+
+            <!-- ==================================================================== -->
+
+            <!-- ##### ⬇︎ ご希望のプラン・客室を選択 ⬇︎ ##### -->
+            <section class="reservation__box" id="is-tab">
+              <h2 class="reservation__title">ご希望のプラン・客室を選択</h2>
+
+              <!-- タブコンテンツ -->
+              <div class="tab">
+                <ul class="tab__menu">
+                  <li class="tab__menu-item js-tab-switch is-active" data-tab="tab-1">
+                    宿泊プランから探す
+                  </li>
+                  <li class="tab__menu-item js-tab-switch" data-tab="tab-2">
+                    客室から探す
+                  </li>
+                </ul>
+                <div class="tab__container">
+
+                  <!-- ##### ↓ プランから探す ↓ ##### -->
+                  <div id="plan-tab" class="tab__contents js-tab-cts is-active" data-tab="tab-1">
+                    <div class="results">
+                      <div class="results__filter-box">
+                        <input class="results__radio" type="radio" name="sort" id="all" value="all" checked>
+                        <label class="results__label" for="all">全て</label>
+
+                        <input class="results__radio" type="radio" name="sort" id="price-cheap" value="price-cheap">
+                        <label class="results__label" for="price-cheap">料金の安い順</label>
+
+                        <input class="results__radio" type="radio" name="sort" id="price-high" value="price-high">
+                        <label class="results__label" for="price-high">料金の高い順</label>
+                      </div>
+                    </div>
+
+                    <div class="reservation-plan">
+
+                      <!-- ##### ⬇︎ プランから探す_蓼科高原 周遊観光プラン ⬇︎ ##### -->
+                      <section id="plan-01" class="reservation-plan__item" data-price="25000">
+                        <h3 class="reservation-plan__title">蓼科高原 周遊観光プラン</h3>
+                        <div class="reservation-plan__inner">
+
+                          <!-- ### プラン情報リスト ### -->
+                          <div class="reservation-plan__col">
+
+                            <figure class="reservation-plan__thumb">
+                              <img class="reservation-plan__img" src="images/img_plan01_thumb.jpg" alt="雪の中を滑るスキーヤーの写真">
+                            </figure>
+
+                            <div class="reservation-plan__info">
+                              <ul class="reservation-plan__info-list">
+                                <li class="reservation-plan__info-item reservation-plan__info-item--period">
+                                  <p class="reservation-plan__info-text">プラン期間： 2023年03月01日 〜 2023年11月31日</p>
+                                </li>
+                                <li class="reservation-plan__info-item reservation-plan__info-item--cuisine">
+                                  <p class="reservation-plan__info-text">朝食・夕食付き</p>
+                                </li>
+                                <li class="reservation-plan__info-item reservation-plan__info-item--checktime">
+                                  <p class="reservation-plan__info-text">チェック in 15:00 ~ 20:00 | out 10:00まで</p>
+                                </li>
+                              </ul>
+
+                              <div class="reservation-plan__info-more js-more">
+                                <div class="reservation-plan__more-contents js-more-contents">
+                                  <p class="reservation-plan__desc">
+                                    蓼科高原の名所を1日観光バスで巡るプランとなっております。<br>
+                                    電車でお越しになられたお客様や、「観光プランはお任せしたい」という方におすすめのプランです。蓼科高原の名所を1日観光バスで巡るプランとなっております。
+                                  </p>
+                                  <p class="reservation-plan__desc-label">
+                                    【周遊予定地タイムスケジュール】
+                                  </p>
+                                  <ul class="reservation-plan__desc-list">
+                                    <li class="">AM:9:00 ~ 当館出発</li>
+                                    <li class="">AM:9:15 ~ 11:30 北八ヶ岳ロープウェイ</li>
+                                    <li class="">AM:11:30 ~ 移動</li>
+                                    <li class="">PM:12:00 ~ 13:30 御射鹿池</li>
+                                    <li class="">PM:13:30 ~ 移動</li>
+                                    <li class="">PM:14:20 ~ 16:00 女神湖</li>
+                                    <li class="">PM:16:00 ~ 移動</li>
+                                    <li class="">PM:16:40 ~ 17:10 蓼科大滝</li>
+                                    <li class="">PM:17:10 ~ ホテル移動</li>
+                                  </ul>
+                                </div>
+                                <button class="reservation-plan__more-btn is-more-btn">プラン詳細</button>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- ### お部屋リスト ### -->
+                          <ul class="rooms-type">
+                            <li class="rooms-type__item">
+                              <div class="rooms-type__label">
+                                <figure class="rooms-type__thumb">
+                                  <img class="rooms-type__img" src="/images/rooms/img_room-slide01_japan-room.jpg"
+                                    alt="小町亭 和室20畳">
+                                </figure>
+                                <div class="rooms-type__name">
+                                  <p class="rooms-type__category">和室タイプ</p>
+                                  <p class="rooms-type__rooms-title">小町亭 和室20畳</p>
+                                </div>
+                              </div>
+                              <div class="rooms-type__info">
+                                <p class="rooms-type__cuisine">朝食・夕食付き</p>
+                                <p class="rooms-type__price">¥25,000 ~</p>
+                              </div>
+                              <div class="rooms-type__btn-box">
+                                <button class="rooms-type__modal-btn js-modal-button" data-target="modal01">詳細
+                                  <span class="rooms-type__modal-icon"></span>
+                                </button>
+                                <a class="rooms-type__link-btn" href="reservation_selection.html">予約</a>
+                              </div>
+
+                              <!--modal-->
+                              <div id="modal01" class="modal js-modal">
+                                <div class="modal__layer js-modal-close"></div>
+                                <div class="modal__container">
+                                  <div class="modal__inner">
+                                    <div class="modal__contents">
+
+                                      <section class="reservation-rooms">
+                                        <h3 class="reservation-rooms__title">小町亭 和室20畳</h3>
+                                        <div class="reservation-rooms__inner">
+                                          <div class="reservation-rooms__contents">
+
+                                            <!-- ### 客室サムネイル ### -->
+                                            <figure class="reservation-rooms__thumb">
+                                              <img class="reservation-rooms__img"
+                                                src="/images/rooms/img_room-slide01_japan-room.jpg" alt="小町亭 和室20畳">
+                                            </figure>
+
+                                            <!-- ### 客室情報 ### -->
+                                            <div class="reservation-rooms__info">
+                                              <ul class="reservation-rooms__info-list">
+                                                <li
+                                                  class="reservation-rooms__info-item reservation-rooms__info-item--capacity">
+                                                  <p class="reservation-rooms__info-text">定員： 2 ~ 5名</p>
+                                                </li>
+                                                <li
+                                                  class="reservation-rooms__info-item reservation-rooms__info-item--cuisine">
+                                                  <p class="reservation-rooms__info-text">朝食・夕食付き</p>
+                                                </li>
+                                                <li
+                                                  class="reservation-rooms__info-item reservation-rooms__info-item--rooms-area">
+                                                  <p class="reservation-rooms__info-text">部屋面積：45㎡</p>
+                                                </li>
+                                              </ul>
+                                              <p class="reservation-rooms__desc">
+                                                広々とした長閑な和室で畳の香りを堪能しながらゆっくりとお寛ぎいただけます。<br>
+                                                テラスからは滝ノ湯川を望むことができますので、自然の音色をお楽しみください。
+                                              </p>
+                                              <a class="link-text" href="/rooms.html#japan-room">「小町亭 和室20畳」詳細はこちら</a>
+                                              <div class="modal__btn-wrapper">
+                                                <button class="modal__close-btn js-modal-close">閉じる</button>
+                                              </div>
+
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </section>
+
+                                    </div>
+                                  </div>
+                                </div><!--modal__inner-->
+                              </div>
+                              <!--modal-->
+                            </li>
+
+                            <li class="rooms-type__item">
+                              <div class="rooms-type__label">
+                                <figure class="rooms-type__thumb">
+                                  <img class="rooms-type__img" src="/images/rooms/img_room-slide01_twin-room.jpg"
+                                    alt="ツインルーム">
+                                </figure>
+                                <div class="rooms-type__name">
+                                  <p class="rooms-type__category">洋室タイプ</p>
+                                  <p class="rooms-type__rooms-title">ツインルーム</p>
+                                </div>
+                              </div>
+                              <div class="rooms-type__info">
+                                <p class="rooms-type__cuisine">朝食・夕食付き</p>
+                                <p class="rooms-type__price">¥29,000 ~</p>
+                              </div>
+                              <div class="rooms-type__btn-box">
+                                <button class="rooms-type__modal-btn js-modal-button" data-target="modal02">詳細
+                                  <span class="rooms-type__modal-icon"></span>
+                                </button>
+                                <a class="rooms-type__link-btn" href="reservation_selection.html">予約</a>
+                              </div>
+
+                              <!--modal-->
+                              <div id="modal02" class="modal js-modal">
+                                <div class="modal__layer js-modal-close"></div>
+                                <div class="modal__container">
+                                  <div class="modal__inner">
+                                    <div class="modal__contents">
+
+                                      <section class="reservation-rooms">
+                                        <h3 class="reservation-rooms__title">ツインルーム</h3>
+                                        <div class="reservation-rooms__inner">
+                                          <div class="reservation-rooms__contents">
+                                            <!-- ### 客室サムネイル ### -->
+                                            <figure class="reservation-rooms__thumb">
+                                              <img class="reservation-rooms__img"
+                                                src="/images/rooms/img_room-slide01_twin-room.jpg" alt="ツインルーム">
+                                            </figure>
+
+                                            <!-- ### 客室情報 ### -->
+                                            <div class="reservation-rooms__info">
+                                              <ul class="reservation-rooms__info-list">
+                                                <li
+                                                  class="reservation-rooms__info-item reservation-rooms__info-item--capacity">
+                                                  <p class="reservation-rooms__info-text">定員：1 ~ 2名</p>
+                                                </li>
+                                                <li
+                                                  class="reservation-rooms__info-item reservation-rooms__info-item--cuisine">
+                                                  <p class="reservation-rooms__info-text">朝食・夕食付き</p>
+                                                </li>
+                                                <li
+                                                  class="reservation-rooms__info-item reservation-rooms__info-item--rooms-area">
+                                                  <p class="reservation-rooms__info-text">部屋面積：45㎡</p>
+                                                </li>
+                                              </ul>
+                                              <p class="reservation-rooms__desc">
+                                                ご夫婦やカップルにおすすめのツインルームです。<br>
+                                                洋室の広々としたお部屋で、くつろぎのひと時をお過ごしください。
+                                              </p>
+                                              <a class="link-text" href="/rooms.html#twin-room">「ツインルーム」詳細はこちら</a>
+                                              <div class="modal__btn-wrapper">
+                                                <button class="modal__close-btn js-modal-close">閉じる</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </section>
+
+                                    </div>
+                                  </div>
+                                </div><!--modal__inner-->
+                              </div>
+                              <!--modal-->
+                            </li>
+
+                            <li class="rooms-type__item">
+                              <div class="rooms-type__label">
+                                <figure class="rooms-type__thumb">
+                                  <img class="rooms-type__img" src="/images/rooms/img_room-slide01_family-room.jpg"
+                                    alt="小町亭 団欒の間">
+                                </figure>
+                                <div class="rooms-type__name">
+                                  <p class="rooms-type__category">和室タイプ</p>
+                                  <p class="rooms-type__rooms-title">小町亭 団欒の間</p>
+                                </div>
+                              </div>
+                              <div class="rooms-type__info">
+                                <p class="rooms-type__cuisine">朝食・夕食付き</p>
+                                <p class="rooms-type__price">¥28,000 ~</p>
+                              </div>
+                              <div class="rooms-type__btn-box">
+                                <button class="rooms-type__modal-btn js-modal-button" data-target="modal03">詳細
+                                  <span class="rooms-type__modal-icon"></span>
+                                </button>
+                                <a class="rooms-type__link-btn" href="reservation_selection.html">予約</a>
+                              </div>
+
+                              <!--modal-->
+                              <div id="modal03" class="modal js-modal">
+                                <div class="modal__layer js-modal-close"></div>
+                                <div class="modal__container">
+                                  <div class="modal__inner">
+                                    <div class="modal__contents">
+
+                                      <section class="reservation-rooms">
+                                        <h3 class="reservation-rooms__title">小町亭 団欒の間</h3>
+                                        <div class="reservation-rooms__inner">
+                                          <div class="reservation-rooms__contents">
+
+                                            <!-- ### 客室サムネイル ### -->
+                                            <figure class="reservation-rooms__thumb">
+                                              <img class="reservation-rooms__img"
+                                                src="/images/rooms/img_room-slide01_family-room.jpg" alt="小町亭 団欒の間">
+                                            </figure>
+
+                                            <!-- ### 客室情報 ### -->
+                                            <div class="reservation-rooms__info">
+                                              <ul class="reservation-rooms__info-list">
+                                                <li
+                                                  class="reservation-rooms__info-item reservation-rooms__info-item--capacity">
+                                                  <p class="reservation-rooms__info-text">定員：2 ~ 8名</p>
+                                                </li>
+                                                <li
+                                                  class="reservation-rooms__info-item reservation-rooms__info-item--cuisine">
+                                                  <p class="reservation-rooms__info-text">朝食・夕食付き</p>
+                                                </li>
+                                                <li
+                                                  class="reservation-rooms__info-item reservation-rooms__info-item--rooms-area">
+                                                  <p class="reservation-rooms__info-text">部屋面積：70㎡</p>
+                                                </li>
+                                              </ul>
+                                              <p class="reservation-rooms__desc">
+                                                お子様連れやお仲間と来館されるお客様におすすめのお部屋となっております。<br>
+                                                和室をベースとした広々とした空間でのびのびとお過ごしいただけます。
+                                              </p>
+                                              <a class="link-text" href="/rooms.html#family-room">「小町亭 団欒の間」の詳細はこちら</a>
+                                              <div class="modal__btn-wrapper">
+                                                <button class="modal__close-btn js-modal-close">閉じる</button>
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                        </div>
+                                      </section>
+
+                                    </div>
+                                  </div>
+                                </div><!--modal__inner-->
+                              </div>
+                              <!--modal-->
+                            </li>
+
+                            <li class="rooms-type__item">
+                              <div class="rooms-type__label">
+                                <figure class="rooms-type__thumb">
+                                  <img class="rooms-type__img" src="/images/rooms/img_room-slide01_sweet-room.jpg"
+                                    alt="露天風呂付きスイートルーム">
+                                </figure>
+                                <div class="rooms-type__name">
+                                  <p class="rooms-type__category">洋室タイプ</p>
+                                  <p class="rooms-type__rooms-title">露天風呂付きスイートルーム</p>
+                                </div>
+                              </div>
+                              <div class="rooms-type__info">
+                                <p class="rooms-type__cuisine">朝食・夕食付き</p>
+                                <p class="rooms-type__price">¥60,000 ~</p>
+                              </div>
+                              <div class="rooms-type__btn-box">
+                                <button class="rooms-type__modal-btn js-modal-button" data-target="modal04">詳細
+                                  <span class="rooms-type__modal-icon"></span>
+                                </button>
+                                <a class="rooms-type__link-btn" href="reservation_selection.html">予約</a>
+                              </div>
+
+                              <!--modal-->
+                              <div id="modal04" class="modal js-modal">
+                                <div class="modal__layer js-modal-close"></div>
+                                <div class="modal__container">
+                                  <div class="modal__inner">
+                                    <div class="modal__contents">
+                                      <section class="reservation-rooms">
+                                        <h3 class="reservation-rooms__title">露天風呂付きスイートルーム</h3>
+                                        <div class="reservation-rooms__inner">
+                                          <div class="reservation-rooms__info">
+                                            <!-- ### 客室サムネイル ### -->
+                                            <figure class="reservation-rooms__thumb">
+                                              <img class="reservation-rooms__img"
+                                                src="/images/rooms/img_room-slide01_sweet-room.jpg" alt="露天風呂付きスイートルーム">
+                                            </figure>
+
+                                            <!-- ### お部屋情報 ### -->
+                                            <ul class="reservation-rooms__info-list">
+                                              <li
+                                                class="reservation-rooms__info-item reservation-rooms__info-item--capacity">
+                                                <p class="reservation-rooms__info-text">定員：2 ~ 4名</p>
+                                              </li>
+                                              <li
+                                                class="reservation-rooms__info-item reservation-rooms__info-item--cuisine">
+                                                <p class="reservation-rooms__info-text">朝食・夕食付き</p>
+                                              </li>
+                                              <li
+                                                class="reservation-rooms__info-item reservation-rooms__info-item--rooms-area">
+                                                <p class="reservation-rooms__info-text">部屋面積：70㎡</p>
+                                              </li>
+                                            </ul>
+                                            <p class="reservation-rooms__desc">
+                                              お子様連れやお仲間と来館されるお客様におすすめのお部屋となっております。<br>
+                                              和室をベースとした広々とした空間でのびのびとお過ごしいただけます。
+                                            </p>
+                                            <a class="link-text" href="/rooms.html#sweet-room">「露天風呂付きスイートルーム」詳細はこちら</a>
+                                          </div>
+                                          <div class="modal__btn-wrapper">
+                                            <button class="modal__close-btn js-modal-close">閉じる</button>
+                                          </div>
+                                        </div>
+                                      </section>
+                                    </div>
+                                  </div>
+                                </div><!--modal__inner-->
+                              </div>
+                              <!--modal-->
+                            </li>
+                          </ul>
+                        </div>
+                      </section>
+                      <!-- ##### ⬆︎ プランから探す_蓼科高原 周遊観光プラン ⬆︎ ##### -->
+
+                      <!-- ==================================================================== -->
+
+                      <!-- ##### ⬇︎ プランから探す_【12月 ~ 2月限定】スキーレンタルプラン ⬇︎ ##### -->
+                      <section id="plan-02" class="reservation-plan__item" data-price="23000">
+                        <h3 class="reservation-plan__title">【12月 ~ 2月限定】スキーレンタルプラン</h3>
+                        <div class="reservation-plan__inner">
+
+                          <!-- ### プラン情報リスト ### -->
+                          <div class="reservation-plan__col">
+
+                            <figure class="reservation-plan__thumb">
+                              <img class="reservation-plan__img" src="images/img_plan02_thumb.jpg" alt="スキーをする若者">
+                            </figure>
+
+                            <div class="reservation-plan__info">
+                              <ul class="reservation-plan__info-list">
+                                <li class="reservation-plan__info-item reservation-plan__info-item--period">
+                                  <p class="reservation-plan__info-text">プラン期間： 2023年12月1日 〜 2024年2月1日（降雪状況により前後します）</p>
+                                </li>
+                                <li class="reservation-plan__info-item reservation-plan__info-item--cuisine">
+                                  <p class="reservation-plan__info-text">朝食・夕食付き</p>
+                                </li>
+                                <li class="reservation-plan__info-item reservation-plan__info-item--checktime">
+                                  <p class="reservation-plan__info-text">チェック in 15:00 ~ 20:00 | out 10:00まで</p>
+                                </li>
+                              </ul>
+
+                              <div class="reservation-plan__info-more js-more">
+                                <div class="reservation-plan__more-contents js-more-contents">
+                                  <p class="reservation-plan__desc">
+                                    スキー用具のレンタルとスキー場の利用料が含まれた冬場限定のレジャープランとなっております。<br>
+                                    重い荷物を持つことなく宿泊に必要な必要最低限の荷物で来館することができます。
+                                  </p>
+                                  <p class="reservation-plan__desc-label">
+                                    【タイムスケジュール（混雑状況により前後します）】
+                                  </p>
+                                  <ul class="reservation-plan__desc-list">
+                                    <li class="reservation-plan__desc-item">AM:9:00 ~ 当館出発</li>
+                                    <li class="reservation-plan__desc-item">AM:9:30 ピラタス蓼科スノーリゾート 到着</li>
+                                    <li class="reservation-plan__desc-item">PM:9:30 ~ 16:30 スキーをお楽しみください</li>
+                                    <li class="reservation-plan__desc-item">PM:17:00 ~ ピラタス蓼科スノーリゾート 出発</li>
+                                    <li class="reservation-plan__desc-item">PM:17:30 ~ 当館到着</li>
+                                  </ul>
+                                </div>
+                                <button class="reservation-plan__more-btn is-more-btn">プラン詳細</button>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- ### お部屋リスト ### -->
+                          <ul class="rooms-type">
+                            <li class="rooms-type__item">
+                              <div class="rooms-type__label">
+                                <figure class="rooms-type__thumb">
+                                  <img class="rooms-type__img" src="/images/rooms/img_room-slide01_japan-room.jpg"
+                                    alt="">
+                                </figure>
+                                <div class="rooms-type__name">
+                                  <p class="rooms-type__category">和室タイプ</p>
+                                  <p class="rooms-type__rooms-title">小町亭 和室20畳</p>
+                                </div>
+                              </div>
+                              <div class="rooms-type__info">
+                                <p class="rooms-type__cuisine">朝食・夕食付き</p>
+                                <p class="rooms-type__price">¥21,000 ~</p>
+                              </div>
+                              <div class="rooms-type__btn-box">
+                                <button class="rooms-type__modal-btn js-modal-button" data-target="modal01">詳細
+                                  <span class="rooms-type__modal-icon"></span>
+                                </button>
+                                <a class="rooms-type__link-btn" href="reservation_selection.html">予約</a>
+                              </div>
+
+                            </li>
+
+                            <li class="rooms-type__item">
+                              <div class="rooms-type__label">
+                                <figure class="rooms-type__thumb">
+                                  <img class="rooms-type__img" src="/images/rooms/img_room-slide01_twin-room.jpg"
+                                    alt="">
+                                </figure>
+                                <div class="rooms-type__name">
+                                  <p class="rooms-type__category">洋室タイプ</p>
+                                  <p class="rooms-type__rooms-title">ツインルーム</p>
+                                </div>
+                              </div>
+                              <div class="rooms-type__info">
+                                <p class="rooms-type__cuisine">朝食・夕食付き</p>
+                                <p class="rooms-type__price">¥23,000 ~</p>
+                              </div>
+                              <div class="rooms-type__btn-box">
+                                <button class="rooms-type__modal-btn js-modal-button" data-target="modal02">詳細
+                                  <span class="rooms-type__modal-icon"></span>
+                                </button>
+                                <a class="rooms-type__link-btn" href="reservation_selection.html">予約</a>
+                              </div>
+                            </li>
+
+                            <li class="rooms-type__item">
+                              <div class="rooms-type__label">
+                                <figure class="rooms-type__thumb">
+                                  <img class="rooms-type__img" src="/images/rooms/img_room-slide01_family-room.jpg"
+                                    alt="">
+                                </figure>
+                                <div class="rooms-type__name">
+                                  <p class="rooms-type__category">和室タイプ</p>
+                                  <p class="rooms-type__rooms-title">小町亭 団欒の間</p>
+                                </div>
+                              </div>
+                              <div class="rooms-type__info">
+                                <p class="rooms-type__cuisine">朝食・夕食付き</p>
+                                <p class="rooms-type__price">¥25,000 ~</p>
+                              </div>
+                              <div class="rooms-type__btn-box">
+                                <button class="rooms-type__modal-btn js-modal-button" data-target="modal03">詳細
+                                  <span class="rooms-type__modal-icon"></span>
+                                </button>
+                                <a class="rooms-type__link-btn" href="reservation_selection.html">予約</a>
+                              </div>
+                            </li>
+
+                            <li class="rooms-type__item">
+                              <div class="rooms-type__label">
+                                <figure class="rooms-type__thumb">
+                                  <img class="rooms-type__img" src="/images/rooms/img_room-slide01_sweet-room.jpg"
+                                    alt="">
+                                </figure>
+                                <div class="rooms-type__name">
+                                  <p class="rooms-type__category">洋室タイプ</p>
+                                  <p class="rooms-type__rooms-title">露天風呂付きスイートルーム</p>
+                                </div>
+                              </div>
+                              <div class="rooms-type__info">
+                                <p class="rooms-type__cuisine">朝食・夕食付き</p>
+                                <p class="rooms-type__price">¥48,000 ~</p>
+                              </div>
+                              <div class="rooms-type__btn-box">
+                                <button class="rooms-type__modal-btn js-modal-button" data-target="modal04">詳細
+                                  <span class="rooms-type__modal-icon"></span>
+                                </button>
+                                <a class="rooms-type__link-btn" href="reservation_selection.html">予約</a>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </section>
+                      <!-- ##### ⬆︎ プランから探す_【12月 ~ 2月限定】スキーレンタルプラン ⬆︎ ##### -->
+
+                      <!-- ==================================================================== -->
+
+                      <!-- ##### ⬇︎ プランから探す_基本宿泊プラン（朝食・夕食付き） ⬇︎ ##### -->
+                      <section class="reservation-plan__item" data-price="18000">
+                        <h3 class="reservation-plan__title">基本宿泊プラン（朝食・夕食付き）</h3>
+                        <div class="reservation-plan__inner">
+
+                          <!-- ### プラン情報リスト ### -->
+                          <div class="reservation-plan__col">
+                            <figure class="reservation-plan__thumb">
+                              <img class="reservation-plan__img" src="images/img_plan03_thumb.jpg" alt="お部屋食のすき焼き">
+                            </figure>
+
+                            <div class="reservation-plan__info">
+                              <ul class="reservation-plan__info-list">
+                                <li class="reservation-plan__info-item reservation-plan__info-item--period">
+                                  <p class="reservation-plan__info-text">プラン期間： 年中実施</p>
+                                </li>
+                                <li class="reservation-plan__info-item reservation-plan__info-item--cuisine">
+                                  <p class="reservation-plan__info-text">朝食・夕食付き</p>
+                                </li>
+                                <li class="reservation-plan__info-item reservation-plan__info-item--checktime">
+                                  <p class="reservation-plan__info-text">チェック in 15:00 ~ 20:00 | out 10:00まで</p>
+                                </li>
+                                <li class="reservation-plan__info-item">
+                                  <p class="reservation-plan__desc">
+                                    朝食・夕食付きの基本プランとなっております。<br>
+                                    旅行内容を計画済みのお客様やビジネスに最適です。
+                                  </p>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <!-- ### お部屋リスト ### -->
+                          <ul class="rooms-type">
+                            <li class="rooms-type__item">
+                              <div class="rooms-type__label">
+                                <figure class="rooms-type__thumb">
+                                  <img class="rooms-type__img" src="/images/rooms/img_room-slide01_japan-room.jpg"
+                                    alt="">
+                                </figure>
+                                <div class="rooms-type__name">
+                                  <p class="rooms-type__category">和室タイプ</p>
+                                  <p class="rooms-type__rooms-title">小町亭 和室20畳</p>
+                                </div>
+                              </div>
+                              <div class="rooms-type__info">
+                                <p class="rooms-type__cuisine">朝食・夕食付き</p>
+                                <p class="rooms-type__price">¥18,000 ~</p>
+                              </div>
+                              <div class="rooms-type__btn-box">
+                                <button class="rooms-type__modal-btn js-modal-button" data-target="modal01">詳細
+                                  <span class="rooms-type__modal-icon"></span>
+                                </button>
+                                <a class="rooms-type__link-btn" href="reservation_selection.html">予約</a>
+                              </div>
+                            </li>
+
+                            <li class="rooms-type__item">
+                              <div class="rooms-type__label">
+                                <figure class="rooms-type__thumb">
+                                  <img class="rooms-type__img" src="/images/rooms/img_room-slide01_twin-room.jpg"
+                                    alt="">
+                                </figure>
+                                <div class="rooms-type__name">
+                                  <p class="rooms-type__category">洋室タイプ</p>
+                                  <p class="rooms-type__rooms-title">ツインルーム</p>
+                                </div>
+                              </div>
+                              <div class="rooms-type__info">
+                                <p class="rooms-type__cuisine">朝食・夕食付き</p>
+                                <p class="rooms-type__price">¥20,000 ~</p>
+                              </div>
+                              <div class="rooms-type__btn-box">
+                                <button class="rooms-type__modal-btn js-modal-button" data-target="modal02">詳細
+                                  <span class="rooms-type__modal-icon"></span>
+                                </button>
+                                <a class="rooms-type__link-btn" href="reservation_selection.html">予約</a>
+                              </div>
+                            </li>
+
+                            <li class="rooms-type__item">
+                              <div class="rooms-type__label">
+                                <figure class="rooms-type__thumb">
+                                  <img class="rooms-type__img" src="/images/rooms/img_room-slide01_family-room.jpg"
+                                    alt="">
+                                </figure>
+                                <div class="rooms-type__name">
+                                  <p class="rooms-type__category">和室タイプ</p>
+                                  <p class="rooms-type__rooms-title">小町亭 団欒の間</p>
+                                </div>
+                              </div>
+                              <div class="rooms-type__info">
+                                <p class="rooms-type__cuisine">朝食・夕食付き</p>
+                                <p class="rooms-type__price">¥20,000 ~</p>
+                              </div>
+                              <div class="rooms-type__btn-box">
+                                <button class="rooms-type__modal-btn js-modal-button" data-target="modal03">詳細
+                                  <span class="rooms-type__modal-icon"></span>
+                                </button>
+                                <a class="rooms-type__link-btn" href="reservation_selection.html">予約</a>
+                              </div>
+                            </li>
+
+                            <li class="rooms-type__item">
+                              <div class="rooms-type__label">
+                                <figure class="rooms-type__thumb">
+                                  <img class="rooms-type__img" src="/images/rooms/img_room-slide01_sweet-room.jpg"
+                                    alt="">
+                                </figure>
+                                <div class="rooms-type__name">
+                                  <p class="rooms-type__category">洋室タイプ</p>
+                                  <p class="rooms-type__rooms-title">露天風呂付きスイートルーム</p>
+                                </div>
+                              </div>
+                              <div class="rooms-type__info">
+                                <p class="rooms-type__cuisine">朝食・夕食付き</p>
+                                <p class="rooms-type__price">¥45,000 ~</p>
+                              </div>
+                              <div class="rooms-type__btn-box">
+                                <button class="rooms-type__modal-btn js-modal-button" data-target="modal04">詳細
+                                  <span class="rooms-type__modal-icon"></span>
+                                </button>
+                                <a class="rooms-type__link-btn" href="reservation_selection.html">予約</a>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </section>
+                      <!-- ##### ⬆︎ プランから探す_基本宿泊プラン（朝食・夕食付き） ⬆︎ ##### -->
+
+                      <!-- ==================================================================== -->
+
+                      <!-- ##### ⬇︎ プランから探す_ペット思い出づくりプラン！ ⬇︎ ##### -->
+                      <section class="reservation-plan__item" data-price="30000">
+                        <h3 class="reservation-plan__title">ペット思い出づくりプラン！</h3>
+                        <div class="reservation-plan__inner">
+
+                          <!-- ### プラン情報リスト ### -->
+                          <div class="reservation-plan__col">
+
+                            <figure class="reservation-plan__thumb">
+                              <img class="reservation-plan__img" src="images/img_plan04_thumb.jpg"
+                                alt="芝生の上を走ってボールを追いかける子犬">
+                            </figure>
+
+                            <div class="reservation-plan__info">
+                              <ul class="reservation-plan__info-list">
+                                <li class="reservation-plan__info-item reservation-plan__info-item--period">
+                                  <p class="reservation-plan__info-text">プラン期間： 2024年3月 ~ 2024年10月</p>
+                                </li>
+                                <li class="reservation-plan__info-item reservation-plan__info-item--cuisine">
+                                  <p class="reservation-plan__info-text">朝食・夕食付き</p>
+                                </li>
+                                <li class="reservation-plan__info-item reservation-plan__info-item--checktime">
+                                  <p class="reservation-plan__info-text">チェック in 15:00 ~ 20:00 | out 10:00まで</p>
+                                </li>
+                              </ul>
+                              <p class="reservation-plan__desc">
+                                愛犬と一緒に宿泊できるプランです。
+                                ドッグランなどの設備も備えておりますので、家族とペットで幸せな旅行の思い出作りをご提供いたします。
+                              </p>
+                              <a class="link-text" href="#">ペット同伴宿泊滞在同意書</a>
+                            </div>
+                          </div>
+
+                          <!-- ### お部屋リスト ### -->
+                          <ul class="rooms-type">
+                            <li class="rooms-type__item">
+                              <div class="rooms-type__label">
+                                <figure class="rooms-type__thumb">
+                                  <img class="rooms-type__img" src="/images/rooms/img_room-slide01_pet-room.jpg"
+                                    alt="ドッグルーム">
+                                </figure>
+                                <div class="rooms-type__name">
+                                  <p class="rooms-type__category">洋室タイプ</p>
+                                  <p class="rooms-type__rooms-title">ドッグルーム</p>
+                                </div>
+                              </div>
+                              <div class="rooms-type__info">
+                                <p class="rooms-type__cuisine">朝食・夕食付き</p>
+                                <p class="rooms-type__price">¥30,000 ~</p>
+                              </div>
+                              <div class="rooms-type__btn-box">
+                                <button class="rooms-type__modal-btn js-modal-button" data-target="modal09">詳細
+                                  <span class="rooms-type__modal-icon"></span>
+                                </button>
+                                <a class="rooms-type__link-btn" href="reservation_selection.html">予約</a>
+                              </div>
+
+                              <!--modal-->
+                              <div id="modal09" class="modal js-modal">
+                                <div class="modal__layer js-modal-close"></div>
+                                <div class="modal__container">
+                                  <div class="modal__inner">
+                                    <div class="modal__contents">
+                                      <section class="reservation-rooms">
+                                        <h3 class="reservation-rooms__title">ドッグルーム</h3>
+                                        <div class="reservation-rooms__inner">
+                                          <div class="reservation-rooms__contents">
+                                            <!-- ### 客室サムネイル ### -->
+                                            <figure class="reservation-rooms__thumb">
+                                              <img class="reservation-rooms__img"
+                                                src="/images/rooms/img_room-slide01_pet-room.jpg" alt="ドッグルーム">
+                                            </figure>
+
+                                            <!-- ### 客室情報 ### -->
+                                            <div class="reservation-rooms__info">
+                                              <ul class="reservation-rooms__info-list">
+                                                <li
+                                                  class="reservation-rooms__info-item reservation-rooms__info-item--capacity">
+                                                  <p class="reservation-rooms__info-text">定員：2 ~ 4名 | 小型~中型犬：１匹</p>
+                                                </li>
+                                                <li
+                                                  class="reservation-rooms__info-item reservation-rooms__info-item--cuisine">
+                                                  <p class="reservation-rooms__info-text">朝食・夕食付き</p>
+                                                </li>
+                                                <li
+                                                  class="reservation-rooms__info-item reservation-rooms__info-item--rooms-area">
+                                                  <p class="reservation-rooms__info-text">部屋面積：50㎡</p>
+                                                </li>
+                                              </ul>
+
+                                              <p class="reservation-rooms__desc">
+                                                ワンちゃんと一緒に宿泊できるお部屋となっております。<br>
+                                                ドッグランなどの設備も備えておりますので、家族とペットで幸せな旅行の思い出作りをご提供いたします。<br>
+                                                ご利用には「ペット同伴宿泊滞在同意書」の提出が必要となりますので、ご予約の際に合わせてご確認をお願い致します。
+                                              </p>
+                                              <a class="link-text" href="#">ペット同伴宿泊滞在同意書</a>
+                                              <div class="modal__btn-wrapper">
+                                                <button class="modal__close-btn js-modal-close">閉じる</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                      </section>
+                                    </div>
+                                  </div>
+                                </div><!--modal__inner-->
+                              </div>
+                              <!--modal-->
+                            </li>
+                          </ul>
+                        </div>
+                      </section>
+                      <!-- ##### ⬆︎ プランから探す_ペット思い出づくりプラン！ ⬆︎ ##### -->
+
+                    </div>
+                  </div>
+                  <!-- ##### ↑ プランから探す ↑ ##### -->
+
+                  <!-- ==================================================================== -->
+
+                  <!-- ##### ↓ 客室から探す ↓ ##### -->
+                  <div id="rooms-tab" class="tab__contents js-tab-cts" data-tab="tab-2">
+                    <div class="reservation-rooms">
+
+                      <!-- ##### ⬇︎ 客室から探す_小町亭 和室20畳 ⬇︎ ##### -->
+                      <section id="japan-rooms" class="reservation-rooms__item">
+                        <h3 class="reservation-rooms__title">小町亭 和室20畳</h3>
+                        <div class="reservation-rooms__inner">
+                          <div class="reservation-rooms__contents">
+                            <!-- ### 客室サムネイル ### -->
+                            <figure class="reservation-rooms__thumb">
+                              <img class="reservation-rooms__img" src="/images/rooms/img_room-slide01_japan-room.jpg"
+                                alt="小町亭 和室20畳">
+                            </figure>
+
+                            <!-- ### お部屋情報 ### -->
+                            <div class="reservation-rooms__info">
+                              <ul class="reservation-rooms__info-list">
+                                <li class="reservation-rooms__info-item reservation-rooms__info-item--capacity">
+                                  <p class="reservation-rooms__info-text">定員： 2 ~ 5名</p>
+                                </li>
+                                <li class="reservation-rooms__info-item reservation-rooms__info-item--cuisine">
+                                  <p class="reservation-rooms__info-text">朝食・夕食付き</p>
+                                </li>
+                                <li class="reservation-rooms__info-item reservation-rooms__info-item--rooms-area">
+                                  <p class="reservation-rooms__info-text">部屋面積：45㎡</p>
+                                </li>
+                              </ul>
+
+                              <p class="reservation-rooms__desc">
+                                広々とした長閑な和室で畳の香りを堪能しながらゆっくりとお寛ぎいただけます。<br>
+                                テラスからは滝ノ湯川を望むことができますので、自然の音色をお楽しみください。
+                              </p>
+
+                              <a class="link-text" href="/rooms.html#japan-room">「小町亭 和室20畳」の詳細はこちら</a>
+                            </div>
+                          </div>
+
+                          <!-- ### プランリスト ### -->
+                          <div class="plan-type">
+
+                            <ul class="plan-type__menu">
+                              <li class="plan-type__item" data-plan_price="28000">
+                                <div class="plan-type__label">
+                                  <figure class="plan-type__thumb">
+                                    <img class="plan-type__img" src="images/img_plan01_thumb.jpg" alt="">
+                                  </figure>
+                                  <div class="plan-type__name">
+                                    <p class="plan-type__rooms-title">蓼科高原 周遊観光プラン</p>
+                                  </div>
+                                </div>
+                                <div class="plan-type__info">
+                                  <p class="plan-type__cuisine">朝食・夕食付き</p>
+                                  <p class="plan-type__price">¥28,000 ~</p>
+                                </div>
+                                <div class="plan-type__btn-box">
+                                  <button class="plan-type__modal-btn js-modal-button" data-target="modal05">
+                                    詳細<span class="plan-type__modal-icon"></span>
+                                  </button>
+                                  <a class="plan-type__link-btn" href="reservation_selection.html">予約</a>
+                                </div>
+
+                                <!--modal-->
+                                <div id="modal05" class="modal js-modal">
+                                  <div class="modal__layer js-modal-close"></div>
+                                  <div class="modal__container">
+                                    <div class="modal__inner">
+                                      <div class="modal__contents">
+                                        <section class="reservation-plan" data-price="28000">
+                                          <h3 class="reservation-plan__title">蓼科高原 周遊観光プラン</h3>
+                                          <div class="reservation-plan__inner">
+
+                                            <div class="reservation-plan__col">
+                                              <figure class="reservation-plan__thumb">
+                                                <img class="reservation-plan__img" src="images/img_plan01_thumb.jpg"
+                                                  alt="青色に染まる御射鹿池">
+                                              </figure>
+
+                                              <div class="reservation-plan__info">
+                                                <ul class="reservation-plan__info-list">
+                                                  <li
+                                                    class="reservation-plan__info-item reservation-plan__info-item--period">
+                                                    <p class="reservation-plan__info-text">プラン期間： 2023年03月01日 〜
+                                                      2023年11月31日
+                                                    </p>
+                                                  </li>
+                                                  <li
+                                                    class="reservation-plan__info-item reservation-plan__info-item--cuisine">
+                                                    <p class="reservation-plan__info-text">朝食・夕食付き</p>
+                                                  </li>
+                                                  <li
+                                                    class="reservation-plan__info-item reservation-plan__info-item--checktime">
+                                                    <p class="reservation-plan__info-text">チェック in 15:00 ~ 20:00 | out
+                                                      10:00まで</p>
+                                                  </li>
+                                                </ul>
+
+                                                <p class="reservation-plan__desc">
+                                                  蓼科高原の名所を1日観光バスで巡るプランとなっております。<br>
+                                                  電車でお越しになられたお客様や、「観光プランはお任せしたい」という方におすすめのプランです。蓼科高原の名所を1日観光バスで巡るプランとなっております。
+                                                </p>
+                                                <p class="reservation-plan__desc-label">
+                                                  【周遊予定地タイムスケジュール】
+                                                </p>
+                                                <ul class="reservation-plan__desc-list">
+                                                  <li class="">AM:9:00 ~ 当館出発</li>
+                                                  <li class="">AM:9:15 ~ 11:30 北八ヶ岳ロープウェイ</li>
+                                                  <li class="">AM:11:30 ~ 移動</li>
+                                                  <li class="">PM:12:00 ~ 13:30 御射鹿池</li>
+                                                  <li class="">PM:13:30 ~ 移動</li>
+                                                  <li class="">PM:14:20 ~ 16:00 女神湖</li>
+                                                  <li class="">PM:16:00 ~ 移動</li>
+                                                  <li class="">PM:16:40 ~ 17:10 蓼科大滝</li>
+                                                  <li class="">PM:17:10 ~ ホテル移動</li>
+                                                </ul>
+                                              </div>
+                                            </div>
+                                            <div class="modal__btn-wrapper">
+                                              <button class="modal__close-btn js-modal-close">閉じる</button>
+                                            </div>
+                                          </div>
+                                        </section>
+                                      </div>
+                                    </div>
+                                  </div><!--modal__inner-->
+                                </div>
+                                <!--modal-->
+                              </li>
+
+                              <li class="plan-type__item" data-plan_price="18000">
+                                <div class="plan-type__label">
+                                  <figure class="plan-type__thumb">
+                                    <img class="plan-type__img" src="images/img_plan03_thumb.jpg" alt="お部屋色のすき焼きの写真">
+                                  </figure>
+                                  <div class="plan-type__name">
+                                    <p class="plan-type__rooms-title">基本宿泊プラン（朝食・夕食付き）</p>
+                                  </div>
+                                </div>
+                                <div class="plan-type__info">
+                                  <p class="plan-type__cuisine">朝食・夕食付き</p>
+                                  <p class="plan-type__price">¥18,000 ~</p>
+                                </div>
+                                <div class="plan-type__btn-box">
+                                  <button class="plan-type__modal-btn js-modal-button" data-target="modal06">
+                                    詳細<span class="plan-type__modal-icon"></span>
+                                  </button>
+                                  <a class="plan-type__link-btn" href="reservation_selection.html">予約</a>
+                                </div>
+
+                                <!--modal-->
+                                <div id="modal06" class="modal js-modal">
+                                  <div class="modal__layer js-modal-close"></div>
+                                  <div class="modal__container">
+                                    <div class="modal__inner">
+                                      <div class="modal__contents">
+                                        <section class="reservation-plan" data-price="28000">
+                                          <h3 class="reservation-plan__title">基本宿泊プラン（朝食・夕食付き）</h3>
+                                          <div class="reservation-plan__inner">
+
+                                            <div class="reservation-plan__col">
+                                              <figure class="reservation-plan__thumb">
+                                                <img class="reservation-plan__img" src="images/img_plan03_thumb.jpg"
+                                                  alt="お部屋色のすき焼きの写真">
+                                              </figure>
+
+                                              <div class="reservation-plan__info">
+                                                <ul class="reservation-plan__info-list">
+                                                  <li
+                                                    class="reservation-plan__info-item reservation-plan__info-item--period">
+                                                    <p class="reservation-plan__info-text">プラン期間： 2023年03月01日 〜
+                                                      2023年11月31日
+                                                    </p>
+                                                  </li>
+                                                  <li
+                                                    class="reservation-plan__info-item reservation-plan__info-item--cuisine">
+                                                    <p class="reservation-plan__info-text">朝食・夕食付き</p>
+                                                  </li>
+                                                  <li
+                                                    class="reservation-plan__info-item reservation-plan__info-item--checktime">
+                                                    <p class="reservation-plan__info-text">チェック in 15:00 ~ 20:00 | out
+                                                      10:00まで</p>
+                                                  </li>
+                                                </ul>
+                                                <p class="reservation-plan__desc">
+                                                  朝食・夕食付きの基本プランとなっております。<br>
+                                                  旅行内容を計画済みのお客様やビジネスに最適です。
+                                                </p>
+                                              </div>
+                                            </div>
+                                            <div class="modal__btn-wrapper">
+                                              <button class="modal__close-btn js-modal-close">閉じる</button>
+                                            </div>
+                                          </div>
+                                        </section>
+                                      </div>
+                                    </div>
+                                  </div><!--modal__inner-->
+                                </div>
+                                <!--modal-->
+                              </li>
+
+                              <li class="plan-type__item" data-plan_price="21000">
+                                <div class="plan-type__label">
+                                  <figure class="plan-type__thumb">
+                                    <img class="plan-type__img" src="images/img_plan02_thumb.jpg" alt="お部屋色のすき焼きの写真">
+                                  </figure>
+                                  <div class="plan-type__name">
+                                    <p class="plan-type__rooms-title">【12月 ~ 2月限定】スキーレンタルプラン</p>
+                                  </div>
+                                </div>
+                                <div class="plan-type__info">
+                                  <p class="plan-type__cuisine">朝食・夕食付き</p>
+                                  <p class="plan-type__price">¥21,000 ~</p>
+                                </div>
+                                <div class="plan-type__btn-box">
+                                  <button class="plan-type__modal-btn js-modal-button" data-target="modal07">
+                                    詳細<span class="plan-type__modal-icon"></span>
+                                  </button>
+                                  <a class="plan-type__link-btn" href="reservation_selection.html">予約</a>
+                                </div>
+
+                                <!--modal-->
+                                <div id="modal07" class="modal js-modal">
+                                  <div class="modal__layer js-modal-close"></div>
+                                  <div class="modal__container">
+                                    <div class="modal__inner">
+                                      <div class="modal__contents">
+                                        <section class="reservation-plan" data-price="28000">
+                                          <h3 class="reservation-plan__title">【12月 ~ 2月限定】スキーレンタルプラン</h3>
+                                          <div class="reservation-plan__inner">
+
+                                            <div class="reservation-plan__col">
+                                              <figure class="reservation-plan__thumb">
+                                                <img class="reservation-plan__img" src="images/img_plan02_thumb.jpg"
+                                                  alt="雪の中を滑るスキーヤーの写真">
+                                              </figure>
+
+                                              <div class="reservation-plan__info">
+                                                <ul class="reservation-plan__info-list">
+                                                  <li
+                                                    class="reservation-plan__info-item reservation-plan__info-item--period">
+                                                    <p class="reservation-plan__info-text">プラン期間： 2023年03月01日 〜
+                                                      2023年11月31日
+                                                    </p>
+                                                  </li>
+                                                  <li
+                                                    class="reservation-plan__info-item reservation-plan__info-item--cuisine">
+                                                    <p class="reservation-plan__info-text">朝食・夕食付き</p>
+                                                  </li>
+                                                  <li
+                                                    class="reservation-plan__info-item reservation-plan__info-item--checktime">
+                                                    <p class="reservation-plan__info-text">チェック in 15:00 ~ 20:00 | out
+                                                      10:00まで</p>
+                                                  </li>
+                                                </ul>
+
+                                                <p class="reservation-plan__desc">
+                                                  スキー用具のレンタルとスキー場の利用料が含まれた冬場限定のレジャープランとなっております。<br>
+                                                  重い荷物を持つことなく宿泊に必要な必要最低限の荷物で来館することができます。
+                                                </p>
+                                                <p class="reservation-plan__desc-label">
+                                                  【タイムスケジュール（混雑状況により前後します）】
+                                                </p>
+                                                <ul class="reservation-plan__desc-list">
+                                                  <li class="">AM:9:00 ~ 当館出発</li>
+                                                  <li class="">AM:9:30 ピラタス蓼科スノーリゾート 到着</li>
+                                                  <li class="">AM:9:30 ~ PM:16:30 スキーをお楽しみください</li>
+                                                  <li class="">PM:17:00 ~ ピラタス蓼科スノーリゾート 出発</li>
+                                                  <li class="">PM:17:30 ~ 当館到着</li>
+                                                </ul>
+                                              </div>
+                                            </div>
+                                            <div class="modal__btn-wrapper">
+                                              <button class="modal__close-btn js-modal-close">閉じる</button>
+                                            </div>
+                                          </div>
+                                        </section>
+                                      </div>
+                                    </div>
+                                  </div><!--modal__inner-->
+                                </div>
+                                <!--modal-->
+
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </section>
+                      <!-- ##### ⬆︎ 客室から探す_小町亭 和室20畳 ⬆︎ ##### -->
+
+                      <!-- ==================================================================== -->
+
+                      <!-- ##### ⬇︎ 客室から探す_ツインルーム ⬇︎ ##### -->
+                      <section id="twin-rooms" class="reservation-rooms__item">
+
+                        <h3 class="reservation-rooms__title">ツインルーム</h3>
+                        <div class="reservation-rooms__inner">
+                          <div class="reservation-rooms__contents">
+                            <!-- ### 客室サムネイル ### -->
+                            <figure class="reservation-rooms__thumb">
+                              <img class="reservation-rooms__img" src="/images/rooms/img_room-slide01_twin-room.jpg"
+                                alt="ツインルーム">
+                            </figure>
+
+                            <!-- ### お部屋情報 ### -->
+                            <div class="reservation-rooms__info">
+                              <ul class="reservation-rooms__info-list">
+                                <li class="reservation-rooms__info-item reservation-rooms__info-item--capacity">
+                                  <p class="reservation-rooms__info-text">定員：1 ~ 2名</p>
+                                </li>
+                                <li class="reservation-rooms__info-item reservation-rooms__info-item--cuisine">
+                                  <p class="reservation-rooms__info-text">朝食・夕食付き</p>
+                                </li>
+                                <li class="reservation-rooms__info-item reservation-rooms__info-item--rooms-area">
+                                  <p class="reservation-rooms__info-text">部屋面積：45㎡</p>
+                                </li>
+                              </ul>
+                              <p class="reservation-rooms__desc">
+                                ご夫婦やカップルにおすすめのツインルームです。<br>
+                                洋室の広々としたお部屋で、くつろぎのひと時をお過ごしください。
+                              </p>
+                              <a class="link-text" href="/rooms.html#twin-room">「ツインルーム」の詳細はこちら</a>
+                            </div>
+                          </div>
+
+
+                          <div class="plan-type">
+                            <!-- <div class="results">
+                              <div class="results__filter-box">
+                                <input class="results__radio" type="radio" name="plan-sort" id="all-plan" value="all-plan" checked>
+                                <label class="results__label" for="all-plan">全て</label>
+  
+                                <input class="results__radio" type="radio" name="plan-sort" id="plan_price-cheap"
+                                  value="plan_price-cheap">
+                                <label class="results__label" for="plan_price-cheap">料金の安い順</label>
+  
+                                <input class="results__radio" type="radio" name="plan-sort" id="plan_price-high" value="plan_price-high">
+                                <label class="results__label" for="plan_price-high">料金の高い順</label>
+                              </div>
+                            </div> -->
+
+                            <!-- ### プランリスト ### -->
+                            <ul class="plan-type__menu">
+                              <li class="plan-type__item" data-plan_price="30000">
+                                <div class="plan-type__label">
+                                  <figure class="plan-type__thumb">
+                                    <img class="plan-type__img" src="images/img_plan01_thumb.jpg" alt="">
+                                  </figure>
+                                  <div class="plan-type__name">
+                                    <p class="plan-type__rooms-title">蓼科高原 周遊観光プラン</p>
+                                  </div>
+                                </div>
+                                <div class="plan-type__info">
+                                  <p class="plan-type__cuisine">朝食・夕食付き</p>
+                                  <p class="plan-type__price">¥29,000 ~</p>
+                                </div>
+                                <div class="plan-type__btn-box">
+                                  <button class="plan-type__modal-btn js-modal-button" data-target="modal05">
+                                    詳細<span class="plan-type__modal-icon"></span>
+                                  </button>
+                                  <a class="plan-type__link-btn" href="reservation_selection.html">予約</a>
+                                </div>
+                              </li>
+
+                              <li class="plan-type__item" data-plan_price="20000">
+                                <div class="plan-type__label">
+                                  <figure class="plan-type__thumb">
+                                    <img class="plan-type__img" src="images/img_plan03_thumb.jpg" alt="お部屋色のすき焼きの写真">
+                                  </figure>
+                                  <div class="plan-type__name">
+                                    <p class="plan-type__rooms-title">基本宿泊プラン（朝食・夕食付き）</p>
+                                  </div>
+                                </div>
+                                <div class="plan-type__info">
+                                  <p class="plan-type__cuisine">朝食・夕食付き</p>
+                                  <p class="plan-type__price">¥20,000 ~</p>
+                                </div>
+                                <div class="plan-type__btn-box">
+                                  <button class="plan-type__modal-btn js-modal-button" data-target="modal06">
+                                    詳細<span class="plan-type__modal-icon"></span>
+                                  </button>
+                                  <a class="plan-type__link-btn" href="reservation_selection.html">予約</a>
+                                </div>
+                              </li>
+
+                              <li class="plan-type__item" data-plan_price="23000">
+                                <div class="plan-type__label">
+                                  <figure class="plan-type__thumb">
+                                    <img class="plan-type__img" src="images/img_plan02_thumb.jpg" alt="お部屋色のすき焼きの写真">
+                                  </figure>
+                                  <div class="plan-type__name">
+                                    <p class="plan-type__rooms-title">【12月 ~ 2月限定】スキーレンタルプラン</p>
+                                  </div>
+                                </div>
+                                <div class="plan-type__info">
+                                  <p class="plan-type__cuisine">朝食・夕食付き</p>
+                                  <p class="plan-type__price">¥23,000 ~</p>
+                                </div>
+                                <div class="plan-type__btn-box">
+                                  <button class="plan-type__modal-btn js-modal-button" data-target="modal07">
+                                    詳細<span class="plan-type__modal-icon"></span>
+                                  </button>
+                                  <a class="plan-type__link-btn" href="reservation_selection.html">予約</a>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                      </section>
+                      <!-- ##### ⬆︎ 客室から探す_ツインルーム ⬆︎ ##### -->
+
+                      <!-- ==================================================================== -->
+
+                      <!-- ##### ⬇︎ 客室から探す_小町亭 団欒の間 ⬇︎ ##### -->
+                      <section id="family-rooms" class="reservation-rooms__item">
+                        <h3 class="reservation-rooms__title">小町亭 団欒の間</h3>
+                        <div class="reservation-rooms__inner">
+                          <div class="reservation-rooms__contents">
+                            <!-- ### 客室サムネイル ### -->
+                            <figure class="reservation-rooms__thumb">
+                              <img class="reservation-rooms__img" src="/images/rooms/img_room-slide01_family-room.jpg"
+                                alt="小町亭 団欒の間">
+                            </figure>
+
+                            <!-- ### お部屋情報 ### -->
+                            <div class="reservation-rooms__info">
+                              <ul class="reservation-rooms__info-list">
+                                <li class="reservation-rooms__info-item reservation-rooms__info-item--capacity">
+                                  <p class="reservation-rooms__info-text">定員：2 ~ 8名</p>
+                                </li>
+                                <li class="reservation-rooms__info-item reservation-rooms__info-item--cuisine">
+                                  <p class="reservation-rooms__info-text">朝食・夕食付き</p>
+                                </li>
+                                <li class="reservation-rooms__info-item reservation-rooms__info-item--rooms-area">
+                                  <p class="reservation-rooms__info-text">部屋面積：70㎡</p>
+                                </li>
+                              </ul>
+                              <p class="reservation-rooms__desc">
+                                ご家族連れや友達との旅行で来館されるお客様におすすめのお部屋となっております。<br>
+                                和室をベースとした広々とした空間でのびのびとお過ごしいただけます。
+                              </p>
+                              <a class="link-text" href="/rooms.html#family-room">「小町亭 団欒の間」の詳細はこちら</a>
+                            </div>
+                          </div>
+
+                          <div class="plan-type">
+                            <!-- <div class="results">
+                              <div class="results__filter-box">
+                                <input class="results__radio" type="radio" name="plan-sort" id="all-plan" value="all-plan" checked>
+                                <label class="results__label" for="all-plan">全て</label>
+  
+                                <input class="results__radio" type="radio" name="plan-sort" id="plan_price-cheap"
+                                  value="plan_price-cheap">
+                                <label class="results__label" for="plan_price-cheap">料金の安い順</label>
+  
+                                <input class="results__radio" type="radio" name="plan-sort" id="plan_price-high" value="plan_price-high">
+                                <label class="results__label" for="plan_price-high">料金の高い順</label>
+                              </div>
+                            </div> -->
+
+                            <!-- ### プランリスト ### -->
+                            <ul class="plan-type__menu">
+                              <li class="plan-type__item" data-plan_price="30000">
+                                <div class="plan-type__label">
+                                  <figure class="plan-type__thumb">
+                                    <img class="plan-type__img" src="images/img_plan01_thumb.jpg" alt="">
+                                  </figure>
+                                  <div class="plan-type__name">
+                                    <p class="plan-type__rooms-title">蓼科高原 周遊観光プラン</p>
+                                  </div>
+                                </div>
+                                <div class="plan-type__info">
+                                  <p class="plan-type__cuisine">朝食・夕食付き</p>
+                                  <p class="plan-type__price">¥28,000 ~</p>
+                                </div>
+                                <div class="plan-type__btn-box">
+                                  <button class="plan-type__modal-btn js-modal-button" data-target="modal05">
+                                    詳細<span class="plan-type__modal-icon"></span>
+                                  </button>
+                                  <a class="plan-type__link-btn" href="reservation_selection.html">予約</a>
+                                </div>
+
+                              </li>
+
+                              <li class="plan-type__item" data-plan_price="20000">
+                                <div class="plan-type__label">
+                                  <figure class="plan-type__thumb">
+                                    <img class="plan-type__img" src="images/img_plan03_thumb.jpg" alt="お部屋色のすき焼きの写真">
+                                  </figure>
+                                  <div class="plan-type__name">
+                                    <p class="plan-type__rooms-title">基本宿泊プラン（朝食・夕食付き）</p>
+                                  </div>
+                                </div>
+                                <div class="plan-type__info">
+                                  <p class="plan-type__cuisine">朝食・夕食付き</p>
+                                  <p class="plan-type__price">¥20,000 ~</p>
+                                </div>
+                                <div class="plan-type__btn-box">
+                                  <button class="plan-type__modal-btn js-modal-button" data-target="modal06">
+                                    詳細<span class="plan-type__modal-icon"></span>
+                                  </button>
+                                  <a class="plan-type__link-btn" href="reservation_selection.html">予約</a>
+                                </div>
+                              </li>
+
+                              <li class="plan-type__item" data-plan_price="23000">
+                                <div class="plan-type__label">
+                                  <figure class="plan-type__thumb">
+                                    <img class="plan-type__img" src="images/img_plan02_thumb.jpg" alt="お部屋色のすき焼きの写真">
+                                  </figure>
+                                  <div class="plan-type__name">
+                                    <p class="plan-type__rooms-title">【12月 ~ 2月限定】スキーレンタルプラン</p>
+                                  </div>
+                                </div>
+                                <div class="plan-type__info">
+                                  <p class="plan-type__cuisine">朝食・夕食付き</p>
+                                  <p class="plan-type__price">¥25,000 ~</p>
+                                </div>
+                                <div class="plan-type__btn-box">
+                                  <button class="plan-type__modal-btn js-modal-button" data-target="modal07">
+                                    詳細<span class="plan-type__modal-icon"></span>
+                                  </button>
+                                  <a class="plan-type__link-btn" href="reservation_selection.html">予約</a>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </section>
+                      <!-- ##### ⬆︎ 客室から探す_小町亭 団欒の間 ⬆︎ ##### -->
+
+                      <!-- ==================================================================== -->
+
+                      <!-- ##### ⬇︎ 客室から探す_露天風呂付きスイートルーム ⬇︎ ##### -->
+                      <section id="sweet-rooms" class="reservation-rooms__item">
+                        <h3 class="reservation-rooms__title">露天風呂付きスイートルーム</h3>
+                        <div class="reservation-rooms__inner">
+                          <div class="reservation-rooms__contents">
+                            <!-- ### 客室サムネイル ### -->
+                            <figure class="reservation-rooms__thumb">
+                              <img class="reservation-rooms__img" src="/images/rooms/img_room-slide01_sweet-room.jpg"
+                                alt="露天風呂付きスイートルーム">
+                            </figure>
+
+                            <div class="reservation-rooms__info">
+                              <!-- ### お部屋情報 ### -->
+                              <ul class="reservation-rooms__info-list">
+                                <li class="reservation-rooms__info-item reservation-rooms__info-item--capacity">
+                                  <p class="reservation-rooms__info-text">定員：2 ~ 4名</p>
+                                </li>
+                                <li class="reservation-rooms__info-item reservation-rooms__info-item--cuisine">
+                                  <p class="reservation-rooms__info-text">朝食・夕食付き</p>
+                                </li>
+                                <li class="reservation-rooms__info-item reservation-rooms__info-item--rooms-area">
+                                  <p class="reservation-rooms__info-text">部屋面積：70㎡</p>
+                                </li>
+                              </ul>
+                              <p class="reservation-rooms__desc">
+                                室内に露天風呂がついた当館自慢のスイートルームです。<br>
+                                露天風呂やテラスからは蓼科湖や八ヶ岳を望むことができ、蓼科の大自然の景色と音色を堪能しながら、ごゆっくりとお寛ぎいただけます。
+                              </p>
+                              <a class="link-text" href="/rooms.html#sweet-room">「露天風呂付きスイートルーム」の詳細はこちら</a>
+                            </div>
+                          </div>
+
+
+                          <div class="plan-type">
+                            <!-- <div class="results">
+                              <div class="results__filter-box">
+                                <input class="results__radio" type="radio" name="plan-sort" id="all-plan" value="all-plan" checked>
+                                <label class="results__label" for="all-plan">全て</label>
+  
+                                <input class="results__radio" type="radio" name="plan-sort" id="plan_price-cheap"
+                                  value="plan_price-cheap">
+                                <label class="results__label" for="plan_price-cheap">料金の安い順</label>
+  
+                                <input class="results__radio" type="radio" name="plan-sort" id="plan_price-high" value="plan_price-high">
+                                <label class="results__label" for="plan_price-high">料金の高い順</label>
+                              </div>
+                            </div> -->
+
+                            <!-- ### プランリスト ### -->
+                            <ul class="plan-type__menu">
+                              <li class="plan-type__item" data-plan_price="30000">
+                                <div class="plan-type__label">
+                                  <figure class="plan-type__thumb">
+                                    <img class="plan-type__img" src="images/img_plan01_thumb.jpg" alt="">
+                                  </figure>
+                                  <div class="plan-type__name">
+                                    <p class="plan-type__rooms-title">蓼科高原 周遊観光プラン</p>
+                                  </div>
+                                </div>
+                                <div class="plan-type__info">
+                                  <p class="plan-type__cuisine">朝食・夕食付き</p>
+                                  <p class="plan-type__price">¥60,000 ~</p>
+                                </div>
+                                <div class="plan-type__btn-box">
+                                  <button class="plan-type__modal-btn js-modal-button" data-target="modal05">
+                                    詳細<span class="plan-type__modal-icon"></span>
+                                  </button>
+                                  <a class="plan-type__link-btn" href="reservation_selection.html">予約</a>
+                                </div>
+                              </li>
+
+                              <li class="plan-type__item" data-plan_price="20000">
+                                <div class="plan-type__label">
+                                  <figure class="plan-type__thumb">
+                                    <img class="plan-type__img" src="images/img_plan03_thumb.jpg" alt="お部屋色のすき焼きの写真">
+                                  </figure>
+                                  <div class="plan-type__name">
+                                    <p class="plan-type__rooms-title">基本宿泊プラン（朝食・夕食付き）</p>
+                                  </div>
+                                </div>
+                                <div class="plan-type__info">
+                                  <p class="plan-type__cuisine">朝食・夕食付き</p>
+                                  <p class="plan-type__price">¥45,000 ~</p>
+                                </div>
+                                <div class="plan-type__btn-box">
+                                  <button class="plan-type__modal-btn js-modal-button" data-target="modal06">
+                                    詳細<span class="plan-type__modal-icon"></span>
+                                  </button>
+                                  <a class="plan-type__link-btn" href="reservation_selection.html">予約</a>
+                                </div>
+                              </li>
+
+                              <li class="plan-type__item" data-plan_price="23000">
+                                <div class="plan-type__label">
+                                  <figure class="plan-type__thumb">
+                                    <img class="plan-type__img" src="images/img_plan02_thumb.jpg" alt="お部屋色のすき焼きの写真">
+                                  </figure>
+                                  <div class="plan-type__name">
+                                    <p class="plan-type__rooms-title">【12月 ~ 2月限定】スキーレンタルプラン</p>
+                                  </div>
+                                </div>
+                                <div class="plan-type__info">
+                                  <p class="plan-type__cuisine">朝食・夕食付き</p>
+                                  <p class="plan-type__price">¥48,000 ~</p>
+                                </div>
+                                <div class="plan-type__btn-box">
+                                  <button class="plan-type__modal-btn js-modal-button" data-target="modal07">
+                                    詳細<span class="plan-type__modal-icon"></span>
+                                  </button>
+                                  <a class="plan-type__link-btn" href="reservation_selection.html">予約</a>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </section>
+                      <!-- ##### ⬆︎ 客室から探す_露天風呂付きスイートルーム ⬆︎ ##### -->
+                      <!-- ==================================================================== -->
+
+                      <!-- ##### ⬇︎ 客室から探す_ドッグルーム ⬇︎ ##### -->
+                      <section id="pet-rooms" class="reservation-rooms__item">
+                        <h3 class="reservation-rooms__title">ドッグルーム</h3>
+                        <div class="reservation-rooms__inner">
+
+                          <div class="reservation-rooms__contents">
+                            <!-- ### 客室サムネイル ### -->
+                            <figure class="reservation-rooms__thumb">
+                              <img class="reservation-rooms__img" src="/images/rooms/img_room-slide01_pet-room.jpg"
+                                alt="ドッグルーム">
+                            </figure>
+
+                            <div class="reservation-rooms__info">
+                              <!-- ### お部屋情報 ### -->
+                              <ul class="reservation-rooms__info-list">
+                                <li class="reservation-rooms__info-item reservation-rooms__info-item--capacity">
+                                  <p class="reservation-rooms__info-text">定員：2 ~ 4名 | 小型~中型犬：１匹</p>
+                                </li>
+                                <li class="reservation-rooms__info-item reservation-rooms__info-item--cuisine">
+                                  <p class="reservation-rooms__info-text">朝食・夕食付き</p>
+                                </li>
+                                <li class="reservation-rooms__info-item reservation-rooms__info-item--rooms-area">
+                                  <p class="reservation-rooms__info-text">部屋面積：50㎡</p>
+                                </li>
+                              </ul>
+                              <p class="reservation-rooms__desc">
+                                ワンちゃんと一緒に宿泊できるお部屋となっております。<br>
+                                ドッグランなどの設備も備えておりますので、家族とペットで幸せな旅行の思い出作りをご提供いたします。<br>
+                                ご利用には「ペット同伴宿泊滞在同意書」の提出が必要となりますので、ご予約の際に合わせてご確認をお願い致します。
+                              </p>
+                              <a class="link-text" href="#">ペット同伴宿泊滞在同意書</a><br><br>
+                              <a class="link-text" href="/rooms.html#pet-room">「ドッグルーム」の詳細はこちら</a>
+                            </div>
+                          </div>
+
+                          <div class="plan-type">
+
+                            <!-- ### プランリスト ### -->
+                            <ul class="plan-type__menu">
+                              <li class="plan-type__item" data-plan_price="30000">
+                                <div class="plan-type__label">
+                                  <figure class="plan-type__thumb">
+                                    <img class="plan-type__img" src="images/img_plan04_thumb.jpg"
+                                      alt="芝生の上を走ってボールを追いかける子犬">
+                                  </figure>
+                                  <div class="plan-type__name">
+                                    <p class="plan-type__rooms-title">ペットプラン</p>
+                                  </div>
+                                </div>
+                                <div class="plan-type__info">
+                                  <p class="plan-type__cuisine">朝食・夕食付き</p>
+                                  <p class="plan-type__price">¥30,000 ~</p>
+                                </div>
+                                <div class="plan-type__btn-box">
+                                  <button class="plan-type__modal-btn js-modal-button" data-target="modal08">
+                                    詳細<span class="plan-type__modal-icon"></span>
+                                  </button>
+                                  <a class="plan-type__link-btn" href="reservation_selection.html">予約</a>
+                                </div>
+
+                                <!--modal-->
+                                <div id="modal08" class="modal js-modal">
+                                  <div class="modal__layer js-modal-close"></div>
+                                  <div class="modal__container">
+                                    <div class="modal__inner">
+                                      <div class="modal__contents">
+
+                                        <section class="reservation-plan" data-price="28000">
+                                          <h3 class="reservation-plan__title">ペット思い出づくりプラン！</h3>
+                                          <div class="reservation-plan__inner">
+
+                                            <div class="reservation-plan__col">
+                                              <figure class="reservation-plan__thumb">
+                                                <img class="reservation-plan__img" src="images/img_plan04_thumb.jpg"
+                                                  alt="ペットルーム">
+                                              </figure>
+
+                                              <div class="reservation-plan__info">
+                                                <ul class="reservation-plan__info-list">
+                                                  <li
+                                                    class="reservation-plan__info-item reservation-plan__info-item--period">
+                                                    <p class="reservation-plan__info-text">プラン期間： 2023年03月01日 〜
+                                                      2023年11月31日
+                                                    </p>
+                                                  </li>
+                                                  <li
+                                                    class="reservation-plan__info-item reservation-plan__info-item--cuisine">
+                                                    <p class="reservation-plan__info-text">朝食・夕食付き</p>
+                                                  </li>
+                                                  <li
+                                                    class="reservation-plan__info-item reservation-plan__info-item--checktime">
+                                                    <p class="reservation-plan__info-text">チェック in 15:00 ~ 20:00 | out
+                                                      10:00まで</p>
+                                                  </li>
+                                                </ul>
+                                                <p class="reservation-plan__desc">
+                                                  愛犬と一緒に宿泊できるプランです。
+                                                  ドッグランなどの設備も備えておりますので、家族とペットで幸せな旅行の思い出作りをご提供いたします。
+                                                </p>
+                                              </div>
+                                            </div>
+                                            <div class="modal__btn-wrapper">
+                                              <button class="modal__close-btn js-modal-close">閉じる</button>
+                                            </div>
+                                          </div>
+                                        </section>
+                                      </div>
+                                    </div>
+                                  </div><!--modal__inner-->
+                                </div>
+                                <!--modal-->
+
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </section>
+                      <!-- ##### ⬆︎ 客室から探す_ドッグルーム ⬆︎ ##### -->
+                    </div>
+                  </div>
+                  <!-- ##### ↑ 客室から探す ↑ ##### -->
+
+                </div>
+              </div>
+            </section>
+            <!-- ##### ⬆︎ ご希望のプラン・客室を選択 ⬆︎ ##### -->
+          </div>
+        </section>
+      </main>
+
+      <!-- ======== ⬇︎ フッター ⬇︎ ======== -->
+      <footer class="footer">
+        <div class="footer__inner">
+
+          <!-- ##### フッター情報 ##### -->
+          <div class="footer__info">
+            <a href="/" class="footer__logo">
+              <img class="footer__logo-img" src="/images/ico_footer-logo.svg" alt="HOTEL小町のロゴ">
+            </a>
+            <div class="footer__address">
+              <p class="footer__address-text">
+                〒123-4456　長野県茅野市北山56789-10
+              </p>
+              <p class="footer__address-text">
+                TEL：<span class="footer__address-text footer__address-text--large">01234-56-7890</span><br>
+                受付時間 9:00 ~ 18:00
+              </p>
+              <p class="footer__address-text">
+                Mail：<a class="footer__address-link" href="メールアプリ起動">test-test@sample.com</a>
+              </p>
+            </div>
+            <div class="footer__sns">
+              <p class="footer__sns-label">SNS</p>
+              <ul class="footer__sns-list">
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-instagram.svg" alt="instagram">
+                  </a>
+                </li>
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-facebook.svg" alt="facebook">
+                  </a>
+                </li>
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-line.svg" alt="LINE">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <nav class="footer__nav">
+            <!-- ##### メインメニュー ##### -->
+            <ul class="footer__menu is-sp">
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/hot-spring.html">
+                  温泉
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/rooms.html">
+                  客室
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/cuisine.html">
+                  お料理
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/facilities.html">
+                  館内ご案内
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/sightseeing.html">
+                  周辺の観光地
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/access.html">
+                  アクセス
+                </a>
+              </li>
+            </ul>
+
+            <!-- ##### サブメニュー ##### -->
+            <ul class="footer__submenu footer__menu--sub">
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/information/index.html">
+                  インフォメーション
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/faq.html">
+                  よくあるご質問
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/contact/contact.html">
+                  お問い合わせ
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/privacy-policy.html">
+                  宿泊約款
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/privacy-policy.html#privacy-policy">
+                  個人情報保護方針
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <small class="footer__copyright">© 2024 Yuuki PortFolio</small>
+        </div>
+      </footer>
+      <!-- ======== ⬆︎ フッター ⬆︎ ======== -->
+
+    </div>
+
+
+    <!-- ======== ⬇︎ JQuery / プラグイン読み込み ⬇︎ ======== -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/javascript/common.js"></script>
+    <!-- ======== ⬆︎ JQuery/プラグイン読み込み ⬆︎ ======== -->
+  </body>
+
+</html>

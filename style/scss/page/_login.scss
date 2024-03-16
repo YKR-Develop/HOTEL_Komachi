@@ -1,0 +1,50 @@
+/*===================================================
+ _login.scss
+ ログイン画面
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/font" as *;
+@use "../config/mq" as *;
+@use "../mixin/mixin" as *;
+
+.login {
+  max-width: 552px;
+  margin: 0 auto 40px auto;
+
+  &__form {
+    flex-direction: column;
+  }
+
+  &__item {
+    margin-bottom: 32px;
+
+    &--center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    width: 552px;
+    padding: 16px;
+    background-color: $c_white;
+    border: 1px solid $c_border;
+    @include mq(tab) {
+      width: 100%;
+    }
+  
+  }
+
+  .link-text {
+    margin-top: 8px;
+    font-size: 14px;
+  }
+}

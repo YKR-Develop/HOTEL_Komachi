@@ -1,0 +1,127 @@
+/*===================================================
+ _table.scss
+ テーブルのデザイン定義
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/mq" as *;
+@use "../config/font" as *;
+@use "../mixin/mixin" as *;
+
+/* --------------------------------------------------
+ テーブルの基本定義
+-------------------------------------------------- */
+.table {
+  width: 100%;
+  table-layout: fixed;
+
+  &__caption {
+    font-size: $font_medium;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  &__tr {
+    height: 48px;
+    border-top: 1px solid $c_border;
+    border-bottom: 1px solid $c_border;
+    border-collapse: collapse;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__th {
+    width: 216px;
+    background-color: $c_main;
+    color: $c_white;
+    font-weight: 300;
+    text-align: center;
+    vertical-align: middle;
+    padding: 8px;
+    font-weight: 600;
+  }
+
+  &__td {
+    width: 100%;
+    padding: 20px;
+    vertical-align: middle;
+  }
+
+  @include mq(sp) {
+    tr {
+      border-top: none;
+      border-bottom: none;
+    }
+
+    th,
+    td {
+      width: 100%;
+      display: block;
+      padding: 16px;
+    }
+  }
+}
+
+.reservation-table {
+  width: 100%;
+  table-layout: fixed;
+
+  &__tr {
+    height: 48px;
+    border-top: 1px solid $c_border;
+    border-bottom: 1px solid $c_border;
+    border-collapse: collapse;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__th {
+    width: 240px;
+    background-color: $c_gray;
+    color: $c_black;
+    font-weight: 300;
+    vertical-align: middle;
+    font-weight: 600;
+    padding: 20px;
+  }
+
+  &__td {
+    width: 100%;
+    padding: 20px;
+    vertical-align: middle;
+  }
+
+  &__text {
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--strong {
+      font-size: $font-medium;
+      font-weight: 600;
+      margin: 0 4px;
+      color: $c_accent;
+    }
+
+    &--price {
+      padding-bottom: 2px;
+      border-bottom: 1px solid $c_accent;
+    }
+  }
+
+  @include mq(sp) {
+    tr {
+      border-top: none;
+      border-bottom: none;
+    }
+
+    th,
+    td {
+      width: 100%;
+      display: block;
+      padding: 16px;
+    }
+  }
+}

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会員情報を変更 | HOTEL小町</title>
+    <meta content="当館の宿泊予約を承っております。ご希望の日時・プラン・お部屋をご選択の上、ご予約してください。最適なプランもご提案させていただきます。" name="description">
+    <meta name="robots" content="noindex,nofollow">
+
+    <!-- ##### ⬇︎ OGP関連タグ ⬇︎ ##### -->
+    <meta property="og:title" content="会員情報を変更 | HOTEL小町" />
+    <meta property="og:description" content="当館の宿泊予約を承っております。ご希望の日時・プラン・お部屋をご選択の上、ご予約してください。最適なプランもご提案させていただきます。" />
+    <meta property="og:type" content="ページの種類" />
+    <meta property="og:url" content="index.html" />
+    <meta property="og:image" content="サムネイル画像の URL" />
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:locale" content="ja_JP" />
+    <!-- ##### ⬆︎ OGP関連タグ ⬆︎ ##### -->
+
+    <!-- ##### ⬇︎ css / js 読み込み ⬇︎ ##### -->
+    <link rel="stylesheet" href="/style/css/style.css">
+    <link rel="stylesheet" href="/style/css/reset.css">
+
+    <!-- 下記トップページでのみ使用 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <!-- ======== ⬆︎ css / js 読み込み ⬆︎ ======== -->
+  </head>
+
+  <body>
+    <div class="container container--reservation">
+
+      <!-- ======== ⬇︎ グローバルヘッダー ⬇︎ ======== -->
+      <header class="reserve-header">
+
+        <div class="reserve-header__inner">
+          <h1 class="reserve-header__title">
+            <a class="reserve-header__title-link" href="/">
+              <img class="reserve-header__logo-img" src="/images/ico_site-logo.svg" alt="HOTEL小町">
+            </a>
+          </h1>
+
+          <nav class="reserve-nav">
+            <ul class="reserve-nav__list" id="js-header-list">
+              <li class="reserve-nav__item reserve-nav__item--log-out">
+                <a class="reserve-nav__link reserve-nav__link--log-out" href="/mypage/login.html">ログアウト</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div id="js-hamburger" class="hamburger is-pc">
+          <span class="hamburger__border hamburger__border--top"></span>
+          <span class="hamburger__border hamburger__border--center"></span>
+          <span class="hamburger__border hamburger__border--bottom"></span>
+        </div>
+        <div id="js-header-bg" class="reserve-header__bg"></div>
+
+      </header>
+      <!-- ======== ⬆︎ グローバルヘッダー ⬆︎ ======== -->
+
+      <!-- ==================================================================== -->
+
+      <main class="contents">
+
+        <div class="breadcrumb">
+          <div class="breadcrumb__inner">
+            <ol class="breadcrumb__list">
+              <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__link--home" href="/">ホーム</a></li>
+              <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__link--home"
+                  href="/reservation/index.html">ご宿泊予約</a></li>
+              <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__link--home" href="login.html">ログイン</a>
+              </li>
+              <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__link--home"
+                  href="mypage.html">マイページ</a></li>
+              <li class="breadcrumb__item">会員情報を変更</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- ======== ⬇︎ コンテンツ_会員情報を変更 ⬇︎ ======== -->
+        <section class="page-section page-section--mypage">
+          <h1 class="h2-heading">
+            <div class="h2-heading__inner">
+              <span class="h2-heading__text">会員情報を変更</span>
+            </div>
+          </h1>
+          <div class="page-section__inner">
+
+            <!-- ==================================================================== -->
+
+            <!-- ##### ⬇︎ 会員情報入力 ⬇︎ ##### -->
+            <div class="info-change">
+
+              <form class="user-form" onsubmit="return validateForm()">
+                <table class="user-form__table">
+
+                  <tr class="user-form__tr">
+                    <th class="user-form__th">
+                      <label class="user-form__label" for="last-name">お名前<span class="user-form__required">必須</span>
+                      </label>
+                    </th>
+                    <td class="user-form__td user-form__td--col">
+                      <div class="user-form__item user-form__item--wrap">
+                        <p class="user-form__td-text">姓</p>
+                        <input class="user-form__text" type="text" id="last-name" name="last-name" value="山本" required>
+                      </div>
+                      <div class="user-form__item user-form__item--wrap">
+                        <p class="user-form__td-text">名</p>
+                        <input class="user-form__text" type="text" id="first-name" name="first-name" value="太郎"
+                          required>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr class="user-form__tr">
+                    <th class="user-form__th">
+                      <label class="user-form__label" for="last-name-kana">フリガナ
+                        <span class="user-form__required">必須</span>
+                      </label>
+                    </th>
+                    <td class="user-form__td user-form__td--col">
+                      <div class="user-form__item user-form__item--wrap">
+                        <p class="user-form__td-text">セイ</p>
+                        <input class="user-form__text" type="text" id="last-name-kana" name="last-name-kana"
+                          value="ヤマモト" required>
+                      </div>
+                      <div class="user-form__item user-form__item--wrap">
+                        <p class="user-form__td-text">メイ</p>
+                        <input class="user-form__text" type="text" id="first-name-kana" name="first-name-kana"
+                          value="タロウ" required>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr class="user-form__tr">
+                    <th class="user-form__th">
+                      <label class="user-form__label" for="email">メールアドレス<span
+                          class="user-form__required">必須</span></label>
+                    </th>
+                    <td class="user-form__td"><input class="user-form__text user-form__text--long" type="email"
+                        id="email" name="email" value="sample@sample.com" required></td>
+                  </tr>
+
+                  <tr class="user-form__tr">
+                    <th class="user-form__th">
+                      <label class="user-form__label" for="confirm-email">メールアドレス確認用<span
+                          class="user-form__required">必須</span></label>
+                    </th>
+                    <td class="user-form__td"><input class="user-form__text user-form__text--long" type="email"
+                        id="confirm-email" name="confirm-email" value="sample@sample.com" required></td>
+                  </tr>
+
+                  <tr class="user-form__tr">
+                    <th class="user-form__th">
+                      <label class="user-form__label" for="password">パスワード<span
+                          class="user-form__required">必須</span></label>
+                    </th>
+                    <td class="user-form__td">
+                      <input class="user-form__text user-form__text--long" type="password" id="password" name="password"
+                        required value="t***********">
+                      <p class="user-form__td-text user-form__td-text--mg-top">半角英数字10文字以上で入力してください </p>
+                    </td>
+                  </tr>
+
+                  <tr class="user-form__tr">
+                    <th class="user-form__th">
+                      <label class="user-form__label" for="confirm-password">パスワード確認用<span
+                          class="user-form__required">必須</span></label>
+                    </th>
+                    <td class="user-form__td">
+                      <input class="user-form__text user-form__text--long" type="password" id="confirm-password"
+                        name="confirm-password" required value="t***********">
+                      <p class="user-form__td-text user-form__td-text--mg-top">半角英数字10文字以上で入力してください </p>
+                    </td>
+                  </tr>
+
+                  <tr class="user-form__tr">
+                    <th class="user-form__th">
+                      <label class="user-form__label" for="birthdate">生年月<span
+                          class="user-form__required">必須</span></label>
+                    </th>
+                    <td class="user-form__td user-form__td--col">
+
+                      <div class="user-form__item">
+                        <div class="user-form__select-wrap">
+                          <select class="user-form__select user-form__select--medium" id="birth-year" name="birth-year"
+                            required>
+                            <option value="">年</option>
+                            <!-- 年の選択肢を追加 -->
+                            <option value="1990" selected>1990年</option>
+                            <option value="1991">1991年</option>
+                            <!-- 他の年も続く -->
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="user-form__item">
+                        <div class="user-form__select-wrap">
+                          <select class="user-form__select" id="birth-month" name="birth-month" required>
+                            <option value="">月</option>
+                            <!-- 月の選択肢を追加 -->
+                            <option value="1" selected>1月</option>
+                            <option value="2">2月</option>
+                            <!-- 他の月も続く -->
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr class="user-form__tr">
+                    <th class="user-form__th">
+                      <label class="user-form__label" for="phone-number">電話番号<span
+                          class="user-form__required">必須</span></label>
+                    </th>
+                    <td class="user-form__td"><input class="user-form__text" type="tel" id="phone-number"
+                        name="phone-number" value="00-0000-0000" required></td>
+                  </tr>
+
+                  <tr class="user-form__tr">
+                    <th class="user-form__th">
+                      <label class="user-form__label" for="postal-code">郵便番号<span
+                          class="user-form__required">必須</span></label>
+                    </th>
+                    <td class="user-form__td"><input class="user-form__text" type="text" id="postal-code"
+                        name="postal-code" value="000-0000" required></td>
+                  </tr>
+
+                  <tr class="user-form__tr">
+                    <th class="user-form__th">
+                      <label class="user-form__label" for="prefecture">住所<span
+                          class="user-form__required">必須</span></label>
+                    </th>
+
+                    <td class="user-form__td">
+                      <div class="user-form__item user-form__item--mb">
+                        <div class="user-form__select-wrap">
+                          <select class="user-form__select user-form__select--medium" id="prefecture" name="prefecture"
+                            required>
+                            <option value="">都道府県を選択</option>
+                            <option value="北海道">北海道</option>
+                            <option value="青森県">青森県</option>
+                            <option value="岩手県">岩手県</option>
+                            <option value="東京都" selected>東京都</option>
+                            <!-- 他の都道府県も続く -->
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="user-form__item">
+                        <input class="user-form__text user-form__text--long" type="text" id="address" name="address"
+                          value="西新宿123-456 建物マンション01" required>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+
+              </form>
+
+              <div class="button-box">
+                <button type="button" class="form-btn" id="submit-btn"
+                  onclick="location.href='mypage.html?active-tab=tab-5'">変更を確定する</button>
+              </div>
+            </div>
+            <!-- ##### ⬆︎ 会員情報入力 ⬆︎ ##### -->
+
+          </div>
+        </section>
+      </main>
+
+      <!-- ======== ⬇︎ フッター ⬇︎ ======== -->
+      <footer class="footer">
+        <div class="footer__inner">
+
+          <!-- ##### フッター情報 ##### -->
+          <div class="footer__info">
+            <a href="/" class="footer__logo">
+              <img class="footer__logo-img" src="/images/ico_footer-logo.svg" alt="HOTEL小町のロゴ">
+            </a>
+            <div class="footer__address">
+              <p class="footer__address-text">
+                〒123-4456　長野県茅野市北山56789-10
+              </p>
+              <p class="footer__address-text">
+                TEL：<span class="footer__address-text footer__address-text--large">01234-56-7890</span><br>
+                受付時間 9:00 ~ 18:00
+              </p>
+              <p class="footer__address-text">
+                Mail：<a class="footer__address-link" href="メールアプリ起動">test-test@sample.com</a>
+              </p>
+            </div>
+            <div class="footer__sns">
+              <p class="footer__sns-label">SNS</p>
+              <ul class="footer__sns-list">
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-instagram.svg" alt="instagram">
+                  </a>
+                </li>
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-facebook.svg" alt="facebook">
+                  </a>
+                </li>
+                <li class="footer__sns-item">
+                  <a class="footer__sns-link" href="">
+                    <img class="footer__sns-icon" src="/images/icon/ico_footer-line.svg" alt="LINE">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <nav class="footer__nav">
+            <!-- ##### メインメニュー ##### -->
+            <ul class="footer__menu is-sp">
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/hot-spring.html">
+                  温泉
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/rooms.html">
+                  客室
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/cuisine.html">
+                  お料理
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/facilities.html">
+                  館内ご案内
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/sightseeing.html">
+                  周辺の観光地
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/access.html">
+                  アクセス
+                </a>
+              </li>
+            </ul>
+
+            <!-- ##### サブメニュー ##### -->
+            <ul class="footer__submenu footer__menu--sub">
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/information/index.html">
+                  インフォメーション
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/faq.html">
+                  よくあるご質問
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/contact/contact.html">
+                  お問い合わせ
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/privacy-policy.html">
+                  宿泊約款
+                </a>
+              </li>
+              <li class="footer__submenu-item">
+                <a class="footer__submenu-link" href="/privacy-policy.html#privacy-policy">
+                  個人情報保護方針
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <small class="footer__copyright">© 2024 Yuuki PortFolio</small>
+        </div>
+      </footer>
+      <!-- ======== ⬆︎ フッター ⬆︎ ======== -->
+
+    </div>
+
+    <!-- ======== ⬇︎ JQuery / プラグイン読み込み ⬇︎ ======== -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/javascript/common.js"></script>
+    <!-- ======== ⬆︎ JQuery/プラグイン読み込み ⬆︎ ======== -->
+  </body>
+
+</html>

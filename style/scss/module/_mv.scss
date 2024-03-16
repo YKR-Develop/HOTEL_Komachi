@@ -1,0 +1,216 @@
+/*===================================================
+ _variables.scss
+ 共通使用変数 定義ファイル
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/mq" as *;
+@use "../config/font" as *;
+
+/* --------------------------------------------------
+ index.html メインビジュアルの指定
+-------------------------------------------------- */
+.mv {
+  grid-row: main;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include mq(tab) {
+    height: 80vh;
+    background-position: bottom 50px;
+  }
+
+  &--rooms {
+    background-image: url("/images/rooms/img_mv-rooms.jpg");
+  }
+  &--hot-spring {
+    background-image: url("/images/hot-spring/img_hot-spring_mv.jpg");
+  }
+  &--cuisine {
+    background-image: url("/images/cuisine/img_cuisine_mv.jpg");
+  }
+
+  &--facilities {
+    background-image: url("/images/facilities/img_facilities_mv.jpg");
+  }
+
+  &--sightseeing {
+    background-image: url("/images/sightseeing/img_sightseeing_mv.jpg");
+  }
+
+  &--access {
+    background-image: url("/images/access/img_access_mv.jpg");
+  }
+
+  &--information {
+    background-image: url("/images/information/img_information_mv.jpg");
+    background-position: 20% 30%;
+    background-size: cover;
+    height: 50vh;
+    @include mq(tab) {
+      background-size: cover;
+      background-position: center;
+      background-position: 25% 30%;
+    }
+    @include mq(sp) {
+      width: 100%;
+      background-size: cover;
+      background-position-x: 25%;
+    }
+  }
+
+  &--contact {
+    background-image: url("/images/contact-faq/img_contact-mv.jpg");
+    background-size: 100% 400px cover;
+    background-position: top left;
+    height: 50vh;
+    @include mq(tab) {
+      background-size: cover;
+      background-position: center;
+    }
+    @include mq(sp) {
+      width: 100%;
+      background-size: cover;
+      background-position: center right;
+    }
+  }
+
+  &--faq {
+    background-image: url("/images/contact-faq/img_faq-mv.jpg");
+    background-size: contain;
+    background-position: top left;
+    height: 50vh;
+    @include mq(tab) {
+      background-size: cover;
+      background-position: center center;
+    }
+    @include mq(sp) {
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &__col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 16px;
+  }
+
+  &__inner {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    color: $c_white;
+
+    @include mq(tab) {
+      width: 100%;
+      padding: 0 16px;
+    }
+  }
+
+  &__logo {
+    width: 64px;
+    @include mq(tab) {
+      width: 40px;
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    text-align: left;
+    @include mq(sp) {
+      font-size: 18px;
+    }
+
+    &--top {
+      text-align: center;
+    }
+
+    &--pages {
+      font-size: 48px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      @include mq(sp) {
+        font-size: 32px;
+      }
+    }
+
+    &--large {
+      font-size: 48px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+
+      @include mq(sp) {
+        font-size: 40px;
+      }
+    }
+
+    &--small {
+      font-size: 16px;
+      text-align: center;
+      letter-spacing: 0.2em;
+      margin-top: 8px;
+      @include mq(sp) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------
+ メインビジュアル スクロールアイコン
+-------------------------------------------------- */
+.scroll-down {
+  position: absolute;
+  bottom: 10px;
+  height: 56px;
+  left: 50%;
+  z-index: 10;
+
+  &__text {
+    position: absolute;
+    color: $c_white;
+    left: -20px;
+    top: -20px;
+    font-size: $font_medium;
+    letter-spacing: 0.1em;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 1.5px;
+    height: 32px;
+    background-color: $c_white;
+    animation: upDownEffect 2s ease-in-out infinite;
+    opacity: 0;
+  }
+
+  @keyframes upDownEffect {
+    0% {
+      height: 0;
+      top: 0;
+      opacity: 0;
+    }
+    30% {
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      height: 0;
+      top: 50px;
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+/*===================================================
+ _cusine.scss
+ 「お料理」のデザイン定義
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/mq" as *;
+@use "../config/font" as *;
+@use "../mixin/mixin" as *;
+
+/* --------------------------------------------------
+ ページ全体のデザイン定義
+-------------------------------------------------- */
+.cuisine {
+  .page-section__col {
+    margin-bottom: 56px;
+  }
+}
+
+/* --------------------------------------------------
+ お子様・アレルギーへのご対応のデザイン定義
+-------------------------------------------------- */
+.cuisine-overview {
+
+  .page-section__inner {
+    @include ContentWidth;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+  }
+
+  &__contents {
+    margin-bottom: 48px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .desc-contents {
+    margin-bottom: 24px;
+  }
+}
