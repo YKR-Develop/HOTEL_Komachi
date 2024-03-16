@@ -25,6 +25,15 @@
     margin: 0 auto;
     padding: 8px;
     border-bottom: 1px solid $c_border;
+
+
+    @include mq(tab) {
+      height: 148px;
+    } 
+
+    @include mq(sp) {
+      height: auto;
+    } 
   }
 
   &__link {
@@ -65,6 +74,18 @@
       transform: translate(0, 0);
     }
   }
+
+    
+  &__label {
+    @include mq(tab) {
+      height: 40px;
+    } 
+
+    @include mq(sp) {
+      height: 24px;
+    } 
+  }
+
 
   @include mq(sp) {
     &__list {
