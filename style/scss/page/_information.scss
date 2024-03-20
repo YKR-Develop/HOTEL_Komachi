@@ -92,6 +92,7 @@
   // 件数表示
   &__category {
     display: flex;
+    flex-wrap: wrap;
     padding: 0 16px 8px 16px;
     border-bottom: 1px solid $c_border;
   }
@@ -114,6 +115,14 @@
       margin: 0 16px;
       font-weight: 600;
       color: $c_main;
+
+      @include mq(sp) {
+        margin: 0 8px;
+      }
+    }
+
+    @include mq(sp) {
+      width: 100%;
     }
   }
   

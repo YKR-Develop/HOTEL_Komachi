@@ -5780,6 +5780,7 @@ a {
 }
 .information__category {
   display: flex;
+  flex-wrap: wrap;
   padding: 0 16px 8px 16px;
   border-bottom: 1px solid #C4C4C4;
 }
@@ -5799,6 +5800,16 @@ a {
   margin: 0 16px;
   font-weight: 600;
   color: #453B33;
+}
+@media screen and (max-width: 767px) {
+  .information__category-text--number {
+    margin: 0 8px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .information__category-text {
+    width: 100%;
+  }
 }
 .information__side {
   width: 320px;
