@@ -38,3 +38,9 @@
   }
 
 }
+
+.other {
+  & .page-section__col {
+    align-items: flex-start;
+  }
+}
