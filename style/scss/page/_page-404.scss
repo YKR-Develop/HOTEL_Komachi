@@ -1,0 +1,58 @@
+/*===================================================
+ _variables.scss
+ 共通使用変数 定義ファイル
+================================================== */
+@use "../config/function" as *;
+@use "../config/variables" as *;
+@use "../config/mq" as *;
+@use "../config/font" as *;
+
+/* --------------------------------------------------
+ サイトマップ
+-------------------------------------------------- */
+.site-map {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 64px;
+  margin-bottom: 32px;
+
+  @include mq(tab) {
+    padding: 0 32px;
+    gap: 16px 32px;
+  }
+
+  @include mq(sp) {
+    padding: 0 16px;
+    grid-template-columns: 1fr;
+  }
+
+  &__item {
+    padding: 0 16px 16px 32px;
+    border-bottom: 1px solid $c_border;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 15%;
+      background-image: url("/images/information/ico_arrow-menu.svg");
+      width: 16px;
+      height: 16px;
+      background-repeat: no-repeat;
+      margin-left: 16px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    background-image: linear-gradient( $c_black, $c_black);
+    background-size: 0 1px;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    transition: all 0.5s;
+    
+    &:hover {
+      background-size: 100% 1px;
+    }
+  }
+}

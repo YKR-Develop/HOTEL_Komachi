@@ -226,6 +226,26 @@ body {
     background-position: center;
   }
 }
+.mv--404 {
+  background-image: url("/images/404/img_404.jpg");
+  width: 100%;
+  background-size: contain;
+  background-position: top left;
+  height: 50vh;
+}
+@media screen and (max-width: 1024px) {
+  .mv--404 {
+    background-size: cover;
+    background-position: center center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .mv--404 {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+}
 .mv__col {
   display: flex;
   align-items: center;
@@ -2032,7 +2052,7 @@ input[type=checkbox]:checked:before {
 @media screen and (max-width: 767px) {
   .button-box {
     flex-wrap: wrap;
-    gap: 32px 0;
+    gap: 32px;
   }
 }
 
@@ -4989,6 +5009,9 @@ a {
   max-width: 1024px;
   margin: 0 auto;
 }
+.page-section--pd-not {
+  padding: 64px 0 0 0;
+}
 .page-section__mv {
   width: 100%;
   height: 320px;
@@ -7168,4 +7191,64 @@ a {
 }
 .withdrawal .desc-contents {
   margin-bottom: 32px;
+}
+
+/*===================================================
+ style.scss
+ 各パーツscssの定義
+================================================== */
+/* --------------------------------------------------
+ configファイル 
+-------------------------------------------------- */
+/*===================================================
+ _variables.scss
+ 共通使用変数 定義ファイル
+================================================== */
+/* --------------------------------------------------
+ サイトマップ
+-------------------------------------------------- */
+.site-map {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 64px;
+  margin-bottom: 32px;
+}
+@media screen and (max-width: 1024px) {
+  .site-map {
+    padding: 0 32px;
+    gap: 16px 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .site-map {
+    padding: 0 16px;
+    grid-template-columns: 1fr;
+  }
+}
+.site-map__item {
+  padding: 0 16px 16px 32px;
+  border-bottom: 1px solid #C4C4C4;
+  position: relative;
+}
+.site-map__item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15%;
+  background-image: url("/images/information/ico_arrow-menu.svg");
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  margin-left: 16px;
+}
+.site-map__link {
+  display: inline-block;
+  background-image: linear-gradient(#30312D, #30312D);
+  background-size: 0 1px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+}
+.site-map__link:hover {
+  background-size: 100% 1px;
 }/*# sourceMappingURL=style.css.map */
